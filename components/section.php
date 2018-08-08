@@ -30,7 +30,7 @@
 
 			foreach ( $featured_items as $post ) : setup_postdata( $post );
 
-				$featured_item_link = get_the_permalink();
+				$featured_item_link = get_field('video_url');
 				$featured_item_title = get_the_title(); 
 				$featured_item_text = get_the_excerpt();
 				$featured_item_image = get_the_post_thumbnail_url();

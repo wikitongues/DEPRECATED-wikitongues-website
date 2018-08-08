@@ -4,6 +4,8 @@
 
 <h1>Community Leaders</h1>
 
+<div class="wt_two-column-face-grid">
+
 <?php 
 	$community_leaders = get_field('community_leaders');
 
@@ -34,8 +36,12 @@
 		wp_reset_postdata();
 	} ?>
 
+</div><!-- /two column face grid -->
+
 <h1>Volunteers</h1>
 
+<div class="wt_three-column-face-grid">
+	
 <?php 
 	$featured_contributors = get_field('featured_contributors');
 
@@ -66,7 +72,11 @@
 		wp_reset_postdata();
 	} ?>
 
+</div><!-- /three column face grid -->
+
 <h1>Contributors</h1>
+
+<div class="wt_names-list">
 
 <?php
 	// merge community leader and featured volunteer arrays
@@ -99,5 +109,7 @@
 
 		wp_reset_postdata();
 	} ?>
+
+</div><!-- /names list -->
 
 <?php get_footer(); ?>

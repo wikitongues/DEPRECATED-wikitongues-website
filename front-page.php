@@ -29,7 +29,14 @@ get_header();
 
 		while ( $video_posts->have_posts() ): $video_posts->the_post();
 
-			the_title();
+			// define page banner variables
+			$alert_link = get_field('video_url');
+			$alert_title = get_the_title();
+			$alert_text = get_the_excerpt();
+			$alert_image = get_the_post_thumbnail_url();
+
+			// include alert template
+			include( locate_template('components/alert.php') );
 
 		endwhile;
 

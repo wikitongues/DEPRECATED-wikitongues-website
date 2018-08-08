@@ -4,6 +4,8 @@
 
 <h1>Tier 1 Donors</h1>
 
+<div class="wt_two-column-face-grid">
+
 <?php 
 	$tier_1_donors = get_field('tier_1_donors');
 
@@ -34,7 +36,11 @@
 		wp_reset_postdata();
 	} ?>
 
+</div><!-- /two column face grid -->
+
 <h1>Tier 2 Donors</h1>
+
+<div class="wt_three-column-face-grid">
 
 <?php 
 	$tier_2_donors = get_field('tier_2_donors');
@@ -66,7 +72,11 @@
 		wp_reset_postdata();
 	} ?>
 
+</div><!-- /three column face grid -->
+
 <h1>Tier 3 Donors</h1>
+
+<div class="wt_names-list">
 
 <?php
 	// merge community leader and featured volunteer arrays
@@ -98,5 +108,7 @@
 
 		wp_reset_postdata();
 	} ?>
+
+</div><!-- /names list -->
 
 <?php get_footer(); ?>

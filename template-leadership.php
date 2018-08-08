@@ -4,6 +4,8 @@
 
 <h1>Governing Board</h1>
 
+<div class="wt_two-column-face-grid">
+
 <?php 
 	$board_members = get_field('board_members');
 
@@ -28,7 +30,11 @@
 		wp_reset_postdata();
 	} ?>
 
+</div><!-- /two column face grid -->
+
 <h1>Advisory Council</h1>
+
+<div class="wt_two-column-face-grid">
 
 <?php 
 	$advisors = get_field('advisors');
@@ -54,7 +60,11 @@
 		wp_reset_postdata();
 	} ?>
 
+</div><!-- /two column face grid -->
+
 <h1>Associate Board</h1>
+
+<div class="wt_three-column-face-grid">
 
 <?php 
 	$associates = get_field('associates');
@@ -78,6 +88,8 @@
 		}
 
 		wp_reset_postdata();
-	} 
+	}  ?>
 
-get_footer(); ?>
+</div><!-- /two column face grid -->
+
+<?php get_footer(); ?>
