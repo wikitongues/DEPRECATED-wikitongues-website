@@ -3,8 +3,11 @@ html {
 }
 body {
   font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.header {
+  font-size: 1.6rem;
 }
 img {
   max-width: 100%;
@@ -40,7 +43,7 @@ body {
   color: #808080;
 }
 .wt_page-intro {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 #wt_full-partners-list {
