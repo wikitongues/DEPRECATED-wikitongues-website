@@ -39,6 +39,10 @@ body {
 .header a:hover {
   color: #808080;
 }
+.wt_page-intro {
+  max-width: 500px;
+  margin: 0 auto;
+}
 #wt_full-partners-list {
   list-style-type: none;
   margin: 0 100px;
