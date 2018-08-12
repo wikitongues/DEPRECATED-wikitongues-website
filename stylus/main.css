@@ -1,21 +1,43 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
 img {
   max-width: 100%;
+}
+body {
+  padding: 0 2rem;
 }
 .header {
   display: flex;
 }
+.calls-to-action {
+  margin-left: auto;
+}
 .logo {
   width: 50px;
 }
-.nav ul,
-.calls-to-action ul {
+.header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-.calls-to-action {
-  margin-left: auto;
+.header li {
+  margin: 1rem;
+  font-weight: bold;
+  vertical-align: center;
+}
+.header a {
+  color: #000;
+  text-decoration: none;
+}
+.header a:hover {
+  color: #808080;
 }
 #wt_full-partners-list {
   list-style-type: none;
@@ -25,12 +47,4 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   column-gap: 2rem;
   row-gap: 2rem;
-}
-html {
-  font-size: 62.5%;
-}
-body {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
 }

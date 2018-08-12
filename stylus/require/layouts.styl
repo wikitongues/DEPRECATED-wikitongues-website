@@ -1,21 +1,57 @@
 /*------------------------------------*\
+    GLOBAL
+\*------------------------------------*/
+
+body
+    padding 0 2rem
+
+
+/*------------------------------------*\
     HEADER
 \*------------------------------------*/
+
+/*
+    Main header flexbox
+    3 children: div.logo img, nav.nav ul, nav.calls-to-action ul
+*/
 
 .header
     display flex
 
+// Calls to action aligned to the right
+.calls-to-action
+    margin-left auto
+
+// Logo size
 .logo
     width 50px
 
-.nav ul, .calls-to-action ul
+/*
+    Secondary header flexboxes
+    Each of the two nav is a flexbox, each link is a flex item
+*/
+
+.header ul
     list-style-type none
     margin 0
     padding 0
     display flex
 
-.calls-to-action
-    margin-left auto
+// Position nav items
+.header li
+    margin 1rem
+    font-weight bold
+    vertical-align center
+
+// Style nav links
+.header a
+    color $text-color
+    text-decoration none
+
+// Style nav links on hover
+.header a:hover
+    color: $secondary-text-color
+
 
 /*------------------------------------*\
     PARTNERS LIST
