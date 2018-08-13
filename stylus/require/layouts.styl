@@ -1,13 +1,6 @@
 /*------------------------------------*\
-    GLOBAL
-\*------------------------------------*/
-
-body
-    padding 0 2rem
-
-
-/*------------------------------------*\
     HEADER
+    header.php
 \*------------------------------------*/
 
 /*
@@ -17,6 +10,9 @@ body
 
 .header
     display flex
+    position absolute
+    top 0
+    width 100vw
 
 // Calls to action aligned to the right
 .calls-to-action
@@ -52,8 +48,34 @@ body
 .header a:hover
     color: $secondary-text-color
 
+/* NO BROWSER SUPPORT
+// White text if over a banner
+.header:has(+ .wt_banner) a
+    color white
+*/
+
+/*------------------------------------*\
+    BANNER
+    components/banner.html
+\*------------------------------------*/
+
+.wt_banner
+    height 100vh
+    width 100vw
+    display flex
+    flex-direction column
+    justify-content center
+    z-index -1
+
+.wt_banner-message
+    margin-left 10rem
+
+.wt_banner-message h1, .wt_banner-message a
+    color white
+
 /*------------------------------------*\
     PAGE INTRO
+    components/page-intro.php
 \*------------------------------------*/
 
 .wt_page-intro
