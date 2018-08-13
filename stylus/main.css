@@ -69,9 +69,7 @@ ul.wt_featured-partners {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 ul.wt_featured-partners li {
   flex: 1;
@@ -82,6 +80,10 @@ ul.wt_featured-partners li {
 }
 .wt_page-section aside {
   flex: 1;
+}
+.wt_featured-items {
+  display: flex;
+  justify-content: space-between;
 }
 .wt_page-intro {
   max-width: 60rem;
