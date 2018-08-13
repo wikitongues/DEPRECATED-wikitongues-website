@@ -74,16 +74,46 @@
     color white
 
 /*------------------------------------*\
+    FEATURED PARTNERS
+    front-page.php
+\*------------------------------------*/
+
+ul.wt_featured-partners
+    list-style-type none
+    margin 0
+    padding 0
+    display flex
+    justify-content space-around
+    flex-direction row
+    flex-wrap nowrap
+
+ul.wt_featured-partners li
+    flex 1
+    max-width 20rem
+
+/*------------------------------------*\
+    SECTION
+    components/section.php
+\*------------------------------------*/
+
+.wt_page-section
+    display flex
+
+.wt_page-section aside
+    flex 1
+
+/*------------------------------------*\
     PAGE INTRO
     components/page-intro.php
 \*------------------------------------*/
 
 .wt_page-intro
-    max-width 600px
+    max-width 60rem
     margin 0 auto
 
 /*------------------------------------*\
     PARTNERS LIST
+    template-partners.php
 \*------------------------------------*/
 
 #wt_full-partners-list
@@ -91,6 +121,6 @@
     margin 0 100px
     padding 0
     display grid
-    grid-template-columns repeat(auto-fit, minmax(150px, 1fr))
-    column-gap 100px
-    row-gap 100px
+    grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
+    column-gap 10rem
+    row-gap 10rem
