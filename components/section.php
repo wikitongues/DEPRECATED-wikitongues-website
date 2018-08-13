@@ -23,7 +23,6 @@
 				 '<a class="wt_cta" href="' . $section_cta_link . '">' . $section_cta_text . '</a>'; 
 		} ?>
 	</aside>
-	<div class="clear"></div>
 	<?php 
 		if ( $featured_items ) { 
 			echo '<div class="wt_featured-items">';
