@@ -11,8 +11,8 @@
 .header
     display flex
     position absolute
+    width 100% // Using %: using the vw unit overflows on the x axis
     top 0
-    width 100vw
 
 // Calls to action aligned to the right
 .calls-to-action
@@ -37,7 +37,6 @@
 .header li
     margin 1rem
     font-weight bold
-    vertical-align center
 
 // Style nav links
 .header a
@@ -61,7 +60,6 @@
 
 .wt_banner
     height 100vh
-    width 100vw
     display flex
     flex-direction column
     justify-content center
@@ -74,6 +72,22 @@
     color white
 
 /*------------------------------------*\
+    ALERT
+    components/alert.php
+\*------------------------------------*/
+
+.wt_alert
+    display flex
+    justify-content flex-start
+    background-color LightGreen
+
+.wt_alert-message
+    max-width 60rem
+
+.wt_close-module
+    margin-left auto
+
+/*------------------------------------*\
     FEATURED PARTNERS
     front-page.php
 \*------------------------------------*/
@@ -83,7 +97,7 @@ ul.wt_featured-partners
     margin 0
     padding 0
     display flex
-    justify-content space-between
+    justify-content space-around
 
 ul.wt_featured-partners li
     flex 1

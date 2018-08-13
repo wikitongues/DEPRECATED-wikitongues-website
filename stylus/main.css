@@ -16,14 +16,20 @@ body {
 .wt_banner-message a {
   font-size: 4rem;
 }
+.wt_alert {
+  font-size: 1.2rem;
+}
+.wt_alert h1 {
+  font-weight: bold;
+}
 img {
   max-width: 100%;
 }
 .header {
   display: flex;
   position: absolute;
+  width: 100%;
   top: 0;
-  width: 100vw;
 }
 .calls-to-action {
   margin-left: auto;
@@ -40,7 +46,6 @@ img {
 .header li {
   margin: 1rem;
   font-weight: bold;
-  vertical-align: center;
 }
 .header a {
   color: #000;
@@ -51,7 +56,6 @@ img {
 }
 .wt_banner {
   height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,12 +68,23 @@ img {
 .wt_banner-message a {
   color: #fff;
 }
+.wt_alert {
+  display: flex;
+  justify-content: flex-start;
+  background-color: LightGreen;
+}
+.wt_alert-message {
+  max-width: 60rem;
+}
+.wt_close-module {
+  margin-left: auto;
+}
 ul.wt_featured-partners {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 ul.wt_featured-partners li {
   flex: 1;
