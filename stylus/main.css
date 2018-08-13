@@ -96,6 +96,9 @@ ul.wt_featured-partners li {
 .wt_page-section aside {
   flex: 1;
 }
+section:nth-child(even) .wt_section-message {
+  order: -1;
+}
 .wt_featured-items {
   display: flex;
   justify-content: space-between;

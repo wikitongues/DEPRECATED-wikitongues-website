@@ -114,6 +114,10 @@ ul.wt_featured-partners li
 .wt_page-section aside
     flex 1
 
+// Switch image and message at each new section
+section:nth-child(even) .wt_section-message
+    order -1
+
 /*------------------------------------*\
     FEATURED ITEMS
     components/featured-item.php
