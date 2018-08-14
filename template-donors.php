@@ -102,8 +102,8 @@
 			$name = get_the_title($post);
 			$location = get_field('location');
 
-			echo '<h2>'.$name.'</h2>'.
-				 '<p>'.$location['country'].'</p>';
+			echo '<div class="wt_name-location"><h2>'.$name.'</h2>'.
+				 '<p>'.$location['country'].'</p></div>';
 		}
 
 		wp_reset_postdata();
