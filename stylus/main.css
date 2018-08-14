@@ -44,6 +44,7 @@ h1 {
   position: absolute;
   width: 100%;
   top: 0;
+  background-color: #fff;
 }
 .calls-to-action {
   margin-left: auto;
@@ -75,6 +76,7 @@ h1 {
 .wt_banner-message h1 {
   color: #fff;
   text-align: left;
+  font-weight: bold;
 }
 .wt_alert {
   display: flex;
