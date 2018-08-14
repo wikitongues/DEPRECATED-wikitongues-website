@@ -62,7 +62,7 @@ get_header();
 
 			echo '<li>'.
 				 '<a href="'.$wikitongues_url.'/partners">'.
-				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
+				 '<img class="wt_bw-img" src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
 				 '</a></li>';
 
 		endforeach; wp_reset_postdata();

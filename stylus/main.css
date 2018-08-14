@@ -19,6 +19,15 @@ body {
 img {
   max-width: 100%;
 }
+img.wt_bw-img {
+  filter: #808080;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+img.wt_bw-img:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
 a {
   text-decoration: none;
   color: #000;
@@ -93,7 +102,6 @@ h2 {
 }
 ul.wt_featured-partners {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-around;
@@ -101,6 +109,7 @@ ul.wt_featured-partners {
 ul.wt_featured-partners li {
   flex: 1;
   max-width: 20rem;
+  margin: 2rem;
 }
 .wt_page-section {
   display: flex;
