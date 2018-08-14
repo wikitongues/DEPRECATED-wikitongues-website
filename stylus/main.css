@@ -40,6 +40,7 @@ h1 {
 }
 .logo {
   width: 5rem;
+  margin: 0 1rem;
 }
 .header ul {
   list-style-type: none;
