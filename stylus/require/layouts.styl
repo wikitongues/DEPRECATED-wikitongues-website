@@ -39,15 +39,6 @@
     margin 1rem
     font-weight bold
 
-// Style nav links
-.header a
-    color $text-color
-    text-decoration none
-
-// Style nav links on hover
-.header a:hover
-    color: $secondary-text-color
-
 /* NO BROWSER SUPPORT
 // White text if over a banner
 .header:has(+ .wt_banner) a
@@ -69,10 +60,9 @@
 .wt_banner-message
     margin-left 10rem
 
-.wt_banner-message h1, .wt_banner-message a
-    color white
+.wt_banner-message h1
+    color $text-color-dark-background
     text-align left
-    font-weight bold // Should be moved to typography.styl
 
 /*------------------------------------*\
     ALERT

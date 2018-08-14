@@ -13,9 +13,6 @@ body {
   font-size: 6rem;
   line-height: 1;
 }
-.wt_banner-message a {
-  font-size: 4rem;
-}
 .wt_alert {
   font-size: 1.2rem;
 }
@@ -25,9 +22,22 @@ body {
 img {
   max-width: 100%;
 }
+a {
+  text-decoration: none;
+  color: #000;
+}
 h1 {
   text-align: center;
   font-weight: normal;
+}
+.wt_cta {
+  display: inline-block;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: normal;
+  background-color: LightBlue;
+  border-radius: 1rem;
+  margin: 2rem 0;
 }
 .header {
   display: flex;
@@ -52,13 +62,6 @@ h1 {
   margin: 1rem;
   font-weight: bold;
 }
-.header a {
-  color: #000;
-  text-decoration: none;
-}
-.header a:hover {
-  color: #808080;
-}
 .wt_banner {
   height: 100vh;
   display: flex;
@@ -69,11 +72,9 @@ h1 {
 .wt_banner-message {
   margin-left: 10rem;
 }
-.wt_banner-message h1,
-.wt_banner-message a {
+.wt_banner-message h1 {
   color: #fff;
   text-align: left;
-  font-weight: bold;
 }
 .wt_alert {
   display: flex;
