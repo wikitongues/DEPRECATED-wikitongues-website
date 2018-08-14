@@ -109,10 +109,17 @@ section:nth-child(even) .wt_section-message {
 }
 #wt_full-partners-list {
   list-style-type: none;
-  margin: 0 100px;
+  margin: 0 10rem;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  column-gap: 10rem;
+  row-gap: 10rem;
+}
+.wt_two-column-face-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin: 0 10rem;
   column-gap: 10rem;
   row-gap: 10rem;
 }
