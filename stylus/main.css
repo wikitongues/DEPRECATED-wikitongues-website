@@ -127,6 +127,13 @@ section:nth-child(even) .wt_section-message {
 .wt_featured-items {
   display: flex;
   justify-content: space-between;
+  background-color: LightBlue;
+}
+.wt_featured-item {
+  margin: 4rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
 }
 .wt_page-intro {
   max-width: 60rem;
