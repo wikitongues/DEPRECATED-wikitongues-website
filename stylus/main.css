@@ -41,13 +41,15 @@ h2 {
   padding: 0;
 }
 .wt_cta {
-  display: inline-block;
+  display: block;
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
   padding: 2rem;
   font-size: 2rem;
   font-weight: normal;
   background-color: LightBlue;
   border-radius: 1rem;
-  margin: 2rem 0;
 }
 .header {
   display: flex;
