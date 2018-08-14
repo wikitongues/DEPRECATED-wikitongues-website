@@ -25,6 +25,10 @@ body {
 img {
   max-width: 100%;
 }
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
 .header {
   display: flex;
   position: absolute;
