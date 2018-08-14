@@ -16,9 +16,6 @@ body {
 .wt_alert {
   font-size: 1.2rem;
 }
-.wt_alert h1 {
-  font-weight: bold;
-}
 img {
   max-width: 100%;
 }
@@ -29,6 +26,10 @@ a {
 h1 {
   text-align: center;
   font-weight: normal;
+}
+h2 {
+  margin: 0;
+  padding: 0;
 }
 .wt_cta {
   display: inline-block;
@@ -82,6 +83,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   background-color: LightGreen;
+  padding: 1rem;
 }
 .wt_alert-message {
   max-width: 60rem;
