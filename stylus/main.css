@@ -73,6 +73,7 @@ h1 {
 .wt_banner-message a {
   color: #fff;
   text-align: left;
+  font-weight: bold;
 }
 .wt_alert {
   display: flex;
