@@ -116,6 +116,7 @@ ul.wt_featured-partners li {
 }
 .wt_page-section aside {
   flex: 1;
+  padding: 2rem;
 }
 section:nth-child(even) .wt_section-message {
   order: -1;
