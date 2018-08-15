@@ -85,12 +85,12 @@ body {
   height: 100vh;
   margin-top: -5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
-.wt_banner-message {
-  margin-left: 10rem;
-  width: 30%;
+.wt_banner > * {
+  flex: 1;
+  margin: 10rem;
+  max-width: 50%;
 }
 .wt_banner-message h1 {
   color: #fff;

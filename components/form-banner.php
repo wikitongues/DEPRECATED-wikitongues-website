@@ -27,5 +27,4 @@
 
 		} ?>
 	</aside>
-	<div class="clear"></div>
 </div>
