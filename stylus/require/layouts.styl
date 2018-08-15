@@ -1,3 +1,7 @@
+body
+    padding-top 5rem
+
+
 /*------------------------------------*\
     HEADER
     header.php
@@ -10,8 +14,8 @@
 
 .header
     display flex
-    position absolute
     width 100% // Using %: using the vw unit overflows on the x axis
+    position absolute
     top 0
 
 // Calls to action aligned to the right
@@ -54,11 +58,12 @@
 \*------------------------------------*/
 
 .wt_banner
+    width 100%
     height 100vh
+    margin-top -5rem // Position banner on top
     display flex
     flex-direction column
     justify-content center
-    z-index -1
 
 .wt_banner-message
     margin-left 10rem
