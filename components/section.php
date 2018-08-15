@@ -22,11 +22,11 @@
 				 '<p>' . $section_text . '</h1>' .
 				 '<a class="wt_cta" href="' . $section_cta_link . '">' . $section_cta_text . '</a>'; 
 		} ?>
-	</aside>
-	<div class="clear"></div>
+    </aside>
+</section>
 	<?php 
 		if ( $featured_items ) { 
-			echo '<div class="wt_featured-items">';
+			echo '<section class="wt_featured-items">';
 
 			foreach ( $featured_items as $post ) : setup_postdata( $post );
 
@@ -37,6 +37,8 @@
 
 				include( locate_template('components/featured-item.php') );
 			
-			endforeach; wp_reset_postdata();
-		} ?>
-</section>
+            endforeach; wp_reset_postdata();
+                
+            echo '</section>';
+        }
+    ?>

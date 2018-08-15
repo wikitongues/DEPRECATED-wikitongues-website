@@ -50,7 +50,7 @@ get_header();
 
 	if ( $featured_partners ):
 
-		echo '<ul>';
+		echo '<ul class="wt_featured-partners">';
 
 		foreach ( $featured_partners as $post ): setup_postdata($post);
 
@@ -62,7 +62,7 @@ get_header();
 
 			echo '<li>'.
 				 '<a href="'.$wikitongues_url.'/partners">'.
-				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
+				 '<img class="wt_bw-img" src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
 				 '</a></li>';
 
 		endforeach; wp_reset_postdata();

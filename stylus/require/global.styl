@@ -1,0 +1,39 @@
+img
+    max-width 100%
+
+/*
+    Black and white image
+*/
+
+img.wt_bw-img
+    filter gray // IE6-9
+    -webkit-filter grayscale(1) // Google Chrome, Safari 6+ & Opera 15+
+    filter grayscale(1) // Microsoft Edge and Firefox 35+
+
+/* Disable grayscale on hover */
+img.wt_bw-img:hover
+    -webkit-filter grayscale(0)
+    filter none
+
+a
+    text-decoration none
+    color $text-color
+
+h1
+    text-align center
+    font-weight normal
+
+h2
+    margin 0
+    padding 0
+
+.wt_cta
+    display block
+    width 50%
+    margin 2rem auto
+    text-align center
+    padding 2rem
+    font-size 2rem
+    font-weight normal
+    background-color $highlight-color
+    border-radius 1rem
