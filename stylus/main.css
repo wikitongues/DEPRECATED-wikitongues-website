@@ -97,6 +97,9 @@ body {
   text-align: left;
   font-weight: bold;
 }
+.wt_banner-message .wt_cta {
+  margin: 2rem 0;
+}
 .wt_alert {
   display: flex;
   justify-content: flex-start;
