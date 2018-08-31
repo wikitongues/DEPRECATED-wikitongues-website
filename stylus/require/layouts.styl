@@ -46,6 +46,18 @@ body
     margin 1rem
     font-weight bold
 
+// Dropdown nav
+.sub-menu
+    flex-direction column
+    visibility hidden
+
+.sub-menu li
+    margin-left 0 // Cancel spacing from .header li
+
+.menu-item-has-children:hover .sub-menu
+    visibility visible
+
+
 /* NO BROWSER SUPPORT
 // White text if over a banner
 .header:has(+ .wt_banner) a

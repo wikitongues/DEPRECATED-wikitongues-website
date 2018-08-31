@@ -87,6 +87,16 @@ body {
   margin: 1rem;
   font-weight: bold;
 }
+.sub-menu {
+  flex-direction: column;
+  visibility: hidden;
+}
+.sub-menu li {
+  margin-left: 0;
+}
+.menu-item-has-children:hover .sub-menu {
+  visibility: visible;
+}
 .header a {
   color: #fff;
 }
