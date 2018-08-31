@@ -49,8 +49,11 @@ body
 /* NO BROWSER SUPPORT
 // White text if over a banner
 .header:has(+ .wt_banner) a
-    color white
+    color $text-color-light
 */
+
+.header a
+    color $text-color-light
 
 /*------------------------------------*\
     BANNER
@@ -71,7 +74,7 @@ body
     max-width 50% // In case there is only one child, leave half of the screen blank
 
 .wt_banner-message h1
-    color $text-color-dark-background
+    color $text-color-light
     text-align left
     font-weight bold
 

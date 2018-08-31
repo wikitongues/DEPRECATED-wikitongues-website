@@ -1,27 +1,30 @@
 img
     max-width 100%
+    border-radius 1rem
 
 /*
-    Black and white image
+    Black and white images
 */
 
 img.wt_bw-img
     filter gray // IE6-9
-    -webkit-filter grayscale(1) // Google Chrome, Safari 6+ & Opera 15+
-    filter grayscale(1) // Microsoft Edge and Firefox 35+
+    -webkit-filter grayscale(1) opacity(50%) // Google Chrome, Safari 6+ & Opera 15+
+    filter grayscale(1) opacity(50%) // Microsoft Edge and Firefox 35+
 
 /* Disable grayscale on hover */
 img.wt_bw-img:hover
-    -webkit-filter grayscale(0)
+    -webkit-filter none
     filter none
 
 a
     text-decoration none
     color $text-color
 
+a:hover
+    color $highlight-color
+
 h1
     text-align center
-    font-weight normal
 
 h2
     margin 0
@@ -37,3 +40,4 @@ h2
     font-weight normal
     background-color $highlight-color
     border-radius 1rem
+    color $text-color-light
