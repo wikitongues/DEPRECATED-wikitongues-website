@@ -55,6 +55,9 @@ h2 {
   border-radius: 1rem;
   color: #fff;
 }
+.wt_cta:hover {
+  color: #fff;
+}
 body {
   padding-top: 5rem;
 }
