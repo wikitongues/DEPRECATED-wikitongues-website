@@ -185,3 +185,12 @@ section:nth-child(even) .wt_section-message {
   column-gap: 10rem;
   row-gap: 10rem;
 }
+.footer {
+  background-color: #0d232f;
+  color: #fff;
+  padding: 2rem;
+  bottom: 0;
+}
+.footer a {
+  color: #fff;
+}
