@@ -50,7 +50,7 @@ h2 {
   text-align: center;
   padding: 3rem;
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: bold;
   background-color: #4799fc;
   border-radius: 1rem;
   color: #fff;
@@ -87,9 +87,6 @@ body {
   margin: 1rem;
   font-weight: bold;
 }
-.header a {
-  color: #fff;
-}
 .sub-menu {
   flex-direction: column;
   visibility: hidden;
@@ -99,6 +96,9 @@ body {
 }
 .menu-item-has-children:hover .sub-menu {
   visibility: visible;
+}
+.header a {
+  color: #fff;
 }
 .wt_banner {
   width: 100%;
