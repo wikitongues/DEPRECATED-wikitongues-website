@@ -6,7 +6,7 @@
 	$alert_image
 	*/ ?>
 
-<aside class="wt_alert">
+<aside class="wt_alert wt_module">
     <img class="wt_alert-image" src="<?php echo $alert_image; ?>" alt="<?php echo $alert_title; ?>">
     <article class="wt_alert-message">
         <h2><?php echo $alert_title; ?></h2>

@@ -630,8 +630,8 @@ function create_post_type_news()
         'supports' => array(
             'title',
             'editor',
-            'excerpt',
-            'thumbnail'
+            'excerpt'
+            // 'thumbnail'
         ),
         'can_export' => true,
         'taxonomies' => array(
