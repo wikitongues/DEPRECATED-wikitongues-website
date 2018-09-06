@@ -12,5 +12,5 @@
         <h2><?php echo $alert_title; ?></h2>
         <?php echo $alert_text; ?>
     </article>
-    <button class="wt_close-module">Close</button>
+    <button class="wt_close-module">×</button>
 </aside>
