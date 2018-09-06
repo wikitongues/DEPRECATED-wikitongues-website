@@ -124,7 +124,7 @@ body {
   display: flex;
   justify-content: flex-start;
   background-color: #b8ffdd;
-  padding: 1rem;
+  padding: 2rem;
 }
 .wt_alert-message {
   max-width: 60rem;
