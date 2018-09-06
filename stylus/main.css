@@ -165,9 +165,11 @@ section:nth-child(even) .wt_section-message {
   display: flex;
   justify-content: space-between;
   background-color: #4799fc;
+  padding: 5rem;
+  margin-bottom: 10rem;
 }
 .wt_featured-item {
-  margin: 4rem;
+  margin: 2rem;
   padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;
