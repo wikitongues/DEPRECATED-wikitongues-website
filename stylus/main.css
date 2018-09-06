@@ -134,13 +134,15 @@ body {
 }
 ul.wt_featured-partners {
   list-style-type: none;
+  width: 80vw;
+  margin: 5rem auto;
   padding: 0;
   display: flex;
   justify-content: space-around;
 }
 ul.wt_featured-partners li {
   flex: 1;
-  max-width: 20rem;
+  max-width: 15rem;
   margin: 2rem;
 }
 .wt_page-section {
