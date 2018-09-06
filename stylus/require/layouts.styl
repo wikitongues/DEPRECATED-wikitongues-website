@@ -57,14 +57,15 @@ body
 .menu-item-has-children:hover .sub-menu
     visibility visible
 
-
-/* NO BROWSER SUPPORT
-// White text if over a banner
-.header:has(+ .wt_banner) a
-    color $text-color-light
-*/
+/*
+    Links color
+ */
 
 .header a
+    color $text-color
+
+// White if over the banner image
+body.home .header a, body.page-template-template-donate .header a
     color $text-color-light
 
 /*------------------------------------*\
