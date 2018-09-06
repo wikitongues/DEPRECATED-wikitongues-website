@@ -109,8 +109,8 @@ get_header();
 	
 		foreach( $news_items as $post ): setup_postdata( $post ); $i++;
 			
-			// TO DO --> set up vars once medium sync is initialized
-			$section_image = get_the_post_thumbnail_url();
+			// define section variables
+			$section_image = get_field('blog_featured_image');
 			$section_title = get_the_title();
 			$section_text = get_the_excerpt();
 			$section_cta_link = get_the_permalink();

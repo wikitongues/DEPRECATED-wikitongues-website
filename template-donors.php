@@ -86,6 +86,7 @@
 	$small_donors = new WP_Query( 
 		array( 
 			'post_type' => 'members',
+			'category_name' => 'donor',
 			'post__not_in' => $major_donors, // exclude tier 1 + 2 donors
 			'posts_per_page' => -1 // no return limit
 		)
