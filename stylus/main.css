@@ -97,6 +97,10 @@ body {
   visibility: visible;
 }
 .header a {
+  color: #11242f;
+}
+body.home .header a,
+body.page-template-template-donate .header a {
   color: #fff;
 }
 .wt_banner {
