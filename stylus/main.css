@@ -179,6 +179,11 @@ section:nth-child(even) .wt_section-message {
   padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.wt_featured-item > a {
+  flex-basis: 10rem;
 }
 .wt_page-intro {
   max-width: 60rem;
@@ -213,6 +218,13 @@ section:nth-child(even) .wt_section-message {
   margin: 0 10rem;
   column-gap: 10rem;
   row-gap: 10rem;
+}
+.wt_member {
+  display: flex;
+}
+.wt_member > * {
+  flex: 1;
+  margin: 1rem;
 }
 .footer {
   background-color: #0d232f;
