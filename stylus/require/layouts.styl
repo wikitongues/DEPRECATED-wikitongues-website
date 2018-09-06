@@ -158,6 +158,17 @@ section:nth-child(even) .wt_section-message
     padding 2rem
     background-color white
     border-radius 1rem
+    // Featured item content flexbox
+    display flex
+    flex-direction column
+
+// Each featured item has three children:
+// 1. A link to youtube with a background image
+// 2. An h2 title
+// 3. A paragraph with intro text
+
+.wt_featured-item > a
+    flex-basis 10rem
 
 /*------------------------------------*\
     PAGE INTRO

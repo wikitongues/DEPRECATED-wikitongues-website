@@ -163,6 +163,11 @@ section:nth-child(even) .wt_section-message {
   padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.wt_featured-item > a {
+  flex-basis: 10rem;
 }
 .wt_page-intro {
   max-width: 60rem;
