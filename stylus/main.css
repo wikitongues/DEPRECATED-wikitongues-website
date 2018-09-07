@@ -230,6 +230,15 @@ section:nth-child(even) .wt_section-message {
   flex: 1;
   margin: 1rem;
 }
+.wt_form-banner {
+  display: flex;
+}
+.wt_form-banner > * {
+  flex: 1;
+}
+.wt_form-banner-form {
+  margin: 10rem 0;
+}
 .footer {
   background-color: #0d232f;
   color: #fff;
