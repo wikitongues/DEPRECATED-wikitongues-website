@@ -15,7 +15,7 @@
 
 		} ?>
 	</aside>
-	<aside>
+	<aside class="wt_banner-form">
 	<?php
 		if ( $banner_form_embed ) {
 			
