@@ -180,9 +180,9 @@ section:nth-child(even) .wt_section-message {
 }
 .wt_featured-item {
   margin: 2rem;
-  padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
