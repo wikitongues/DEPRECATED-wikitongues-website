@@ -187,7 +187,11 @@ section:nth-child(even) .wt_section-message {
   flex-direction: column;
 }
 .wt_featured-item > a {
-  flex-basis: 10rem;
+  height: 20rem;
+}
+.wt_featured-item-image {
+  height: 100%;
+  width: 100%;
 }
 .wt_page-intro {
   max-width: 60rem;
