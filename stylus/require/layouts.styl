@@ -246,17 +246,29 @@ section:nth-child(even) .wt_section-message
 
 /*------------------------------------*\
     VIDEO SUBMISSION FORM
+    DONATE PAGE AND FORM
     components/form-banner.php
 \*------------------------------------*/
 
 .wt_form-banner
+    width 100%
+    min-height 100vh
+    margin-top -5rem // Position banner on top
     display flex
+    align-items center
 
 .wt_form-banner > *
     flex 1
+    margin 10rem
+    max-width 50% // In case there is only one child, leave half of the screen blank
 
-.wt_form-banner-form
-    margin 10rem 0
+.wt_form-banner-message h1
+    color $text-color-light
+    text-align left
+    font-weight bold
+
+.wt_form-banner-message .wt_cta
+    margin: 2rem 0
 
 /*------------------------------------*\
     FOOTER

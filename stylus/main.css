@@ -274,13 +274,24 @@ section:nth-child(even) .wt_section-message {
   margin: 1rem;
 }
 .wt_form-banner {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: -5rem;
   display: flex;
+  align-items: center;
 }
 .wt_form-banner > * {
   flex: 1;
+  margin: 10rem;
+  max-width: 50%;
 }
-.wt_form-banner-form {
-  margin: 10rem 0;
+.wt_form-banner-message h1 {
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+.wt_form-banner-message .wt_cta {
+  margin: 2rem 0;
 }
 .footer {
   background-color: #0d232f;
