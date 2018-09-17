@@ -142,15 +142,18 @@ ul.wt_featured-partners li
 
 .wt_page-section
     display flex
+    flex-wrap wrap
     margin-bottom 5rem
 
-.wt_section-image
+.wt_page-section > *
     flex 1
+    min-width 40rem
+
+.wt_section-image
     padding 2rem
     margin auto
 
 .wt_section-message
-    flex 1
     padding 5rem
 
 // Switch image and message at each new section
