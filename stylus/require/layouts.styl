@@ -182,6 +182,11 @@ section:nth-child(even) .wt_section-message
     display flex
     flex-direction column
 
+// On smaller screens, show items in a single column
+@media only screen and (max-width: 800px)
+    .wt_featured-items
+        flex-direction column
+
 // Each featured item has three children:
 // 1. A link to youtube with a background image
 // 2. An h2 title

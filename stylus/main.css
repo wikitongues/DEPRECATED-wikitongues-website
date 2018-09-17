@@ -232,6 +232,11 @@ section:nth-child(even) .wt_section-message {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 800px) {
+  .wt_featured-items {
+    flex-direction: column;
+  }
+}
 .wt_featured-item > a {
   height: 20rem;
 }
