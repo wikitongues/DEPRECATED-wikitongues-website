@@ -180,14 +180,24 @@ section:nth-child(even) .wt_section-message {
 }
 .wt_featured-item {
   margin: 2rem;
-  padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 .wt_featured-item > a {
-  flex-basis: 10rem;
+  height: 20rem;
+}
+.wt_featured-item-image {
+  height: 100%;
+  width: 100%;
+}
+.wt_featured-item > h2 {
+  padding: 2rem 2rem 0 2rem;
+}
+.wt_featured-item > p {
+  padding: 0 2rem 2rem 2rem;
 }
 .wt_page-intro {
   max-width: 60rem;
