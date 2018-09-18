@@ -6,8 +6,8 @@
 	$banner_form_shortcode;
 	*/ ?>
 
-<div class="wt_banner" style="background:url('<?php echo $banner_image; ?>') center center no-repeat;">
-	<aside class="wt_banner-message">
+<div class="wt_form-banner" style="background:url('<?php echo $banner_image; ?>') center center no-repeat;">
+	<aside class="wt_form-banner-message">
 	<?php 
 		if ( $banner_text ) { 
 
@@ -15,7 +15,7 @@
 
 		} ?>
 	</aside>
-	<aside>
+	<aside class="wt_form-banner-form">
 	<?php
 		if ( $banner_form_embed ) {
 			

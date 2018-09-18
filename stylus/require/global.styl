@@ -30,6 +30,10 @@ h2
     margin 0
     padding 0
 
+/*
+    Buttons
+*/
+
 .wt_cta
     display block
     width 50%
@@ -44,3 +48,44 @@ h2
 
 .wt_cta:hover
     color $text-color-light
+
+/*
+    Forms
+*/
+
+label
+    font-size $small-text-size
+
+label > span
+    font-size $text-size
+
+input[type=text], input[type=email]
+    border none
+    border-bottom 1px solid LightGrey
+    margin-top 1rem
+
+input[type=text]:focus, input[type=email]:focus
+    border-color $text-color
+
+textarea
+    border 1px solid LightGrey
+    border-radius 0.5rem
+    padding 1rem
+    margin-top 1rem
+    resize none
+
+textarea:focus
+    border-color $text-color
+
+input[type=button], input[type=submit], input[type=reset]
+    font-size 1.5rem
+    background-color transparent
+    border 1px solid LightGrey
+    border-radius 0.5rem
+    padding 1rem
+    margin-top 1rem
+    text-decoration none
+    cursor pointer
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover
+    border-color $text-color
