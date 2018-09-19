@@ -50,14 +50,7 @@
 				<nav class="calls-to-action">
 					<?php calls_to_action(); ?>
 				</nav>
-                <!-- /calls to action -->
-
-                <!-- hamburger -->
-                <nav class="hamburger">
-                    <a href="javascript:void(0);" onclick="toggleHamburger()">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/hamburger.svg" alt="Menu" class="hamburger-icon">
-                    </a>
-                </nav>
+				<!-- /calls to action -->
 
 		</header>
 		<!-- /header -->
