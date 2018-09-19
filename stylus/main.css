@@ -146,17 +146,6 @@ body.home .header a,
 body.page-template-template-donate .header a {
   color: #fff;
 }
-nav.hamburger {
-  display: none;
-}
-@media only screen and (max-width: 800px) {
-  nav.hamburger {
-    display: block;
-  }
-  .header ul {
-    display: none;
-  }
-}
 .wt_banner {
   width: 100%;
   height: 100vh;
