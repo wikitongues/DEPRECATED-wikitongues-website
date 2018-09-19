@@ -13,10 +13,30 @@ body
 */
 
 .header
-    display flex
     width 100% // Using %: using the vw unit overflows on the x axis
     position absolute
     top 0
+    /*
+    * Horizontal scroll flexbox
+    * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
+    */
+    display flex
+    flex-wrap nowrap
+    overflow-x auto
+    -webkit-overflow-scrolling touch // smooth scrolling on IOS devices
+    -ms-overflow-style -ms-autohiding-scrollbar // hide scrollbar in Edge until hover
+
+// Hide scrollbar on webkit browsers
+.header::-webkit-scrollbar
+    display none
+
+// Don't let flex children shrink to toggle scroll
+.header > *
+    flex 0 0 auto
+
+/*
+* End horizontal scroll
+*/
 
 // Calls to action aligned to the right
 .calls-to-action

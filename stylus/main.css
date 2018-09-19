@@ -105,10 +105,24 @@ body {
   padding-top: 5rem;
 }
 .header {
-  display: flex;
   width: 100%;
   position: absolute;
   top: 0;
+/*
+    * Horizontal scroll flexbox
+    * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
+    */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.header::-webkit-scrollbar {
+  display: none;
+}
+.header > * {
+  flex: 0 0 auto;
 }
 .calls-to-action {
   margin-left: auto;
