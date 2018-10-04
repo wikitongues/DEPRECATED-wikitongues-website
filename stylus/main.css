@@ -116,7 +116,7 @@ body {
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
 }
 .header::-webkit-scrollbar {
   display: none;
