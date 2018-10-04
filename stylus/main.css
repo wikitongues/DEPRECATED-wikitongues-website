@@ -108,23 +108,27 @@ body {
   width: 100%;
   position: absolute;
   top: 0;
+  display: flex;
+}
+.nav {
 /*
     * Horizontal scroll flexbox
     * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
     */
   display: flex;
+  width: 100%;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
-.header::-webkit-scrollbar {
+.nav::-webkit-scrollbar {
   display: none;
 }
-.header > * {
+.nav > * {
   flex: 0 0 auto;
 }
-.calls-to-action {
+.nav ul:last-child {
   margin-left: auto;
 }
 .logo {

@@ -16,22 +16,26 @@ body
     width 100% // Using %: using the vw unit overflows on the x axis
     position absolute
     top 0
+    display flex
+
+.nav
     /*
     * Horizontal scroll flexbox
     * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
     */
     display flex
+    width 100%
     flex-wrap nowrap
     overflow-x auto
     -webkit-overflow-scrolling touch // smooth scrolling on IOS devices
     -ms-overflow-style none // hide scrollbar in Edge
 
 // Hide scrollbar on webkit browsers
-.header::-webkit-scrollbar
+.nav::-webkit-scrollbar
     display none
 
 // Don't let flex children shrink to toggle scroll
-.header > *
+.nav > *
     flex 0 0 auto
 
 /*
@@ -39,7 +43,7 @@ body
 */
 
 // Calls to action aligned to the right
-.calls-to-action
+.nav ul:last-child
     margin-left auto
 
 // Logo size

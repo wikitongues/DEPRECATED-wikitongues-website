@@ -43,14 +43,9 @@
 				<!-- nav -->
 				<nav class="nav" role="navigation">
 					<?php main_nav(); ?>
-				</nav>
-				<!-- /nav -->
-
-				<!-- calls to action -->
-				<nav class="calls-to-action">
 					<?php calls_to_action(); ?>
 				</nav>
-				<!-- /calls to action -->
+				<!-- /nav -->
 
 		</header>
 		<!-- /header -->
