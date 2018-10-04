@@ -34,6 +34,10 @@ body
 .nav::-webkit-scrollbar
     display none
 
+// The scroll bar can not be hidden in Firefox (Gecko) using CSS as of 2018
+// See: https://stackoverflow.com/a/6165489/7770081
+// Possible solutions: https://stackoverflow.com/a/16671476/7770081
+
 // Don't let flex children shrink to toggle scroll
 .nav > *
     flex 0 0 auto
