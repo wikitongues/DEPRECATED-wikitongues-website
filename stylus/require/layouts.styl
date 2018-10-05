@@ -109,8 +109,8 @@ body.home .header a, body.page-template-template-donate .header a
 
 .wt_banner > *
     flex 1
-    margin 10rem
-    max-width 50% // In case there is only one child, leave half of the screen blank
+    margin-left 10%
+    max-width 50rem // In case there is only one child, leave half of the screen blank
 
 .wt_banner-message h1
     color $text-color-light
@@ -152,7 +152,7 @@ body.home .header a, body.page-template-template-donate .header a
 ul.wt_featured-partners
     list-style-type none
     width 80vw
-    margin 5rem auto
+    margin 5% auto
     padding 0
     display flex
     justify-content space-around
@@ -169,17 +169,12 @@ ul.wt_featured-partners li
 
 .wt_page-section
     display flex
-    margin-bottom 5rem
+    margin-bottom 5%
 
 .wt_page-section > *
     flex 1
-
-.wt_section-image
     padding 2rem
     margin auto
-
-.wt_section-message
-    padding 5rem
 
 // Switch image and message at each new section
 section:nth-child(even) .wt_section-message
@@ -203,8 +198,8 @@ section:nth-child(even) .wt_section-message
     display flex
     justify-content space-between
     background-color $highlight-color
-    padding 5rem
-    margin-bottom 10rem
+    padding 5%
+    margin-bottom 10%
 
 .wt_featured-item // Children
     margin 2rem
@@ -225,6 +220,8 @@ section:nth-child(even) .wt_section-message
 // 2. An h2 title
 // 3. A paragraph with intro text
 
+// Arbitrary height to display image
+// Might want to switch to image instead of background image
 .wt_featured-item > a
     height 20rem
 
@@ -245,7 +242,7 @@ section:nth-child(even) .wt_section-message
 
 .wt_page-intro
     max-width 60rem
-    margin 10rem auto
+    margin 10% auto
 
 /*------------------------------------*\
     PARTNERS LIST
@@ -254,12 +251,11 @@ section:nth-child(even) .wt_section-message
 
 #wt_full-partners-list
     list-style-type none
-    margin 0 10rem
+    margin 0 10%
     padding 0
     display grid
     grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
-    column-gap 10rem
-    row-gap 10rem
+    grid-gap 10%
 
 /*------------------------------------*\
     WHO WE ARE
@@ -270,23 +266,20 @@ section:nth-child(even) .wt_section-message
 .wt_two-column-face-grid
     display grid
     grid-template-columns repeat(auto-fit, minmax(40rem, 1fr))
-    margin 0 10rem
-    column-gap 10rem
-    row-gap 10rem
+    margin 0 10%
+    grid-gap 10%
 
 .wt_three-column-face-grid
     display grid
     grid-template-columns repeat(auto-fit, minmax(30rem, 1fr))
-    margin 0 10rem
-    column-gap 10rem
-    row-gap 10rem
+    margin 0 10%
+    grid-gap 10%
 
 .wt_names-list
     display grid
     grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
-    margin 0 10rem
-    column-gap 10rem
-    row-gap 10rem
+    margin 0 10%
+    grid-gap 10%
 
 .wt_member
     display flex
@@ -310,8 +303,8 @@ section:nth-child(even) .wt_section-message
 
 .wt_form-banner > *
     flex 1
-    margin 10rem
-    max-width 50% // In case there is only one child, leave half of the screen blank
+    margin 10%
+    max-width 50rem // In case there is only one child, leave half of the screen blank
 
 .wt_form-banner-message h1
     color $text-color-light

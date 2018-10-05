@@ -172,8 +172,8 @@ body.page-template-template-donate .header a {
 }
 .wt_banner > * {
   flex: 1;
-  margin: 10rem;
-  max-width: 50%;
+  margin-left: 10%;
+  max-width: 50rem;
 }
 .wt_banner-message h1 {
   color: #fff;
@@ -205,7 +205,7 @@ body.page-template-template-donate .header a {
 ul.wt_featured-partners {
   list-style-type: none;
   width: 80vw;
-  margin: 5rem auto;
+  margin: 5% auto;
   padding: 0;
   display: flex;
   justify-content: space-around;
@@ -217,17 +217,12 @@ ul.wt_featured-partners li {
 }
 .wt_page-section {
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 5%;
 }
 .wt_page-section > * {
   flex: 1;
-}
-.wt_section-image {
   padding: 2rem;
   margin: auto;
-}
-.wt_section-message {
-  padding: 5rem;
 }
 section:nth-child(even) .wt_section-message {
   order: -1;
@@ -244,8 +239,8 @@ section:nth-child(even) .wt_section-message {
   display: flex;
   justify-content: space-between;
   background-color: #4799fc;
-  padding: 5rem;
-  margin-bottom: 10rem;
+  padding: 5%;
+  margin-bottom: 10%;
 }
 .wt_featured-item {
   margin: 2rem;
@@ -275,37 +270,33 @@ section:nth-child(even) .wt_section-message {
 }
 .wt_page-intro {
   max-width: 60rem;
-  margin: 10rem auto;
+  margin: 10% auto;
 }
 #wt_full-partners-list {
   list-style-type: none;
-  margin: 0 10rem;
+  margin: 0 10%;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  column-gap: 10rem;
-  row-gap: 10rem;
+  grid-gap: 10%;
 }
 .wt_two-column-face-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  margin: 0 10rem;
-  column-gap: 10rem;
-  row-gap: 10rem;
+  margin: 0 10%;
+  grid-gap: 10%;
 }
 .wt_three-column-face-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  margin: 0 10rem;
-  column-gap: 10rem;
-  row-gap: 10rem;
+  margin: 0 10%;
+  grid-gap: 10%;
 }
 .wt_names-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  margin: 0 10rem;
-  column-gap: 10rem;
-  row-gap: 10rem;
+  margin: 0 10%;
+  grid-gap: 10%;
 }
 .wt_member {
   display: flex;
@@ -323,8 +314,8 @@ section:nth-child(even) .wt_section-message {
 }
 .wt_form-banner > * {
   flex: 1;
-  margin: 10rem;
-  max-width: 50%;
+  margin: 10%;
+  max-width: 50rem;
 }
 .wt_form-banner-message h1 {
   color: #fff;
