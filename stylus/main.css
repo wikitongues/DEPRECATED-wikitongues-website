@@ -3,14 +3,14 @@ html {
 }
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 .header {
   font-size: 1.5rem;
 }
 .wt_banner-message h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 1;
 }
 .wt_alert {
@@ -59,10 +59,10 @@ h2 {
   color: #fff;
 }
 label {
-  font-size: 1.5rem;
+  font-size: $small-text-size;
 }
 label > span {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 input[type=text],
 input[type=email] {
