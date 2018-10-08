@@ -1,6 +1,8 @@
 body
     padding-top 5rem
-
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
 /*------------------------------------*\
     HEADER
@@ -295,24 +297,23 @@ section:nth-child(even) .wt_section-message
 \*------------------------------------*/
 
 .wt_form-banner
-    width 100%
+    max-width 100%
+    margin 2rem
     min-height 100vh
-    margin-top -5rem // Position banner on top
     display flex
     align-items center
 
 .wt_form-banner > *
     flex 1
-    margin 10%
-    max-width 50rem // In case there is only one child, leave half of the screen blank
+    max-width 100%
 
 .wt_form-banner-message h1
     color $text-color-light
     text-align left
     font-weight bold
 
-.wt_form-banner-message .wt_cta
-    margin: 2rem 0
+input[type=text], input[type=email], textarea
+    max-width 100%
 
 /*------------------------------------*\
     FOOTER
