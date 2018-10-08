@@ -20,9 +20,7 @@
 
 ### v0
 
-#### v0.1
-
-- [ ] Standard post types
+- [x] Standard post types
 - [x] Template structures
 - [ ] Template basic styles
 - [ ] Template graphic elements
@@ -31,13 +29,11 @@
 - [x] Integration with Medium (i.e., recent news)
 - [ ] Mobile styles
 
-#### v0.2
-
 - [ ] transifex live integration (including published translations)
 
-#### v1 - LIVE
+### v1 - LIVE
 
-- [ ] sync all contributors with community page
+- [ ] sync all contributors with community page - can we automate this?
 
 #### v1.1
 
@@ -45,6 +41,7 @@
 - [ ] progress bar for submission form
 - [ ] add pagination -- or lazy load? -- to volunteers scroll
 - [ ] automate volunteer activity tracking
+- [ ] separate donors from other members with their own unique post type
 
 
 # [HTML5 Blank]
