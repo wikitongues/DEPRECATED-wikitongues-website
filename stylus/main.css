@@ -278,6 +278,7 @@ section:nth-child(even) .wt_section-message {
 .wt_page-intro {
   max-width: 60rem;
   margin: 10% auto;
+  padding: 2rem;
 }
 #wt_full-partners-list {
   list-style-type: none;
