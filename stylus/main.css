@@ -288,12 +288,7 @@ section:nth-child(even) .wt_section-message {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 10%;
 }
-.wt_two-column-face-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  margin: 5% 10% 10% 10%;
-  grid-gap: 10%;
-}
+.wt_two-column-face-grid,
 .wt_three-column-face-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
