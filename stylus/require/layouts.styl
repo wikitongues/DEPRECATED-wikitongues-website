@@ -137,6 +137,11 @@ body.home .header a, body.page-template-template-donate .header a
 .wt_alert-message
     max-width 60rem
 
+@media only screen and (max-width: 800px)
+    .wt_alert-message > p
+        display none
+
+
 .wt_close-module
     margin-left auto
     position relative
@@ -245,6 +250,7 @@ section:nth-child(even) .wt_section-message
 .wt_page-intro
     max-width 60rem
     margin 10% auto
+    padding 2rem // Space out from browser boundaries on mobile
 
 /*------------------------------------*\
     PARTNERS LIST
@@ -265,22 +271,18 @@ section:nth-child(even) .wt_section-message
     template-community.php
 \*------------------------------------*/
 
-.wt_two-column-face-grid
-    display grid
-    grid-template-columns repeat(auto-fit, minmax(40rem, 1fr))
-    margin 0 10%
-    grid-gap 10%
+// Setting min at 40rem overflows on mobile
 
-.wt_three-column-face-grid
+.wt_two-column-face-grid, .wt_three-column-face-grid
     display grid
     grid-template-columns repeat(auto-fit, minmax(30rem, 1fr))
-    margin 0 10%
+    margin 5% 10% 10% 10%
     grid-gap 10%
 
 .wt_names-list
     display grid
     grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
-    margin 0 10%
+    margin 5% 10% 10% 10%
     grid-gap 10%
 
 .wt_member
