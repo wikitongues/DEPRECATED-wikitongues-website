@@ -311,13 +311,17 @@ section:nth-child(even) .wt_section-message {
 .wt_form-banner {
   max-width: 100%;
   margin: 2rem;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  background-color: #4799fc;
 }
 .wt_form-banner > * {
   flex: 1;
   max-width: 100%;
+}
+.wt_form-banner-message {
+  align-self: center;
 }
 .wt_form-banner-message h1 {
   color: #fff;
@@ -328,6 +332,9 @@ input[type=text],
 input[type=email],
 textarea {
   max-width: 100%;
+}
+.page-template-template-form main {
+  max-width: 50%;
 }
 .footer {
   background-color: #0d232f;

@@ -301,13 +301,17 @@ section:nth-child(even) .wt_section-message
 .wt_form-banner
     max-width 100%
     margin 2rem
-    min-height 100vh
+    max-height 100vh // The form will overflow but the background will cover the viewer height
     display flex
-    align-items center
+    align-items flex-start // To stop the form from overflowing at the top
+    background-color $highlight-color // Temporary background color to display message
 
 .wt_form-banner > *
     flex 1
     max-width 100%
+
+.wt_form-banner-message
+    align-self center // Veritcally center the message
 
 .wt_form-banner-message h1
     color $text-color-light
@@ -316,6 +320,14 @@ section:nth-child(even) .wt_section-message
 
 input[type=text], input[type=email], textarea
     max-width 100%
+
+/*------------------------------------*\
+    FORM TEMPLATE
+    template-form.php
+\*------------------------------------*/
+
+.page-template-template-form main
+    max-width 50%
 
 /*------------------------------------*\
     FOOTER
