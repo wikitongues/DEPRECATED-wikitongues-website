@@ -66,13 +66,15 @@ label > span {
   font-size: 1.5rem;
 }
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=url] {
   border: none;
   border-bottom: 1px solid LightGrey;
   margin-top: 1rem;
 }
 input[type=text]:focus,
-input[type=email]:focus {
+input[type=email]:focus,
+input[type=url]:focus {
   border-color: #11242f;
 }
 textarea {
