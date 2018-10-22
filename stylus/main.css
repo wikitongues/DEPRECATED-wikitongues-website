@@ -328,8 +328,9 @@ section:nth-child(even) .wt_section-message {
 }
 input[type=text],
 input[type=email],
+input[type=url],
 textarea {
-  max-width: 100%;
+  width: 100%;
 }
 .page-template-template-form main {
   max-width: 35%;
