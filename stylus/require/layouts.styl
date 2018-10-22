@@ -111,8 +111,10 @@ body.home .header a, body.page-template-template-donate .header a, body.page-tem
 
 .wt_banner > * , .wt_form-banner > *
     flex 1
-    margin-left 10%
-    max-width 50rem // In case there is only one child, leave half of the screen blank
+
+.wt_banner-message, .wt_form-banner-message
+    max-width 60rem
+    margin 0 10% 0 10%
 
 .wt_banner-message h1, .wt_form-banner-message h1
     color $text-color-light
@@ -299,15 +301,16 @@ section:nth-child(even) .wt_section-message
 \*------------------------------------*/
 
 /*
-** For banner layout styles refer to BANNER
+** For general banner layout styles refer to BANNER
 */
 
 .wt_form-banner-form
     align-self flex-start
     background-color $text-color-light
     padding 2rem 4rem
-    border-radius 1rem
+    border-radius 2rem 0 0 0
     margin-top 10rem // margin from nav
+    min-width 50%
 
 input[type=text], input[type=email], textarea
     max-width 100%
@@ -318,7 +321,8 @@ input[type=text], input[type=email], textarea
 \*------------------------------------*/
 
 .page-template-template-form main
-    max-width 50%
+    max-width 35%
+    margin-left 5%
 
 /*------------------------------------*\
     FOOTER
