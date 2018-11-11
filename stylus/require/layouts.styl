@@ -93,7 +93,7 @@ body
     color $text-color
 
 // White if over the banner image
-body.home .header a, body.page-template-template-donate .header a
+body.home .header a, body.page-template-template-donate .header a, body.page-template-template-form .header a
     color $text-color-light
 
 /*------------------------------------*\
@@ -102,19 +102,21 @@ body.home .header a, body.page-template-template-donate .header a
     components/form-banner.php
 \*------------------------------------*/
 
-.wt_banner
+.wt_banner, .wt_form-banner
     width 100%
     height 100vh
     margin-top -5rem // Position banner on top
     display flex
     align-items center
 
-.wt_banner > *
+.wt_banner > * , .wt_form-banner > *
     flex 1
-    margin-left 10%
-    max-width 50rem // In case there is only one child, leave half of the screen blank
 
-.wt_banner-message h1
+.wt_banner-message, .wt_form-banner-message
+    max-width 60rem
+    margin 0 10% 0 10%
+
+.wt_banner-message h1, .wt_form-banner-message h1
     color $text-color-light
     text-align left
     font-weight bold
@@ -298,24 +300,29 @@ section:nth-child(even) .wt_section-message
     components/form-banner.php
 \*------------------------------------*/
 
-.wt_form-banner
-    max-width 100%
-    margin 2rem
-    min-height 100vh
-    display flex
-    align-items center
+/*
+** For general banner layout styles refer to BANNER
+*/
 
-.wt_form-banner > *
-    flex 1
-    max-width 100%
+.wt_form-banner-form
+    align-self flex-start
+    background-color $text-color-light
+    padding 2rem 4rem
+    border-radius 2rem 0 0 0
+    margin-top 10rem // margin from nav
+    min-width 50%
 
-.wt_form-banner-message h1
-    color $text-color-light
-    text-align left
-    font-weight bold
+input[type=text], input[type=email], input[type=url], textarea
+    width 100%
 
-input[type=text], input[type=email], textarea
-    max-width 100%
+/*------------------------------------*\
+    FORM TEMPLATE
+    template-form.php
+\*------------------------------------*/
+
+.page-template-template-form main
+    max-width 35%
+    margin-left 5%
 
 /*------------------------------------*\
     FOOTER
