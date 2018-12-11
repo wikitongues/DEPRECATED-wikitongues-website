@@ -1,12 +1,16 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
+				
+				<!-- logomark -->
+				<div class="footer-logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="Logo" class="logo-img">
+					<span>Wikitongues, Inc.</span>
+				</div>
+				<!-- /logomark -->
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<!-- legal -->
+				<p class="legal">Wikitongues is a 501(3)(c) non-profit organization based in Brooklyn, NY, USA. Thanks to GreenGeeks, this website's carbon footprint is offset by wind credits.</p>
+				<!-- /legal -->
 
 			</footer>
 			<!-- /footer -->

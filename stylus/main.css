@@ -205,6 +205,11 @@ body.page-template-template-form .header a {
   background-color: #b8ffdd;
   padding: 2rem;
 }
+.wt_alert img {
+  width: 30%;
+  height: auto;
+  margin-right: 30px;
+}
 .wt_alert-message {
   max-width: 60rem;
 }
@@ -344,6 +349,11 @@ textarea {
   color: #fff;
   padding: 2rem;
   bottom: 0;
+}
+.footer .logo-img {
+  width: 50px;
+  height: auto;
+  border-radius: 100%;
 }
 .footer a {
   color: #fff;
