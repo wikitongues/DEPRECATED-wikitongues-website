@@ -345,5 +345,33 @@ input[type=text], input[type=email], input[type=url], textarea
         height auto
         border-radius 100%
 
+    .footer-navigation
+        display flex
+        width 100%
+
+        ul
+            display flex
+            list-style-type none
+            padding 0
+
+            &:last-of-type
+                margin-left auto
+
+            >li
+                margin 0 20px 0 0
+
+            .sub-menu
+                visibility visible
+
+                li
+                    margin 0
+
+                    a
+                        color $footer-offblue
+
+    .legal
+        width 60%
+        color $footer-offblue
+
 .footer a
     color $text-color-light

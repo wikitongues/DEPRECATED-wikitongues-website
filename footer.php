@@ -8,6 +8,14 @@
 				</div>
 				<!-- /logomark -->
 
+				<!-- footer menus -->
+				<div class="footer-navigation">
+					<?php main_footer_menu(); ?>
+					<?php secondary_footer_menu(); ?>
+					<!-- <div class="clear"></div> -->
+				</div>
+				<!-- /footer menus -->
+
 				<!-- legal -->
 				<p class="legal">Wikitongues is a 501(3)(c) non-profit organization based in Brooklyn, NY, USA. Thanks to GreenGeeks, this website's carbon footprint is offset by wind credits.</p>
 				<!-- /legal -->
