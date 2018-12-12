@@ -355,6 +355,34 @@ textarea {
   height: auto;
   border-radius: 100%;
 }
+.footer .footer-navigation {
+  display: flex;
+  width: 100%;
+}
+.footer .footer-navigation ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.footer .footer-navigation ul:last-of-type {
+  margin-left: auto;
+}
+.footer .footer-navigation ul >li {
+  margin: 0 20px 0 0;
+}
+.footer .footer-navigation ul .sub-menu {
+  visibility: visible;
+}
+.footer .footer-navigation ul .sub-menu li {
+  margin: 0;
+}
+.footer .footer-navigation ul .sub-menu li a {
+  color: #78858a;
+}
+.footer .legal {
+  width: 60%;
+  color: #78858a;
+}
 .footer a {
   color: #fff;
 }
