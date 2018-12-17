@@ -8,13 +8,14 @@
 
 		// slide in module
 		setTimeout(function(){
-			$('.wt_alert').addClass('slide-in');
+			// $('.wt_alert').addClass('slide-in');
+			console.log('oh hai')
 		}, 1000);
 
 		// close module function
 		function closeModule() {
 			$('.wt_close-module').on('click', function(){
-				$(this).closest('.wt_module').hide();
+				$(this).closest('.wt_module').removeClass('slide-in');
 			});
 		}
 		
