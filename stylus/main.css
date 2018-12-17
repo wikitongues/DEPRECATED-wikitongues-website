@@ -118,6 +118,10 @@ body {
   top: 0;
   display: flex;
 }
+.header.fixed {
+  position: fixed !important;
+  height: 50px;
+}
 .nav {
 /*
     * Horizontal scroll flexbox
@@ -179,6 +183,8 @@ body.page-template-template-form .header a {
   margin-top: -5rem;
   display: flex;
   align-items: center;
+  background-size: cover !important;
+  background-attachment: fixed !important;
 }
 .wt_banner > *,
 .wt_form-banner > * {
@@ -191,9 +197,11 @@ body.page-template-template-form .header a {
 }
 .wt_banner-message h1,
 .wt_form-banner-message h1 {
+  font-size: 7rem;
   color: #fff;
   text-align: left;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .wt_banner-message .wt_cta {
   margin: 2rem 0;
@@ -221,6 +229,9 @@ body.page-template-template-form .header a {
   width: auto;
   margin-right: 30px;
   border-radius: 0;
+}
+.wt_alert button:focus {
+  outline: none;
 }
 .wt_alert-message {
   max-width: 60rem;
@@ -254,15 +265,46 @@ ul.wt_featured-partners li {
   margin: 2rem;
 }
 .wt_page-section {
-  display: flex;
   margin-bottom: 5%;
 }
-.wt_page-section > * {
+.wt_page-section .wt_section-content {
+  display: flex;
+}
+.wt_page-section .wt_section-content > * {
   flex: 1;
-  padding: 2rem;
   margin: auto;
 }
-section:nth-child(even) .wt_section-message {
+.wt_page-section .wt_section-content .wt_section-message {
+  padding: 2rem;
+}
+.wt_page-section .wt_section-content .wt_section-message h1 {
+  margin: 0;
+  padding-left: 6rem;
+  text-align: left;
+}
+.wt_page-section .wt_section-content .wt_section-message p {
+  padding: 0 6rem;
+}
+.wt_page-section .wt_section-content .wt_section-message .wt_cta {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3rem;
+}
+.wt_page-section .wt_featured-items {
+  margin: 5% 0 0 0;
+}
+.wt_page-section:nth-of-type(odd) .wt_section-image img {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.wt_page-section:nth-of-type(even) .wt_section-image {
+  padding: 2rem 0 2rem 2rem;
+}
+.wt_page-section:nth-of-type(even) .wt_section-image img {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.wt_page-section:nth-of-type(even) .wt_section-message {
   order: -1;
 }
 @media only screen and (max-width: 800px) {
@@ -278,7 +320,6 @@ section:nth-child(even) .wt_section-message {
   justify-content: space-between;
   background-color: #4799fc;
   padding: 5%;
-  margin-bottom: 10%;
 }
 .wt_featured-item {
   margin: 2rem;
@@ -297,6 +338,7 @@ section:nth-child(even) .wt_section-message {
   height: 20rem;
 }
 .wt_featured-item-image {
+  background-size: cover !important;
   height: 100%;
   width: 100%;
 }
