@@ -61,7 +61,7 @@ get_header();
 			$partner_website = get_field('partner_website'); // do we want to include this?
 
 			echo '<li>'.
-				 '<a href="'.$wikitongues_url.'/partners">'.
+				 '<a href="'.$wikitongues_url.'/our_partners">'.
 				 '<img class="wt_bw-img" src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
 				 '</a></li>';
 

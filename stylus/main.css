@@ -15,7 +15,7 @@ body {
   line-height: 1;
 }
 .wt_alert {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .wt_form-banner-form h2 {
   margin-top: 4rem;
@@ -186,8 +186,8 @@ body.page-template-template-form .header a {
 }
 .wt_banner-message,
 .wt_form-banner-message {
-  max-width: 60rem;
-  margin: 0 10% 0 10%;
+  max-width: 40rem;
+  margin: 0 0 0 auto;
 }
 .wt_banner-message h1,
 .wt_form-banner-message h1 {
@@ -199,19 +199,32 @@ body.page-template-template-form .header a {
   margin: 2rem 0;
 }
 .wt_alert {
+  position: fixed;
+  bottom: -100%;
+  z-index: 999999 !important;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #b8ffdd;
-  padding: 2rem;
+  -webkit-transition: 0.33s bottom ease-in-out;
+  -o-transition: 0.33s bottom ease-in-out;
+  transition: 0.33s bottom ease-in-out;
+  width: 100%;
+  height: 150px;
+}
+.wt_alert.slide-in {
+  bottom: 0;
 }
 .wt_alert img {
-  width: 30%;
-  height: auto;
+  flex: unset;
+  height: 100%;
+  width: auto;
   margin-right: 30px;
+  border-radius: 0;
 }
 .wt_alert-message {
   max-width: 60rem;
+  padding: 1.5rem;
 }
 @media only screen and (max-width: 800px) {
   .wt_alert-message > p {
@@ -221,8 +234,8 @@ body.page-template-template-form .header a {
 .wt_close-module {
   margin-left: auto;
   position: relative;
-  top: -1rem;
-  right: -1rem;
+  top: 0rem;
+  right: 0rem;
   border: none;
   background-color: transparent;
   font-size: 3rem;
