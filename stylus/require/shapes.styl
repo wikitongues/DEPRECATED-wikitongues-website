@@ -21,3 +21,202 @@ body
 #ffc3a0
 
 */
+
+#primary_content-block-1 > .wt_section-content::after
+    content ""
+    background-color transparent
+    height 600px
+    transform translate(70%, -10%)
+    margin-right 50%
+    position absolute
+    border-right 60vw solid
+    border-right-color rgb(255,210,94)
+    z-index -1
+
+#primary_content-block-2::before
+    content ""
+    background-color transparent
+    height 1400px
+    transform translateY(-5%)
+    position absolute
+    border-right 100vw solid
+    border-right-color rgb(110,176,255)	
+    border-top 100px solid transparent  
+    z-index -1  
+
+#news_content-block-1::before
+    content ""
+    background-color transparent
+    position absolute
+    left 0
+    height 1400px
+    transform translateY(-10%)
+    border-right 100vw solid rgb(233,144,134)
+    border-top 140px solid transparent
+    z-index -1
+
+// floats around when window resized
+#news_content-block-1::after
+    content ""
+    background-color transparent
+    position absolute
+    left 0
+    height 140px
+    transform translateY(634px)
+    border-left 50vw solid transparent
+    border-right 50vw solid transparent
+    border-bottom 140px solid white
+    z-index -1
+
+.projects > .wt_page-intro::before
+    content ""
+    background-color transparent
+    position absolute
+    border-radius 250vh
+    border 250vh #6eb0ff solid 
+    top 0
+    left 50vw
+    transform translate(-50%, -87%)
+    z-index -1
+
+.projects > .wt_page-section
+    &:first-of-type::after
+        content ""
+        background-color transparent
+        position absolute
+        width 100vw
+        left 0
+        transform translateY(-200px)
+        border-bottom 10px rgb(244,244,244) dashed
+        z-index -1
+
+    &:nth-of-type(even) > .wt_section-content > .wt_section-image::before
+        content ""
+        background-color transparent
+        position absolute
+        height 600px
+        left 60vw
+        transform translateY(-10%)
+        border-left 40vw solid rgb(110,176,255)	
+        z-index -1
+
+    &:nth-of-type(odd) > .wt_section-content > .wt_section-image::before
+        content ""
+        background-color transparent
+        position absolute
+        height 600px
+        left 0
+        transform translateY(-10%)
+        border-right 40vw solid rgb(110,176,255)	
+        z-index -1
+
+.our_partners > .wt_page-intro::before
+    content ""
+    background-color transparent
+    position absolute
+    height 300px
+    left 0
+    top 0
+    border-left 100vw solid rgb(233,144,134)
+    border-bottom 75px solid transparent
+    z-index -1
+
+// Mixin for styling of all pages in "Who We Are" submenu!
+style-who-we-are(c)
+    & > .wt_page-intro::before
+        content ""
+        background-color transparent
+        position absolute
+        height 330px
+        left 0
+        top 0
+        border-right 100vw solid c
+        border-bottom 50px solid transparent
+        z-index -1	
+
+    & > .wt_three-column-face-grid:nth-of-type(4)::before
+        content ""
+        background-color transparent
+        position absolute
+        height 215px
+        transform translateY(-50%)
+        left 0
+        border-right 100vw solid c
+        border-top 100px solid transparent
+        border-bottom 100px solid transparent
+        z-index -1
+
+    & > .wt_two-column-face-grid:nth-of-type(2)::after
+        content ""
+        background-color transparent
+        position absolute
+        height 400px
+        // transform translateY(-40%)
+        left 0
+        border-right 40vw solid c
+        z-index -1
+
+    & > .wt_two-column-face-grid:nth-of-type(2) > .wt_member:first-child::after
+        content ""
+        background-color transparent
+        position absolute
+        width 100vw
+        left 0
+        transform translateY(200px)
+        border-bottom 10px rgb(244,244,244) dashed
+        z-index -1
+
+    & > .wt_names-list::before
+        content ""
+        background-color transparent
+        position absolute
+        height 400px
+        // transform translateY(-40%)
+        transform translate(150%, -50%)
+        left 0
+        border-right 40vw solid c
+        z-index -1
+
+.contributors
+    style-who-we-are rgb(134,233,195)
+
+.leadership
+    style-who-we-are rgb(134,233,195)
+
+.supporters
+    style-who-we-are rgb(255,246,143)
+
+.submit-a-video 
+    & > .wt_form-banner::before
+        content ""
+        background-color transparent
+        position absolute
+        height 1000px
+        left 0
+        top 0
+        border-left 100vw solid rgb(110,176,255)
+        border-bottom 100px solid transparent
+        z-index -1
+
+    & > .main
+        margin-top 600px
+
+        & > .wt_page-intro::before
+            content ""
+            background-color transparent
+            position absolute
+            width 100vw
+            left 0
+            transform translateY(60px)
+            border-bottom 10px rgb(244,244,244) dashed
+            z-index -1
+                
+        & > .wt_featured-item::before
+            content ""
+            background-color transparent
+            position absolute
+            height 100%
+            left 0
+            transform translateY(100px)
+            border-right 100vw solid rgb(196,207,220)
+            z-index -1
