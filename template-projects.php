@@ -26,6 +26,8 @@ if ( $featured_projects ) {
 		$section_title = get_the_title($post);
 		$section_text = get_field('project_excerpt');
 		$section_cta = get_field('project_call_to_action');
+		$section_cta_link = $section_cta['cta_link'];
+		$section_cta_text = $section_cta['cta_text'];
 		$section_identifier = 'wt_project';
 
 		// load section template
