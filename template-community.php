@@ -4,7 +4,7 @@
 
 <h1>Community Leaders</h1>
 
-<div class="wt_two-column-face-grid">
+<div class="wt_face-grid large">
 
 <?php 
 	$community_leaders = get_field('community_leaders');
@@ -40,7 +40,7 @@
 
 <h1>Volunteers</h1>
 
-<div class="wt_three-column-face-grid">
+<div class="wt_face-grid small">
 	
 <?php 
 	$featured_contributors = get_field('featured_contributors');
@@ -74,7 +74,7 @@
 
 </div><!-- /three column face grid -->
 
-<h1>Contributors</h1>
+<!-- <h1>Contributors</h1>
 
 <div class="wt_names-list">
 
@@ -110,6 +110,6 @@
 		wp_reset_postdata();
 	} ?>
 
-</div><!-- /names list -->
+</div> --><!-- /names list -->
 
 <?php get_footer(); ?>

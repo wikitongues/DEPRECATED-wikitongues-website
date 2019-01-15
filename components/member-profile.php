@@ -7,22 +7,27 @@
 	*/ ?>
 
 <div class="wt_member">
-	<div class="wt_member-photo" style="background:url('<?php echo $profile_picture['url']; ?>') center center no-repeat;"></div>
+	<?php if ( $profile_picture['url'] ): ?>
+		<div class="wt_member-photo" style="background:url('<?php echo $profile_picture['url']; ?>') center center no-repeat;"></div>
+	<?php else: ?>
+		<div class="wt_member-photo empty"></div>
+	<?php endif; ?>
 	<div class="wt_member-information">
 		<h2><?php echo $name; ?></h2>
 		<?php
-			if ( $location ) {
-				echo '<div class="wt_member-location">'.
-					 '<p class="wt_member-city">'.$location['city_and_territory'].'</p>'.
-					 '<p class="wt_member-country">'.$location['country'].'</p>'.
+			if ( $credentials ) { // not testing correctly
+				echo '<div class="wt_member-credentials">'.
+					 '<span class="wt_member-title">'.$credentials['title'].'</span>'.
+					 '<span class="wt_institution">, '.$credentials['institution_or_company'].'</span>'.
 					 '</div>';
 			}
 
-			if ( $credentials ) {
-				echo '<div class="wt_member-credentials">'.
-					 '<p class="wt_member-title">'.$credentials['title'].'</p>'.
-					 '<p class="wt_institution">'.$credentials['institution_or_company'].'</p>'.
+			if ( $location ) {
+				echo '<div class="wt_member-location">'.
+					 '<span class="wt_member-city">'.$location['city_and_territory'].', </span>'.
+					 '<span class="wt_member-country">'.$location['country'].'</span>'.
 					 '</div>';
-			} ?>
+			}
+			?>
 	</div>
 </div>

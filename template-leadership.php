@@ -4,7 +4,7 @@
 
 <h1>Governing Board</h1>
 
-<div class="wt_two-column-face-grid">
+<div class="wt_face-grid large">
 
 <?php 
 	$board_members = get_field('board_members');
@@ -34,7 +34,7 @@
 
 <h1>Advisory Council</h1>
 
-<div class="wt_two-column-face-grid">
+<div class="wt_face-grid large">
 
 <?php 
 	$advisors = get_field('advisors');
@@ -64,7 +64,7 @@
 
 <h1>Associate Board</h1>
 
-<div class="wt_three-column-face-grid">
+<div class="wt_face-grid small">
 
 <?php 
 	$associates = get_field('associates');
