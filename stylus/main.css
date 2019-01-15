@@ -374,25 +374,33 @@ ul.wt_featured-partners li img {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 10%;
 }
-.wt_two-column-face-grid,
-.wt_three-column-face-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  margin: 5% 10% 10% 10%;
-  grid-gap: 10%;
+.wt_face-grid {
+  width: 90%;
+  margin: auto;
 }
-.wt_names-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  margin: 5% 10% 10% 10%;
-  grid-gap: 10%;
+.wt_face-grid.large .wt_member {
+  width: 31%;
+  margin: 1% 0.5%;
 }
-.wt_member {
-  display: flex;
+.wt_face-grid.small .wt_member {
+  width: 23%;
+  margin: 1% 0.5%;
 }
-.wt_member > * {
-  flex: 1;
-  margin: 1rem;
+.wt_face-grid .wt_member {
+  display: inline-block;
+  vertical-align: top;
+}
+.wt_face-grid .wt_member .wt_member-photo {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover !important;
+  margin-bottom: 10px;
+}
+.wt_face-grid .wt_member .wt_member-photo.empty {
+  background-color: #eee;
+}
+.wt_face-grid .wt_member .wt_member-credentials {
+  font-weight: 600;
 }
 .wt_form-banner-form {
   align-self: flex-start;
