@@ -729,10 +729,12 @@ textarea {
   border-right: 40vw solid #fff68f;
   z-index: -1;
 }
-.submit-a-video {
+.submit-a-video,
+.volunteers {
   overflow-x: hidden;
 }
-.submit-a-video > .wt_form-banner::before {
+.submit-a-video > .wt_form-banner::before,
+.volunteers > .wt_form-banner::before {
   content: "";
   background-color: transparent;
   position: absolute;
@@ -743,11 +745,13 @@ textarea {
   border-bottom: 100px solid transparent;
   z-index: -1;
 }
-.submit-a-video > .main {
+.submit-a-video > .main,
+.volunteers > .main {
   position: relative;
   margin-top: 600px;
 }
-.submit-a-video > .main::after {
+.submit-a-video > .main::after,
+.volunteers > .main::after {
   content: "";
   background-color: #c4cfdc;
   position: absolute;
@@ -757,7 +761,8 @@ textarea {
   left: -10vw;
   z-index: -1;
 }
-.submit-a-video > .main > .wt_page-intro::before {
+.submit-a-video > .main > .wt_page-intro::before,
+.volunteers > .main > .wt_page-intro::before {
   content: "";
   background-color: transparent;
   position: absolute;
