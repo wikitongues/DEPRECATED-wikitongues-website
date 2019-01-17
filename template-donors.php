@@ -2,9 +2,9 @@
 
 <?php include( locate_template('components/page-intro.php') ); ?>
 
-<h1>Tier 1 Donors</h1>
+<h1>Our Partners</h1>
 
-<div class="wt_two-column-face-grid">
+<div class="wt_face-grid small">
 
 <?php 
 	$tier_1_donors = get_field('tier_1_donors');
@@ -38,9 +38,9 @@
 
 </div><!-- /two column face grid -->
 
-<h1>Tier 2 Donors</h1>
+<h1>Monthly Supporters</h1>
 
-<div class="wt_three-column-face-grid">
+<div class="wt_face-grid names-only">
 
 <?php 
 	$tier_2_donors = get_field('tier_2_donors');
@@ -74,7 +74,7 @@
 
 </div><!-- /three column face grid -->
 
-<h1>Tier 3 Donors</h1>
+<!-- <h1>Tier 3 Donors</h1>
 
 <div class="wt_names-list">
 
@@ -110,6 +110,6 @@
 		wp_reset_postdata();
 	} ?>
 
-</div><!-- /names list -->
+</div> --><!-- /names list -->
 
 <?php get_footer(); ?>

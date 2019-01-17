@@ -434,8 +434,6 @@ add_action('admin_init', 'remove_textarea');
 
 function remove_textarea() {
     remove_post_type_support( 'page', 'editor' );
-    //remove_post_type_support( 'members', 'editor' );
-    // remove_post_type_support( 'page', 'editor' );
 }
 
 /*------------------------------------*\
@@ -451,6 +449,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_projects'); // Add our Projects Custom Post Type
 add_action('init', 'create_post_type_partners'); // Add our Partners Custom Post Type
 add_action('init', 'create_post_type_members'); // Add our Members Custom Post Type
+add_action('init', 'create_post_type_donors'); // Add our Donors Custom Post Type
 add_action('init', 'create_post_type_videos'); // Add our Videos Custom Post Type
 add_action('init', 'create_post_type_news'); // Add our News Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
@@ -598,6 +597,45 @@ function create_post_type_members()
         'public' => true,
         'hierarchical' => true,
         'menu_icon' => 'dashicons-megaphone',
+        'has_archive' => true,
+        'supports' => array(
+            'title'
+            // 'editor',
+            // 'excerpt',
+            // 'thumbnail'
+        ),
+        'can_export' => true,
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        )
+    ));
+}
+
+// Donors
+function create_post_type_donors()
+{
+    register_taxonomy_for_object_type('category', 'donors'); 
+    register_taxonomy_for_object_type('post_tag', 'donors');
+    register_post_type('donors',
+        array(
+        'labels' => array(
+            'name' => __('Donors', 'donor'), 
+            'singular_name' => __('Donor', 'donor'),
+            'add_new' => __('Add New', 'donor'),
+            'add_new_item' => __('Add New Donor', 'donor'),
+            'edit' => __('Edit', 'donor'),
+            'edit_item' => __('Edit Donor', 'donor'),
+            'new_item' => __('New Donor', 'donor'),
+            'view' => __('View Donor', 'donor'),
+            'view_item' => __('View Donor', 'donor'),
+            'search_items' => __('Search Donors', 'donor'),
+            'not_found' => __('No Donors found', 'donor'),
+            'not_found_in_trash' => __('No Donors found in Trash', 'donor')
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'menu_icon' => 'dashicons-awards',
         'has_archive' => true,
         'supports' => array(
             'title'
