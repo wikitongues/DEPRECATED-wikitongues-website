@@ -207,12 +207,14 @@ style-who-we-are(c)
 .supporters
     style-who-we-are rgb(255,246,143)
 
-.submit-a-video 
+.submit-a-video
+    overflow-x hidden
+     
     & > .wt_form-banner::before
         content ""
         background-color transparent
         position absolute
-        height 1000px
+        height 75vh
         left 0
         top 0
         border-left 100vw solid rgb(110,176,255)
@@ -220,7 +222,18 @@ style-who-we-are(c)
         z-index -1
 
     & > .main
+        position relative
         margin-top 600px
+        
+        &::after
+            content ""
+            background-color rgb(196,207,220)
+            position absolute
+            width 110vw
+            height 50%
+            top 60%
+            left -10vw
+            z-index -1
 
         & > .wt_page-intro::before
             content ""
@@ -230,14 +243,4 @@ style-who-we-are(c)
             left 0
             transform translateY(60px)
             border-bottom 10px rgb(244,244,244) dashed
-            z-index -1
-                
-        & > .wt_featured-item::before
-            content ""
-            background-color transparent
-            position absolute
-            height 100%
-            left 0
-            transform translateY(100px)
-            border-right 100vw solid rgb(196,207,220)
             z-index -1

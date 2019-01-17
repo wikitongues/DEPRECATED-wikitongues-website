@@ -192,19 +192,23 @@ body.page-template-template-form .header a {
 }
 .wt_banner-message,
 .wt_form-banner-message {
-  max-width: 45rem;
-  margin: 0 0 0 auto;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 10rem 0 auto;
 }
 .wt_banner-message h1,
 .wt_form-banner-message h1 {
   font-size: 7rem;
   color: #fff;
-  text-align: left;
+  text-align: right;
   font-weight: bold;
   text-transform: uppercase;
 }
 .wt_banner-message .wt_cta {
-  margin: 2rem 0;
+  margin: 2rem 0 0 auto;
+}
+.wt_form-banner {
+  height: 75vh !important;
 }
 .wt_alert {
   position: fixed;
@@ -386,6 +390,15 @@ ul.wt_featured-partners li img {
   width: 23%;
   margin: 1% 0.5%;
 }
+.wt_face-grid.names-only {
+  columns: 3;
+}
+.wt_face-grid.names-only .wt_member {
+  display: block;
+}
+.wt_face-grid.names-only .wt_member .wt_member-photo {
+  display: none;
+}
 .wt_face-grid .wt_member {
   display: inline-block;
   vertical-align: top;
@@ -408,7 +421,8 @@ ul.wt_featured-partners li img {
   padding: 2rem 4rem;
   border-radius: 2rem 0 0 0;
   margin-top: 10rem;
-  min-width: 50%;
+  max-width: 55%;
+  box-sizing: border-box;
 }
 input[type=text],
 input[type=email],
@@ -418,7 +432,7 @@ textarea {
 }
 .page-template-template-form main {
   max-width: 35%;
-  margin-left: 5%;
+  margin: 0 auto 0 5% !important;
 }
 .footer {
   background-color: #0d232f;
@@ -715,11 +729,14 @@ textarea {
   border-right: 40vw solid #fff68f;
   z-index: -1;
 }
+.submit-a-video {
+  overflow-x: hidden;
+}
 .submit-a-video > .wt_form-banner::before {
   content: "";
   background-color: transparent;
   position: absolute;
-  height: 1000px;
+  height: 75vh;
   left: 0;
   top: 0;
   border-left: 100vw solid #6eb0ff;
@@ -727,7 +744,18 @@ textarea {
   z-index: -1;
 }
 .submit-a-video > .main {
+  position: relative;
   margin-top: 600px;
+}
+.submit-a-video > .main::after {
+  content: "";
+  background-color: #c4cfdc;
+  position: absolute;
+  width: 110vw;
+  height: 50%;
+  top: 60%;
+  left: -10vw;
+  z-index: -1;
 }
 .submit-a-video > .main > .wt_page-intro::before {
   content: "";
@@ -737,15 +765,5 @@ textarea {
   left: 0;
   transform: translateY(60px);
   border-bottom: 10px #f4f4f4 dashed;
-  z-index: -1;
-}
-.submit-a-video > .main > .wt_featured-item::before {
-  content: "";
-  background-color: transparent;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  transform: translateY(100px);
-  border-right: 100vw solid #c4cfdc;
   z-index: -1;
 }
