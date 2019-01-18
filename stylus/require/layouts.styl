@@ -15,8 +15,9 @@ body
 */
 
 .header
+    z-index 10
     width 100% // Using %: using the vw unit overflows on the x axis
-    position absolute
+    position fixed
     top 0
     display flex
 
@@ -97,8 +98,12 @@ body
     color $text-color
 
 // White if over the banner image
-body.home .header a, body.page-template-template-donate .header a, body.page-template-template-form .header a
-    color $text-color-light
+body
+    &.home .header a, 
+    &.page-template-template-donate .header a, 
+    &.page-template-template-form .header a,
+    &.page-template-template-volunteers a
+        color $text-color-light
 
 /*------------------------------------*\
     BANNER
@@ -107,34 +112,43 @@ body.home .header a, body.page-template-template-donate .header a, body.page-tem
 \*------------------------------------*/
 
 .wt_banner, .wt_form-banner
+    position relative
     width 100%
-    height 100vh
+    height 85vh
     margin-top -5rem // Position banner on top
     display flex
     align-items center
     background-size cover !important
     background-attachment fixed !important
 
-.wt_banner > * , .wt_form-banner > *
-    flex 1
+    &:before
+        content ""
+        background-color transparent
+        position absolute
+        height 0
+        left 0
+        bottom 0
+        border-left 100vw solid transparent
+        border-bottom 100px solid white
+        z-index 5
+
+    & > *
+        flex 1
 
 .wt_banner-message, .wt_form-banner-message
     width 90%
     max-width 500px
     margin 0 10rem 0 auto
 
-.wt_banner-message h1, .wt_form-banner-message h1
-    font-size 7rem
-    color $text-color-light
-    text-align right
-    font-weight bold
-    text-transform uppercase
+    h1
+        font-size 7rem
+        color $text-color-light
+        text-align right
+        font-weight bold
+        text-transform uppercase
 
 .wt_banner-message .wt_cta
     margin 2rem 0 0 auto
-    
-.wt_form-banner
-    height 75vh !important
 
 /*------------------------------------*\
     ALERT
@@ -185,29 +199,6 @@ body.home .header a, body.page-template-template-donate .header a, body.page-tem
     border none
     background-color transparent
     font-size 3rem
-
-/*------------------------------------*\
-    FEATURED PARTNERS
-    front-page.php
-\*------------------------------------*/
-
-ul.wt_featured-partners
-    list-style-type none
-    width 80vw
-    margin 5% auto 10%
-    padding 0
-    display flex
-    justify-content space-around
-
-ul.wt_featured-partners li
-    flex 1
-    max-width 15rem
-    margin 2rem
-    
-    img
-        border-radius 0
-        width 100%
-        height auto
 
 /*------------------------------------*\
     SECTION
@@ -375,6 +366,30 @@ ul.wt_featured-partners li
 //     flex 1
 //     margin 1rem
 
+body
+    &.page-template-template-leadership,
+    &.page-template-template-community,
+    &.page-template-template-donors
+        .wt_who-navigation
+            margin 10% auto 0
+            padding 0
+            text-align center
+            
+            li
+                display inline-block
+                margin 0 10px  
+                text-transform uppercase
+                
+                &:hover,
+                &.active
+                    border-bottom 1px solid              
+
+        .wt_page-intro
+            margin-top 0
+            
+            h1
+                margin-top 0
+
 .wt_face-grid
     width 90%
     margin auto
@@ -435,6 +450,33 @@ ul.wt_featured-partners li
 
 input[type=text], input[type=email], input[type=url], textarea
     width 100%
+
+/*------------------------------------*\
+    VOLUNTEERS PAGE
+\*------------------------------------*/
+
+body
+    &.page-template-template-volunteers
+        .wt_banner
+            height 85vh
+            
+        .main
+            position relative
+            margin-top 0
+            
+            &:before
+                content ""
+                background-color transparent
+                position absolute
+                height 0
+                left 0
+                top -100px
+                border-left 100vw solid transparent
+                border-bottom 100px solid white
+                z-index 5
+            
+            .wt_page-intro
+                margin-top 0
 
 /*------------------------------------*\
     FORM TEMPLATE

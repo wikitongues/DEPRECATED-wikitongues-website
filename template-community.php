@@ -1,5 +1,17 @@
 <?php /* Template name: Community */ get_header(); ?>
 
+<ul class="wt_who-navigation">
+	<li>
+		<a href="<?php bloginfo('url'); ?>/who/leadership">Leadership</a>
+	</li>
+	<li class="active">
+		<a href="<?php bloginfo('url'); ?>/who/contributors">Community</a>
+	</li>
+	<li>
+		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
+	</li>
+</ul>
+
 <?php include( locate_template('components/page-intro.php') ); ?>
 
 <h1>Community Leaders</h1>
@@ -22,8 +34,12 @@
 			// define content variables
 			$name = get_the_title($post);
 			$profile_picture = get_field('profile_picture');
-			$location = get_field('location');
 			$credentials = get_field('credentials');
+			$credentials_title = $credentials['title'];
+			$credentials_institution = $credentials['institution_or_company'];
+			$location = get_field('location');
+			$location_city = $location['city_and_territory'];
+			$location_country = $location['country'];
 			$bio = get_field('bio');
 
 			// load member profile template
@@ -58,8 +74,12 @@
 			// define content variables
 			$name = get_the_title($post);
 			$profile_picture = get_field('profile_picture');
-			$location = get_field('location');
 			$credentials = get_field('credentials');
+			$credentials_title = $credentials['title'];
+			$credentials_institution = $credentials['institution_or_company'];
+			$location = get_field('location');
+			$location_city = $location['city_and_territory'];
+			$location_country = $location['country'];
 			$bio = get_field('bio');
 
 			// load member profile template
