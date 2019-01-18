@@ -433,7 +433,7 @@ add_action('admin_menu', 'remove_admin_menu_items');
 add_action('admin_init', 'remove_textarea');
 
 function remove_textarea() {
-    remove_post_type_support( 'page', 'editor' );
+    // remove_post_type_support( 'page', 'editor' );
 }
 
 /*------------------------------------*\
