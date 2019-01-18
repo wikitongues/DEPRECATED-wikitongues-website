@@ -16,14 +16,31 @@ body
 
 .header
     z-index 10
-    width 100% // Using %: using the vw unit overflows on the x axis
     position fixed
-    top 0
     display flex
+    top 0
+    width 100% // Using %: using the vw unit overflows on the x axis
 
     &.fixed
         position fixed !important
         height 50px
+    
+    &.background        
+        &::before
+            content ""
+            z-index -1
+            position absolute
+            width 100vw
+            height 50px
+            background white
+
+        ul
+            li
+                a
+                   color $text-color
+            
+            &.sub-menu
+                background white
 
 .nav
     /*
@@ -78,7 +95,7 @@ body
 
 // Position nav items
 .header li
-    margin 1rem
+    margin 1.18rem 1rem 1rem 1rem
     font-weight bold
 
 // Dropdown nav
@@ -96,6 +113,11 @@ body
 
 .header a
     color $text-color
+    -webkit-transition color .2s ease-in-out;
+    -moz-transition color .2s ease-in-out;
+    -ms-transition color .2s ease-in-out;
+    -o-transition color .2s ease-in-out;
+    transition color .2s ease-in-out;
 
 // White if over the banner image
 body
