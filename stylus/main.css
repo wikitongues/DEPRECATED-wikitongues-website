@@ -523,6 +523,137 @@ body.page-template-template-volunteers .main .wt_page-intro {
 .footer a {
   color: #fff;
 }
+body.home ul.wt_featured-partners {
+  list-style-type: none;
+  width: 80vw;
+  margin: 2.5% auto 10%;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+body.home ul.wt_featured-partners li {
+  flex: 1;
+  max-width: 15rem;
+  margin: 2rem;
+}
+body.home ul.wt_featured-partners li img {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+}
+body.page-template-template-leadership .wt_who-navigation,
+body.page-template-template-community .wt_who-navigation,
+body.page-template-template-donors .wt_who-navigation {
+  margin: 10% auto 0;
+  padding: 0;
+  text-align: center;
+}
+body.page-template-template-leadership .wt_who-navigation li,
+body.page-template-template-community .wt_who-navigation li,
+body.page-template-template-donors .wt_who-navigation li {
+  display: inline-block;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+body.page-template-template-leadership .wt_who-navigation li:hover,
+body.page-template-template-community .wt_who-navigation li:hover,
+body.page-template-template-donors .wt_who-navigation li:hover,
+body.page-template-template-leadership .wt_who-navigation li.active,
+body.page-template-template-community .wt_who-navigation li.active,
+body.page-template-template-donors .wt_who-navigation li.active {
+  border-bottom: 1px solid;
+}
+body.page-template-template-leadership .wt_page-intro,
+body.page-template-template-community .wt_page-intro,
+body.page-template-template-donors .wt_page-intro {
+  margin-top: 0;
+}
+body.page-template-template-leadership .wt_page-intro h1,
+body.page-template-template-community .wt_page-intro h1,
+body.page-template-template-donors .wt_page-intro h1 {
+  margin-top: 0;
+}
+.wt_face-grid {
+  width: 90%;
+  margin: auto;
+}
+.wt_face-grid.large .wt_member {
+  width: 31%;
+  margin: 1% 0.5%;
+}
+.wt_face-grid.small .wt_member {
+  width: 23%;
+  margin: 1% 0.5%;
+}
+.wt_face-grid.names-only {
+  columns: 3;
+}
+.wt_face-grid.names-only .wt_member {
+  display: block;
+}
+.wt_face-grid.names-only .wt_member .wt_member-photo {
+  display: none;
+}
+.wt_face-grid .wt_member {
+  display: inline-block;
+  vertical-align: top;
+}
+.wt_face-grid .wt_member .wt_member-photo {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover !important;
+  margin-bottom: 10px;
+}
+.wt_face-grid .wt_member .wt_member-photo.empty {
+  background-color: #eee;
+}
+.wt_face-grid .wt_member .wt_member-credentials {
+  font-weight: 600;
+}
+#wt_full-partners-list {
+  list-style-type: none;
+  margin: 0 10%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 10%;
+}
+.wt_form-banner-form {
+  align-self: flex-start;
+  background-color: #fff;
+  padding: 2rem 4rem;
+  border-radius: 2rem 0 0 0;
+  margin-top: 10rem;
+  max-width: 55%;
+  box-sizing: border-box;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+textarea {
+  width: 100%;
+}
+body.page-template-template-volunteers .wt_banner {
+  height: 85vh;
+}
+body.page-template-template-volunteers .main {
+  position: relative;
+  margin-top: 0;
+}
+body.page-template-template-volunteers .main:before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  height: 0;
+  left: 0;
+  top: -100px;
+  border-left: 100vw solid transparent;
+  border-bottom: 100px solid #fff;
+  z-index: 5;
+}
+body.page-template-template-volunteers .main .wt_page-intro {
+  margin-top: 0;
+}
 #primary_content-block-1 > .wt_section-content::after {
   content: "";
   background-color: transparent;

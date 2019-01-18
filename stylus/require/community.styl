@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    WHO WE ARE
+    template-leadership.php
+    template-community.php
+\*------------------------------------*/
+
+// Setting min at 40rem overflows on mobile
+
+// .wt_two-column-face-grid, .wt_three-column-face-grid
+//     display grid
+//     grid-template-columns repeat(auto-fit, minmax(30rem, 1fr))
+//     margin 5% 10% 10% 10%
+//     grid-gap 10%
+
+// .wt_names-list
+//     display grid
+//     grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
+//     margin 5% 10% 10% 10%
+//     grid-gap 10%
+
+// .wt_member
+//     display flex
+
+// .wt_member > *
+//     flex 1
+//     margin 1rem
+
+body
+    &.page-template-template-leadership,
+    &.page-template-template-community,
+    &.page-template-template-donors
+        .wt_who-navigation
+            margin 10% auto 0
+            padding 0
+            text-align center
+            
+            li
+                display inline-block
+                margin 0 10px  
+                text-transform uppercase
+                
+                &:hover,
+                &.active
+                    border-bottom 1px solid              
+
+        .wt_page-intro
+            margin-top 0
+            
+            h1
+                margin-top 0
+
+.wt_face-grid
+    width 90%
+    margin auto
+    
+    &.large
+        .wt_member
+            width 31%
+            margin 1% .5%
+    
+    &.small
+        .wt_member
+            width 23%
+            margin 1% .5%
+    
+    &.names-only
+        columns 3
+        
+        .wt_member
+            display block
+            
+            .wt_member-photo
+                display none
+    
+    .wt_member
+        display inline-block
+        vertical-align top
+        
+        .wt_member-photo
+            width 100%
+            padding-bottom 100%
+            background-size cover !important
+            margin-bottom 10px
+            
+            &.empty
+                background-color #eee // if no photo
+        
+        .wt_member-credentials
+            font-weight 600
