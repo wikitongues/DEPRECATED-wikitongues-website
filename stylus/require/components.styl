@@ -1,5 +1,5 @@
 body
-    padding-top 5rem
+    // padding-top 5rem
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -87,22 +87,29 @@ body
     Each of the two nav is a flexbox, each link is a flex item
 */
 
-.header ul
-    list-style-type none
-    margin 0
-    padding 0
-    display flex
+.header
+    ul
+        list-style-type none
+        margin 0
+        padding 0
+        display flex
 
-// Position nav items
-.header li
-    margin 1.18rem 1rem 1rem 1rem
-    font-weight bold
+        // Position nav items
+        li
+            margin 1.18rem 1rem 1rem 1rem
+            font-weight bold
+            text-transform uppercase
+            letter-spacing 0.1rem
+            text-align center
 
 // Dropdown nav
 .sub-menu
     flex-direction column
     visibility hidden
     line-height 0.8
+    
+    li
+        font-size 1.25rem
 
 .menu-item-has-children:hover .sub-menu
     visibility visible
@@ -128,15 +135,18 @@ body
         color $text-color-light
 
 /*------------------------------------*\
-    BANNER
+    BANNERS
     components/banner.php
     components/form-banner.php
+    components/donate-banner.php
 \*------------------------------------*/
+
+/* Banner and Form Banner */
 
 .wt_banner, .wt_form-banner
     position relative
     width 100%
-    height 85vh
+    height 90vh
     margin-top -5rem // Position banner on top
     display flex
     align-items center
@@ -172,6 +182,31 @@ body
 
 .wt_banner-message .wt_cta
     margin 2rem 0 0 auto
+
+/* donate banner */
+
+.wt_donate-banner
+    position relative
+    width 100%
+    height 90vh
+    margin-top -5rem // Position banner on top
+    // align-items center
+    background-size cover !important
+    background-attachment fixed !important
+    
+    .wt_donate-banner-content
+        position absolute;
+        top 50%;
+        right 5rem;
+        -webkit-transform translateY(-50%)
+        -ms-transform translateY(-50%)
+        -o-transform translateY(-50%)
+        transform translateY(-50%)
+        background #fff;
+        width 423px
+        padding 0 3rem
+        border-radius 3px;
+        text-align center;
 
 /*------------------------------------*\
     ALERT
@@ -249,14 +284,20 @@ body
             h1
                 margin 0 auto 2rem
                 text-align left
+                font-size 5rem
+                letter-spacing 0.2rem
+                line-height 6rem
+                text-transform uppercase
 
             p
                 margin auto
 
             .wt_cta
-                width 100%
+                width 90%
                 box-sizing border-box
                 margin-top 3rem
+                text-transform uppercase
+                letter-spacing .1rem
 
     .wt_featured-items
         max-width 1460px
@@ -285,14 +326,43 @@ body
         .wt_section-message
             order -1
 
-// Single column and remove image/message switch on smaller screens
-@media only screen and (max-width: 800px)
+// typography reduction on laptop screens
+@media only screen and (max-width: 1280px)
     .wt_page-section
-        flex-direction column
-    
-    section:nth-child(even) .wt_section-message
-        order 1
+        .wt_section-content
+            .wt_section-message
+                h1
+                    margin-bottom 1rem
+                    font-size 3rem
+                    line-height 4rem
+                
+                .wt_cta
+                    margin-top 2rem
+                    padding 2rem
+            
+        .wt_featured-items
+            font-size 1.25rem
 
+// Single column and remove image/message switch on smaller screens
+@media only screen and (max-width: 979px)    
+    .wt_page-section
+        .wt_section-content
+            flex-direction column
+            
+            .wt_section-message
+                &:nth-of-type(even)
+                    order 1
+                                        
+                &:nth-of-type(odd)
+                    order -1
+            
+            .wt_section-image
+                padding 0
+                
+                img
+                    width 100%
+                    border-radius 0 !important
+                    
 /*------------------------------------*\
     FEATURED ITEMS
     components/featured-item.php
@@ -355,6 +425,7 @@ body
 \*------------------------------------*/
 
 .footer
+    margin-top 150px
     background-color $dark-background
     color $text-color-light
     padding 2rem

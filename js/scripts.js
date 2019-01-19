@@ -21,7 +21,7 @@
 
 		// nav color change on scroll
 		function navColorChange() {
-			var $banner = $('.wt_banner, .wt_form-banner'),
+			var $banner = $('.banner-element'),
 				$bannerOffset = $banner.position().top + $banner.outerHeight(true);
 
 			$(window).scroll(function(){

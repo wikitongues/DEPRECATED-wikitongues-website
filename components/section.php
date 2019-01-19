@@ -8,7 +8,7 @@
 	$section_identifier
 	*/ ?>
 
-<section class="wt_page-section" id="<?php echo $section_identifier; ?>_content-block-<?php echo $i; ?>">
+<section class="wt_page-section <?php echo $section_identifier; ?>_content-block" id="<?php echo $section_identifier; ?>_content-block-<?php echo $i; ?>">
 	<div class="wt_section-content">
 		<aside class="wt_section-image">
 		<?php 

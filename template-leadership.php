@@ -1,5 +1,7 @@
 <?php /* Template name: Leadership */ get_header(); ?>
 
+<?php include( locate_template('components/page-intro.php') ); ?>
+
 <ul class="wt_who-navigation">
 	<li class="active">
 		<a href="<?php bloginfo('url'); ?>/who/leadership">Leadership</a>
@@ -11,8 +13,6 @@
 		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
 	</li>
 </ul>
-
-<?php include( locate_template('components/page-intro.php') ); ?>
 
 <h1>Governing Board</h1>
 
