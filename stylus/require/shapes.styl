@@ -244,3 +244,17 @@ style-who-we-are(c)
             transform translateY(60px)
             border-bottom 10px rgb(244,244,244) dashed
             z-index -1
+
+.footer
+    position relative
+    
+    &:before
+        content ""
+        background-color transparent
+        position absolute
+        height 0
+        left 0
+        top -100px
+        border-right 100vw solid transparent
+        border-bottom 100px solid #0d232f
+        z-index 5

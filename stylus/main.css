@@ -6,6 +6,9 @@ body {
   font-size: 1.5rem;
   line-height: 1.5;
 }
+h1 {
+  font-size: 6rem;
+}
 .header {
   font-size: 1.5rem;
 }
@@ -19,6 +22,11 @@ body {
 }
 .wt_form-banner-form h2 {
   margin-top: 4rem;
+}
+@media all and (max-width: 979px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 img {
   max-width: 100%;
@@ -50,7 +58,7 @@ h2 {
 .wt_cta {
   display: block;
   width: 50%;
-  margin: 2rem auto;
+  margin: 2rem auto 2rem 0;
   text-align: center;
   padding: 3rem;
   font-size: 2rem;
@@ -58,6 +66,8 @@ h2 {
   background-color: #4799fc;
   border-radius: 1rem;
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 .wt_cta:hover {
   color: #fff;
@@ -107,7 +117,6 @@ input[type=reset]:hover {
   border-color: #11242f;
 }
 body {
-  padding-top: 5rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -171,14 +180,20 @@ body {
   padding: 0;
   display: flex;
 }
-.header li {
+.header ul li {
   margin: 1.18rem 1rem 1rem 1rem;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
 }
 .sub-menu {
   flex-direction: column;
   visibility: hidden;
   line-height: 0.8;
+}
+.sub-menu li {
+  font-size: 1.25rem;
 }
 .menu-item-has-children:hover .sub-menu {
   visibility: visible;
@@ -201,7 +216,7 @@ body.page-template-template-volunteers a {
 .wt_form-banner {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   margin-top: -5rem;
   display: flex;
   align-items: center;
@@ -240,6 +255,28 @@ body.page-template-template-volunteers a {
 }
 .wt_banner-message .wt_cta {
   margin: 2rem 0 0 auto;
+}
+.wt_donate-banner {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin-top: -5rem;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+.wt_donate-banner .wt_donate-banner-content {
+  position: absolute;
+  top: 50%;
+  right: 5rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #fff;
+  width: 423px;
+  padding: 0 3rem;
+  border-radius: 3px;
+  text-align: center;
 }
 .wt_alert {
   position: fixed;
@@ -307,14 +344,20 @@ body.page-template-template-volunteers a {
 .wt_page-section .wt_section-content .wt_section-message h1 {
   margin: 0 auto 2rem;
   text-align: left;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  line-height: 6rem;
+  text-transform: uppercase;
 }
 .wt_page-section .wt_section-content .wt_section-message p {
   margin: auto;
 }
 .wt_page-section .wt_section-content .wt_section-message .wt_cta {
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 .wt_page-section .wt_featured-items {
   max-width: 1460px;
@@ -338,12 +381,36 @@ body.page-template-template-volunteers a {
 .wt_page-section:nth-of-type(even) .wt_section-message {
   order: -1;
 }
-@media only screen and (max-width: 800px) {
-  .wt_page-section {
+@media only screen and (max-width: 1280px) {
+  .wt_page-section .wt_section-content .wt_section-message h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .wt_page-section .wt_section-content .wt_section-message .wt_cta {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  .wt_page-section .wt_featured-items {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 979px) {
+  .wt_page-section .wt_section-content {
     flex-direction: column;
   }
-  section:nth-child(even) .wt_section-message {
+  .wt_page-section .wt_section-content .wt_section-message:nth-of-type(even) {
     order: 1;
+  }
+  .wt_page-section .wt_section-content .wt_section-message:nth-of-type(odd) {
+    order: -1;
+  }
+  .wt_page-section .wt_section-content .wt_section-image {
+    padding: 0;
+  }
+  .wt_page-section .wt_section-content .wt_section-image img {
+    width: 100%;
+    border-radius: 0 !important;
   }
 }
 .wt_featured-items {
@@ -384,6 +451,7 @@ body.page-template-template-volunteers a {
   padding: 2rem;
 }
 .footer {
+  margin-top: 150px;
   background-color: #0d232f;
   color: #fff;
   padding: 2rem;
@@ -443,10 +511,26 @@ body.home ul.wt_featured-partners li img {
   width: 100%;
   height: auto;
 }
+body.home .wt_page-section {
+  font-size: 1.75rem;
+}
+body.home .wt_page-section.primary_content-block {
+  color: #fff;
+}
+body.home .wt_page-section .wt_featured-items {
+  color: #11242f !important;
+}
+body.home #wt_blog-title {
+  margin-bottom: 0;
+}
+body.home #wt_blog-title+p {
+  margin: 0;
+  text-align: center;
+}
 body.page-template-template-leadership .wt_who-navigation,
 body.page-template-template-contributors .wt_who-navigation,
 body.page-template-template-donors .wt_who-navigation {
-  margin: 10% auto 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 }
@@ -468,7 +552,7 @@ body.page-template-template-donors .wt_who-navigation li.active {
 body.page-template-template-leadership .wt_page-intro,
 body.page-template-template-contributors .wt_page-intro,
 body.page-template-template-donors .wt_page-intro {
-  margin-top: 0;
+  margin-bottom: 2%;
 }
 body.page-template-template-leadership .wt_page-intro h1,
 body.page-template-template-contributors .wt_page-intro h1,
@@ -512,6 +596,23 @@ body.page-template-template-donors .wt_page-intro h1 {
 .wt_face-grid .wt_member .wt_member-credentials {
   font-weight: 600;
 }
+@media only screen and (max-width: 979px) {
+  .wt_face-grid {
+    font-size: 1rem !important;
+  }
+  .wt_face-grid.large .wt_member,
+  .wt_face-grid.small .wt_member {
+    width: 48% !important;
+    margin: 1.5% 0.5% !important;
+  }
+  .wt_face-grid.names-only .wt_member {
+    margin-bottom: 15px;
+  }
+}
+body.page-template-template-projects .wt_form-banner:before {
+  border-left: initial;
+  border-bottom: initial;
+}
 #wt_full-partners-list {
   list-style-type: none;
   margin: 0 10%;
@@ -520,23 +621,30 @@ body.page-template-template-donors .wt_page-intro h1 {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 10%;
 }
-.wt_form-banner-form {
+body.page-template-template-form .wt_form-banner-form {
   align-self: flex-start;
   background-color: #fff;
   padding: 2rem 4rem;
   border-radius: 2rem 0 0 0;
-  margin-top: 10rem;
+  margin-top: 20rem;
   max-width: 55%;
   box-sizing: border-box;
 }
-input[type=text],
-input[type=email],
-input[type=url],
-textarea {
+body.page-template-template-form input[type=text],
+body.page-template-template-form input[type=email],
+body.page-template-template-form input[type=url],
+body.page-template-template-form textarea {
   width: 100%;
 }
-body.page-template-template-volunteers .wt_banner {
-  height: 85vh;
+body.page-template-template-form .main {
+  width: 45%;
+  box-sizing: border-box;
+  margin: 0 0 1500px 0;
+}
+body.page-template-template-donate .wt_form-banner:before {
+  border-right: initial;
+  border-left: initial;
+  border-bottom: initial;
 }
 body.page-template-template-volunteers .main {
   position: relative;
@@ -851,4 +959,18 @@ body.page-template-template-volunteers .main .wt_page-intro {
   transform: translateY(60px);
   border-bottom: 10px #f4f4f4 dashed;
   z-index: -1;
+}
+.footer {
+  position: relative;
+}
+.footer:before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  height: 0;
+  left: 0;
+  top: -100px;
+  border-right: 100vw solid transparent;
+  border-bottom: 100px solid #0d232f;
+  z-index: 5;
 }

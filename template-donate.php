@@ -6,7 +6,7 @@ $banner_text = get_field('banner_text');
 $banner_form_embed = get_field('banner_form_embed');
 
 // load banner template
-include( locate_template('components/form-banner.php') );
+include( locate_template('components/donate-banner.php') );
 
 // loop through page sections
 if ( have_rows( 'page_sections' ) ) {

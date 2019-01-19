@@ -1,18 +1,18 @@
 <?php /* Template name: Donors */ get_header(); ?>
 
+<?php include( locate_template('components/page-intro.php') ); ?>
+
 <ul class="wt_who-navigation">
 	<li>
 		<a href="<?php bloginfo('url'); ?>/who/leadership">Leadership</a>
 	</li>
 	<li>
-		<a href="<?php bloginfo('url'); ?>/who/contributors">Community</a>
+		<a href="<?php bloginfo('url'); ?>/who/contributors">Contributors</a>
 	</li>
 	<li class="active">
 		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
 	</li>
 </ul>
-
-<?php include( locate_template('components/page-intro.php') ); ?>
 
 <h1>Our Partners</h1>
 
