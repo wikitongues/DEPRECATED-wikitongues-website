@@ -1,6 +1,7 @@
 <?php
 /* The following variables may be defined for this template:
 	$section_image (required)
+	$section_image_caption
 	$section_title
 	$section_text
 	$section_cta_link
@@ -14,6 +15,10 @@
 		<?php 
 			if ( $section_image ) {
 				echo '<img src="' . $section_image['url'] . '" alt="' . $section_image['alt'] . '">';
+
+				if ( $section_image_caption ) {
+					echo '<p class="wt_section-image-caption">' . $section_image_caption . '</p>';
+				}
 			} ?>
 		</aside>
 		<aside class="wt_section-message">

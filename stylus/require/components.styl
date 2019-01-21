@@ -208,6 +208,14 @@ body
         border-radius 3px;
         text-align center;
 
+.wt_banner,
+.wt_donate-banner
+    .wt_banner-image-caption
+        position absolute
+        color $text-color-light
+        font-weight 700
+        letter-spacing 0.1em
+
 /*------------------------------------*\
     ALERT
     components/alert.php
@@ -312,6 +320,9 @@ body
                 height auto
                 border-top-left-radius 0
                 border-bottom-left-radius 0
+                
+            .wt_section-image-caption
+                margin 0 0 0 10px
 
     &:nth-of-type(even)
         .wt_section-image
@@ -322,6 +333,10 @@ body
                 height auto
                 border-top-right-radius 0
                 border-bottom-right-radius 0
+            
+            .wt_section-image-caption
+                margin 0 10px 0 0
+                text-align right
 
         .wt_section-message
             order -1
