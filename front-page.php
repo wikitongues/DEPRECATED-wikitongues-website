@@ -8,6 +8,7 @@ get_header();
 
 	// define page banner variables
 	$banner_image = get_field('banner_image');
+	$banner_image_caption = get_field('banner_image_caption');
 	$banner_text = get_field('banner_text');
 	$banner_cta_link = get_field('banner_cta_link');
 	$banner_cta_text = get_field('banner_cta_text');
@@ -82,6 +83,7 @@ get_header();
 
 			// define page section variables
 			$section_image = get_sub_field('section_image');
+			$section_image_caption = get_sub_field('section_image_caption');
 			$section_title = get_sub_field('section_title');
 			$section_text = get_sub_field('section_text');
 			$section_cta = get_sub_field('section_cta'); 

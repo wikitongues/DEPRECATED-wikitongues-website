@@ -1,6 +1,7 @@
 <?php 
 /* The following variables may be defined for this template:
 	$banner_image;
+	$banner_image_caption;
 	$banner_text;
 	$banner_form_embed;
 	$banner_form_shortcode;
@@ -25,4 +26,10 @@
 
 		} ?>
 	</aside>
+	<p class="wt_banner-image-caption">
+	<?php
+		if ( $banner_image_caption ) {
+			echo $banner_image_caption;
+		} ?>
+	</p>
 </div>

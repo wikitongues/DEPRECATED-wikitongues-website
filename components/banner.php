@@ -1,6 +1,7 @@
 <?php
 /* The following variables may be defined for this template:
 	$banner_image (required)
+	$banner_image_caption
 	$banner_text
 	$banner_cta_link
 	$banner_cta_text
@@ -17,4 +18,10 @@
 			echo '<a class="wt_cta" href="' . $banner_cta_link . '">' . $banner_cta_text . '</a>'; 
 		} ?>
 	</aside>
+	<p class="wt_banner-image-caption">
+	<?php
+		if ( $banner_image_caption ) {
+			echo $banner_image_caption;
+		} ?>
+	</p>
 </div>
