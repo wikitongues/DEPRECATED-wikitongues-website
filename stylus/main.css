@@ -25,6 +25,9 @@ h1 {
     font-size: 3rem;
   }
 }
+.clear {
+  clear: both;
+}
 img {
   max-width: 100%;
   border-radius: 1rem;
@@ -654,12 +657,12 @@ body.page-template-template-form .wt_form-banner-message h1 {
   text-align: left;
 }
 body.page-template-template-form .wt_form-banner-form {
-  align-self: flex-start;
+  float: right;
   background-color: #fff;
   padding: 2rem 4rem 4rem;
   border-radius: 2rem 0 0 2rem;
-  margin-top: 20rem;
-  max-width: 55%;
+  margin-top: -60rem;
+  width: 50%;
   box-sizing: border-box;
 }
 body.page-template-template-form .wt_form-banner-form>h1 {
@@ -719,7 +722,8 @@ body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_form-
   width: 50%;
 }
 body.page-template-template-form .main {
-  width: 45%;
+  float: left;
+  width: 50%;
   box-sizing: border-box;
   margin: 0 0 0 0;
 }
@@ -729,6 +733,31 @@ body.page-template-template-form .main .wt_page-intro {
 body.page-template-template-form .main .wt_featured-item {
   max-width: 500px;
   margin: 2rem auto;
+}
+@media all and (max-width: 970px) {
+  body.page-template-template-form .wt_form-banner .wt_form-banner-message {
+    margin: 0 auto;
+  }
+  body.page-template-template-form .wt_form-banner .wt_form-banner-message h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  body.page-template-template-form .wt_form-banner-form,
+  body.page-template-template-form .main {
+    width: 100%;
+    float: none;
+  }
+  body.page-template-template-form .wt_form-banner-form {
+    margin-top: 0;
+  }
+  body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_form-description {
+    width: 100%;
+    position: relative;
+  }
+  body.page-template-template-form .wt_form-banner-form .wt_form-section h2,
+  body.page-template-template-form .wt_form-banner-form .wt_form-section p {
+    width: 100%;
+  }
 }
 body.page-template-template-donate .wt_form-banner:before {
   border-right: initial;
