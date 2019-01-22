@@ -16,7 +16,9 @@
 
 		} ?>
 	</aside>
-	<aside class="wt_form-banner-form">
+</div>
+
+<div class="wt_form-banner-form">
 	<?php
 		if ( $banner_form_header ) {
 			echo '<h1>' . $banner_form_header . '</h1>';
@@ -31,5 +33,4 @@
 			echo do_shortcode( $banner_form_shortcode );
 
 		} ?>
-	</aside>
 </div>

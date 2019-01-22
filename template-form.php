@@ -7,7 +7,7 @@ $banner_form_header = get_field('banner_form_header');
 $banner_form_shortcode = get_field('banner_form_shortcode');
 
 // load banner template
-include( locate_template('components/form-banner.php') );
+include( locate_template('components/form-header.php') );
 
 echo '<main class="main">';
 
@@ -36,6 +36,6 @@ if ( have_rows('featured_resources') ) {
 	}
 }
 
-echo '</main>';
+echo '</main><div class="clear"></div>';
 
 get_footer();

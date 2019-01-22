@@ -16,14 +16,13 @@ body
                 h1
                     text-align left
                     
-        // the height of this element doesn't work well
         .wt_form-banner-form
-            align-self flex-start
+            float right
             background-color $text-color-light
             padding 2rem 4rem 4rem
             border-radius 2rem 0 0 2rem
-            margin-top 20rem // margin from nav
-            max-width 55%
+            margin-top -60rem // margin from nav
+            width 50%
             box-sizing border-box
             
             &>h1
@@ -83,7 +82,8 @@ body
                     width 50%
             
         .main
-            width 45%
+            float left
+            width 50%
             box-sizing border-box
             margin 0 0 0 0
             
@@ -93,3 +93,31 @@ body
             .wt_featured-item
                 max-width 500px
                 margin 2rem auto
+
+@media all and (max-width:970px)
+    body
+        &.page-template-template-form
+            .wt_form-banner
+                .wt_form-banner-message
+                    margin 0 auto
+                    
+                    h1
+                        font-size 5rem
+                        text-align center
+                        
+            .wt_form-banner-form,
+            .main
+                width 100%
+                float none
+            
+            .wt_form-banner-form
+                margin-top 0
+                
+                .wt_form-section
+                    .wt_form-description
+                        width 100%
+                        position relative
+                    
+                    h2,
+                    p
+                        width 100%
