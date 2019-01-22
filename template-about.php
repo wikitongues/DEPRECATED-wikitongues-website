@@ -1,5 +1,14 @@
 <?php /* Template name: About */ get_header(); ?>
 
+<?php
+// define page banner variables
+$banner_image = get_field('banner_image');
+$banner_text = get_field('banner_text');
+$banner_cta_link = get_field('banner_cta_link');
+$banner_cta_text = get_field('banner_cta_text'); ?>
+
+<?php include( locate_template('components/banner.php') ); ?>
+
 	<main role="main">
 		<!-- section -->
 		<section>
@@ -12,12 +21,6 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<?php the_content(); ?>
-
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
 
 			</article>
 			<!-- /article -->
