@@ -21,11 +21,8 @@
 
 		// nav color change on scroll
 		function navColorChange() {
-			var $banner = $('.banner-element'),
-				$bannerOffset = $banner.position().top + $banner.outerHeight(true);
-
 			$(window).scroll(function(){
-				if ( $(window).scrollTop() > $bannerOffset ) { 
+				if ( $(window).scrollTop() > 0 ) { 
 					$('.header').addClass('background');
 				} else {
 					$('.header').removeClass('background');
