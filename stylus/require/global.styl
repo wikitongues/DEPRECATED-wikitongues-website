@@ -22,9 +22,12 @@ img.wt_bw-img:hover
 a
     text-decoration none
     color $text-color
+    display inline-block
+    width 100%
+    box-sizing border-box
 
-a:hover
-    color $highlight-color
+// a:hover
+//     color $highlight-color
 
 h1
     text-align center
@@ -39,7 +42,8 @@ h2
 
 .wt_cta
     display block
-    width 50%
+    width 60%
+    white-space nowrap
     margin 2rem auto 2rem 0
     text-align center
     padding 3rem
@@ -51,8 +55,8 @@ h2
     text-transform uppercase
     letter-spacing 0.1rem
 
-.wt_cta:hover
-    color $text-color-light
+    &:hover
+        color $text-color-light
 
 /*
     Forms

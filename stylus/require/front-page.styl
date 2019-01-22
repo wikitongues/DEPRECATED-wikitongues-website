@@ -13,7 +13,7 @@ body
         ul.wt_featured-partners
             list-style-type none
             width 80vw
-            margin 2.5% auto 10%
+            margin 0 auto 8%
             padding 0
             display flex
             justify-content space-around
@@ -22,28 +22,68 @@ body
                 flex 1
                 max-width 15rem
                 margin 2rem
-                
+
                 img
                     border-radius 0
                     width 100%
                     height auto
-        
+
         .wt_page-section
             font-size 1.75rem
-            
+
             &.primary_content-block
                 color $text-color-light
-            
-            &#primary_content-block-1
-                .wt_section-image-caption
-                    color $text-color
-            
+
+            &#primary_content-block-2
+                margin-bottom 0
+
+                .wt_section-content
+                    .wt_section-message
+                        .wt_cta
+                            background-color $text-color-light
+                            color $highlight-color
+
+                            &:hover
+                                color $highlight-color
+
+            &#primary_content-block-3
+                margin-bottom 0
+
             .wt_featured-items
                 color $text-color !important
-        
+                margin-top 0
+                padding-top 0
+
+                .wt_featured-item
+                    width (100/3)%
+
+            &.news_content-block
+                margin-bottom 1rem
+
+                .wt_section-message
+                    max-width 550px
+                    box-sizing border-box
+
+                    h1
+                        text-transform unset
+                        font-size 3rem
+                        line-height initial
+
+                    .wt_cta
+                        width initial
+                        float left
+                        background transparent
+                        padding 0
+                        color black
+                        margin-top 2rem
+                        font-weight 400
+
+
         #wt_blog-title
-            margin-bottom 0
-            
+            margin 0
+            color white
+            text-transform uppercase
+
             &+p
                 margin 0
                 text-align center
