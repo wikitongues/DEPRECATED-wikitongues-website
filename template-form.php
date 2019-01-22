@@ -36,6 +36,7 @@ if ( have_rows('featured_resources') ) {
 	}
 }
 
-echo '</main><div class="clear"></div>';
+echo '</main>' .
+	 '<div class="clear"></div>'; // clears floats for main and form
 
 get_footer();
