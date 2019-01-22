@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 get_header();
 
@@ -12,7 +12,7 @@ get_header();
 	$banner_text = get_field('banner_text');
 	$banner_cta_link = get_field('banner_cta_link');
 	$banner_cta_text = get_field('banner_cta_text');
-	
+
 	// load page banner template
 	include( locate_template('components/banner.php') );
 
@@ -21,7 +21,7 @@ get_header();
 	\* ======================= */
 
 	$args = array(
-		'post_type' => 'videos', 
+		'post_type' => 'videos',
 		'posts_per_page' => 1
 	);
 	$video_posts = new WP_Query( $args );
@@ -63,7 +63,7 @@ get_header();
 
 			echo '<li>'.
 				 '<a href="'.$wikitongues_url.'/our_partners">'.
-				 '<img class="wt_bw-img" src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
+				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
 				 '</a></li>';
 
 		endforeach; wp_reset_postdata();
@@ -86,7 +86,7 @@ get_header();
 			$section_image_caption = get_sub_field('section_image_caption');
 			$section_title = get_sub_field('section_title');
 			$section_text = get_sub_field('section_text');
-			$section_cta = get_sub_field('section_cta'); 
+			$section_cta = get_sub_field('section_cta');
 			$section_cta_link = $section_cta['cta_link'];
 			$section_cta_text = $section_cta['cta_text'];
 			$featured_items = get_sub_field('featured_items');
@@ -107,11 +107,10 @@ get_header();
 
 	if ( $news_items ): $i = 0; // $i++ assigns unique section IDs
 
-		echo '<h1 id="wt_blog-title">From the blog</h1>'.
-			 '<p>Due to volume, we\'re unable to translate blog posts.</p>';
-	
+		echo '<h1 id="wt_blog-title">From the blog</h1>';
+
 		foreach( $news_items as $post ): setup_postdata( $post ); $i++;
-			
+
 			// define section variables
 			$section_image = get_field('blog_featured_image');
 			$section_title = get_the_title();
@@ -123,7 +122,7 @@ get_header();
 
 			// load section template
 			include( locate_template('components/section.php') );
-		
+
 		endforeach; wp_reset_postdata();
 
 	endif;
