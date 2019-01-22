@@ -2,7 +2,8 @@
 /* The following variables may be defined for this template:
 	$banner_image;
 	$banner_image_caption;
-	$banner_text;
+	$banner_header;
+	$banner_copy;
 	$banner_form_embed;
 	$banner_form_shortcode;
 	*/ ?>
@@ -10,9 +11,15 @@
 <div class="wt_donate-banner bannet_element" style="background:url('<?php echo $banner_image; ?>') center center no-repeat;">
 	<aside class="wt_donate-banner-content">
 	<?php 
-		if ( $banner_text ) { 
+		if ( $banner_header ) { 
 
-			echo '<h1>' . $banner_text . '</h1>'; 
+			echo '<h1>' . $banner_header . '</h1>'; 
+
+		}
+
+		if ( $banner_copy ) {
+
+			echo '<p>' . $banner_copy . '</p>';
 
 		}
 
