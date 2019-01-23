@@ -137,7 +137,8 @@ body
     &.home .header a,
     &.page-template-template-donate .header a,
     &.page-template-template-form .header a,
-    &.page-template-template-volunteers a
+    &.page-template-template-volunteers .header a
+    &.page-template-template-about .header a
         color $text-color-light
         display inline-block
 
@@ -173,6 +174,9 @@ body
 
     & > *
         flex 1
+    
+    .wt_banner-image-caption
+        text-shadow 0 0 30px #000
 
 .wt_banner-message,
 .wt_form-banner-message
@@ -328,6 +332,7 @@ body
             margin 0
             position absolute
             color white
+            text-shadow 0 0 30px #000
 
     &:nth-of-type(odd)
         .wt_section-image
@@ -450,13 +455,21 @@ body
     margin-top 150px
     background-color $dark-background
     color $text-color-light
-    padding 2rem
+    padding 0 2rem 2rem 2rem
     bottom 0
-
-    .logo-img
-        width 50px
-        height auto
-        border-radius 100%
+    
+    .footer-logo
+        .logo-img
+            vertical-align middle
+            width 35px
+            height auto
+            border-radius 100%
+        
+        span
+            padding-left 5px
+            font-weight 700
+            letter-spacing 0.05rem
+            text-transform uppercase
 
     .footer-navigation
         display flex
@@ -468,22 +481,22 @@ body
             padding 0
 
             &:last-of-type
-                margin-left auto
-
-            >li
-                margin 0 20px 0 0
+                margin-left auto                
+            
+            li
+                margin 3px 20px 3px 3px
+                letter-spacing 0.08rem
 
             .sub-menu
                 visibility visible
 
                 li
-                    margin 0
-
                     a
                         color $footer-offblue
 
     .legal
-        width 60%
+        width 100%
+        margin-bottom 0
         color $footer-offblue
 
 .footer a

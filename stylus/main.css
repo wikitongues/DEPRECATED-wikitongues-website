@@ -24,6 +24,10 @@ h1 {
     font-size: 3rem;
   }
 }
+body,
+html {
+  margin-top: 0;
+}
 .clear {
   clear: both;
 }
@@ -115,6 +119,14 @@ input[type=button]:hover,
 input[type=submit]:hover,
 input[type=reset]:hover {
   border-color: #11242f;
+}
+body.page-template-template-about {
+  width: 100%;
+}
+body.page-template-template-about main p {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 body {
   -webkit-box-sizing: border-box;
@@ -215,7 +227,8 @@ body {
 body.home .header a,
 body.page-template-template-donate .header a,
 body.page-template-template-form .header a,
-body.page-template-template-volunteers a {
+body.page-template-template-volunteers .header a,
+body.page-template-template-about .header a {
   color: #fff;
   display: inline-block;
 }
@@ -245,6 +258,10 @@ body.page-template-template-volunteers a {
 .wt_banner > *,
 .wt_form-banner > * {
   flex: 1;
+}
+.wt_banner .wt_banner-image-caption,
+.wt_form-banner .wt_banner-image-caption {
+  text-shadow: 0 0 30px #000;
 }
 .wt_banner-message,
 .wt_form-banner-message {
@@ -384,6 +401,7 @@ body.page-template-template-volunteers a {
   margin: 0;
   position: absolute;
   color: #fff;
+  text-shadow: 0 0 30px #000;
 }
 .wt_page-section:nth-of-type(odd) .wt_section-image img {
   width: 100%;
@@ -473,13 +491,20 @@ body.page-template-template-volunteers a {
   margin-top: 150px;
   background-color: #0d232f;
   color: #fff;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   bottom: 0;
 }
-.footer .logo-img {
-  width: 50px;
+.footer .footer-logo .logo-img {
+  vertical-align: middle;
+  width: 35px;
   height: auto;
   border-radius: 100%;
+}
+.footer .footer-logo span {
+  padding-left: 5px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
 }
 .footer .footer-navigation {
   display: flex;
@@ -493,20 +518,19 @@ body.page-template-template-volunteers a {
 .footer .footer-navigation ul:last-of-type {
   margin-left: auto;
 }
-.footer .footer-navigation ul >li {
-  margin: 0 20px 0 0;
+.footer .footer-navigation ul li {
+  margin: 3px 20px 3px 3px;
+  letter-spacing: 0.08rem;
 }
 .footer .footer-navigation ul .sub-menu {
   visibility: visible;
-}
-.footer .footer-navigation ul .sub-menu li {
-  margin: 0;
 }
 .footer .footer-navigation ul .sub-menu li a {
   color: #78858a;
 }
 .footer .legal {
-  width: 60%;
+  width: 100%;
+  margin-bottom: 0;
   color: #78858a;
 }
 .footer a {
@@ -588,7 +612,7 @@ body.home .wt_page-section.news_content-block .wt_section-message .wt_cta {
   font-weight: 400;
 }
 body.home #wt_blog-title {
-  margin: 0;
+  margin: 4rem 0 0;
   color: #fff;
   text-transform: uppercase;
 }
@@ -694,9 +718,11 @@ body.page-template-template-donors .wt_page-intro h1 {
     margin-bottom: 15px;
   }
 }
-body.page-template-template-projects .wt_form-banner:before {
-  border-left: initial;
-  border-bottom: initial;
+body.page-template-template-projects .wt_donate-banner {
+  min-height: auto;
+}
+body.page-template-template-projects .footer {
+  margin-top: 0;
 }
 #wt_full-partners-list {
   list-style-type: none;
@@ -705,6 +731,9 @@ body.page-template-template-projects .wt_form-banner:before {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 10%;
+}
+body.page-template-template-form {
+  width: 100%;
 }
 body.page-template-template-form .wt_form-banner-message {
   margin: 0 auto 0 10rem;
@@ -717,7 +746,7 @@ body.page-template-template-form .wt_form-banner-form {
   background-color: #fff;
   padding: 2rem 4rem 4rem;
   border-radius: 2rem 0 0 2rem;
-  margin-top: -60rem;
+  margin-top: -80vh;
   width: 50%;
   box-sizing: border-box;
 }
@@ -790,7 +819,7 @@ body.page-template-template-form .main .wt_featured-item {
   max-width: 500px;
   margin: 2rem auto;
 }
-@media all and (max-width: 970px) {
+@media all and (max-width:970px) {
   body.page-template-template-form .wt_form-banner .wt_form-banner-message {
     margin: 0 auto;
   }
@@ -905,9 +934,10 @@ body.page-template-template-volunteers .main .wt_featured-item {
   content: "";
   background-color: transparent;
   position: absolute;
-  height: 600px;
-  left: 60vw;
-  transform: translateY(-10%);
+  height: 125%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   border-left: 40vw solid #6eb0ff;
   z-index: -1;
 }
@@ -915,9 +945,10 @@ body.page-template-template-volunteers .main .wt_featured-item {
   content: "";
   background-color: transparent;
   position: absolute;
-  height: 600px;
+  height: 125%;
+  top: 50%;
   left: 0;
-  transform: translateY(-10%);
+  transform: translateY(-50%);
   border-right: 40vw solid #6eb0ff;
   z-index: -1;
 }
