@@ -260,3 +260,19 @@ style-who-we-are(c)
         border-right 100vw solid transparent
         border-bottom 100px solid #0d232f
         z-index 5
+        
+@media all and (max-width:979px)
+    /* yellow block */
+    #primary_content-block-1 > .wt_section-content::after
+        content ""
+        background-color transparent
+        height 150%
+        // transform translate(70%, -10%)
+        // margin-top 5%
+        // margin-right 50%
+        position absolute
+        top 0
+        right 0
+        border-right 100vw solid
+        border-right-color #ffc342
+        z-index -1
