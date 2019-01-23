@@ -87,3 +87,52 @@ body
             &+p
                 margin 0
                 text-align center
+
+@media all and (max-width:979px)
+    body
+        &.home
+            .wt_banner
+                display block
+                
+                .wt_banner-message
+                    position absolute 
+                    bottom 20%
+                    
+                    h1
+                        font-size 3rem
+                    
+                    .wt_cta
+                        width 75%
+                        padding 2rem 1rem
+                        font-size 1.5rem
+                
+                .wt_banner-image-caption
+                    left -20%
+                    bottom 20%
+            
+            .wt_featured-partners
+                display block !important
+                text-align center
+                
+                li
+                    display inline-block
+                    width 26% !important
+                    margin 2% !important
+            
+            .wt_page-section
+                .wt_section-image
+                    .wt_section-image-caption
+                        bottom 0
+                        -webkit-transform none
+                        -ms-transform none
+                        -o-transform none
+                        transform none
+                        margin 0 0 10px 10px
+                
+                .wt_featured-items
+                    .wt_featured-item
+                        width 100%
+                        margin 2% 1%
+            
+            #wt_blog-title
+                margin-bottom 2rem

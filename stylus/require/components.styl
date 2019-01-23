@@ -224,6 +224,17 @@ body
         font-weight 700
         letter-spacing 0.1em
 
+@media all and (max-width:979px)
+    .wt_banner-message,
+    .wt_form-banner-message
+        h1
+            font-size 3rem
+        
+        .wt_cta
+            width 75%
+            padding 2rem 1rem
+            font-size 1.5rem
+
 /*------------------------------------*\
     ALERT
     components/alert.php
@@ -501,3 +512,9 @@ body
 
 .footer a
     color $text-color-light
+    
+@media all and (max-width:979px)
+    .footer
+        .footer-navigation
+            ul
+                display block
