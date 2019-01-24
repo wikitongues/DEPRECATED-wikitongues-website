@@ -336,11 +336,12 @@ body
         position relative
 
         .wt_section-image-caption
-            font-weight 700
-            font-size 1.5rem
+            position absolute
+            top 0
+            left 0
+            font-size 1.25rem
             letter-spacing 0.1em
-            transform translateX(-82px) translateY(-140px) rotateZ(-90deg)
-            margin 0
+            margin 5px 10px
             position absolute
             color white
             text-shadow 0 0 30px #000
@@ -352,10 +353,14 @@ body
                 height auto
                 border-top-left-radius 0
                 border-bottom-left-radius 0
+            
+            .wt_section-image-caption
+                left initial
+                right 0
 
     &:nth-of-type(even)
         .wt_section-image
-            padding 2rem 0 2rem 2rem
+            margin 2rem 0 2rem 2rem
 
             img
                 width 100%
