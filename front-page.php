@@ -113,7 +113,7 @@ get_header();
 
 			// define section variables
 			$section_image = get_field('blog_featured_image');
-			$section_image_caption;
+			$section_image_caption = null;
 			$section_title = get_the_title();
 			$section_text = get_the_excerpt();
 			$section_cta_link = get_the_permalink();
