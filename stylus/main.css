@@ -410,7 +410,6 @@ body.page-template-template-about .header a {
 .wt_page-section .wt_section-image .wt_section-image-caption {
   position: absolute;
   top: 0;
-  left: 0;
   font-size: 1.25rem;
   letter-spacing: 0.1em;
   margin: 5px 10px;
@@ -425,8 +424,7 @@ body.page-template-template-about .header a {
   border-bottom-left-radius: 0;
 }
 .wt_page-section:nth-of-type(odd) .wt_section-image .wt_section-image-caption {
-  left: initial;
-  right: 0;
+  left: 0;
 }
 .wt_page-section:nth-of-type(even) .wt_section-image {
   margin: 2rem 0 2rem 2rem;
@@ -436,6 +434,9 @@ body.page-template-template-about .header a {
   height: auto;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+.wt_page-section:nth-of-type(even) .wt_section-image .wt_section-image-caption {
+  right: 0;
 }
 .wt_page-section:nth-of-type(even) .wt_section-message {
   order: -1;
