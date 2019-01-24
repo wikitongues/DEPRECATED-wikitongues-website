@@ -14,7 +14,7 @@
 	</li>
 </ul>
 
-<h1>Our Partners</h1>
+<h1>Annual Partners</h1>
 
 <div class="wt_face-grid small">
 

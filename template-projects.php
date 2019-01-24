@@ -23,6 +23,7 @@ if ( $featured_projects ) {
 		
 		// define content variables
 		$section_image = get_field('project_banner_image');
+		$section_image_cpation = get_field('project_image_caption');
 		$section_title = get_the_title($post);
 		$section_text = get_field('project_excerpt');
 		$section_cta = get_field('project_call_to_action');
