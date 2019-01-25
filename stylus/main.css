@@ -154,6 +154,8 @@ body {
   width: 100vw;
   height: 50px;
   background: #fff;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .header.background ul li a {
   color: #11242f;
@@ -268,7 +270,6 @@ body.page-template-template-about .header a {
 .wt_banner-message,
 .wt_form-banner-message {
   width: 90%;
-  max-width: 500px;
   margin: 0 10rem 0 auto;
 }
 .wt_banner-message h1,
@@ -279,8 +280,12 @@ body.page-template-template-about .header a {
   font-weight: bold;
   text-transform: uppercase;
 }
+.wt_banner-message h1 {
+  text-shadow: 0 0 100px #000;
+}
 .wt_banner-message .wt_cta {
   margin: 2rem 0 0 auto;
+  max-width: 500px;
 }
 .wt_donate-banner {
   width: 100%;
@@ -307,7 +312,7 @@ body.page-template-template-about .header a {
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   .wt_banner-message h1,
   .wt_form-banner-message h1 {
     font-size: 3rem;
@@ -485,6 +490,8 @@ body.page-template-template-about .header a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 @media only screen and (max-width: 800px) {
   .wt_featured-items {
@@ -556,7 +563,7 @@ body.page-template-template-about .header a {
 .footer a {
   color: #fff;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   .footer .footer-navigation ul {
     display: block;
   }
@@ -645,7 +652,7 @@ body.home #wt_blog-title+p {
   margin: 0;
   text-align: center;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   body.home .wt_banner {
     display: block;
   }
@@ -800,7 +807,7 @@ body.page-template-template-projects .wt_donate-banner {
 body.page-template-template-projects .footer {
   margin-top: 0;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   body.page-template-template-projects .wt_page-section .wt_section-message {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -907,7 +914,7 @@ body.page-template-template-form .main .wt_featured-item {
   max-width: 500px;
   margin: 2rem auto;
 }
-@media all and (max-width:970px) {
+@media all and (max-width: 970px) {
   body.page-template-template-form .wt_form-banner .wt_form-banner-message {
     margin: 0 auto;
   }
@@ -940,7 +947,7 @@ body.page-template-template-donate .wt_form-banner:before {
 body.page-template-template-donate .footer {
   margin-top: 0;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   body.page-template-template-donate .wt_donate-banner .wt_donate-banner-content {
     width: auto;
     margin: auto;
@@ -950,6 +957,7 @@ body.page-template-template-donate .footer {
 body.page-template-template-volunteers .main {
   position: relative;
   margin-top: 0;
+  text-align: center;
 }
 body.page-template-template-volunteers .main:before {
   content: "";
@@ -965,9 +973,17 @@ body.page-template-template-volunteers .main:before {
 body.page-template-template-volunteers .main .wt_page-intro {
   margin-top: 0;
 }
+body.page-template-template-volunteers .main .wt_page-intro p {
+  text-align: left;
+}
 body.page-template-template-volunteers .main .wt_featured-item {
+  display: inline-block;
+  vertical-align: top;
   max-width: 500px;
-  margin: 2rem auto;
+  margin: 2rem;
+}
+body.page-template-template-volunteers .main .wt_featured-item p {
+  text-align: left;
 }
 #primary_content-block-1 > .wt_section-content::after {
   content: "";
@@ -1211,8 +1227,8 @@ body.page-template-template-volunteers .main .wt_featured-item {
   background-color: #c4cfdc;
   position: absolute;
   width: 110vw;
-  height: 50%;
-  bottom: -15%;
+  height: 70%;
+  bottom: -35%;
   left: -10vw;
   z-index: -1;
 }
@@ -1230,7 +1246,7 @@ body.page-template-template-volunteers .main .wt_featured-item {
   border-bottom: 100px solid #0d232f;
   z-index: 5;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   #primary_content-block-1 > .wt_section-content::after {
     content: "";
     background-color: transparent;

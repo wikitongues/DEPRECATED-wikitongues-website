@@ -108,7 +108,7 @@ get_header();
 
 	if ( $news_items ): $i = 0; // $i++ assigns unique section IDs
 
-		echo '<h1 id="wt_blog-title">From the blog</h1>';
+		echo '<h1 id="wt_blog-title">Further Reading</h1>';
 
 		foreach( $news_items as $post ): setup_postdata( $post ); $i++;
 

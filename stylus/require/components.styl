@@ -34,6 +34,8 @@ body
             width 100vw
             height 50px
             background white
+            -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+            box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
 
         ul
             li
@@ -181,7 +183,6 @@ body
 .wt_banner-message,
 .wt_form-banner-message
     width 90%
-    max-width 500px
     margin 0 10rem 0 auto
 
     h1
@@ -191,8 +192,13 @@ body
         font-weight bold
         text-transform uppercase
 
-.wt_banner-message .wt_cta
-    margin 2rem 0 0 auto
+.wt_banner-message 
+    h1
+        text-shadow 0 0 100px #000
+
+    .wt_cta
+        margin 2rem 0 0 auto
+        max-width 500px
 
 /* donate banner */
 
@@ -329,6 +335,7 @@ body
     .wt_featured-items
         max-width 1460px
         margin 5% auto 0
+        
 
 // Switch image and message at each new section
 .wt_page-section
@@ -428,6 +435,8 @@ body
     // Featured item content flexbox
     display flex
     flex-direction column
+    -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+    box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
 
 // On smaller screens, show items in a single column
 @media only screen and (max-width: 800px)
