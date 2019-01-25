@@ -58,12 +58,13 @@ get_header();
 			// define content variables
 			$wikitongues_url = get_site_url(); // this should be defined globally later
 			$partner_logo = get_field('partner_logo');
-			$partner_name = $post->the_title; // do we want to include this?
+			$partner_name = $post->post_title; // do we want to include this?
 			$partner_website = get_field('partner_website'); // do we want to include this?
 
 			echo '<li>'.
-				 '<a href="'.$wikitongues_url.'/our_partners">'.
+				 '<a href="'.$partner_website.'">'.
 				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
+				 // '<h3>'.$partner_name.'</h3>'.
 				 '</a></li>';
 
 		endforeach; wp_reset_postdata();
