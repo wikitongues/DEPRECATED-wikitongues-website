@@ -4,7 +4,7 @@
 
 ### Technologies
 
-Wikitongues.org is a Wordpress website. To set up your local environment and start contributing, you'll need to be familiarity with the following:
+Wikitongues.org runs on Wordpress website. To set up your local environment and start contributing, you'll need to be familiar with the following:
 
 * Wordpress CMS structure
 * Distinction between WP themes, plugins, and core 
