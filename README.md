@@ -4,7 +4,17 @@
 
 ### Technologies
 
+Wikitongues.org is a Wordpress website. To set up your local environment and start contributing, you'll need to be familiarity with the following:
+
+* Wordpress CMS structure
+* Distinction between WP themes, plugins, and core 
+* PHP
+* JavaScript
+* HTML/CSS
+
 ### Theme Structure
+
+
 
 ### Installation Instructions
 
