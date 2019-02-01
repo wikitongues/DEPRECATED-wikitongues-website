@@ -1,6 +1,16 @@
-# Wikitongues.org Roadmap
+# Wikitongues.org
 
-## Early Post-Launch Features
+## Getting Started
+
+### Technologies
+
+### Theme Structure
+
+### Installation Instructions
+
+## Roadmap
+
+### Early Post-Launch Features
 
 - [ ] Global: Apply depth layers through element box-shadows
 - [ ] Global: Assess new tab standards for external links
@@ -16,7 +26,7 @@
 - [ ] Donors: Lifetime contributions section
 - [ ] Donate: Improved typography on donate templates
 
-## Code Clean-Up
+### Code Clean-Up
 
 - [ ] CSS consolidation
 - [ ] Backward compatibility standards assessment
@@ -25,25 +35,25 @@
 - [ ] Remove unnecessary HTML5 Blank code from functions.php
 - [ ] Update theme name, thumbnail, and copyright information
 
-## Improve Forms
+### Improve Forms
 
 - [ ] Progress bar on submission form
 - [ ] Add "Download form" feature to Video Submission page
 - [ ] Integrate volunteer sign up with Google Forms
 
-## Archive
+### Archive
 
 - [ ] Video post-type single template
 - [ ] Video post-type archive page
 - [ ] Video archive brosing functionality
 - [ ] Search feature
 
-## SEO Sharing
+### SEO Sharing
 
 - [ ] SEO audit
 - [ ] Add meta sharing content control to CMS
 
-## Content Strategy
+### Content Strategy
 
 - [ ] Projects: Assess Poly
 - [ ] About: Add images, media
@@ -52,16 +62,16 @@
 - [ ] Donate: assess flow
 - [ ] Donate: design narrative templates
 
-## Donations
+### Donations
 
 - [ ] Built donate pop-up window
 
-## Meta
+### Meta
 
 - [ ] Press Kit page
 - [ ] Wikitongues in the press page
 - [ ] Stats and reporting page
 
-## Accessibility audit
+### Accessibility audit
 
 Audit will determine project steps and timeline here
