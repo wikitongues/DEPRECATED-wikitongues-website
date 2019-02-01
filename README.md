@@ -27,11 +27,11 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 * All page-specific stylus templates are loaded in *app.styl*, which is located in the root of the /**stylus** directory.
 * *app.styl* is loaded in *style.css*, which is located in the theme root.
 * Most pages on Wikitongues.org use custom page templates, which are stored in the theme root.
-* Design elements in **/components** have content variables that can be defined differently each time that element is loaded in a different element. For instance, $banner_image in the banner element component can be defined differently on different pages.
+* Design elements in **/components** have content variables that can be defined differently each time that element is loaded in a telement.
 
 ### Set-up Instructions
 
-Coming soon
+*Coming soon*
 
 ## Roadmap
 
@@ -99,4 +99,4 @@ Coming soon
 
 ### Accessibility audit
 
-Audit will determine project steps and timeline here
+*Audit will determine project steps and timeline*
