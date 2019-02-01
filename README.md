@@ -16,7 +16,7 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 ### Theme Structure and Supporting Plugins
 
 * The Wikitongues.org theme is based on the [HTML5 Blank Boilerplate Theme](http://html5blank.com/). 
-* It leverages [Advanced Customs Fields](https://www.advancedcustomfields.com/) and [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugins.
+* It leverages the [Advanced Customs Fields](https://www.advancedcustomfields.com/) and [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugins.
 * It has the following directories:
 	* **components**, for repeating design elements, such as page banners and other content modules;  
 	* **stylus**, for stylus templates;
@@ -24,11 +24,14 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 	* **img**, for image assets;
 	* **js**, for JavaScript files; and
 	* **languages**, for localization files.
-* All page-specific stylus templates are loaded in *app.styl*, which is located in the root of the /**stylus** directory
-* *app.styl* is loaded in *style.css*, which is located in the theme root
+* All page-specific stylus templates are loaded in *app.styl*, which is located in the root of the /**stylus** directory.
+* *app.styl* is loaded in *style.css*, which is located in the theme root.
 * Most pages on Wikitongues.org use custom page templates, which are stored in the theme root.
+* Each design element in **components** has pre-defined variables that can be defined differently each instance that component is loaded.
 
-### Installation Instructions
+### Set-up Instructions
+
+Coming soon
 
 ## Roadmap
 
