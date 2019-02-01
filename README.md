@@ -15,7 +15,14 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 
 ### Theme Structure and Supporting Plugins
 
-The Wikitongues.org theme relies on is based on the [HTML5 Blank Boilerplate Theme](http://html5blank.com/) and leverages [Advanced Customs Fields](https://www.advancedcustomfields.com/) and [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugins.
+* The Wikitongues.org theme is based on the [HTML5 Blank Boilerplate Theme](http://html5blank.com/). 
+* It leverages [Advanced Customs Fields](https://www.advancedcustomfields.com/) and [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugins.
+* The Wikitongues.org theme has the following directories
+	* **components**
+	* **stylus**
+	* **img**
+	* **js**
+	* **languages**
 
 ### Installation Instructions
 
