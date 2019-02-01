@@ -40,6 +40,7 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 - [ ] Global: Apply depth layers through element box-shadows
 - [ ] Global: Assess new tab standards for external links
 - [ ] Global: Fade-in images on page load
+- [ ] Global: Redirect template for deprecated links (i.e., "/who")
 - [ ] Homepage: Add GreenGeeks affiliate link
 - [ ] Homepage: "Wikitongues In the Press" section
 - [ ] Homepage: Increase featured videos to six
