@@ -4,17 +4,18 @@
 
 ### Technologies
 
-Wikitongues.org runs on Wordpress website. To set up your local environment and start contributing, you'll need to be familiar with the following:
+Wikitongues.org runs on Wordpress. To set up your local environment and start contributing, you'll need to be familiar with the following:
 
-* Wordpress CMS structure
-* Distinction between WP themes, plugins, and core 
+* The Wordpress CMS
+* The distinction between Wordpress themes, plugins, and core 
 * PHP
 * JavaScript
 * HTML/CSS
+* [Stylus](http://stylus-lang.com/), a CSS preprocessor
 
-### Theme Structure
+### Theme Structure and Supporting Plugins
 
-
+The Wikitongues.org theme relies on is based on the [HTML5 Blank Boilerplate Theme](http://html5blank.com/) and leverages [Advanced Customs Fields](https://www.advancedcustomfields.com/) and [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugins.
 
 ### Installation Instructions
 
