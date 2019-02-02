@@ -45,7 +45,9 @@ Make sure you've installed [Stylus](http://stylus-lang.com/) on your computer, t
 * Run your local server, open the browser of your choice, and navigate to installer.php. The URL will depend on your setup. *For example, if using MAMP to run the site from a **wikitongues** directory, you might navigate to **http://localhost:8888/wikitongues/installer.php***
 * Follow the on-screen installer instructions to extract the site files and connect to your database.
 * Once your installation is complete, use the command line to navigate to your Wordpress installation's **themes** directory:
+	
 	$ cd your-local-directory/wp-content/themes
+
 * Delete the existing Wikitongues theme and clone this repository in its place:
 	$ rm -rf wikitongues
 	$ git clone git@github.com:wikitongues/wikitongues-website.git
