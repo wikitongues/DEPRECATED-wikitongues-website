@@ -31,7 +31,28 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 
 ### Set-up Instructions
 
-*Coming soon*
+#### Working Environment
+
+Your local environment will need to run PHP, Apache, and MySQL. There are several out-of-the-box solutions, such as MAMP for Mac, WAMP for Windows, and LAMP for linux. 
+
+Make sure you've installed [Stylus](http://stylus-lang.com/) on your computer, too.
+
+#### Installation
+
+* Either through the command line or in phpMyAdmin, create a blank database for the site. Name it whatever you want.
+* Create a directory on your local server to load the site files. Name it whatever you want. *Example: if you're using MAMP, create a **Wikitongues** directory in **htdocs**.*
+* Download our staging Wordpress instance and our **installer.php** file. Move them to the directory you just created. **The instance will be a .zip file. Do not extract it.** 
+* Run your local server, open the browser of your choice, and navigate to installer.php. The URL will depend on your setup. *For example, if using MAMP to run the site from a **wikitongues** directory, you might navigate to **http://localhost:8888/wikitongues/installer.php***
+* Follow the on-screen installer instructions to extract the site files and connect to your database.
+* Once your installation is complete, use the command line to navigate to your Wordpress installation's **themes** directory:
+	$ cd your-local-directory/wp-content/themes
+* Delete the existing Wikitongues theme and clone this repository in its place:
+	$ rm -rf wikitongues
+	$ git clone git@github.com:wikitongues/wikitongues-website.git
+* This will clone the repository into a **wikitongues-website** directory in your themes folder. Rename that **wikitongues**.
+	$ mv wikitongues-website wikitongues
+
+That's it! You're all set.
 
 ## Roadmap
 
