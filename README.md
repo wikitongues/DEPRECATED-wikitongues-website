@@ -53,14 +53,23 @@ Make sure you've installed [Stylus](http://stylus-lang.com/) on your computer, t
 
 	```bash
 	$ rm -rf wikitongues
+	```
+
+	If you're cloning with SSH:
+	```bash
 	$ git clone git@github.com:wikitongues/wikitongues-website.git
+	```
+
+	If you're cloning with HTTPS
+	```bash
+	$ git clone https://github.com/wikitongues/wikitongues-website.git
 	```
 * This will clone the repository into a **wikitongues-website** directory in your themes folder. Rename that **wikitongues**.
 	
 	```bash
 	$ mv wikitongues-website wikitongues
 	```
-	
+
 That's it! You're all set.
 
 ## Roadmap
