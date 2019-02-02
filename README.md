@@ -33,7 +33,7 @@ Wikitongues.org runs on Wordpress. To set up your local environment and start co
 
 #### Working Environment
 
-Your local environment will need to run PHP, Apache, and MySQL. There are several out-of-the-box solutions, such as MAMP for Mac, WAMP for Windows, and LAMP for linux. 
+Your local environment will need to run PHP, Apache, and MySQL. There are several out-of-the-box solutions, such as [MAMP](https://www.mamp.info/en/) for Mac, [WAMP](http://www.wampserver.com/en/) for Windows, and [LAMP](http://www.ampps.com/LAMP) for Linux. 
 
 Make sure you've installed [Stylus](http://stylus-lang.com/) on your computer, too.
 
@@ -41,7 +41,7 @@ Make sure you've installed [Stylus](http://stylus-lang.com/) on your computer, t
 
 * Either through the command line or in phpMyAdmin, create a blank database for the site. Name it whatever you want.
 * Create a directory on your local server to load the site files. Name it whatever you want. *Example: if you're using MAMP, create a **Wikitongues** directory in **htdocs**.*
-* Download our staging Wordpress instance and our **installer.php** file. Move them to the directory you just created. **The instance will be a .zip file. Do not extract it.** 
+* Download our [staging Wordpress instance](https://www.dropbox.com/s/ga8a4e3dpflb5ee/20190117_wikitonguesorg_3a6523231de2ae8c5964_20190202213241_archive.zip?dl=0) and our [installer.php](https://www.dropbox.com/s/epcm39benyhhdeq/installer.php?dl=0) file. Move them to the directory you just created. **The instance will be a .zip file. Do not extract it.** 
 * Run your local server, open the browser of your choice, and navigate to installer.php. The URL will depend on your setup. *For example, if using MAMP to run the site from a **wikitongues** directory, you might navigate to **http://localhost:8888/wikitongues/installer.php***
 * Follow the on-screen installer instructions to extract the site files and connect to your database.
 * Once your installation is complete, use the command line to navigate to your Wordpress installation's **themes** directory:
@@ -60,7 +60,7 @@ Make sure you've installed [Stylus](http://stylus-lang.com/) on your computer, t
 	$ git clone git@github.com:wikitongues/wikitongues-website.git
 	```
 
-	If you're cloning with HTTPS
+	If you're cloning with HTTPS:
 	```bash
 	$ git clone https://github.com/wikitongues/wikitongues-website.git
 	```
