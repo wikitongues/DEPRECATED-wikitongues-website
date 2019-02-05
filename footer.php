@@ -17,7 +17,7 @@
 				<!-- /footer menus -->
 
 				<!-- legal -->
-				<p class="legal">Wikitongues is a 501(3)(c) non-profit organization based in Brooklyn, NY, USA. <br> Thanks to GreenGeeks, this website's carbon footprint is offset by wind credits.</p>
+				<p class="legal">Wikitongues is a 501(3)(c) non-profit organization based in Brooklyn, NY, USA. <br> Thanks to <a href="https://www.greengeeks.com/track/wikitongues" target="_blank">GreenGeeks</a>, this website's carbon footprint is offset by wind credits.</p>
 				<!-- /legal -->
 
 			</footer>

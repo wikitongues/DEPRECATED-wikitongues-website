@@ -81,7 +81,7 @@ That's it! You're all set.
 - [ ] Global: Fade-in images on page load
 - [ ] Global: Redirect template for deprecated links (i.e., "/who")
 - [ ] Global: Add Google analytics
-- [ ] Homepage: Add GreenGeeks affiliate link
+- [x] Homepage: Add GreenGeeks affiliate link
 - [ ] Homepage: "Wikitongues In the Press" section
 - [ ] Homepage: Increase featured videos to six
 - [ ] Homepage: Click-through horizontal scroll for featured videos

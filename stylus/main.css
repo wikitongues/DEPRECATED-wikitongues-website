@@ -568,6 +568,9 @@ body.page-template-template-about .header a {
   margin-bottom: 0;
   color: #78858a;
 }
+.footer .legal a {
+  display: inline;
+}
 .footer a {
   color: #fff;
 }
