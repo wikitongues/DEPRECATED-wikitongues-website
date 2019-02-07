@@ -906,11 +906,24 @@ body.page-template-template-form .wt_form-banner-form .wt_form-section p textare
   border-radius: 0;
   height: 75px;
 }
+body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_radio-button > span {
+  display: block;
+  margin: 1em 0;
+}
+body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_radio-button > span span,
+body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_radio-button > span input {
+  display: inline !important;
+  width: auto !important;
+}
 body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_form-description {
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
+}
+body.page-template-template-form .wt_form-banner-form .wt_form-section .wt_form-description a {
+  display: inline;
+  font-weight: 700;
 }
 body.page-template-template-form .main {
   float: left;
