@@ -836,15 +836,26 @@ body.page-template-template-projects .footer {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 10%;
 }
 .wt_partner {
   cursor: pointer;
+  margin: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .wt_partner-profile {
-  grid-column: span 4;
   background: #0d232f;
   color: #fff;
+  max-height: 0vh;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: all 0.5s ease-out;
+}
+.wt_partner-profile.expanded {
+  max-height: 100vh;
+  opacity: 1;
+  transform: scaleY(1);
 }
 .wt_partner-profile > .flex-container {
   display: flex;

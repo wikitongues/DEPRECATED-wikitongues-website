@@ -8,7 +8,7 @@
 	$partner_bio (required)
 	*/ ?>
 
-<div class="wt_partner-profile" id="partner-profile-<?php echo($i); ?>" style="display: none; <?php echo($profile_style) ?>">
+<div class="wt_partner-profile" id="partner-profile-<?php echo($i); ?>" style="<?php echo($profile_style) ?>">
     <div class="flex-container">
         <div class="wt_partner-profile-image">
             <img src="<?php echo($partner_logo['url']) ?>">

@@ -11,6 +11,9 @@
 			'orderby' => 'menu_order'
 		));
 
+	// number of partners per row of grid
+	$partners_per_row = 4;
+
 	// start the loop
 	if ( $partners->have_posts() ) {
 
@@ -30,16 +33,18 @@
 			$partner_bio = get_field('partner_bio');
 
 			// assign to row of css grid
-			$grid_row = intdiv($i, 4) * 2 + 1;
+			// grid contains row of partner images, followed by expandable profiles of each partner in row
+			// profile gets entire row
+			$grid_row = intdiv($i, $partners_per_row) * ($partners_per_row + 1) + 1;
 
 			// js function to call onclick
 			$function_call = 'expandPartner('.$i.')';
 
 			// css grid-row of image
-			$style = 'grid-row: '.$grid_row.'/'.($grid_row + 1);
+			$style = 'grid-row: '.$grid_row;
 
 			// css grid-row of expandable profile
-			$profile_style = 'grid-row: '.($grid_row + 1).'/'.($grid_row + 2);
+			$profile_style = 'grid-row: '.($grid_row + 1 + $i % $partners_per_row).'; grid-column: span '.$partners_per_row;
 
 			echo '<li class="wt_partner" id="partner-'.$i.'" onclick="'.$function_call.'" style="'.$style.'"><img src="'.$partner_logo['url'].'"></li>';
 
@@ -57,13 +62,22 @@
 get_footer(); ?>
 
 <script>
+// index of currently expanded partner
+var expandedPartner = -1;
+
 function expandPartner (i) {
 	// collapse all other profiles
 	const allProfiles = document.querySelectorAll('.wt_partner-profile');
-	allProfiles.forEach(profile => profile.style.display = 'none');
+	allProfiles.forEach(profile => profile.classList.remove('expanded'));
 
-	// expand selected profile
-	const profile = document.getElementById(`partner-profile-${i}`);
-	profile.style.display = 'block';
+	if (i === expandedPartner) {
+		// currently expanded partner clicked; expand no profile
+		expandedPartner = -1;
+	} else {
+		// expand selected profile
+		const profile = document.getElementById(`partner-profile-${i}`);
+		profile.classList.add('expanded');
+		expandedPartner = i;
+	}
 }
 </script>
