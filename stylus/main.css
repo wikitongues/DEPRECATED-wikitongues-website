@@ -832,7 +832,6 @@ body.page-template-template-projects .footer {
 }
 #wt_full-partners-list {
   list-style-type: none;
-  margin: 0 10%;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -843,6 +842,7 @@ body.page-template-template-projects .footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-column: span 1;
 }
 .wt_partner-profile {
   background: #0d232f;
