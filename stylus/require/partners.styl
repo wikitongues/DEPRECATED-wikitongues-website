@@ -11,11 +11,27 @@
 
 .wt_partner
     cursor pointer
-    margin 10%
     display flex
     align-items center
     justify-content center
     grid-column span 1
+
+    &:after
+        opacity 0
+        transition all 0s ease 0.5s
+
+    // carat attached to profile panel
+    &.selected:after
+        opacity 1
+        content ""
+        background-color transparent
+        position absolute
+        height 1em
+        width 0
+        border-left 1em solid transparent
+        border-right 1em solid transparent
+        border-bottom 1em solid $dark-background
+        align-self end
 
 .wt_partner-profile
     background $dark-background

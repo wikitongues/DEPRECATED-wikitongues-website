@@ -70,6 +70,10 @@ function expandPartner (i) {
 	const allProfiles = document.querySelectorAll('.wt_partner-profile');
 	allProfiles.forEach(profile => profile.classList.remove('expanded'));
 
+	// hide carat for all other partners
+	const allLogos = document.querySelectorAll('.wt_partner');
+	allLogos.forEach(logo => logo.classList.remove('selected'));
+
 	if (i === expandedPartner) {
 		// currently expanded partner clicked; expand no profile
 		expandedPartner = -1;
@@ -77,6 +81,11 @@ function expandPartner (i) {
 		// expand selected profile
 		const profile = document.getElementById(`partner-profile-${i}`);
 		profile.classList.add('expanded');
+
+		// show carat attached to profile panel pointing to logo in grid
+		const logo = document.getElementById(`partner-${i}`);
+		logo.classList.add('selected');
+
 		expandedPartner = i;
 	}
 }
