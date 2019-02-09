@@ -13,9 +13,11 @@
         <div class="wt_partner-profile-image">
             <img src="<?php echo($partner_logo['url']) ?>">
         </div>
-        <div>
-            <h2><?php echo($partner_name) ?></h2>
-            <a href="<?php echo($partner_website); ?>"><?php echo($partner_website) ?></a>
+        <div class="wt_partner-profile-content">
+            <div class="wt_partner-profile-header">
+                <h2><?php echo($partner_name) ?></h2>
+                <a href="<?php echo($partner_website); ?>"><?php echo($partner_website) ?></a>
+            </div>
             <p><?php echo($partner_bio); ?></p>
         </div>
     </div>
