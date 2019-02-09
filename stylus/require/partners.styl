@@ -18,11 +18,7 @@
 
     &:after
         opacity 0
-        transition all 0s ease 0.5s
-
-    // carat attached to profile panel
-    &.selected:after
-        opacity 1
+        transform translateY(600%)
         content ""
         background-color transparent
         position absolute
@@ -32,6 +28,12 @@
         border-right 1em solid transparent
         border-bottom 1em solid $dark-background
         align-self end
+        transition all 0.5s ease-in-out
+
+    // carat attached to profile panel
+    &.selected:after
+        opacity 1
+        transform none
 
 .wt_partner-profile
     background $dark-background
