@@ -872,6 +872,7 @@ body.page-template-template-projects .footer {
 .wt_partner-profile.expanded {
   max-height: 100vh;
   opacity: 1;
+  z-index: auto;
 }
 .wt_partner-profile.row-expanded {
   transform: scaleY(1);
