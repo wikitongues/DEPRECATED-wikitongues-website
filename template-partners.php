@@ -81,6 +81,11 @@ function expandPartner (i) {
 		// expand selected profile
 		const profile = document.getElementById(`partner-profile-${i}`);
 		profile.classList.add('expanded');
+		profile.scrollIntoView({
+			behavior: 'smooth',
+			block: 'center',
+			inline: 'start'
+		});
 
 		// show carat attached to profile panel pointing to logo in grid
 		const logo = document.getElementById(`partner-${i}`);

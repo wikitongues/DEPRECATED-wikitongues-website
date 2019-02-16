@@ -9,6 +9,7 @@
     display grid
     grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
 
+// partner logo in grid
 .wt_partner
     cursor pointer
     display flex
@@ -16,6 +17,7 @@
     justify-content center
     grid-column span 1
 
+    // carat attached to profile panel
     &:after
         opacity 0
         transform translateY(600%)
@@ -27,30 +29,29 @@
         border-left 1em solid transparent
         border-right 1em solid transparent
         border-bottom 1em solid $dark-background
-        align-self end
+        align-self flex-end
         transition all 0.5s ease-in-out
 
-    // carat attached to profile panel
     &.selected:after
         opacity 1
         transform none
 
+// expandable partner profile
 .wt_partner-profile
     background $dark-background
     color $text-color-light
     max-height 0vh
-    opacity 0
     transform scaleY(0)
     transition all 0.5s ease-out
 
     &.expanded
         max-height 100vh
-        opacity 1
         transform scaleY(1)
 
     & > .flex-container
         display flex
 
+        // logo
         & > .wt_partner-profile-image 
             flex-grow 0
             flex-shrink 0
@@ -67,8 +68,10 @@
             padding 1em
             margin 1em
 
+        // name, website, and bio
         & > .wt_partner-profile-content
 
+            // name and website
             & > .wt_partner-profile-header
                 display flex
 
