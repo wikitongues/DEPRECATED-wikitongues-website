@@ -30,7 +30,6 @@
         border-right 1em solid transparent
         border-bottom 1em solid $dark-background
         align-self flex-end
-        transition all 0.5s ease-in-out
 
     &.selected:after
         opacity 1
@@ -42,10 +41,16 @@
     color $text-color-light
     max-height 0vh
     transform scaleY(0)
-    transition all 0.5s ease-out
+    opacity 0
+    transition transform 0.5s ease-out
+    z-index -1
 
     &.expanded
         max-height 100vh
+        opacity 1
+
+    // trigger scaleY animation when row of expanded partner changes
+    &.row-expanded
         transform scaleY(1)
 
     & > .flex-container
