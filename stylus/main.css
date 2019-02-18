@@ -854,8 +854,7 @@ body.page-template-template-projects .footer {
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
   border-bottom: 1em solid #0d232f;
-  align-self: end;
-  transition: all 0.5s ease-in-out;
+  align-self: flex-end;
 }
 .wt_partner.selected:after {
   opacity: 1;
@@ -865,13 +864,17 @@ body.page-template-template-projects .footer {
   background: #0d232f;
   color: #fff;
   max-height: 0vh;
-  opacity: 0;
   transform: scaleY(0);
-  transition: all 0.5s ease-out;
+  opacity: 0;
+  transition: transform 0.5s ease-out;
+  z-index: -1;
 }
 .wt_partner-profile.expanded {
   max-height: 100vh;
   opacity: 1;
+  z-index: auto;
+}
+.wt_partner-profile.row-expanded {
   transform: scaleY(1);
 }
 .wt_partner-profile > .flex-container {

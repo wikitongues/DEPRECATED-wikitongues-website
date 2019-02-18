@@ -38,7 +38,7 @@
 			$grid_row = intdiv($i, $partners_per_row) * ($partners_per_row + 1) + 1;
 
 			// js function to call onclick
-			$function_call = 'expandPartner('.$i.')';
+			$function_call = 'expandPartner('.$i.', '.$partners_per_row.')';
 
 			// css grid-row of image
 			$style = 'grid-row: '.$grid_row;
@@ -65,7 +65,7 @@ get_footer(); ?>
 // index of currently expanded partner
 var expandedPartner = -1;
 
-function expandPartner (i) {
+function expandPartner (i, partnersPerRow) {
 	// collapse all other profiles
 	const allProfiles = document.querySelectorAll('.wt_partner-profile');
 	allProfiles.forEach(profile => profile.classList.remove('expanded'));
@@ -77,10 +77,30 @@ function expandPartner (i) {
 	if (i === expandedPartner) {
 		// currently expanded partner clicked; expand no profile
 		expandedPartner = -1;
+		allProfiles.forEach(profile => profile.classList.remove('row-expanded'));
 	} else {
 		// expand selected profile
 		const profile = document.getElementById(`partner-profile-${i}`);
 		profile.classList.add('expanded');
+
+		const row = Math.floor(i / partnersPerRow);
+		if (row !== Math.floor(expandedPartner / partnersPerRow)) {
+			// partner not in same row as currently expanded partner
+			allProfiles.forEach(profile => profile.classList.remove('row-expanded'));
+
+			for (let j = row * partnersPerRow; j < (row + 1) * partnersPerRow; j++) {
+				let profileInRow = document.getElementById(`partner-profile-${j}`);
+
+				// row-expanded triggers animated transition
+				profileInRow.classList.add('row-expanded');
+			}
+
+			profile.scrollIntoView({
+				behavior: 'smooth',
+				block: 'center',
+				inline: 'start'
+			});
+		}
 
 		// show carat attached to profile panel pointing to logo in grid
 		const logo = document.getElementById(`partner-${i}`);
