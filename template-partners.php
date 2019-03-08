@@ -95,11 +95,7 @@ function expandPartner (i, partnersPerRow) {
 				profileInRow.classList.add('row-expanded');
 			}
 
-			profile.scrollIntoView({
-				behavior: 'smooth',
-				block: 'center',
-				inline: 'start'
-			});
+			window.scroll(0, profile.offsetTop - window.innerHeight / 2 + profile.offsetHeight / 2);
 		}
 
 		// show carat attached to profile panel pointing to logo in grid
