@@ -313,14 +313,19 @@ body
 
     .wt_section-content
         position relative
-        display flex
 
         > *
-            flex 1
             margin auto
 
+        .wt_section-image
+            display inline-block
+            max-width 50vw
+
         .wt_section-message
-            padding 6rem
+            display inline-block
+            vertical-align top
+            max-width 50vw
+            padding 6rem 3rem 6rem 3rem
 
             *
                 max-width 650px
@@ -376,7 +381,7 @@ body
 
     &:nth-of-type(even)
         .wt_section-image
-            margin 2rem 0 2rem 2rem
+            // margin 2rem 0 2rem 2rem
 
             img
                 width 100%
