@@ -546,18 +546,28 @@ body.page-template-template-about .header a {
   text-transform: uppercase;
 }
 .footer .footer-navigation {
-  display: flex;
   width: 100%;
 }
+.footer .footer-navigation:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
 .footer .footer-navigation ul {
-  display: flex;
+  display: inline-block;
   list-style-type: none;
   padding: 0;
 }
+.footer .footer-navigation ul:first-of-type {
+  float: left;
+}
 .footer .footer-navigation ul:last-of-type {
+  float: right;
   margin-left: auto;
 }
 .footer .footer-navigation ul li {
+  display: inline-block;
   margin: 3px 20px 3px 3px;
   letter-spacing: 0.08rem;
 }

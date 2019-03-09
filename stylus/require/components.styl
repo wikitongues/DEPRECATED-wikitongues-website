@@ -511,18 +511,29 @@ body
             text-transform uppercase
 
     .footer-navigation
-        display flex
         width 100%
 
+        // clearfix
+        &:after
+            content ''
+            display block
+            height 0
+            clear both
+
         ul
-            display flex
+            display inline-block
             list-style-type none
             padding 0
 
+            &:first-of-type
+                float left
+
             &:last-of-type
+                float right
                 margin-left auto                
             
             li
+                display inline-block
                 margin 3px 20px 3px 3px
                 letter-spacing 0.08rem
 
