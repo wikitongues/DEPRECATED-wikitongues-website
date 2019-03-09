@@ -143,7 +143,6 @@ body {
 .header {
   z-index: 10;
   position: fixed;
-  display: flex;
   top: 0;
   width: 100%;
 }
@@ -172,18 +171,13 @@ body {
     * Horizontal scroll flexbox
     * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
     */
-  display: flex;
   width: 100%;
-  flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
 .nav::-webkit-scrollbar {
   display: none;
-}
-.nav > * {
-  flex: 0 0 auto;
 }
 .nav ul:last-child {
   margin-left: auto;
@@ -193,6 +187,8 @@ body {
   width: 48px;
   height: 48px;
   margin: 0 1rem;
+  display: inline-block;
+  float: left;
 }
 .logo img {
   border-radius: 0 0 50% 50%;
@@ -202,16 +198,25 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: inline-block;
+  vertical-align: top;
+}
+.header ul:first-of-type {
+  float: left;
+}
+.header ul:last-of-type {
+  float: right;
 }
 .header ul li {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   text-align: center;
+  display: inline-block;
+  line-height: 48px;
 }
 .header ul li a {
-  padding: 1.18rem 1rem 1rem 1rem;
+  padding: 0 0 1rem 1rem;
 }
 .sub-menu {
   flex-direction: column;

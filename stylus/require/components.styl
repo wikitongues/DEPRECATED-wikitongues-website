@@ -18,7 +18,6 @@ body
 .header
     z-index 10
     position fixed
-    display flex
     top 0
     width 100% // Using %: using the vw unit overflows on the x axis
 
@@ -50,9 +49,7 @@ body
     * Horizontal scroll flexbox
     * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
     */
-    display flex
     width 100%
-    flex-wrap nowrap
     overflow-x auto
     -webkit-overflow-scrolling touch // smooth scrolling on IOS devices
     -ms-overflow-style none // hide scrollbar in Edge
@@ -65,10 +62,6 @@ body
 // See: https://stackoverflow.com/a/6165489/7770081
 // Possible solutions: https://stackoverflow.com/a/16671476/7770081
 
-// Don't let flex children shrink to toggle scroll
-.nav > *
-    flex 0 0 auto
-
 /*
 * End horizontal scroll
 */
@@ -78,11 +71,16 @@ body
     margin-left auto
     margin-right 1rem
 
+$logo-height = 48px
+$logo-width = 48px
+
 // Logo size
 .logo
-    width 48px
-    height 48px
+    width $logo-height
+    height $logo-width
     margin 0 1rem
+    display inline-block
+    float left
 
 .logo img
     border-radius 0 0 50% 50%
@@ -98,7 +96,15 @@ body
         list-style-type none
         margin 0
         padding 0
-        display flex
+        display inline-block
+        vertical-align top
+
+        &:first-of-type
+            float left
+        
+        &:last-of-type
+            float right
+
 
         // Position nav items
         li
@@ -106,9 +112,11 @@ body
             text-transform uppercase
             letter-spacing 0.1rem
             text-align center
+            display inline-block
+            line-height $logo-height
 
             a
-                padding 1.18rem 1rem 1rem 1rem
+                padding 0 0 1rem 1rem
 
 // Dropdown nav
 .sub-menu
