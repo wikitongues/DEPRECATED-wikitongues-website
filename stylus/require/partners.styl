@@ -15,10 +15,13 @@
     display inline-block
     vertical-align top
 
+    img
+        width 100%
+
     // carat attached to profile panel
     // &:after
     //     opacity 0
-    //     transform translateY(600%)
+    //     transform translate(-550%, 790%)
     //     content ""
     //     background-color transparent
     //     position absolute
@@ -30,11 +33,19 @@
 
     // make room for profile
     &.selected
-        height 600px
+        height 650px
 
     &.selected:after
         opacity 1
-        transform none
+
+for i in (12..6)
+    @media all and (max-width:(i * 100)px)
+        .selected
+            height (i * 60)px !important
+
+@media all and (max-width:450px)
+    .selected
+        height 750px !important
 
 // expandable partner profile
 .wt_partner-profile
@@ -63,10 +74,12 @@
         height 20vw
         background white
         border-radius 1em
-        vertical-align middle
         display inline-block
         width 20vw
         vertical-align top
+
+        img
+            width 100%
 
     & > div
         padding 1em
