@@ -330,7 +330,7 @@ body
 
         .wt_section-image
             display inline-block
-            max-width 50vw
+            max-width 42vw
 
         .wt_section-message
             display inline-block
@@ -366,6 +366,10 @@ body
 
 // Switch image and message at each new section
 .wt_page-section
+
+    .wt_section-content
+        min-height 500px
+
     .wt_section-image
         position relative
 
@@ -381,6 +385,8 @@ body
 
     &:nth-of-type(odd)
         .wt_section-image
+            float left
+
             img
                 width 100%
                 height auto
@@ -390,9 +396,13 @@ body
             .wt_section-image-caption
                 left 0
 
+        .wt_section-message
+            float right
+
     &:nth-of-type(even)
         .wt_section-image
             // margin 2rem 0 2rem 2rem
+            float right
 
             img
                 width 100%
@@ -404,6 +414,7 @@ body
                 right 0
 
         .wt_section-message
+            float left
             order -1
 
 // typography reduction on laptop screens

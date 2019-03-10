@@ -406,7 +406,7 @@ body.page-template-template-about .header a {
 }
 .wt_page-section .wt_section-content .wt_section-image {
   display: inline-block;
-  max-width: 50vw;
+  max-width: 42vw;
 }
 .wt_page-section .wt_section-content .wt_section-message {
   display: inline-block;
@@ -439,6 +439,9 @@ body.page-template-template-about .header a {
   max-width: 1460px;
   margin: 5% auto 0;
 }
+.wt_page-section .wt_section-content {
+  min-height: 500px;
+}
 .wt_page-section .wt_section-image {
   position: relative;
 }
@@ -452,6 +455,9 @@ body.page-template-template-about .header a {
   color: #fff;
   text-shadow: 0 0 30px #000;
 }
+.wt_page-section:nth-of-type(odd) .wt_section-image {
+  float: left;
+}
 .wt_page-section:nth-of-type(odd) .wt_section-image img {
   width: 100%;
   height: auto;
@@ -460,6 +466,12 @@ body.page-template-template-about .header a {
 }
 .wt_page-section:nth-of-type(odd) .wt_section-image .wt_section-image-caption {
   left: 0;
+}
+.wt_page-section:nth-of-type(odd) .wt_section-message {
+  float: right;
+}
+.wt_page-section:nth-of-type(even) .wt_section-image {
+  float: right;
 }
 .wt_page-section:nth-of-type(even) .wt_section-image img {
   width: 100%;
@@ -471,6 +483,7 @@ body.page-template-template-about .header a {
   right: 0;
 }
 .wt_page-section:nth-of-type(even) .wt_section-message {
+  float: left;
   order: -1;
 }
 @media only screen and (max-width: 1280px) {
