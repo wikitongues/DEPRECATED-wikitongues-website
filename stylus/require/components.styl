@@ -152,6 +152,15 @@ body
         color $text-color-light
         display inline-block
 
+// Fit the white navbar background on smaller screens
+@media all and (max-width:750px)
+    .background:before
+        height 100px !important
+
+@media all and (max-width:400px)
+    .background:before
+        height 200px !important
+
 /*------------------------------------*\
     BANNERS
     components/banner.php
@@ -416,9 +425,9 @@ body
 @media only screen and (max-width: 979px)
     .wt_page-section
         .wt_section-content
-            flex-direction column
-
             .wt_section-message
+                max-width 100%
+
                 &:nth-of-type(even)
                     order 1
 
@@ -426,6 +435,7 @@ body
                     order -1
 
             .wt_section-image
+                max-width 100%
                 padding 0
 
                 img
@@ -450,11 +460,6 @@ body
     display inline-block
     -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
     box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
-
-// On smaller screens, show items in a single column
-@media only screen and (max-width: 800px)
-    .wt_featured-items
-        flex-direction column
 
 // Each featured item has three children:
 // 1. A link to youtube with a background image

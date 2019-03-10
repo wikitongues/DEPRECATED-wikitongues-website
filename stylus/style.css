@@ -245,6 +245,16 @@ body.page-template-template-about .header a {
   color: #fff;
   display: inline-block;
 }
+@media all and (max-width: 750px) {
+  .background:before {
+    height: 100px !important;
+  }
+}
+@media all and (max-width: 400px) {
+  .background:before {
+    height: 200px !important;
+  }
+}
 .wt_banner,
 .wt_form-banner {
   position: relative;
@@ -476,8 +486,8 @@ body.page-template-template-about .header a {
   }
 }
 @media only screen and (max-width: 979px) {
-  .wt_page-section .wt_section-content {
-    flex-direction: column;
+  .wt_page-section .wt_section-content .wt_section-message {
+    max-width: 100%;
   }
   .wt_page-section .wt_section-content .wt_section-message:nth-of-type(even) {
     order: 1;
@@ -486,6 +496,7 @@ body.page-template-template-about .header a {
     order: -1;
   }
   .wt_page-section .wt_section-content .wt_section-image {
+    max-width: 100%;
     padding: 0;
   }
   .wt_page-section .wt_section-content .wt_section-image img {
@@ -504,11 +515,6 @@ body.page-template-template-about .header a {
   display: inline-block;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
   box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
-}
-@media only screen and (max-width: 800px) {
-  .wt_featured-items {
-    flex-direction: column;
-  }
 }
 .wt_featured-item .wt_featured-item-image {
   height: 20rem;
@@ -702,8 +708,7 @@ body.home #wt_blog-title+p {
     font-size: 1.5rem;
   }
   body.home .wt_banner .wt_banner-image-caption {
-    left: -20%;
-    bottom: 20%;
+    transform: rotate(-8deg);
   }
   body.home .wt_featured-partners {
     display: block !important;
@@ -713,6 +718,9 @@ body.home #wt_blog-title+p {
     display: inline-block;
     width: 26% !important;
     margin: 2% !important;
+  }
+  body.home .wt_page-section .wt_section-image {
+    width: 100% !important;
   }
   body.home .wt_page-section .wt_section-image .wt_section-image-caption {
     bottom: 0;
@@ -724,10 +732,16 @@ body.home #wt_blog-title+p {
   }
   body.home .wt_page-section .wt_featured-items .wt_featured-item {
     width: 100%;
+    height: auto;
     margin: 2% 1%;
   }
   body.home #wt_blog-title {
     margin-bottom: 2rem;
+  }
+}
+@media all and (max-width: 450px) {
+  .wt_banner-image-caption {
+    transform: rotate(-15deg) !important;
   }
 }
 body.page-template-template-leadership .wt_who-navigation,
