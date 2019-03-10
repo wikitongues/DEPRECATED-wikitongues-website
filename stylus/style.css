@@ -610,8 +610,16 @@ body.page-template-template-about .header a {
   color: #fff;
 }
 @media all and (max-width: 979px) {
+  .footer {
+    margin-top: 1800px;
+  }
   .footer .footer-navigation ul {
     display: block;
+  }
+}
+@media all and (max-width: 450px) {
+  .footer {
+    margin-top: 1200px;
   }
 }
 body.home .wt_banner .wt_banner-image-caption {
