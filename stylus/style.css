@@ -305,6 +305,8 @@ body.page-template-template-about .header a {
 .wt_banner-message .wt_cta {
   margin: 2rem 0 0 auto;
   max-width: 500px;
+  position: relative;
+  z-index: 6;
 }
 .wt_donate-banner {
   width: 100%;
@@ -637,7 +639,7 @@ body.home .wt_page-section.primary_content-block {
   color: #fff;
 }
 body.home .wt_page-section.primary_content-block .wt_section-image {
-  width: 45vw;
+  width: 41vw;
 }
 body.home .wt_page-section#primary_content-block-2 {
   margin-bottom: 0;
@@ -659,7 +661,7 @@ body.home .wt_page-section .wt_featured-items {
 }
 body.home .wt_page-section .wt_featured-items .wt_featured-item {
   width: 28%;
-  height: 495px;
+  height: 525px;
 }
 body.home .wt_page-section.news_content-block {
   margin-bottom: 1rem;
