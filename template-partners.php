@@ -32,21 +32,10 @@
 			$partner_website = get_field('partner_website');
 			$partner_bio = get_field('partner_bio');
 
-			// assign to row of css grid
-			// grid contains row of partner images, followed by expandable profiles of each partner in row
-			// profile gets entire row
-			$grid_row = intdiv($i, $partners_per_row) * ($partners_per_row + 1) + 1;
-
 			// js function to call onclick
 			$function_call = 'expandPartner('.$i.', '.$partners_per_row.')';
 
-			// css grid-row of image
-			$style = 'grid-row: '.$grid_row;
-
-			// css grid-row of expandable profile
-			$profile_style = 'grid-row: '.($grid_row + 1 + $i % $partners_per_row).'; grid-column: span '.$partners_per_row;
-
-			echo '<li class="wt_partner" id="partner-'.$i.'" onclick="'.$function_call.'" style="'.$style.'"><img src="'.$partner_logo['url'].'"></li>';
+			echo '<li class="wt_partner" id="partner-'.$i.'" onclick="'.$function_call.'"><img src="'.$partner_logo['url'].'"></li>';
 
 			// expandable profile component
 			include( locate_template('components/partner-profile.php') );
