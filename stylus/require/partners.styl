@@ -4,36 +4,48 @@
 \*------------------------------------*/
 
 #wt_full-partners-list
-    list-style-type none
-    padding 0
-    display grid
-    grid-template-columns repeat(auto-fit, minmax(15rem, 1fr))
+    width 90%
+    margin auto
 
 // partner logo in grid
 .wt_partner
     cursor pointer
-    display flex
-    align-items center
-    justify-content center
-    grid-column span 1
+    width 23%
+    margin 1% .5%
+    display inline-block
+    vertical-align top
+
+    img
+        width 100%
 
     // carat attached to profile panel
-    &:after
-        opacity 0
-        transform translateY(600%)
-        content ""
-        background-color transparent
-        position absolute
-        height 1em
-        width 0
-        border-left 1em solid transparent
-        border-right 1em solid transparent
-        border-bottom 1em solid $dark-background
-        align-self flex-end
+    // &:after
+    //     opacity 0
+    //     transform translate(-550%, 790%)
+    //     content ""
+    //     background-color transparent
+    //     position absolute
+    //     height 1em
+    //     width 0
+    //     border-left 1em solid transparent
+    //     border-right 1em solid transparent
+    //     border-bottom 1em solid $dark-background
+
+    // make room for profile
+    &.selected
+        height 650px
 
     &.selected:after
         opacity 1
-        transform none
+
+for i in (12..6)
+    @media all and (max-width:(i * 100)px)
+        .selected
+            height (i * 60)px !important
+
+@media all and (max-width:450px)
+    .selected
+        height 750px !important
 
 // expandable partner profile
 .wt_partner-profile
@@ -42,47 +54,47 @@
     max-height 0vh
     transform scaleY(0)
     opacity 0
-    transition transform 0.5s ease-out
+    transition max-height 0.5s ease-out
     z-index -1
+    position absolute
+    left 0vw
+    width 100vw
 
     &.expanded
-        max-height 100vh
         opacity 1
         z-index auto
+        transform translateY(-100%)
 
-    // trigger scaleY animation when row of expanded partner changes
     &.row-expanded
-        transform scaleY(1)
+        max-height 100vh
 
-    & > .flex-container
-        display flex
+    // logo
+    & > .wt_partner-profile-image 
+        height 20vw
+        background white
+        border-radius 1em
+        display inline-block
+        width 20vw
+        vertical-align top
 
-        // logo
-        & > .wt_partner-profile-image 
-            flex-grow 0
-            flex-shrink 0
-            flex-basis 20vw
-            height 20vw
-            background white
-            border-radius 1em
-            vertical-align middle
-            display flex
-            align-items center
-            justify-content center
+        img
+            width 100%
 
-        & > div
-            padding 1em
-            margin 1em
+    & > div
+        padding 1em
+        margin 1em
 
-        // name, website, and bio
-        & > .wt_partner-profile-content
+    // name, website, and bio
+    & > .wt_partner-profile-content
+        display inline-block
+        width 60vw
 
-            // name and website
-            & > .wt_partner-profile-header
-                display flex
+        // name and website
+        & > .wt_partner-profile-header
 
-                & > *
-                    flex 1 0 50vw
+            & > *
+                display inline-block
+                width 50vw
 
-                & > a
-                    color $text-color-light
+            & > a
+                color $text-color-light

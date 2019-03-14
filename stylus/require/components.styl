@@ -18,7 +18,6 @@ body
 .header
     z-index 10
     position fixed
-    display flex
     top 0
     width 100% // Using %: using the vw unit overflows on the x axis
 
@@ -50,9 +49,7 @@ body
     * Horizontal scroll flexbox
     * https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
     */
-    display flex
     width 100%
-    flex-wrap nowrap
     overflow-x auto
     -webkit-overflow-scrolling touch // smooth scrolling on IOS devices
     -ms-overflow-style none // hide scrollbar in Edge
@@ -65,10 +62,6 @@ body
 // See: https://stackoverflow.com/a/6165489/7770081
 // Possible solutions: https://stackoverflow.com/a/16671476/7770081
 
-// Don't let flex children shrink to toggle scroll
-.nav > *
-    flex 0 0 auto
-
 /*
 * End horizontal scroll
 */
@@ -78,11 +71,16 @@ body
     margin-left auto
     margin-right 1rem
 
+$logo-height = 48px
+$logo-width = 48px
+
 // Logo size
 .logo
-    width 48px
-    height 48px
+    width $logo-height
+    height $logo-width
     margin 0 1rem
+    display inline-block
+    float left
 
 .logo img
     border-radius 0 0 50% 50%
@@ -98,7 +96,15 @@ body
         list-style-type none
         margin 0
         padding 0
-        display flex
+        display inline-block
+        vertical-align top
+
+        &:first-of-type
+            float left
+        
+        &:last-of-type
+            float right
+
 
         // Position nav items
         li
@@ -106,9 +112,11 @@ body
             text-transform uppercase
             letter-spacing 0.1rem
             text-align center
+            display inline-block
+            line-height $logo-height
 
             a
-                padding 1.18rem 1rem 1rem 1rem
+                padding 0 0 1rem 1rem
 
 // Dropdown nav
 .sub-menu
@@ -143,6 +151,15 @@ body
     &.page-template-template-about .header a
         color $text-color-light
         display inline-block
+
+// Fit the white navbar background on smaller screens
+@media all and (max-width:750px)
+    .background:before
+        height 100px !important
+
+@media all and (max-width:400px)
+    .background:before
+        height 200px !important
 
 /*------------------------------------*\
     BANNERS
@@ -199,6 +216,8 @@ body
     .wt_cta
         margin 2rem 0 0 auto
         max-width 500px
+        position relative
+        z-index 6
 
 /* donate banner */
 
@@ -305,14 +324,19 @@ body
 
     .wt_section-content
         position relative
-        display flex
 
         > *
-            flex 1
             margin auto
 
+        .wt_section-image
+            display inline-block
+            max-width 42vw
+
         .wt_section-message
-            padding 6rem
+            display inline-block
+            vertical-align top
+            max-width 50vw
+            padding 6rem 3rem 6rem 3rem
 
             *
                 max-width 650px
@@ -342,6 +366,10 @@ body
 
 // Switch image and message at each new section
 .wt_page-section
+
+    .wt_section-content
+        min-height 500px
+
     .wt_section-image
         position relative
 
@@ -357,6 +385,8 @@ body
 
     &:nth-of-type(odd)
         .wt_section-image
+            float left
+
             img
                 width 100%
                 height auto
@@ -366,9 +396,13 @@ body
             .wt_section-image-caption
                 left 0
 
+        .wt_section-message
+            float right
+
     &:nth-of-type(even)
         .wt_section-image
-            margin 2rem 0 2rem 2rem
+            // margin 2rem 0 2rem 2rem
+            float right
 
             img
                 width 100%
@@ -380,6 +414,7 @@ body
                 right 0
 
         .wt_section-message
+            float left
             order -1
 
 // typography reduction on laptop screens
@@ -403,9 +438,9 @@ body
 @media only screen and (max-width: 979px)
     .wt_page-section
         .wt_section-content
-            flex-direction column
-
             .wt_section-message
+                max-width 100%
+
                 &:nth-of-type(even)
                     order 1
 
@@ -413,6 +448,7 @@ body
                     order -1
 
             .wt_section-image
+                max-width 100%
                 padding 0
 
                 img
@@ -426,8 +462,6 @@ body
 
 // Display as a flexbox
 .wt_featured-items
-    display flex
-    justify-content space-between
     padding 5%
 
 .wt_featured-item // Children
@@ -436,15 +470,9 @@ body
     border-radius 1rem
     overflow hidden
     // Featured item content flexbox
-    display flex
-    flex-direction column
+    display inline-block
     -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
     box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
-
-// On smaller screens, show items in a single column
-@media only screen and (max-width: 800px)
-    .wt_featured-items
-        flex-direction column
 
 // Each featured item has three children:
 // 1. A link to youtube with a background image
@@ -501,18 +529,29 @@ body
             text-transform uppercase
 
     .footer-navigation
-        display flex
         width 100%
 
+        // clearfix
+        &:after
+            content ''
+            display block
+            height 0
+            clear both
+
         ul
-            display flex
+            display inline-block
             list-style-type none
             padding 0
 
+            &:first-of-type
+                float left
+
             &:last-of-type
+                float right
                 margin-left auto                
             
             li
+                display inline-block
                 margin 3px 20px 3px 3px
                 letter-spacing 0.08rem
 
@@ -536,6 +575,12 @@ body
     
 @media all and (max-width:979px)
     .footer
+        margin-top 1800px
+
         .footer-navigation
             ul
                 display block
+
+@media all and (max-width:450px)
+    .footer
+        margin-top 1200px
