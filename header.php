@@ -10,6 +10,7 @@
 
         <!-- loading fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

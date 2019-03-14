@@ -22,49 +22,27 @@ body
 
 */
 
-
-/* yellow block */
-#primary_content-block-1 > .wt_section-content::after
-    content ""
-    background-color transparent
-    height 150%
-    // transform translate(70%, -10%)
-    // margin-top 5%
-    // margin-right 50%
-    position absolute
-    top -10%
-    right 0
-    border-right 60vw solid
-    border-right-color #ffc342
-    z-index -1
-
 /* blue block */
+#primary_content-block-2::before,
+#primary_content-block-2::after,
+#primary_content-block-3::after
+  content ""
+
 #primary_content-block-2::before
-    content ""
-    background-color transparent
-    height 150%
-    transform translateY(-5%)
-    position absolute
-    border-right 100vw solid
-    border-right-color rgb(110,176,255)
+    border-right 100vw solid rgb(110,176,255)
     border-top 100px solid transparent
-    z-index -1
+
+#primary_content-block-2::after
+    border-left 100vw solid rgb(110,176,255)
+    border-bottom 100px solid transparent
 
 /* pink gradiant block */
-#primary_content-block-3::before
-    content ""
-    background-color transparent
-    position absolute
-    top -90%
-    left 0
-    height 215%
-    // transform translateY(-10%)
-    border-right 100vw solid rgb(233,144,134)
-    border-top 140px solid transparent
-    z-index -1
+#primary_content-block-3::after
+    border-left 100vw solid rgb(233,144,134)
+    border-bottom 100px solid transparent
 
 #news_content-block-1::before
-    content ""
+    // content ""
     background-color transparent
     position absolute
     top 0
@@ -260,7 +238,7 @@ style-who-we-are(c)
         border-right 100vw solid transparent
         border-bottom 100px solid #0d232f
         z-index 5
-        
+
 @media all and (max-width:979px)
     /* yellow block */
     #primary_content-block-1 > .wt_section-content::after

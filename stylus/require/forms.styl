@@ -11,13 +11,14 @@
 body
     &.page-template-template-form
         width 100% // body width fix
-        
+
         .wt_form-banner-message
                 margin 0 auto 0 10rem
-                
+                float left
+
                 h1
                     text-align left
-                    
+
         .wt_form-banner-form
             float right
             background-color $text-color-light
@@ -26,87 +27,87 @@ body
             margin-top -80vh // margin from nav
             width 50%
             box-sizing border-box
-            
+
             &>h1
                 margin-top 0
-            
+
             .wt_form-section
                 position relative
                 margin-top 50px
-                
+
                 // first div in the form is injected js
                 &nth-of-type(2)
                     margin-top 0
-                
+
                 input,
                 textarea
                     width 100%
                     padding-bottom 5px
                     font-size 1.5rem
-                    
+
                     &:focus
                         outline none
-                
+
                 h2
                     width 45%
                     margin 0 0 25px 0
-                
+
                 p
                     width 45%
                     margin-bottom 0
-                    
+
                     label
                         font-size 1.35rem
                         font-weight 700
-                    
+
                     br
                         display none
-                    
+
                     span
                         display block
                         font-size 1.25rem
                         font-weight normal
                         color #888
-                    
+
                     input
                         border-bottom 2px solid LightGrey
-                    
+
                     textarea
                         border 0
                         border-bottom 2px solid LightGrey
                         border-radius 0
                         height 75px
-                
+
                 // radio buttons
                 .wt_radio-button
                     & > span
                         display block
                         margin 1em 0
-                        
+
                         span,
                         input
                             display inline !important
                             width auto !important
-                    
+
                 .wt_form-description
                     position absolute
                     top 0
                     right 0
                     width 50%
-                    
+
                     a
                         display inline
                         font-weight 700
-            
+
         .main
             float left
             width 50%
             box-sizing border-box
             margin 0 0 0 0
-            
+
             .wt_page-intro
                 margin-top 0
-            
+
             .wt_featured-item
                 max-width 500px
                 margin 2rem auto
@@ -117,24 +118,24 @@ body
             .wt_form-banner
                 .wt_form-banner-message
                     margin 0 auto
-                    
+
                     h1
                         font-size 5rem
                         text-align center
-                        
+
             .wt_form-banner-form,
             .main
                 width 100%
                 float none
-            
+
             .wt_form-banner-form
                 margin-top 0
-                
+
                 .wt_form-section
                     .wt_form-description
                         width 100%
                         position relative
-                    
+
                     h2,
                     p
                         width 100%

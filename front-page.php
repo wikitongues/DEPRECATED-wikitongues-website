@@ -52,6 +52,7 @@ get_header();
 	if ( $featured_partners ):
 
 		echo '<ul class="wt_featured-partners">';
+    echo '<h1>Partners</h1>';
 
 		foreach ( $featured_partners as $post ): setup_postdata($post);
 
