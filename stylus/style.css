@@ -552,33 +552,44 @@ body.page-template-template-about .header a {
   background-color: #0d232f;
   color: #fff;
   padding: 0 2rem 2rem 2rem;
-  bottom: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  display: inline-block;
+  width: 100%;
+}
+.footer .footer-logo {
+  display: inline-block;
+  float: left;
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
 }
 .footer .footer-logo .logo-img {
+  float: left;
   vertical-align: middle;
   width: 35px;
   height: auto;
   border-radius: 100%;
 }
 .footer .footer-logo span {
-  padding-left: 5px;
+  padding-left: 1rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  float: left;
+  margin-top: 1rem;
 }
 .footer .footer-navigation {
   width: 100%;
-}
-.footer .footer-navigation:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
+  float: left;
+  display: inline-block;
+  margin: 2rem 0;
 }
 .footer .footer-navigation ul {
   display: inline-block;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 .footer .footer-navigation ul:first-of-type {
   float: left;
@@ -589,25 +600,34 @@ body.page-template-template-about .header a {
 }
 .footer .footer-navigation ul li {
   display: inline-block;
-  margin: 3px 20px 3px 3px;
-  letter-spacing: 0.08rem;
+  margin-right: 1.5rem;
+  line-height: 1.5;
 }
 .footer .footer-navigation ul .sub-menu {
   visibility: visible;
+  display: inline-block;
+  float: left;
+}
+.footer .footer-navigation ul .sub-menu li {
+  float: left;
+  clear: both;
 }
 .footer .footer-navigation ul .sub-menu li a {
   color: #78858a;
+  font-size: 1.5rem;
 }
 .footer .legal {
   width: 100%;
   margin-bottom: 0;
   color: #78858a;
+  display: inline-block;
 }
 .footer .legal a {
   display: inline;
 }
 .footer a {
   color: #fff;
+  display: block;
 }
 @media all and (max-width: 979px) {
   .footer {
@@ -624,10 +644,6 @@ body.page-template-template-about .header a {
 }
 body.home .wt_banner .wt_banner-image-caption {
   left: 5%;
-  -webkit-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  transform: rotate(-5deg);
   margin: 0;
   bottom: 5%;
 }
@@ -644,9 +660,11 @@ body.home ul.wt_featured-partners:after {
   display: inline-block;
 }
 body.home ul.wt_featured-partners li {
-  max-width: 15rem;
-  margin: 2rem;
+  width: 20%;
+  padding: 2rem;
+  box-sizing: border-box;
   display: inline-block;
+  vertical-align: middle;
 }
 body.home ul.wt_featured-partners li img {
   border-radius: 0;
