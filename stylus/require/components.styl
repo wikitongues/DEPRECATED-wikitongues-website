@@ -173,9 +173,7 @@ body
 .wt_banner, .wt_form-banner
     position relative
     width 100%
-    height 98vh
-    margin-top -5rem // Position banner on top
-    display flex
+    display inline-block
     align-items center
     background-size cover !important
     background-attachment fixed !important
@@ -208,13 +206,14 @@ body
         text-align right
         font-weight bold
         text-transform uppercase
+        margin 20rem 0 5rem 0
 
 .wt_banner-message
     h1
         text-shadow 0 0 100px #000
 
     .wt_cta
-        margin 2rem 0 0 auto
+        margin 2rem 0 2rem auto
         max-width 500px
         position relative
         z-index 6
