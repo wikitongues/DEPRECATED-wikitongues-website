@@ -75,8 +75,8 @@ var featuredItemsPosition_<?php echo $i ?> = 0;
 if (hasFeaturedItems_<?php echo $i ?>) {
 	var nFeaturedItemsShown = <?php echo $n_items_shown ?>;
 
-	const leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
-	const rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
+	var leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
+	var rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
 
 	leftButton.style.display = 'none';
 
@@ -86,14 +86,14 @@ if (hasFeaturedItems_<?php echo $i ?>) {
 }
 
 function featuredItemsLeft_<?php echo $i ?> () {
-	const itemToHide = document.getElementById(`featured-item-${featuredItemsPosition_<?php echo $i ?> + nFeaturedItemsShown - 1}`);
-	const itemToShow = document.getElementById(`featured-item-${featuredItemsPosition_<?php echo $i ?> - 1}`);
+	var itemToHide = document.getElementById('featured-item-' + (featuredItemsPosition_<?php echo $i ?> + nFeaturedItemsShown - 1));
+	var itemToShow = document.getElementById('featured-item-' + (featuredItemsPosition_<?php echo $i ?> - 1));
 
 	itemToHide.style.display = 'none';
 	itemToShow.style.display = 'inline-block';
 
-	const leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
-	const rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
+	var leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
+	var rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
 
 	rightButton.style.display = 'inline-block';
 
@@ -105,14 +105,14 @@ function featuredItemsLeft_<?php echo $i ?> () {
 }
 
 function featuredItemsRight_<?php echo $i ?> () {
-	const itemToHide = document.getElementById(`featured-item-${featuredItemsPosition_<?php echo $i ?>}`);
-	const itemToShow = document.getElementById(`featured-item-${featuredItemsPosition_<?php echo $i ?> + nFeaturedItemsShown}`);
+	var itemToHide = document.getElementById('featured-item-' + featuredItemsPosition_<?php echo $i ?>);
+	var itemToShow = document.getElementById('featured-item-' + (featuredItemsPosition_<?php echo $i ?> + nFeaturedItemsShown));
 
 	itemToHide.style.display = 'none';
 	itemToShow.style.display = 'inline-block';
 
-	const leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
-	const rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
+	var leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
+	var rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
 
 	leftButton.style.display = 'inline-block';
 
