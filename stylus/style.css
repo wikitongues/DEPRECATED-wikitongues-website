@@ -336,6 +336,7 @@ body.page-template-template-about .header a {
   .wt_banner,
   .wt_form-banner {
     background-attachment: initial !important;
+    height: 500px;
   }
   .wt_banner-message h1,
   .wt_form-banner-message h1 {
@@ -747,11 +748,6 @@ body.home #wt_blog-title+p {
     padding: 2rem 1rem;
     font-size: 1.5rem;
   }
-  body.home .wt_banner .wt_banner-image-caption {
-    left: -20%;
-    bottom: 20%;
-    transform: rotate(-8deg);
-  }
   body.home .wt_featured-partners {
     display: block !important;
     text-align: center;
@@ -779,11 +775,6 @@ body.home #wt_blog-title+p {
   }
   body.home #wt_blog-title {
     margin-bottom: 2rem;
-  }
-}
-@media all and (max-width: 450px) {
-  .wt_banner-image-caption {
-    transform: rotate(-15deg) !important;
   }
 }
 body.page-template-template-leadership .wt_who-navigation,
