@@ -51,30 +51,33 @@ for i in (12..6)
 .wt_partner-profile
     background $dark-background
     color $text-color-light
-    max-height 0vh
+    max-height 0%
     transform scaleY(0)
     opacity 0
     transition max-height 0.5s ease-out
     z-index -1
     position absolute
-    left 0vw
-    width 100vw
+    left 0%
+    width 100%
 
     &.expanded
         opacity 1
         z-index auto
+        -webkit-transform translateY(-100%)
+        -moz-transform translateY(-100%)
+        -ms-transform translateY(-100%)
         transform translateY(-100%)
 
     &.row-expanded
-        max-height 100vh
+        max-height 100%
 
     // logo
     & > .wt_partner-profile-image 
-        height 20vw
+        // height 20vw
         background white
         border-radius 1em
         display inline-block
-        width 20vw
+        width 20%
         vertical-align top
 
         img
@@ -87,14 +90,14 @@ for i in (12..6)
     // name, website, and bio
     & > .wt_partner-profile-content
         display inline-block
-        width 60vw
+        width 60%
 
         // name and website
         & > .wt_partner-profile-header
 
             & > *
                 display inline-block
-                width 50vw
+                width 50%
 
             & > a
                 color $text-color-light
