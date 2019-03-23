@@ -30,7 +30,7 @@ body
             content ""
             z-index -1
             position absolute
-            width 100vw
+            width 100%
             height 50px
             background white
             -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
@@ -173,9 +173,7 @@ body
 .wt_banner, .wt_form-banner
     position relative
     width 100%
-    height 98vh
-    margin-top -5rem // Position banner on top
-    display flex
+    display inline-block
     align-items center
     background-size cover !important
     background-attachment fixed !important
@@ -187,7 +185,7 @@ body
         height 0
         left 0
         bottom 0
-        border-left 100vw solid transparent
+        border-left 100% solid transparent
         border-bottom 100px solid white
         z-index 5
 
@@ -208,13 +206,14 @@ body
         text-align right
         font-weight bold
         text-transform uppercase
+        margin 20rem 0 5rem 0
 
 .wt_banner-message
     h1
         text-shadow 0 0 100px #000
 
     .wt_cta
-        margin 2rem 0 0 auto
+        margin 2rem 0 2rem auto
         max-width 500px
         position relative
         z-index 6
@@ -252,6 +251,7 @@ body
 @media all and (max-width:979px)
     .wt_banner, .wt_form-banner
         background-attachment: initial !important;
+        height 500px
 
     .wt_banner-message,
     .wt_form-banner-message
@@ -330,12 +330,12 @@ body
 
         .wt_section-image
             display inline-block
-            max-width 42vw
+            max-width 42%
 
         .wt_section-message
             display inline-block
             vertical-align top
-            max-width 50vw
+            max-width 50%
             padding 6rem 3rem 6rem 3rem
 
             *
@@ -492,6 +492,29 @@ body
 
     p
         padding 0 2rem 2rem 2rem
+
+.wt_featured-items-button
+    display inline-block
+    width 4%
+
+    button 
+        background-color $alert-color
+        padding 0.5rem 2rem 0.5rem 2rem
+        border-radius 4rem
+        border none
+        color $text-color
+        font-size 4rem
+        -webkit-transform translateY(-250px)
+        -moz-transform translateY(-250px)
+        -ms-transform translateY(-250px)
+        transform translateY(-250px)
+
+@media all and (max-width: 979px)
+    .wt_featured-items-button
+        width 100%
+        button 
+            transform scale(0.5)
+            left 50%
 
 /*------------------------------------*\
     PAGE INTRO

@@ -56,29 +56,37 @@ var expandedPartner = -1;
 
 function expandPartner (i, partnersPerRow) {
 	// collapse all other profiles
-	const allProfiles = document.querySelectorAll('.wt_partner-profile');
-	allProfiles.forEach(profile => profile.classList.remove('expanded'));
+	var allProfiles = [].slice.call(document.querySelectorAll('.wt_partner-profile'));
+	for (var j in allProfiles) {
+		allProfiles[j].classList.remove('expanded');
+	}
 
 	// hide carat for all other partners
-	const allLogos = document.querySelectorAll('.wt_partner');
-	allLogos.forEach(logo => logo.classList.remove('selected'));
+	var allLogos = [].slice.call(document.querySelectorAll('.wt_partner'));
+	for (var j in allLogos) {
+		allLogos[j].classList.remove('selected');
+	}
 
 	if (i === expandedPartner) {
 		// currently expanded partner clicked; expand no profile
 		expandedPartner = -1;
-		allProfiles.forEach(profile => profile.classList.remove('row-expanded'));
+		for (var j in allProfiles) {
+			allProfiles[j].classList.remove('row-expanded');
+		}
 	} else {
 		// expand selected profile
-		const profile = document.getElementById(`partner-profile-${i}`);
+		var profile = document.getElementById('partner-profile-' + i);
 		profile.classList.add('expanded');
 
-		const row = Math.floor(i / partnersPerRow);
+		var row = Math.floor(i / partnersPerRow);
 		if (row !== Math.floor(expandedPartner / partnersPerRow)) {
 			// partner not in same row as currently expanded partner
-			allProfiles.forEach(profile => profile.classList.remove('row-expanded'));
+			for (var j in allProfiles) {
+				allProfiles[j].classList.remove('row-expanded');
+			}
 
-			for (let j = row * partnersPerRow; j < (row + 1) * partnersPerRow; j++) {
-				let profileInRow = document.getElementById(`partner-profile-${j}`);
+			for (var j = row * partnersPerRow; j < (row + 1) * partnersPerRow; j++) {
+				var profileInRow = document.getElementById('partner-profile-' + j);
 
 				// row-expanded triggers animated transition
 				profileInRow.classList.add('row-expanded');
@@ -88,7 +96,7 @@ function expandPartner (i, partnersPerRow) {
 		}
 
 		// show carat attached to profile panel pointing to logo in grid
-		const logo = document.getElementById(`partner-${i}`);
+		var logo = document.getElementById('partner-' + i);
 		logo.classList.add('selected');
 
 		expandedPartner = i;
