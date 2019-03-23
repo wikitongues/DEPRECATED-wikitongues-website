@@ -76,7 +76,13 @@ if (hasFeaturedItems_<?php echo $i ?>) {
 	var nFeaturedItemsShown = <?php echo $n_items_shown ?>;
 
 	const leftButton = document.getElementById('featured-items-left-<?php echo $i ?>');
+	const rightButton = document.getElementById('featured-items-right-<?php echo $i ?>');
+
 	leftButton.style.display = 'none';
+
+	if (nTotalFeaturedItems_<?php echo $i ?> <= nFeaturedItemsShown) {
+		rightButton.style.display = 'none';
+	}
 }
 
 function featuredItemsLeft_<?php echo $i ?> () {
