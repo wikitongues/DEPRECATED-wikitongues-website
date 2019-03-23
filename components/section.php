@@ -39,7 +39,9 @@
 		
 		echo '<section class="wt_featured-items">';
 
-		echo '<button id="featured-items-left-'.$i.'" onclick="featuredItemsLeft_'.$i.'()">left</button>';
+		echo '<div class="wt_featured-items-button">' . 
+				'<button id="featured-items-left-'.$i.'" onclick="featuredItemsLeft_'.$i.'()"><</button>' . 
+				'</div>';
 
 		foreach ( $featured_items as $post ) : setup_postdata( $post );
 
@@ -56,7 +58,9 @@
 
 			endforeach; wp_reset_postdata();
 			
-			echo '<button id="featured-items-right-'.$i.'" onclick="featuredItemsRight_'.$i.'()">right</button>';
+			echo '<div class="wt_featured-items-button">' . 
+					'<button id="featured-items-right-'.$i.'" onclick="featuredItemsRight_'.$i.'()">></button>' . 
+					'</div>';
 
 	    echo '</section>';
 	}

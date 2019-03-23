@@ -542,6 +542,19 @@ body.page-template-template-about .header a {
 .wt_featured-item p {
   padding: 0 2rem 2rem 2rem;
 }
+.wt_featured-items-button {
+  display: inline-block;
+  width: 6rem;
+}
+.wt_featured-items-button button {
+  background-color: #b8ffdd;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 4rem;
+  border: none;
+  color: #11242f;
+  font-size: 4rem;
+  transform: translateY(-250px);
+}
 .wt_page-intro {
   max-width: 60rem;
   margin: 10% auto;
