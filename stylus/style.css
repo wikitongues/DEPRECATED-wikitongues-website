@@ -553,6 +553,9 @@ body.page-template-template-about .header a {
   border: none;
   color: #11242f;
   font-size: 4rem;
+  -webkit-transform: translateY(-250px);
+  -moz-transform: translateY(-250px);
+  -ms-transform: translateY(-250px);
   transform: translateY(-250px);
 }
 @media all and (max-width: 979px) {
