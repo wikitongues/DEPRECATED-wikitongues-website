@@ -544,7 +544,7 @@ body.page-template-template-about .header a {
 }
 .wt_featured-items-button {
   display: inline-block;
-  width: 6rem;
+  width: 4%;
 }
 .wt_featured-items-button button {
   background-color: #b8ffdd;
@@ -554,6 +554,15 @@ body.page-template-template-about .header a {
   color: #11242f;
   font-size: 4rem;
   transform: translateY(-250px);
+}
+@media all and (max-width: 979px) {
+  .wt_featured-items-button {
+    width: 100%;
+  }
+  .wt_featured-items-button button {
+    transform: scale(0.5);
+    left: 50%;
+  }
 }
 .wt_page-intro {
   max-width: 60rem;

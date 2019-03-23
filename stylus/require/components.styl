@@ -495,7 +495,7 @@ body
 
 .wt_featured-items-button
     display inline-block
-    width 6rem
+    width 4%
 
     button 
         background-color $alert-color
@@ -505,6 +505,13 @@ body
         color $text-color
         font-size 4rem
         transform translateY(-250px)
+
+@media all and (max-width: 979px)
+    .wt_featured-items-button
+        width 100%
+        button 
+            transform scale(0.5)
+            left 50%
 
 /*------------------------------------*\
     PAGE INTRO
