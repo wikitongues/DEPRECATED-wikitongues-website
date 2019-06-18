@@ -3,10 +3,10 @@ body
         .wt_banner
             .wt_banner-image-caption
                 left 5%
-                // -webkit-transform rotate(-5deg) // rotation doesn't quite align, gonna need some media queries to get this right
-                // -ms-transform rotate(-5deg)
-                // -o-transform rotate(-5deg)
-                // transform rotate(-5deg)
+                -webkit-transform rotate(-5deg) // rotation doesn't quite align, gonna need some media queries to get this right
+                -ms-transform rotate(-5deg)
+                -o-transform rotate(-5deg)
+                transform rotate(-5deg)
                 margin 0
                 bottom 5%
 
@@ -15,19 +15,13 @@ body
             width 80vw
             margin 0 auto 8%
             padding 0
-            text-align justify
-
-            &:after
-                content ''
-                width 100%
-                display inline-block
+            display flex
+            justify-content space-around
 
             li
-                width 20%
-                padding 2rem
-                box-sizing border-box
-                display inline-block
-                vertical-align middle
+                flex 1
+                max-width 15rem
+                margin 2rem
 
                 img
                     border-radius 0
@@ -39,9 +33,6 @@ body
 
             &.primary_content-block
                 color $text-color-light
-
-                .wt_section-image
-                    width 41vw
 
             &#primary_content-block-2
                 margin-bottom 0
@@ -64,8 +55,7 @@ body
                 padding-top 0
 
                 .wt_featured-item
-                    width 28%
-                    height 525px
+                    width (100/3)%
 
             &.news_content-block
                 margin-bottom 1rem
@@ -103,37 +93,34 @@ body
         &.home
             .wt_banner
                 display block
-
+                
                 .wt_banner-message
-                    position absolute
+                    position absolute 
                     bottom 20%
-
+                    
                     h1
                         font-size 3rem
-
+                    
                     .wt_cta
                         width 75%
                         padding 2rem 1rem
                         font-size 1.5rem
-
+                
                 .wt_banner-image-caption
                     left -20%
                     bottom 20%
-                    transform rotate(-8deg)
-
+            
             .wt_featured-partners
                 display block !important
                 text-align center
-
+                
                 li
                     display inline-block
                     width 26% !important
                     margin 2% !important
-
+            
             .wt_page-section
                 .wt_section-image
-                    width 100% !important
-
                     .wt_section-image-caption
                         bottom 0
                         -webkit-transform none
@@ -141,16 +128,11 @@ body
                         -o-transform none
                         transform none
                         margin 0 0 10px 10px
-
+                
                 .wt_featured-items
                     .wt_featured-item
                         width 100%
-                        height auto
                         margin 2% 1%
-
+            
             #wt_blog-title
                 margin-bottom 2rem
-
-@media all and (max-width:450px)
-    .wt_banner-image-caption
-        transform rotate(-15deg) !important

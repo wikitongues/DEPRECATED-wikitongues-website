@@ -81,7 +81,6 @@ That's it! You're all set.
 - [ ] Global: Fade-in images on page load
 - [ ] Global: Redirect template for deprecated links (i.e., "/who")
 - [x] Global: Add Google analytics
-- [x] Global: Video form submissions need unique names in CMS
 - [x] Homepage: Add GreenGeeks affiliate link
 - [ ] Homepage: "Wikitongues In the Press" section
 - [ ] Homepage: Increase featured videos to six
