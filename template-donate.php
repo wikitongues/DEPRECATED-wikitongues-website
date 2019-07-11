@@ -1,10 +1,10 @@
 <?php /* Template name: Donate */ get_header(); 
 
 // define content variables for page banner
-$banner_image = get_field('banner_image');
-$banner_header = get_field('banner_header');
-$banner_copy = get_field('banner_copy');
-$banner_form_embed = get_field('banner_form_embed');
+$donate_banner_image = get_field('donate_banner_image');
+$donate_banner_header = get_field('donate_banner_header');
+$donate_banner_copy = get_field('donate_banner_copy');
+$donate_banner_form_embed = get_field('donate_banner_form_embed');
 
 // load banner template
 include( locate_template('components/donate-banner.php') );

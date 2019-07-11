@@ -108,7 +108,7 @@ get_header();
 
 	if ( $news_items ): $i = 0; // $i++ assigns unique section IDs
 
-		echo '<h1 id="wt_blog-title">Further Reading</h1>';
+		echo '<h1 id="wt_blog-title">Learn More</h1>';
 
 		foreach( $news_items as $post ): setup_postdata( $post ); $i++;
 
@@ -117,10 +117,20 @@ get_header();
 			$section_image_caption = null;
 			$section_title = get_the_title();
 			$section_text = get_the_excerpt();
+			$section_cta_link_alt = get_field('post_permalink');
 			$section_cta_link = get_the_permalink();
-			$section_cta_text = 'Read More';
+			$section_cta_text = 'Read This';
 			$section_identifier = 'news'; // unique section identifier for each $i++ loop
 			$featured_items = null;
+
+			// temporary hack overrides section_cta_link var
+			// if custom field is available. need to fix
+			// syndication so that blog permalinks from medium
+			// populate an editable custom field so we can enter
+			// links to non-medium posts when desired
+			if ( $section_cta_link_alt ):
+				$section_cta_link = $section_cta_link_alt;
+			endif;
 
 			// load section template
 			include( locate_template('components/section.php') );
