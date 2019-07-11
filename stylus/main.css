@@ -316,7 +316,7 @@ body.page-template-template-about .header a {
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   .wt_banner,
   .wt_form-banner {
     background-attachment: initial !important;
@@ -574,7 +574,7 @@ body.page-template-template-about .header a {
 .footer a {
   color: #fff;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   .footer .footer-navigation ul {
     display: block;
   }
@@ -663,7 +663,7 @@ body.home #wt_blog-title+p {
   margin: 0;
   text-align: center;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   body.home .wt_banner {
     display: block;
   }
@@ -818,7 +818,7 @@ body.page-template-template-projects .wt_donate-banner {
 body.page-template-template-projects .footer {
   margin-top: 0;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   body.page-template-template-projects .wt_page-section .wt_section-message {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -938,7 +938,7 @@ body.page-template-template-form .main .wt_featured-item {
   max-width: 500px;
   margin: 2rem auto;
 }
-@media all and (max-width:970px) {
+@media all and (max-width: 970px) {
   body.page-template-template-form .wt_form-banner .wt_form-banner-message {
     margin: 0 auto;
   }
@@ -971,7 +971,7 @@ body.page-template-template-donate .wt_form-banner:before {
 body.page-template-template-donate .footer {
   margin-top: 0;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   body.page-template-template-donate .wt_donate-banner .wt_donate-banner-content {
     width: auto;
     margin: auto;
@@ -1270,7 +1270,7 @@ body.page-template-template-volunteers .main .wt_featured-item p {
   border-bottom: 100px solid #0d232f;
   z-index: 5;
 }
-@media all and (max-width:979px) {
+@media all and (max-width: 979px) {
   #primary_content-block-1 > .wt_section-content::after {
     content: "";
     background-color: transparent;
