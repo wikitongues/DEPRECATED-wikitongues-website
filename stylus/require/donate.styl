@@ -1,11 +1,42 @@
 body
 	&.page-template-template-donate
-		.wt_form-banner
+		.wt_donate-banner
+			position relative
+			margin-bottom 50px !important
+			padding-bottom 150px !important
+			
 			&:before
-				border-right initial
-				border-left initial
-				border-bottom initial
-
+				content ""
+				background-color transparent
+				position absolute
+				height 0
+				left 0
+				bottom 0
+				border-left 100vw solid transparent
+				border-bottom 100px solid #fff
+				z-index 5
+		
+		.wt_newsletter-signup-wrapper
+			padding 25px 0 150px
+			position relative
+			background #e99086
+			margin-top 100px
+			
+			&:before
+				content ''
+				position absolute
+				background-color transparent   
+				z-index -5
+				border-left 100vw solid transparent
+				border-bottom 60px solid #e99086
+				top -60px
+			
+			h1, h2
+				color $text-color-light
+			
+			.wt_newsletter-signup
+				margin-bottom 0 !important
+				
 		.footer
 			margin-top 0
 
@@ -17,3 +48,10 @@ body
 					width auto
 					margin auto
 					border-radius 0
+			
+			.wt_page-section
+				.wt_section-content
+					.wt_section-message
+						padding 2rem
+						box-sizing border-box
+						width 100%

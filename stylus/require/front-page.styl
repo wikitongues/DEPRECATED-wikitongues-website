@@ -10,24 +10,6 @@ body
                 margin 0
                 bottom 5%
 
-        ul.wt_featured-partners
-            list-style-type none
-            width 80vw
-            margin 0 auto 8%
-            padding 0
-            display flex
-            justify-content space-around
-
-            li
-                flex 1
-                max-width 15rem
-                margin 2rem
-
-                img
-                    border-radius 0
-                    width 100%
-                    height auto
-
         .wt_page-section
             font-size 1.75rem
 
@@ -60,6 +42,9 @@ body
             &.news_content-block
                 margin-bottom 1rem
 
+                &#news_content-block-1
+                    padding-top 50px
+
                 .wt_section-message
                     max-width 550px
                     box-sizing border-box
@@ -87,6 +72,60 @@ body
             &+p
                 margin 0
                 text-align center
+        
+        h2.wt_featured-press-title
+            margin-top 100px
+        
+        h2.wt_featured-partners-title,
+        h2.wt_featured-press-title
+            width 100%
+            text-align center
+            text-transform uppercase
+        
+        ul.wt_featured-partners,
+        ul.wt_featured-press
+            list-style-type none
+            width 100%
+            width 100vw
+            padding 2% 8% !important
+            text-align center      
+            box-sizing border-box   
+
+            li
+                display inline-block
+                max-width 15rem
+                margin 2rem
+
+                img
+                    border-radius 0
+                    width 100%
+                    height auto
+        
+        ul.wt_featured-press
+            li
+                vertical-align middle
+        
+        ul.wt_featured-partners
+            margin 50px 0 100px !important
+            
+            li
+                vertical-align top
+        
+        .wt_donate-banner
+            position relative
+            margin-top 0 !important
+            box-shadow none !important
+            
+            &:before
+                content ""
+                background-color transparent
+                position absolute
+                height 0
+                left 0
+                top -100px
+                border-left 100vw solid transparent
+                border-bottom 100px solid #ededed
+                z-index 5
 
 @media all and (max-width:979px)
     body
@@ -107,8 +146,12 @@ body
                         font-size 1.5rem
                 
                 .wt_banner-image-caption
-                    left -20%
-                    bottom 20%
+                    left 4%
+                    bottom 6%
+                    -webkit-transform rotate(-15deg)
+                    -ms-transform rotate(-15deg)
+                    -o-transform rotate(-15deg)
+                    transform rotate(-15deg)
             
             .wt_featured-partners
                 display block !important

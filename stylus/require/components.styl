@@ -1,5 +1,4 @@
 body
-    // padding-top 5rem
     -webkit-box-sizing border-box
     -moz-box-sizing border-box
     box-sizing border-box
@@ -84,9 +83,9 @@ body
     height 48px
     margin 0 1rem
 
-.logo img
-    border-radius 0 0 50% 50%
-    float left
+    img
+        border-radius 0 0 50% 50%
+        float left
 
 /*
     Secondary header flexboxes
@@ -137,7 +136,7 @@ body
 // White if over the banner image
 body
     &.home .header a,
-    &.page-template-template-donate .header a,
+    // &.page-template-template-donate .header a,
     &.page-template-template-form .header a,
     &.page-template-template-volunteers .header a
     &.page-template-template-about .header a
@@ -203,24 +202,47 @@ body
 /* donate banner */
 
 .wt_donate-banner
-    // position relative
     width 100%
-    min-height 90vh
-    padding 100px 0
-    background-size cover !important
-    background-attachment fixed !important
+    margin-top 50px
+    padding 50px 0 100px
+    -webkit-box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
+    box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
+    background: rgba(237,237,237,1)
+    background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(11%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)))
+    background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // filter: progid DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#fafafa', GradientType=0 )
+       
+    .inner-wrap
+        width 1073px
+        margin auto
 
-    .wt_donate-banner-content
-        // display none
-        margin 0 50px 0 auto
-        background #fff;
-        width 423px
-        padding 2rem 3rem 0
-        border-radius 3px;
-        text-align center;
+        aside
+            float left
+            
+            &.wt_donate-banner-header
+                width 500px
+                padding 50px 150px 50px 0
+                
+                h1
+                    text-align left
+                    color $text-color
+                
+                p
+                    font-size 2rem
+                    color $text-color
 
-        h1
-            font-size 2rem
+            &.wt_donate-banner-form
+                margin 0
+                width 423px
+                height 508px
+                border-radius 3px
+                -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)
+                box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)
+                overflow-y scroll
 
 .wt_banner,
 .wt_donate-banner
@@ -232,7 +254,7 @@ body
 
 @media all and (max-width:979px)
     .wt_banner, .wt_form-banner
-        background-attachment: initial !important;
+        background-attachment initial !important
 
     .wt_banner-message,
     .wt_form-banner-message
@@ -243,6 +265,21 @@ body
             width 75%
             padding 2rem 1rem
             font-size 1.5rem
+    
+    .wt_donate-banner
+        position relative
+        margin-top 0 !important
+        box-shadow none !important
+        padding 50px 0 150px
+        
+        .inner-wrap
+            width auto !important
+            
+            aside
+                width 90% !important
+                margin 0 auto !important
+                padding 0 !important
+                float none
 
 /*------------------------------------*\
     ALERT
@@ -476,12 +513,64 @@ body
     padding 2rem // Space out from browser boundaries on mobile
 
 /*------------------------------------*\
+    NEWSLETTER
+    components/newsletter.php
+\*------------------------------------*/
+
+.wt_newsletter-signup
+    margin 50px auto 100px
+    width 90%
+    max-width 550px
+    font-family 'Montserrat', sans-serif !important
+    
+    #mc_embed_signup
+        h2
+            width 100%
+            text-align center
+            text-transform uppercase
+            letter-spacing 0.05em
+        
+        input
+            width 100%
+            box-sizing border-box
+            padding 20px
+            -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)
+            box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.1)
+            
+            &[type="email"]
+                margin-top 25px
+                border 1px solid #C4C3C3
+                border-top-left-radius 5px
+                border-top-right-radius 5px
+                
+                &:focus
+                    outline none
+                
+            &[type="submit"]
+                margin-top 0 !important
+                border-top-left-radius 0
+                border-top-right-radius 0
+                border 1px solid $highlight-color
+                
+        .mce_inline_error
+            margin-bottom 0 !important
+            text-align center
+            font-weight 400
+            padding 10px 0
+        
+        #mce-success-response,
+        #mce-error-response
+            padding 20px
+            background $vivid-yellow
+            color $text-color-light
+
+/*------------------------------------*\
     FOOTER
     footer.php
 \*------------------------------------*/
 
 .footer
-    margin-top 150px
+//    margin-top 150px
     background-color $dark-background
     color $text-color-light
     padding 0 2rem 2rem 2rem
