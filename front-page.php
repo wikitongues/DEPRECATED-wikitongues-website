@@ -43,35 +43,13 @@ get_header();
 
 	endif; wp_reset_postdata();
 
-	/* ================ *\
-	 *     Partners     *
-	\* ================ */
+	/* ======================= *\
+	 *    Newsletter Signup    *
+	\* ======================= */
 
-	$featured_partners = get_field('partners');
+	$form_embed_code = get_field('form_embed_code');
 
-	if ( $featured_partners ):
-
-		echo '<ul class="wt_featured-partners">';
-
-		foreach ( $featured_partners as $post ): setup_postdata($post);
-
-			// define content variables
-			$wikitongues_url = get_site_url(); // this should be defined globally later
-			$partner_logo = get_field('partner_logo');
-			$partner_name = $post->post_title; // do we want to include this?
-			$partner_website = get_field('partner_website'); // do we want to include this?
-
-			echo '<li>'.
-				 '<a href="'.$partner_website.'">'.
-				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
-				 // '<h3>'.$partner_name.'</h3>'.
-				 '</a></li>';
-
-		endforeach; wp_reset_postdata();
-
-		echo '</ul>';
-
-	endif;
+	include( locate_template('components/newsletter.php') );
 
 	/* ===================== *\
 	 *   Featured Sections   *
@@ -104,13 +82,13 @@ get_header();
 	 *   Featured News   *
 	\* ================= */
 
-	$news_items = get_field('news_items');
+	$blog_posts = get_field('blog_posts');
 
-	if ( $news_items ): $i = 0; // $i++ assigns unique section IDs
+	if ( $blog_posts ): $i = 0; // $i++ assigns unique section IDs
 
-		echo '<h1 id="wt_blog-title">Learn More</h1>';
+		echo '<h1 id="wt_blog-title">Dive Deeper</h1>';
 
-		foreach( $news_items as $post ): setup_postdata( $post ); $i++;
+		foreach( $blog_posts as $post ): setup_postdata( $post ); $i++;
 
 			// define section variables
 			$section_image = get_field('blog_featured_image');
@@ -123,20 +101,90 @@ get_header();
 			$section_identifier = 'news'; // unique section identifier for each $i++ loop
 			$featured_items = null;
 
-			// temporary hack overrides section_cta_link var
-			// if custom field is available. need to fix
-			// syndication so that blog permalinks from medium
-			// populate an editable custom field so we can enter
-			// links to non-medium posts when desired
-			if ( $section_cta_link_alt ):
-				$section_cta_link = $section_cta_link_alt;
-			endif;
-
 			// load section template
 			include( locate_template('components/section.php') );
 
 		endforeach; wp_reset_postdata();
 
 	endif;
+
+	/* =================== *\
+	 *   Featured Press    *
+	\* =================== */
+
+	$featured_press = get_field('featured_press');
+
+	if ( $featured_press ):
+
+		echo '<h2 class="wt_featured-press-title">We\'re Featured In</h2>';
+
+		echo '<ul class="wt_featured-press">';
+
+		foreach ( $featured_press as $post ): setup_postdata($post);
+
+			//define content variables
+			$press_logo = get_the_post_thumbnail_url();
+			$press_url = get_field('press_item_url');
+			$press_title = $post->post_title;
+
+			echo '<li>'.
+				 '<a href="'.$press_url.'">'.
+				 '<img src="'.$press_logo.'" alt="'.$press_title.'">'.
+				 '</a></li>';
+
+		endforeach; wp_reset_postdata();
+
+		echo '</ul>';
+
+	endif;
+
+	/* ================ *\
+	 *     Partners     *
+	\* ================ */
+
+	$featured_partners = get_field('partners');
+
+	if ( $featured_partners ):
+
+		echo '<h2 class="wt_featured-partners-title">We Work With</h2>';
+
+		echo '<ul class="wt_featured-partners">';
+
+		foreach ( $featured_partners as $post ): setup_postdata($post);
+
+			// define content variables
+			$wikitongues_url = get_site_url(); // this should be defined globally later
+			$partner_logo = get_field('partner_logo');
+			$partner_name = $post->post_title; // do we want to include this?
+			$partner_website = get_field('partner_website'); // do we want to include this?
+
+			echo '<li>'.
+				 '<a href="'.$partner_website.'">'.
+				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
+				 '<h3>'.$partner_name.'</h3>'.
+				 '</a></li>';
+
+		endforeach; wp_reset_postdata();
+
+		echo '</ul>';
+
+	endif;
+
+	/* ================= *\
+	 *   Donate Banner   *
+	\* ================= */
+
+	// define variables for donate CTA at bottom of layout
+	$donate_banner_header = get_field('donate_banner_header');
+	$donate_banner_copy = get_field('donate_banner_copy');
+	$donate_banner_form_embed = get_field('donate_banner_form_embed');
+
+	// load donate CTA
+	include( locate_template('components/donate-banner.php') );
+
+	/* ================= *\
+	 *   Popup Notice    *
+	\* ================= */
+	include( locate_template('components/popup-notice.php') );
 
 get_footer();

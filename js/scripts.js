@@ -29,7 +29,26 @@
 				}
 			});
 		}
+
+		// homepage popup notice
+		function popupNotice() {
+			if ( $('body').hasClass('home') ){
+				$('.wt_popup-overlay').show();
+				$('body').addClass('no-scroll');
+
+				$('.wt_popup-overlay button').on('click', function(){
+					$('.wt_popup-overlay').hide();
+					$('body').removeClass('no-scroll');
+				});
+			} else {
+				console.log('popup notice only appears on homepage');
+			}
+		}
 		
+		setTimeout(function(){
+			popupNotice();
+		}, 7500);
+
 		// load close module function
 		closeModule();
 

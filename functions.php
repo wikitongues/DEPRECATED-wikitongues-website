@@ -451,7 +451,8 @@ add_action('init', 'create_post_type_partners'); // Add our Partners Custom Post
 add_action('init', 'create_post_type_members'); // Add our Members Custom Post Type
 add_action('init', 'create_post_type_donors'); // Add our Donors Custom Post Type
 add_action('init', 'create_post_type_videos'); // Add our Videos Custom Post Type
-add_action('init', 'create_post_type_news'); // Add our News Custom Post Type
+add_action('init', 'create_post_type_blog'); // Add our News Custom Post Type
+add_action('init', 'create_post_type_press'); // Add our News Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -690,26 +691,65 @@ function create_post_type_videos()
     ));
 }
 
-// News
-function create_post_type_news()
+// Blog Posts
+function create_post_type_blog()
 {
-    register_taxonomy_for_object_type('category', 'news'); 
-    register_taxonomy_for_object_type('post_tag', 'news');
-    register_post_type('news',
+    register_taxonomy_for_object_type('category', 'blog'); 
+    register_taxonomy_for_object_type('post_tag', 'blog');
+    register_post_type('blog',
         array(
         'labels' => array(
-            'name' => __('News Items', 'news'), 
-            'singular_name' => __('News Item', 'news'),
-            'add_new' => __('Add New', 'news'),
-            'add_new_item' => __('Add New News Item', 'news'),
-            'edit' => __('Edit', 'news'),
-            'edit_item' => __('Edit News Item', 'news'),
-            'new_item' => __('New News Item', 'news'),
-            'view' => __('View News Item', 'news'),
-            'view_item' => __('View News Item', 'news'),
-            'search_items' => __('Search News Items', 'news'),
-            'not_found' => __('No News Items found', 'news'),
-            'not_found_in_trash' => __('No News Items found in Trash', 'news')
+            'name' => __('Blog Posts', 'blog'), 
+            'singular_name' => __('Blog Post', 'blog'),
+            'add_new' => __('Add New', 'blog'),
+            'add_new_item' => __('Add New Blog Post', 'blog'),
+            'edit' => __('Edit', 'blog'),
+            'edit_item' => __('Edit Blog Post', 'blog'),
+            'new_item' => __('New Blog Post', 'blog'),
+            'view' => __('View Blog Post', 'blog'),
+            'view_item' => __('View Blog Post', 'blog'),
+            'search_items' => __('Search Blog Posts', 'blog'),
+            'not_found' => __('No Blog Posts found', 'blog'),
+            'not_found_in_trash' => __('No Blog Items found in Trash', 'blog')
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'menu_icon' => 'dashicons-format-quote',
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt'
+            // 'thumbnail'
+        ),
+        'can_export' => true,
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        )
+    ));
+}
+
+// Press Posts
+function create_post_type_press()
+{
+    register_taxonomy_for_object_type('category', 'press'); 
+    register_taxonomy_for_object_type('post_tag', 'press');
+    register_post_type('press',
+        array(
+        'labels' => array(
+            'name' => __('Press Items', 'press'), 
+            'singular_name' => __('Press Item', 'press'),
+            'add_new' => __('Add New', 'press'),
+            'add_new_item' => __('Add New Press Item', 'press'),
+            'edit' => __('Edit', 'press'),
+            'edit_item' => __('Edit Press Item', 'press'),
+            'new_item' => __('New Press Item', 'press'),
+            'view' => __('View Press Item', 'press'),
+            'view_item' => __('View Press Item', 'press'),
+            'search_items' => __('Search Press Items', 'press'),
+            'not_found' => __('No Press Items found', 'press'),
+            'not_found_in_trash' => __('No press Items found in Trash', 'press')
         ),
         'public' => true,
         'hierarchical' => true,
@@ -717,9 +757,7 @@ function create_post_type_news()
         'has_archive' => true,
         'supports' => array(
             'title',
-            'editor',
-            'excerpt'
-            // 'thumbnail'
+            'thumbnail'
         ),
         'can_export' => true,
         'taxonomies' => array(

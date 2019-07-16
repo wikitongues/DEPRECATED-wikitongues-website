@@ -20,12 +20,17 @@
 			// initialize post data
 			$partners->the_post();
 
-			// define content variables 
+			// define content variables
+			$partner_name = $post->post_title; 
 			$partner_logo = get_field('partner_logo');
 			$partner_website = get_field('partner_website');
 			$partner_bio = get_field('partner_bio');
 
-			echo '<li class="wt_partner"><img src="'.$partner_logo['url'].'"></li>';
+			echo '<li>'.
+				 '<a href="'.$partner_website.'">'.
+				 '<img src="'.$partner_logo['url'].'" alt="'.$partner_logo['alt'].'">'.
+				 '<h3>'.$partner_name.'</h3>'.
+				 '</a></li>';
 
 		} 
 
