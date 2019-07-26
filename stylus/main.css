@@ -888,7 +888,7 @@ body.page-template-template-donors .wt_page-intro h1 {
 }
 .wt_face-grid {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 15%;
 }
 .wt_face-grid.large .wt_member {
   width: 31%;
@@ -985,7 +985,7 @@ body.page-template-template-form .wt_form-banner-message h1 {
 body.page-template-template-form .wt_form-banner-form {
   float: right;
   background-color: #fff;
-  padding: 2rem 4rem 4rem;
+  padding: 2rem 4rem 8rem 4rem;
   border-radius: 2rem 0 0 2rem;
   margin-top: -80vh;
   width: 50%;
@@ -1153,7 +1153,7 @@ body.page-template-template-donate .footer {
 }
 body.page-template-template-volunteers .main {
   position: relative;
-  margin-top: 0;
+  margin: 0 0 15%;
   text-align: center;
 }
 body.page-template-template-volunteers .main:before {
@@ -1168,7 +1168,7 @@ body.page-template-template-volunteers .main:before {
   z-index: 5;
 }
 body.page-template-template-volunteers .main .wt_page-intro {
-  margin-top: 0;
+  margin: 0 auto;
 }
 body.page-template-template-volunteers .main .wt_page-intro p {
   text-align: left;
