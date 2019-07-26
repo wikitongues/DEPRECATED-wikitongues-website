@@ -127,6 +127,9 @@ input[type=reset]:hover {
 body.page-template-template-about {
   width: 100%;
 }
+body.page-template-template-about main {
+  margin-bottom: 15%;
+}
 body.page-template-template-about main p {
   width: 90%;
   max-width: 650px;
