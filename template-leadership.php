@@ -1,4 +1,4 @@
-<?php /* Template name: Community */ get_header(); ?>
+<?php /* Template name: Leadership */ get_header(); ?>
 
 <?php include( locate_template('components/page-intro.php') ); ?>
 
