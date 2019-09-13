@@ -35,18 +35,21 @@
 	if ( $featured_items ) {
 		echo '<section class="wt_featured-items">';
 
-		foreach ( $featured_items as $post ) : setup_postdata( $post );
+			foreach ( $featured_items as $post ) : setup_postdata( $post );
 
-			$featured_item_link = get_field('video_url');
-			$featured_item_title = get_the_title();
-			$featured_item_text = get_the_excerpt();
-			$featured_item_image = get_the_post_thumbnail_url();
+				$featured_item_link = get_field('video_url');
+				$featured_item_title = get_the_title();
+				$featured_item_text = get_the_excerpt();
+				$featured_item_image = get_the_post_thumbnail_url();
 
-			include( locate_template('components/featured-item.php') );
+				include( locate_template('components/featured-item.php') );
 
-	    endforeach; wp_reset_postdata();
+		    endforeach; wp_reset_postdata();
 
-	    echo '</section>';
+		    // should eventually be configured as editable within the CMS
+			echo '<div class="wt_featured-item"><a href="https://youtube.com/wikitongues" target="_blank"><h2>Watch on YouTube</h2></a></div>';
+		
+		echo '</section>';
 	}
 	?>
 </section>

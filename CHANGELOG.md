@@ -1,3 +1,77 @@
+### Wikitongues.org Changelog
+
+## 11 September 2019
+
+* ACF updates
+	* Removed _Tier 2 Donors_ field
+	* Renamed _Tier 1 Donors_ field to featured partners
+	* Removed featured partners in favor of automating the layout
+	* Divided _Personal Information_ into _Personal Information - Leadership_, _Personal Information - Contributors_ and _Personal Information - Donors_
+* Completed Donor Page update
+	* Structured CSV export in Airtable
+	* Divided donors tempate between lifetime contributors and kickstarter wall. Automatically sorted based on CSV data
+	* Added the donate banner component
+
+**To Do**
+[X] Content
+	[x] Leadership
+		[x] Page introduction content
+		[x] Board, advisor and staff bios
+		[x] Donate banner
+	[x] Contributors
+		[x] Page introduction content
+		[x] Donate banner
+	[x] Donors 
+		[x] Page introduction content
+		[x] Section sub-headers
+		[x] Section calls-to-action
+		[x] Donate banner
+[X] Data
+	[x] Modify location info for donors to country only
+	[x] Add photo 
+
+**Open Questions**
+
+* The donor page is structured to have a "Partners" section above lifetime contributors to prominantly feature high-capacity donors. The partners program needs to be better defined before we can launch it.
+
+## 10 September 2019
+
+* ACF updates
+	* Removed
+		* _Featured Volunteers_ field group
+		* _Associate Board_ field group
+		* _Advisory Board_ field group
+	* _Governing Board_ is now called _Featured Leadership_
+	* _Member Information_ is now called _Personal Information_
+	* New _Personal Information_ custom fields
+	* Added _Donate Banner_ field group to child pages of _Who we are_
+* Routine automation - elaborate
+* Added pagination to custom post type loops
+
+## 04 September 2019
+
+* added lenape land statement to footer
+* tweaked newsletter popup design
+* six video scroll
+* reformatted community templates content
+	* small member grid template: reduced image size
+	* large member grid: formatted member bios
+
+**Next Steps and Considerations**
+* [x] community
+	* [x] solve routine automation
+		* [X] should leadership, community, and donors be separate post types?
+		* [X] how do we order contributors?
+			* [x] special projects, not empty>empty _dropping for now_
+			* [x] videos recorded, 9>1
+		* [x] what information do we show? number of videos? special project? down the line it would be cool to have a hover feature with a popup that shows you what the person has done _for now, just name and location_
+	* [x] include pagination
+* [x] donors: divide into the following sections
+	* [x] divide between annual partners
+	* [x] active monthly donors _eliminated this distinction for now_
+	* [x] lifetime contributors
+	* [x] kickstarter wall
+
 ### [HTML5 Blank](http://html5blank.com) Changelog
 
 ## 1.4.3 (02 December, 2013)

@@ -1,50 +1,33 @@
 <?php
 /* The following variables may be defined for this template:
 	$profile_picture (required)
-	$credentials
-	$credentials_title
-	$credentials_institution
+	$name
 	$location
-	$location_city
-	$location_country
+	$title
 	$bio
 	*/ ?>
 
 <div class="wt_member">
-	<?php if ( $profile_picture['url'] ): ?>
-		<div class="wt_member-photo" style="background:url('<?php echo $profile_picture['url']; ?>') center center no-repeat;"></div>
+	<?php if ( $profile_picture ): ?>
+		<!-- we should find a way to format this string correctly in the exported Airtable CSV rather than parsing the string here -->
+		<?php preg_match('#\((.*?)\)#', $profile_picture, $match); ?>
+		<div class="wt_member-photo" style="background:url('<?php echo $match[1]; ?>') center center no-repeat;"></div>
 	<?php else: ?>
 		<div class="wt_member-photo empty"></div>
 	<?php endif; ?>
 	<div class="wt_member-information">
 		<h2><?php echo $name; ?></h2>
-		<?php
-			if ( $credentials ) {
-				echo '<div class="wt_member-credentials">';
-
-				if ( $credentials_title ) {
-					echo '<span class="wt_member-title">'.$credentials_title.'</span>';
-				}
-
-				 if ( $credentials_institution ) {
-					 echo '<span class="wt_institution">, '.$credentials_institution.'</span>';				 	
-				 }
-	
-				echo '</div>';
+		<?php			
+			if ( $title ) {
+				echo '<div class="wt_leadership-title">'.$title.'</div>';
 			}
 
 			if ( $location ) {
-				echo '<div class="wt_member-location">';
+				echo '<div class="wt_member-location">'.$location.'</div>';
+			}
 
-				if ( $location_city ) {
-					echo '<span class="wt_member-city">'.$location_city.', </span>';
-				}
-
-				if ( $location_country ) {
-					echo '<span class="wt_member-country">'.$location_country.'</span>';			
-				}
-				
-				echo '</div>';
+			if ( $bio ) {
+				echo '<div class="wt_member-bio">'.$bio.'</div>';
 			}
 			?>
 	</div>

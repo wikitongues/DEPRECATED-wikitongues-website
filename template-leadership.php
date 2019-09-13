@@ -1,4 +1,4 @@
-<?php /* Template name: Leadership */ get_header(); ?>
+<?php /* Template name: Community */ get_header(); ?>
 
 <?php include( locate_template('components/page-intro.php') ); ?>
 
@@ -13,73 +13,40 @@
 		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
 	</li>
 </ul>
-
-<h1>Governing Board</h1>
-
-<div class="wt_face-grid large">
-
-<?php 
-	$board_members = get_field('board_members');
-
-	// start the loop
-	if ( $board_members ) {
-		
-		foreach ( $board_members as $post ) { 
-			// initialize row data
-			setup_postdata($post);
-
-			// define content variables
-			$name = get_the_title($post);
-			$profile_picture = get_field('profile_picture');
-			$credentials = get_field('credentials');
-			$credentials_title = $credentials['title'];
-			$credentials_institution = $credentials['institution_or_company'];
-			$location = get_field('location');
-			$location_city = $location['city_and_territory'];
-			$location_country = $location['country'];
-			$bio = get_field('bio');
-
-			// load member profile template
-			include( locate_template('components/member-profile.php') );
-		}
-
-		wp_reset_postdata();
-	} ?>
-
-</div><!-- /two column face grid -->
-
-<h1>Advisory Council</h1>
+<?php
+// Custom Query args
+$args = array( 
+	'post_type' => 'leadership',
+	'meta_key' => 'appearance_order',
+	'orderby' => 'meta_value_num',
+	'order' => 'ASC'
+ );
+// Instantiate leadership query
+$leadership = new WP_Query( $args ); 
+// Run leadership loop
+if ( $leadership->have_posts() ) {  ?>
 
 <div class="wt_face-grid large">
+<?php
+	while ( $leadership->have_posts() ) { $leadership->the_post();
+		$name = get_the_title($post);
+		$profile_picture = get_field('profile_picture');
+		$location = get_field('contributor_location');
+		$title = get_field('leadership_title');
+		$bio = get_field('bio');
 
-<?php 
-	$advisors = get_field('advisors');
+		include( locate_template('components/member-profile.php') );
+	} 
+} wp_reset_postdata(); ?>
+</div><!-- /.wt_face-grid -->
 
-	// start the loop
-	if ( $advisors ) {
-		
-		foreach ( $advisors as $post ) { 
-			// initialize row data
-			setup_postdata($post);
+<?php
+// define variables for donate CTA at bottom of layout
+$donate_banner_header = get_field('donate_banner_header');
+$donate_banner_copy = get_field('donate_banner_copy');
+$donate_banner_form_embed = get_field('donate_banner_form_embed');
 
-			// define content variables
-			$name = get_the_title($post);
-			$profile_picture = get_field('profile_picture');
-			$credentials = get_field('credentials');
-			$credentials_title = $credentials['title'];
-			$credentials_institution = $credentials['institution_or_company'];
-			$location = get_field('location');
-			$location_city = $location['city_and_territory'];
-			$location_country = $location['country'];
-			$bio = get_field('bio');
+// load donate CTA
+include( locate_template('components/donate-banner.php') );
 
-			// load member profile template
-			include( locate_template('components/member-profile.php') );
-		}
-
-		wp_reset_postdata();
-	} ?>
-
-</div><!-- /two column face grid -->
-
-<?php get_footer(); ?>
+get_footer(); ?>

@@ -80,6 +80,10 @@ h2 {
 .wt_cta:hover {
   color: #fff;
 }
+.wt_secondary-cta {
+  padding-top: 20px;
+  font-weight: bold;
+}
 label {
   font-size: $small-text-size;
 }
@@ -531,8 +535,6 @@ body.page-template-template-about .header a {
   }
 }
 .wt_featured-items {
-  display: flex;
-  justify-content: space-between;
   padding: 5%;
 }
 .wt_featured-item {
@@ -544,6 +546,9 @@ body.page-template-template-about .header a {
   flex-direction: column;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
   box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+.wt_featured-item:nth-of-type(1) {
+  margin-left: 0 !important;
 }
 @media only screen and (max-width: 800px) {
   .wt_featured-items {
@@ -565,6 +570,21 @@ body.page-template-template-about .header a {
   max-width: 60rem;
   margin: 10% auto;
   padding: 2rem;
+}
+.wt_section-intro {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.wt_section-intro .wt_cta {
+  width: 100%;
+  margin: auto !important;
+}
+.wt_section-intro p a {
+  display: inline;
+  font-weight: bold;
 }
 .wt_newsletter-signup {
   margin: 50px auto 100px;
@@ -693,16 +713,40 @@ body.home .wt_page-section#primary_content-block-2 .wt_section-content .wt_secti
 body.home .wt_page-section#primary_content-block-2 .wt_section-content .wt_section-message .wt_cta:hover {
   color: #4799fc;
 }
+body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featured-item:last-of-type {
+  position: relative;
+  background: #ffc342;
+}
+body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featured-item:last-of-type a {
+  color: #fff;
+}
+body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featured-item:last-of-type h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
 body.home .wt_page-section#primary_content-block-3 {
   margin-bottom: 0;
 }
 body.home .wt_page-section .wt_featured-items {
+  overflow-x: scroll;
+  white-space: nowrap;
   color: #11242f !important;
   margin-top: 0;
   padding-top: 0;
 }
 body.home .wt_page-section .wt_featured-items .wt_featured-item {
-  width: 33.333333333333336%;
+  display: inline-block !important;
+  vertical-align: top;
+  width: 350px;
+  height: 386px;
+  white-space: normal;
 }
 body.home .wt_page-section.news_content-block {
   margin-bottom: 1rem;
@@ -841,6 +885,26 @@ body.home .wt_donate-banner:before {
     margin-bottom: 2rem;
   }
 }
+body.page-template-template-leadership .wt_face-grid {
+  margin-top: 5%;
+}
+body.page-template-template-donors .wt_section-intro {
+  margin-top: 100px;
+}
+body.page-template-template-donors .wt_face-grid {
+  margin-bottom: 5%;
+}
+body.page-template-template-donors .wt_face-grid.kickstarter {
+  margin-top: 2.5%;
+}
+body.page-template-template-leadership>h1,
+body.page-template-template-contributors>h1,
+body.page-template-template-donors>h1,
+body.page-template-template-leadership>h2,
+body.page-template-template-contributors>h2,
+body.page-template-template-donors>h2 {
+  text-align: center;
+}
 body.page-template-template-leadership .wt_who-navigation,
 body.page-template-template-contributors .wt_who-navigation,
 body.page-template-template-donors .wt_who-navigation {
@@ -891,28 +955,78 @@ body.page-template-template-donors .wt_page-intro h1 {
 }
 .wt_face-grid {
   width: 90%;
-  margin: 0 auto 15%;
+  margin: 5% auto 15%;
+  text-align: center;
 }
 .wt_face-grid.large .wt_member {
   width: 31%;
   margin: 1% 0.5%;
 }
+.wt_face-grid.large .wt_member h2 {
+  font-size: 1em;
+}
+.wt_face-grid.large .wt_member .wt_member-location {
+  margin-top: 20px;
+  font-style: italic;
+}
+.wt_face-grid.large .wt_member .wt_member-bio {
+  margin: 5px 0 10px;
+  padding-right: 5px;
+}
 .wt_face-grid.small .wt_member {
   width: 23%;
   margin: 1% 0.5%;
 }
-.wt_face-grid.names-only {
-  columns: 3;
+.wt_face-grid.small .wt_member >* {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wt_face-grid.small .wt_member .wt_member-photo {
+  width: 20% !important;
+  padding-bottom: 20% !important;
+  margin-bottom: 0 !important;
+  border-radius: 100%;
+}
+.wt_face-grid.small .wt_member .wt_member-information {
+  width: 78% !important;
+  font-size: 12px !important;
+  padding-left: 10px !important;
+  box-sizing: border-box !important;
+}
+.wt_face-grid.small .wt_member .wt_member-information h2 {
+  font-size: 12px !important;
+}
+.wt_face-grid.small .wt_member .wt_member-information .wt_member-credentials {
+  display: none !important;
+}
+.wt_face-grid.small .wt_member .wt_member-information .wt_member-bio {
+  display: none !important;
 }
 .wt_face-grid.names-only .wt_member {
-  display: block;
+  width: 24%;
+  margin: 0.5% 0;
 }
 .wt_face-grid.names-only .wt_member .wt_member-photo {
   display: none;
 }
+.wt_face-grid.names-only .wt_member .wt_member-information {
+  text-align: center;
+}
+.wt_face-grid.names-only .wt_member .wt_member-information h2 {
+  font-size: 12px !important;
+  font-weight: normal !important;
+}
+.wt_face-grid.names-only.kickstarter .wt_member {
+  width: 19%;
+  margin-bottom: 0;
+}
+.wt_face-grid.names-only.kickstarter .wt_member .wt_member-information h2 {
+  font-size: 10px !important;
+}
 .wt_face-grid .wt_member {
   display: inline-block;
   vertical-align: top;
+  text-align: left;
 }
 .wt_face-grid .wt_member .wt_member-photo {
   width: 100%;
@@ -923,10 +1037,24 @@ body.page-template-template-donors .wt_page-intro h1 {
 .wt_face-grid .wt_member .wt_member-photo.empty {
   background-color: #86e9c3;
 }
-.wt_face-grid .wt_member .wt_member-credentials {
-  font-weight: 600;
+.wt_face-grid .pagination {
+  margin-top: 5%;
+}
+.wt_face-grid .pagination a,
+.wt_face-grid .pagination span {
+  width: initial;
+  margin: 0 10px;
+  font-weight: bold;
+}
+.wt_face-grid .pagination .current {
+  color: #86e9c3;
 }
 @media only screen and (max-width: 979px) {
+  body.page-template-template-leadership h1,
+  body.page-template-template-contributors h1,
+  body.page-template-template-donors h1 {
+    margin-top: 10%;
+  }
   .wt_who-navigation {
     font-size: 1rem;
   }
@@ -942,7 +1070,8 @@ body.page-template-template-donors .wt_page-intro h1 {
     margin: 1.5% 0.5% !important;
   }
   .wt_face-grid.names-only .wt_member {
-    margin-bottom: 15px;
+    width: initial !important;
+    margin: 1.5% !important;
   }
 }
 body.page-template-template-projects .wt_donate-banner {
@@ -1171,7 +1300,7 @@ body.page-template-template-volunteers .main:before {
   z-index: 5;
 }
 body.page-template-template-volunteers .main .wt_page-intro {
-  margin: 0 auto;
+  margin-top: 0;
 }
 body.page-template-template-volunteers .main .wt_page-intro p {
   text-align: left;
@@ -1467,12 +1596,20 @@ body.page-template-template-volunteers .main .wt_featured-item p {
   width: 100%;
   height: 100vh;
   z-index: 100;
-  background: rgba(255,255,255,0.95);
+  background: rgba(0,0,0,0.55);
 }
 .wt_popup-overlay .wt_popup-inner {
   position: relative;
-  width: 100%;
-  height: 100%;
+  widows: 90%;
+  max-width: 550px;
+  height: initial;
+  margin: 100px auto;
+  background: #fff;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.1);
 }
 .wt_popup-overlay .wt_popup-inner #close {
   position: absolute;
@@ -1491,11 +1628,7 @@ body.page-template-template-volunteers .main .wt_featured-item p {
   outline: none;
 }
 .wt_popup-overlay .wt_popup-inner .wt_newsletter-signup {
-  position: absolute !important;
-  margin: 0 !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 50px auto;
 }
 .wt_popup-overlay .wt_popup-inner .wt_newsletter-signup h2,
 .wt_popup-overlay .wt_popup-inner .wt_newsletter-signup p,

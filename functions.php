@@ -448,7 +448,8 @@ add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_projects'); // Add our Projects Custom Post Type
 add_action('init', 'create_post_type_partners'); // Add our Partners Custom Post Type
-add_action('init', 'create_post_type_members'); // Add our Members Custom Post Type
+add_action('init', 'create_post_type_contributors'); // Add our Contributors Custom Post Type
+add_action('init', 'create_post_type_leadership'); // Add our Leadership Custom Post Type
 add_action('init', 'create_post_type_donors'); // Add our Donors Custom Post Type
 add_action('init', 'create_post_type_videos'); // Add our Videos Custom Post Type
 add_action('init', 'create_post_type_blog'); // Add our News Custom Post Type
@@ -574,26 +575,65 @@ function create_post_type_partners()
     ));
 }
 
-// Members
-function create_post_type_members()
+// Contributors
+function create_post_type_contributors()
 {
-    register_taxonomy_for_object_type('category', 'members'); 
-    register_taxonomy_for_object_type('post_tag', 'members');
-    register_post_type('members',
+    register_taxonomy_for_object_type('category', 'contributors'); 
+    register_taxonomy_for_object_type('post_tag', 'contributors');
+    register_post_type('contributors',
         array(
         'labels' => array(
-            'name' => __('Members', 'member'), 
-            'singular_name' => __('Member', 'member'),
-            'add_new' => __('Add New', 'member'),
-            'add_new_item' => __('Add New Member', 'member'),
-            'edit' => __('Edit', 'member'),
-            'edit_item' => __('Edit Member', 'member'),
-            'new_item' => __('New Member', 'member'),
-            'view' => __('View Member', 'member'),
-            'view_item' => __('View Member', 'member'),
-            'search_items' => __('Search Members', 'member'),
-            'not_found' => __('No Members found', 'member'),
-            'not_found_in_trash' => __('No Members found in Trash', 'member')
+            'name' => __('Contributors', 'contributor'), 
+            'singular_name' => __('Contributor', 'contributor'),
+            'add_new' => __('Add New', 'contributor'),
+            'add_new_item' => __('Add New contributor', 'contributor'),
+            'edit' => __('Edit', 'contributor'),
+            'edit_item' => __('Edit Contributor', 'contributor'),
+            'new_item' => __('New Contributor', 'contributor'),
+            'view' => __('View Contributor', 'contributor'),
+            'view_item' => __('View Contributor', 'contributor'),
+            'search_items' => __('Search Contributors', 'contributor'),
+            'not_found' => __('No Contributors found', 'contributor'),
+            'not_found_in_trash' => __('No Contributors found in Trash', 'contributor')
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'menu_icon' => 'dashicons-megaphone',
+        'has_archive' => true,
+        'supports' => array(
+            'title'
+            // 'editor',
+            // 'excerpt',
+            // 'thumbnail'
+        ),
+        'can_export' => true,
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        )
+    ));
+}
+
+// Leadership
+function create_post_type_leadership()
+{
+    register_taxonomy_for_object_type('category', 'leadership'); 
+    register_taxonomy_for_object_type('post_tag', 'leadership');
+    register_post_type('leadership',
+        array(
+        'labels' => array(
+            'name' => __('Leadership', 'leadership'), 
+            'singular_name' => __('Leadership', 'leadership'),
+            'add_new' => __('Add New', 'leadership'),
+            'add_new_item' => __('Add New leadership', 'leadership'),
+            'edit' => __('Edit', 'leadership'),
+            'edit_item' => __('Edit Leadership', 'leadership'),
+            'new_item' => __('New Leadership', 'leadership'),
+            'view' => __('View Leadership', 'leadership'),
+            'view_item' => __('View Leadership', 'leadership'),
+            'search_items' => __('Search Leadership', 'leadership'),
+            'not_found' => __('No Leadership found', 'leadership'),
+            'not_found_in_trash' => __('No Leadership found in Trash', 'leadership')
         ),
         'public' => true,
         'hierarchical' => true,

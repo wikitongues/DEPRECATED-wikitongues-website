@@ -463,8 +463,8 @@ body
 
 // Display as a flexbox
 .wt_featured-items
-    display flex
-    justify-content space-between
+    // display flex
+    // justify-content space-between
     padding 5%
 
 .wt_featured-item // Children
@@ -477,6 +477,9 @@ body
     flex-direction column
     -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
     box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+    
+    &:nth-of-type(1)
+        margin-left 0 !important
 
 // On smaller screens, show items in a single column
 @media only screen and (max-width: 800px)
@@ -511,6 +514,22 @@ body
     max-width 60rem
     margin 10% auto
     padding 2rem // Space out from browser boundaries on mobile
+
+.wt_section-intro
+    width 90%
+    max-width 500px
+    margin auto
+    text-align center
+    margin-top 50px
+    
+    .wt_cta
+        width 100%
+        margin auto !important
+        
+    p
+        a
+            display inline
+            font-weight bold
 
 /*------------------------------------*\
     NEWSLETTER

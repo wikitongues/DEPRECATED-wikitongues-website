@@ -13,123 +13,55 @@
 		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
 	</li>
 </ul>
-
-<h1>Community Leaders</h1>
-
-<div class="wt_face-grid large">
-
-<?php 
-	$community_leaders = get_field('community_leaders');
-
-	// start the loop
-	if ( $community_leaders ) {
-
-		// define array storing community leader IDs
-		$community_leaders_ids = array();
-		
-		foreach ( $community_leaders as $post ) { 
-			// initialize row data
-			setup_postdata($post);
-
-			// define content variables
-			$name = get_the_title($post);
-			$profile_picture = get_field('profile_picture');
-			$credentials = get_field('credentials');
-			$credentials_title = $credentials['title'];
-			$credentials_institution = $credentials['institution_or_company'];
-			$location = get_field('location');
-			$location_city = $location['city_and_territory'];
-			$location_country = $location['country'];
-			$bio = get_field('bio');
-
-			// load member profile template
-			include( locate_template('components/member-profile.php') );
-
-			// load each community leader ID into array
-			$community_leaders_ids[] = $post->ID;
-		}
-
-		wp_reset_postdata();
-	} ?>
-
-</div><!-- /two column face grid -->
-
-<h1>Volunteers</h1>
+<?php
+// Custom Query args
+$args = array( 
+	'post_type' => 'contributors',
+	'meta_key' => 'total_video_count', // can we sort by multiple values (i.e., count, then date added, and so on...?
+	'orderby' => 'meta_value_num',
+	'order' => 'DESC'
+ );
+// Get current page and append to custom query parameters array
+$args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+// Instantiate contributors query
+$contributors = new WP_Query( $args ); 
+// Pagination fix
+$temp_query = $wp_query;
+$wp_query   = NULL;
+$wp_query   = $contributors;
+// Run contributors loop
+if ( $contributors->have_posts() ) {  ?>
 
 <div class="wt_face-grid small">
-	
-<?php 
-	$featured_contributors = get_field('featured_contributors');
+<?php
+	while ( $contributors->have_posts() ) { $contributors->the_post();
+		$name = get_the_title($post);
+		$profile_picture = get_field('profile_picture');
+		$location = get_field('contributor_location');
+		$bio = get_field('bio');
 
-	// start the loop
-	if ( $featured_contributors ) {
+		include( locate_template('components/member-profile.php') );
+	} 
+} wp_reset_postdata(); 
 
-		// define array storing featured contributor IDs
-		$featured_contributors_ids = array();
-		
-		foreach ( $featured_contributors as $post ) { 
-			// initialize row data
-			setup_postdata($post);
+// Custom query loop pagination
+get_template_part('pagination');
 
-			// define content variables
-			$name = get_the_title($post);
-			$profile_picture = get_field('profile_picture');
-			$credentials = get_field('credentials');
-			$credentials_title = $credentials['title'];
-			$credentials_institution = $credentials['institution_or_company'];
-			$location = get_field('location');
-			$location_city = $location['city_and_territory'];
-			$location_country = $location['country'];
-			$bio = get_field('bio');
+// Reset main query object
+$wp_query = NULL;
+$wp_query = $temp_query; 
 
-			// load member profile template
-			include( locate_template('components/member-profile.php') );
-
-			// load each featured contributors ID into array			
-			$featured_contributors_ids[] = $post->ID;
-		}
-
-		wp_reset_postdata();
-	} ?>
-
-</div><!-- /three column face grid -->
-
-<!-- <h1>Contributors</h1>
-
-<div class="wt_names-list">
+// Reset post data after query reset to reactive page variables below
+wp_reset_postdata(); ?>
+</div><!-- /.wt_face-grid -->
 
 <?php
-	// merge community leader and featured volunteer arrays
-	$featured_volunteers = array_merge($community_leaders_ids, $featured_contributors_ids);
+// define variables for donate CTA at bottom of layout
+$donate_banner_header = get_field('donate_banner_header');
+$donate_banner_copy = get_field('donate_banner_copy');
+$donate_banner_form_embed = get_field('donate_banner_form_embed');
 
-	// query all community members
-	$community_members = new WP_Query( 
-		array( 
-			'post_type' => 'members',
-			'post__not_in' => $featured_volunteers, // exclude leaders, featured volunteers
-			'category__not_in' => '4', // exclude board members, advisors, associates
-			'posts_per_page' => -1 // no return limit
-		)
-	);
+// load donate CTA
+include( locate_template('components/donate-banner.php') );
 
-	// start the loop
-	if ( $community_members->have_posts() ) {
-		
-		while ( $community_members->have_posts() ) { 
-			// initialize row data
-			$community_members->the_post();
-
-			// define content variables
-			$name = get_the_title($post);
-			$location = get_field('location');
-
-			echo '<div class="wt_name-location"><h2>'.$name.'</h2>'.
-				 '<p>'.$location['country'].'</p></div>';
-		}
-
-		wp_reset_postdata();
-	} ?>
-
-</div> --><!-- /names list -->
-
-<?php get_footer(); ?>
+get_footer(); ?>
