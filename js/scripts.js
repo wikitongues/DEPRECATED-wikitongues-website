@@ -45,9 +45,9 @@
 			}
 		}
 		
-		setTimeout(function(){
-			popupNotice();
-		}, 7500);
+		// setTimeout(function(){
+		// 	popupNotice();
+		// }, 7500);
 
 		// load close module function
 		closeModule();

@@ -454,6 +454,7 @@ add_action('init', 'create_post_type_donors'); // Add our Donors Custom Post Typ
 add_action('init', 'create_post_type_videos'); // Add our Videos Custom Post Type
 add_action('init', 'create_post_type_blog'); // Add our News Custom Post Type
 add_action('init', 'create_post_type_press'); // Add our News Custom Post Type
+add_action('init', 'create_post_type_languages'); // Add our Languages Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -794,6 +795,43 @@ function create_post_type_press()
         'public' => true,
         'hierarchical' => true,
         'menu_icon' => 'dashicons-media-text',
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'thumbnail'
+        ),
+        'can_export' => true,
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        )
+    ));
+}
+
+// Language Posts
+function create_post_type_languages()
+{
+    register_taxonomy_for_object_type('category', 'languages'); 
+    register_taxonomy_for_object_type('post_tag', 'languages');
+    register_post_type('languages',
+        array(
+        'labels' => array(
+            'name' => __('Languages', 'language'), 
+            'singular_name' => __('Language', 'language'),
+            'add_new' => __('Add New', 'language'),
+            'add_new_item' => __('Add New Language', 'language'),
+            'edit' => __('Edit', 'language'),
+            'edit_item' => __('Edit Language', 'language'),
+            'new_item' => __('New Language', 'language'),
+            'view' => __('View Language', 'language'),
+            'view_item' => __('View Language', 'language'),
+            'search_items' => __('Search Languages', 'language'),
+            'not_found' => __('No Languages found', 'language'),
+            'not_found_in_trash' => __('No language Items found in Trash', 'language')
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'menu_icon' => 'dashicons-translation',
         'has_archive' => true,
         'supports' => array(
             'title',

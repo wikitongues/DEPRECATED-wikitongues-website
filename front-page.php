@@ -185,6 +185,6 @@ get_header();
 	/* ================= *\
 	 *   Popup Notice    *
 	\* ================= */
-	include( locate_template('components/popup-notice.php') );
+	//include( locate_template('components/popup-notice.php') );
 
 get_footer();

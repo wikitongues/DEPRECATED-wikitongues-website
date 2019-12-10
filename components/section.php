@@ -37,10 +37,12 @@
 
 			foreach ( $featured_items as $post ) : setup_postdata( $post );
 
-				$featured_item_link = get_field('video_url');
-				$featured_item_title = get_the_title();
-				$featured_item_text = get_the_excerpt();
-				$featured_item_image = get_the_post_thumbnail_url();
+				$featured_item_link = get_field('youtube_link');
+				$featured_item_title = get_field('video_title');
+				$featured_item_text = get_field('video_description');
+				$featured_item_image = get_field('video_thumbnail');
+
+				preg_match('#\((.*?)\)#', $featured_item_image, $match);
 
 				include( locate_template('components/featured-item.php') );
 
