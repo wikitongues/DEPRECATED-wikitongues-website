@@ -1,5 +1,7 @@
+<?php
+add_action('init', 'my_function_to_add_field_groups');
+function my_function_to_add_field_groups() {
 if( function_exists('acf_add_local_field_group') ):
-
 acf_add_local_field_group(array(
 	'key' => 'group_5dbe918ed857e',
 	'title' => 'Oral Histories',
@@ -2114,3 +2116,5 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+}
+?>
