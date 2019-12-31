@@ -23,7 +23,25 @@
             assets: '<?php echo get_template_directory_uri(); ?>',
             tests: {}
         });
-        </script>
+		</script>
+		
+		<?php if(is_page('map')): ?>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+		<style>
+		.map {
+			height: 500px;
+			width: 100%;
+		}
+		.ol-zoom {
+			top: 400px;
+		}
+		</style>
+
+		<!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+		
+		<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+		<?php endif ?>
 
 	</head>
 	<body <?php body_class(); ?>>
