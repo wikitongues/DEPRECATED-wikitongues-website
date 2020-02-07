@@ -10,10 +10,46 @@
 $args = array(
 	'post_type' => 'videos',
 	'posts_per_page' => '30',
-	'meta_key' => 'youtube_publish_date',
 	'orderby' => 'meta_value_num',
 	'order' => 'DESC'
 );
+
+$meta_query = array(
+	array(
+		'key' => 'youtube_publish_date'
+	)
+);
+
+// Language ISO code from url
+$language = get_query_var('language');
+
+if (!empty($language)) {
+	// Find languages matching ISO code
+	$language_args = array(
+		'post_type' => 'languages',
+		'meta_query' => array(
+			array(
+				'key' => 'wt_id',
+				'value' => $language,
+				'compare' => 'LIKE'
+			)
+		)
+	);
+	$existing_languages = get_posts($language_args);
+
+	if (count($existing_languages) > 0) {
+		// Query videos by post ID of featured languages (post object)
+		$meta_query[] = array(
+			'key' => 'featured_languages',
+			'value' => $existing_languages[0]->ID,
+			'compare' => 'LIKE'
+		);
+		$meta_query['relation'] = 'AND';
+	}
+}
+
+$args['meta_query'] = $meta_query;
+
 // Get current page and append to custom query parameters array
 $args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 $video = new WP_Query( $args );
