@@ -1667,18 +1667,21 @@ body.page-template-template-volunteers .main .wt_featured-item p {
 }
 body.page-template-template-videos,
 body.post-type-archive-videos,
-body.languages-template-default {
+body.languages-template-default,
+body.videos-template-default {
   font-size: 1.2rem;
 }
 body.page-template-template-videos .wt_page-intro,
 body.post-type-archive-videos .wt_page-intro,
-body.languages-template-default .wt_page-intro {
+body.languages-template-default .wt_page-intro,
+body.videos-template-default .wt_page-intro {
   margin: 1% auto;
   text-align: center;
 }
 body.page-template-template-videos .wt_video-preview,
 body.post-type-archive-videos .wt_video-preview,
-body.languages-template-default .wt_video-preview {
+body.languages-template-default .wt_video-preview,
+body.videos-template-default .wt_video-preview {
   display: inline-block;
   vertical-align: top;
   width: 29%;
@@ -1691,7 +1694,8 @@ body.languages-template-default .wt_video-preview {
 }
 body.page-template-template-videos .wt_video-preview .wt_video-thumbnail,
 body.post-type-archive-videos .wt_video-preview .wt_video-thumbnail,
-body.languages-template-default .wt_video-preview .wt_video-thumbnail {
+body.languages-template-default .wt_video-preview .wt_video-thumbnail,
+body.videos-template-default .wt_video-preview .wt_video-thumbnail {
   width: 100%;
   padding-bottom: 56%;
   background-size: 100% !important;
@@ -1699,12 +1703,14 @@ body.languages-template-default .wt_video-preview .wt_video-thumbnail {
 }
 body.page-template-template-videos .wt_video-preview .wt_video-thumbnail.empty,
 body.post-type-archive-videos .wt_video-preview .wt_video-thumbnail.empty,
-body.languages-template-default .wt_video-preview .wt_video-thumbnail.empty {
+body.languages-template-default .wt_video-preview .wt_video-thumbnail.empty,
+body.videos-template-default .wt_video-preview .wt_video-thumbnail.empty {
   background: #6eb0ff;
 }
 body.page-template-template-videos .wt_video-preview .wt_video-thumbnail.empty::before,
 body.post-type-archive-videos .wt_video-preview .wt_video-thumbnail.empty::before,
-body.languages-template-default .wt_video-preview .wt_video-thumbnail.empty::before {
+body.languages-template-default .wt_video-preview .wt_video-thumbnail.empty::before,
+body.videos-template-default .wt_video-preview .wt_video-thumbnail.empty::before {
   content: "This video is not yet available";
   position: absolute;
   color: #fff;
@@ -1716,58 +1722,73 @@ body.languages-template-default .wt_video-preview .wt_video-thumbnail.empty::bef
   font-size: 1rem;
   letter-spacing: 0.1rem;
 }
+body.page-template-template-videos .wt_video-preview h2,
+body.post-type-archive-videos .wt_video-preview h2,
+body.languages-template-default .wt_video-preview h2,
+body.videos-template-default .wt_video-preview h2,
 body.page-template-template-videos .wt_video-preview h3,
 body.post-type-archive-videos .wt_video-preview h3,
 body.languages-template-default .wt_video-preview h3,
+body.videos-template-default .wt_video-preview h3,
 body.page-template-template-videos .wt_video-preview p,
 body.post-type-archive-videos .wt_video-preview p,
-body.languages-template-default .wt_video-preview p {
+body.languages-template-default .wt_video-preview p,
+body.videos-template-default .wt_video-preview p {
   padding: 0 15px;
 }
 body.page-template-template-videos .wt_video-preview h3,
 body.post-type-archive-videos .wt_video-preview h3,
-body.languages-template-default .wt_video-preview h3 {
+body.languages-template-default .wt_video-preview h3,
+body.videos-template-default .wt_video-preview h3 {
   margin-bottom: 0;
 }
 body.page-template-template-videos .wt_video-preview p,
 body.post-type-archive-videos .wt_video-preview p,
-body.languages-template-default .wt_video-preview p {
+body.languages-template-default .wt_video-preview p,
+body.videos-template-default .wt_video-preview p {
   margin: 5px 0;
 }
 body.page-template-template-videos .wt_video-preview a,
 body.post-type-archive-videos .wt_video-preview a,
-body.languages-template-default .wt_video-preview a {
+body.languages-template-default .wt_video-preview a,
+body.videos-template-default .wt_video-preview a {
   color: #6eb0ff;
 }
 body.page-template-template-videos .wt_video-preview a.inline,
 body.post-type-archive-videos .wt_video-preview a.inline,
-body.languages-template-default .wt_video-preview a.inline {
+body.languages-template-default .wt_video-preview a.inline,
+body.videos-template-default .wt_video-preview a.inline {
   display: inline;
 }
 body.page-template-template-videos .wt_video-preview a:hover,
 body.post-type-archive-videos .wt_video-preview a:hover,
-body.languages-template-default .wt_video-preview a:hover {
+body.languages-template-default .wt_video-preview a:hover,
+body.videos-template-default .wt_video-preview a:hover {
   text-decoration: underline;
 }
 body.page-template-template-videos .pagination,
 body.post-type-archive-videos .pagination,
-body.languages-template-default .pagination {
+body.languages-template-default .pagination,
+body.videos-template-default .pagination {
   text-align: center;
   margin: 5% auto 10%;
 }
 body.page-template-template-videos .pagination a,
 body.post-type-archive-videos .pagination a,
 body.languages-template-default .pagination a,
+body.videos-template-default .pagination a,
 body.page-template-template-videos .pagination span,
 body.post-type-archive-videos .pagination span,
-body.languages-template-default .pagination span {
+body.languages-template-default .pagination span,
+body.videos-template-default .pagination span {
   width: initial;
   margin: 0 10px;
   font-weight: bold;
 }
 body.page-template-template-videos .pagination .current,
 body.post-type-archive-videos .pagination .current,
-body.languages-template-default .pagination .current {
+body.languages-template-default .pagination .current,
+body.videos-template-default .pagination .current {
   color: #6eb0ff;
 }
 @media all and (max-width: 869px) {
