@@ -16,18 +16,28 @@
 		<!-- we should find a way to format this string correctly in the exported Airtable CSV rather than parsing the string here -->
 		<?php if ( $video_thumbnail ): 
 			preg_match('#\((.*?)\)#', $video_thumbnail, $match); ?>
-			<div class="wt_video-thumbnail" style="background:url('<?php echo $match[1]; ?>') center center no-repeat;"></div>
-			<?php else: ?>
-			<div class="wt_video-thumbnail empty"></div>
+			<div class="wt_video-preview__video-thumbnail" 
+				style="background:url('<?php echo $match[1]; ?>') center center no-repeat;">
+			</div>
+		<?php else: ?>
+			<div class="wt_video-preview__video-thumbnail wt_video-preview__video-thumbnail--empty">
+			</div>
 		<?php endif; ?>
 	</a>
 
-	<h2><a href="<?php echo $video_permalink; ?>"><?php echo $video_title; ?></a></h2>
+	<h2 class="wt_video-preview__text">
+		<a class="wt_video-preview__link" 
+			href="<?php echo $video_permalink; ?>">
+			<?php echo $video_title; ?>
+		</a>
+	</h2>
 
 	<!-- show language names -->
-	<h3>Featured Languages</h3>
+	<h3 class="wt_video-preview__text wt_video-preview__text--header">
+		Featured Languages
+	</h3>
 	<?php if( $featured_languages ): ?>
-		<p>
+		<p class="wt_video-preview__text wt_video-preview__text--p">
 		<?php foreach( $featured_languages as $post ):
 				setup_postdata( $post ); 
 
@@ -35,42 +45,62 @@
 				$language_name = get_field('standard_name');
 				$language_url = get_the_permalink(); ?>
 				<span>
-					<a href="<?php echo $language_url; ?>">
+					<a class="wt_video-preview__link" href="<?php echo $language_url; ?>">
 						<?php echo $language_name; ?> [<?php echo $ISO_code; ?>]
 					</a>
 				</span>
 		<?php endforeach; wp_reset_postdata(); ?>
 		</p>
 	<?php else: ?>
-		<p>Sorry, languages aren't loading right now.</p>
+		<p class="wt_video-preview__text wt_video-preview__text--p">
+			Sorry, languages aren't loading right now.
+		</p>
 	<?php endif; ?>
 	<!-- /show language names -->
 	
 	<!-- Show distribution links -->
-	<h3>Distribution</h3>
+	<h3 class="wt_video-preview__text wt_video-preview__text--header">
+		Distribution
+	</h3>
 	<?php if ( $public_status == 'Removed' || $public_status == 'Private' ): ?>
-		<p>This video is not publicly available.</p>
+		<p class="wt_video-preview__text wt_video-preview__text--p">
+			This video is not publicly available.
+		</p>
 	<?php else: ?>
 		<?php if ( $youtube_link != 'No ID' || $wikimedia_commons_link ): ?>
 			<?php if ( $youtube_link != 'No ID' ): ?>
-				<p>
-					<a href="<?php echo $youtube_link; ?>">YouTube</a>
+				<p class="wt_video-preview__text wt_video-preview__text--p">
+					<a class="wt_video-preview__link" href="<?php echo $youtube_link; ?>">
+						YouTube
+					</a>
 				</p>
 			<?php endif; ?>
 			<?php if ( $wikimedia_commons_link ): ?>
-				<p>
-					<a href="<?php echo $wikimedia_commons_link; ?>">Wikimedia Commons</a>
+				<p class="wt_video-preview__text wt_video-preview__text--p">
+					<a class="wt_video-preview__link" href="<?php echo $wikimedia_commons_link; ?>">
+						Wikimedia Commons
+					</a>
 				</p>
 			<?php endif; ?>
 		<?php else: ?>
-			<p>This video is not yet available. <a class="inline" href="http://www.youtube.com/user/wikitongues?sub_confirmation=1">Subscribe on YouTube</a> to know when it's published.</p>
+			<p class="wt_video-preview__text wt_video-preview__text--p">
+				This video is not yet available. 
+				<a 
+					class="wt_video-preview__link wt_video-preview__link--inline" 
+					href="http://www.youtube.com/user/wikitongues?sub_confirmation=1">
+					Subscribe on YouTube
+				</a>
+				to know when it's published.
+			</p>
 		<?php endif; ?>
 	<?php endif; ?>
 	<!-- /Show distribution links -->
 
 	<!-- Show Licensing -->
-	<h3>Licensing</h3>
-	<p>
+	<h3 class="wt_video-preview__text wt_video-preview__text--header">
+		Licensing
+	</h3>
+	<p class="wt_video-preview__text wt_video-preview__text--p">
 		<?php if ( $video_license == 'Standard' ) {
 			echo 'Protected';
 		} else {

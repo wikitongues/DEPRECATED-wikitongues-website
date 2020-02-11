@@ -27,7 +27,7 @@
 		$license_link = get_field('license_link');
 		$attribution_statement = get_field('attribution');
 
-		include( locate_template('components/video-thumbnail.php') );
+		include( locate_template('components/video-preview.php') );
 
 	endforeach; wp_reset_postdata(); ?>
 <?php else: ?>
