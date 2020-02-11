@@ -1717,6 +1717,17 @@ body.single-languages .wt_no-videos .wt_cta {
     margin: 15% auto 5% !important;
   }
 }
+.wt_single-videos {
+  font-size: 1.2rem;
+}
+.wt_single-videos__intro {
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .wt_single-videos__intro {
+    margin: 15% auto 5% !important;
+  }
+}
 .pagination {
   text-align: center;
   margin: 5% auto 10%;
