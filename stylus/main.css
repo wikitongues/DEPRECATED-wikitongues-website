@@ -1717,6 +1717,9 @@ body.page-template-template-volunteers .main .wt_featured-item p {
   margin: 5% auto 10% !important;
 }
 @media all and (max-width: 768px) {
+  .wt_single-languages__intro {
+    margin: 15% auto 5% !important;
+  }
   .wt_single-languages__pagination {
     margin: 15% auto 30% !important;
   }
