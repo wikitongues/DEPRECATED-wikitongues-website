@@ -27,6 +27,7 @@ if ( $video->have_posts() ) {  ?>
 <?php
 	while ( $video->have_posts() ) { $video->the_post();
 		$video_title = get_the_title($post);
+		$video_permalink = get_the_permalink();
 		$video_thumbnail = get_field('video_thumbnail');
 		$featured_languages = get_field('featured_languages');
 		$video_description = get_field('video_description');
@@ -34,7 +35,7 @@ if ( $video->have_posts() ) {  ?>
 		$wikimedia_commons_link = get_field('wikimedia_commons_link');
 		$video_license = get_field('video_license');
 		$license_link = get_field('license_link');
-		$attribution_statement = get_field('attribution_statement');
+		$attribution_statement = get_field('attribution');
 		$public_status = get_field('public_status');
 
 		include( locate_template('components/video-thumbnail.php') );

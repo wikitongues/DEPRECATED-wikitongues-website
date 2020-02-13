@@ -12,13 +12,17 @@
 	$public_status
 	*/ ?>
 <div class="wt_video-preview">
-	<!-- we should find a way to format this string correctly in the exported Airtable CSV rather than parsing the string here -->
-	<?php if ( $video_thumbnail ): 
-		preg_match('#\((.*?)\)#', $video_thumbnail, $match); ?>
-		<div class="wt_video-thumbnail" style="background:url('<?php echo $match[1]; ?>') center center no-repeat;"></div>
-		<?php else: ?>
-		<div class="wt_video-thumbnail empty"></div>
-	<?php endif; ?>
+	<a href="<?php echo $video_permalink; ?>">
+		<!-- we should find a way to format this string correctly in the exported Airtable CSV rather than parsing the string here -->
+		<?php if ( $video_thumbnail ): 
+			preg_match('#\((.*?)\)#', $video_thumbnail, $match); ?>
+			<div class="wt_video-thumbnail" style="background:url('<?php echo $match[1]; ?>') center center no-repeat;"></div>
+			<?php else: ?>
+			<div class="wt_video-thumbnail empty"></div>
+		<?php endif; ?>
+	</a>
+
+	<h2><a href="<?php echo $video_permalink; ?>"><?php echo $video_title; ?></a></h2>
 
 	<!-- show language names -->
 	<h3>Featured Languages</h3>
