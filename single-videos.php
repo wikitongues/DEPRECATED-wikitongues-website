@@ -45,99 +45,103 @@
     
     ?>
 
-<div class="wt_page-intro">
-    <?php if( $video_title ): ?>
-        <h1><?php echo $video_title; ?></h1>
-    <?php else: ?>
-        <h1><?php echo $post_title; ?></h1>
-    <?php endif; ?>
-
-	<?php if ( $public_status == 'Removed' || $public_status == 'Private' ): ?>
-		<p>This video is not publicly available.</p>
-	<?php else: ?>
-		<?php if ( $youtube_link != 'No ID' || $wikimedia_commons_link ): ?>
-            <?php if ( $youtube_link != 'No ID' ): ?>
-                <!-- Embed YouTube video -->
-                <iframe width="480" height="270"
-                    src="<?php echo get_youtube_embed_url($youtube_link); ?>">
-                </iframe> 
-            <?php elseif ( $wikimedia_commons_link ): ?>
-                <!-- Embed Wikimedia video -->
-                <video width="480" height="270" controls>
-                    <source src="<?php echo get_wikimedia_upload_url($wikimedia_commons_link); ?>" type="video/webm">
-                    Your browser does not support this video.
-                </video>
+<div class="wt_single-videos">
+    <div class="wt_single-videos__intro">
+        <div class="wt_page-intro wt_page-intro--short">
+            <?php if( $video_title ): ?>
+                <h1><?php echo $video_title; ?></h1>
+            <?php else: ?>
+                <h1><?php echo $post_title; ?></h1>
             <?php endif; ?>
-        <?php else: ?>
-            <p>This video is not yet available. <a class="inline" href="http://www.youtube.com/user/wikitongues?sub_confirmation=1">Subscribe on YouTube</a> to know when it's published.</p>
-        <?php endif; ?>
-    <?php endif; ?>
 
-    <p>
-        Published: <?php echo $formatted_date; ?>
-    </p>
+            <?php if ( $public_status == 'Removed' || $public_status == 'Private' ): ?>
+                <p>This video is not publicly available.</p>
+            <?php else: ?>
+                <?php if ( $youtube_link != 'No ID' || $wikimedia_commons_link ): ?>
+                    <?php if ( $youtube_link != 'No ID' ): ?>
+                        <!-- Embed YouTube video -->
+                        <iframe width="480" height="270"
+                            src="<?php echo get_youtube_embed_url($youtube_link); ?>">
+                        </iframe> 
+                    <?php elseif ( $wikimedia_commons_link ): ?>
+                        <!-- Embed Wikimedia video -->
+                        <video width="480" height="270" controls>
+                            <source src="<?php echo get_wikimedia_upload_url($wikimedia_commons_link); ?>" type="video/webm">
+                            Your browser does not support this video.
+                        </video>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <p>This video is not yet available. <a class="inline" href="http://www.youtube.com/user/wikitongues?sub_confirmation=1">Subscribe on YouTube</a> to know when it's published.</p>
+                <?php endif; ?>
+            <?php endif; ?>
 
-    <p>
-        <?php echo $video_description; ?>
-    </p>
+            <p>
+                Published: <?php echo $formatted_date; ?>
+            </p>
 
-	<!-- show language names -->
-	<h2>Featured Languages</h2>
-	<?php if( $featured_languages ): ?>
-		<p>
-		<?php foreach( $featured_languages as $post ):
-				setup_postdata( $post ); 
+            <p>
+                <?php echo $video_description; ?>
+            </p>
 
-				$ISO_code = get_the_title();
-				$language_name = get_field('standard_name');
-				$language_url = get_the_permalink(); ?>
-				<span>
-					<a href="<?php echo $language_url; ?>">
-						<?php echo $language_name; ?> [<?php echo $ISO_code; ?>]
-					</a>
-				</span>
-		<?php endforeach; wp_reset_postdata(); ?>
-		</p>
-	<?php else: ?>
-		<p>Sorry, languages aren't loading right now.</p>
-    <?php endif; ?>
-	<!-- /show language names -->
-    
-    <small>
-        Licensing: <a href="<?php echo $license_link; ?>"><?php echo $video_license; ?></a>
-        <br>
-        <?php echo $attribution_statement; ?>
-    </small>
-</div>
+            <!-- show language names -->
+            <h2>Featured Languages</h2>
+            <?php if( $featured_languages ): ?>
+                <p>
+                <?php foreach( $featured_languages as $post ):
+                        setup_postdata( $post ); 
 
-<div class="pagination">
-	<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a> | <a href="<?php bloginfo('url'); ?>/languages">Explore all languages</a>
-</div>
+                        $ISO_code = get_the_title();
+                        $language_name = get_field('standard_name');
+                        $language_url = get_the_permalink(); ?>
+                        <span>
+                            <a href="<?php echo $language_url; ?>">
+                                <?php echo $language_name; ?> [<?php echo $ISO_code; ?>]
+                            </a>
+                        </span>
+                <?php endforeach; wp_reset_postdata(); ?>
+                </p>
+            <?php else: ?>
+                <p>Sorry, languages aren't loading right now.</p>
+            <?php endif; ?>
+            <!-- /show language names -->
+            
+            <small>
+                Licensing: <a href="<?php echo $license_link; ?>"><?php echo $video_license; ?></a>
+                <br>
+                <?php echo $attribution_statement; ?>
+            </small>
+        </div>
+    </div>
 
-<!-- 
-/* ================= *\
- *   Donate Banner   *
-\* ================= */ -->
-<?php 
-// define variables for donate CTA at bottom of layout
-$donate_banner_header = get_field('donate_banner_header');
-$donate_banner_copy = get_field('donate_banner_copy');
-$donate_banner_form_embed = get_field('donate_banner_form_embed');
+    <div class="pagination">
+        <a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a> | <a href="<?php bloginfo('url'); ?>/languages">Explore all languages</a>
+    </div>
 
-// load donate CTA ?>
-<div class="wt_donate-banner banner_element">
-	<div class="inner-wrap">
-		<aside class="wt_donate-banner-header">
-			<h1>For $250, you can help save a language</h1>
-			<p>
-				<strong>*</strong> That's just <strong>$20.84 per month</strong>!
-			</p>
-		</aside>
-		<aside class="wt_donate-banner-form">
-			<script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/wikitongues?amount=20.84&default_interval=m" height="685px" width="100%" style="max-width:500px; min-width:310px; max-height:none!important" seamless="seamless" name="donorbox" frameborder="0" scrolling="no" allowpaymentrequest></iframe>
-		</aside>
-		<div class="clear"></div>
-	</div>
+    <!-- 
+    /* ================= *\
+    *   Donate Banner   *
+    \* ================= */ -->
+    <?php 
+    // define variables for donate CTA at bottom of layout
+    $donate_banner_header = get_field('donate_banner_header');
+    $donate_banner_copy = get_field('donate_banner_copy');
+    $donate_banner_form_embed = get_field('donate_banner_form_embed');
+
+    // load donate CTA ?>
+    <div class="wt_donate-banner banner_element">
+        <div class="inner-wrap">
+            <aside class="wt_donate-banner-header">
+                <h1>For $250, you can help save a language</h1>
+                <p>
+                    <strong>*</strong> That's just <strong>$20.84 per month</strong>!
+                </p>
+            </aside>
+            <aside class="wt_donate-banner-form">
+                <script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/wikitongues?amount=20.84&default_interval=m" height="685px" width="100%" style="max-width:500px; min-width:310px; max-height:none!important" seamless="seamless" name="donorbox" frameborder="0" scrolling="no" allowpaymentrequest></iframe>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </div>
 </div>
 
 <?php get_footer(); ?>

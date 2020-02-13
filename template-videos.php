@@ -30,7 +30,7 @@ if ( $video->have_posts() ) {  ?>
 		$attribution_statement = get_field('attribution');
 		$public_status = get_field('public_status');
 
-		include( locate_template('components/video-thumbnail.php') );
+		include( locate_template('components/video-preview.php') );
 	} 
 } wp_reset_postdata(); 
 
