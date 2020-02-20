@@ -3,6 +3,18 @@
 
     &__intro
         text-align center
+    
+    &__grid
+    	&::before
+    		content ""
+    		position absolute
+    		z-index -1
+    		height 450%
+    		transform translateY(2%)
+    		background-color transparent
+    		border-right 100vw solid
+    		border-right-color #e99086
+    		border-top 100px solid transparent
 
 @media all and (max-width:768px)
     .wt_archive-videos

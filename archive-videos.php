@@ -3,8 +3,7 @@
 <div class="wt_archive-videos">
 	<div class="wt_archive-videos__intro">
 		<div class="wt_page-intro wt_page-intro--short">
-			<h1>Every Wikitongues video</h1>
-			<p>Wikitongues works with a global network of grassroots linguists to record oral histories in every language in the world. To date, we have safeguarded nearly a thousand videos of 500 languages.</p>
+			<h1>Language Videos</h1>
 		</div>
 	</div>
 
@@ -26,7 +25,7 @@
 
 	// Run video loop
 	if ( $video->have_posts() ) {  ?>
-	<div><!-- video thumbnails grid -->
+	<div class="wt_archive-videos__grid"><!-- video thumbnails grid -->
 	<?php
 		while ( $video->have_posts() ) { $video->the_post();
 			$video_title = get_the_title($post);

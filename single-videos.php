@@ -45,24 +45,26 @@
     
     ?>
 
-<div class="wt_single-videos">
-    <div class="wt_single-videos__intro">
-        <div class="wt_page-intro wt_page-intro--short">
-            <?php if( $video_title ): ?>
-                <h1><?php echo $video_title; ?></h1>
-            <?php else: ?>
-                <h1><?php echo $post_title; ?></h1>
-            <?php endif; ?>
-
+    <div class="wt_single-videos">
+        <div class="wt_single-videos__intro wt_page-intro wt_page-intro--short">
+        <?php if( $video_title ): ?>
+            <h1><?php echo $video_title; ?></h1>
+        <?php else: ?>
+            <h1><?php echo $post_title; ?></h1>
+        <?php endif; ?>
+        </div>
+        <div class="wt_single-videos__body">               
             <?php if ( $public_status == 'Removed' || $public_status == 'Private' ): ?>
                 <p>This video is not publicly available.</p>
             <?php else: ?>
                 <?php if ( $youtube_link != 'No ID' || $wikimedia_commons_link ): ?>
                     <?php if ( $youtube_link != 'No ID' ): ?>
                         <!-- Embed YouTube video -->
-                        <iframe width="480" height="270"
-                            src="<?php echo get_youtube_embed_url($youtube_link); ?>">
-                        </iframe> 
+                        <div class="wt_single-videos__iframe">
+                            <iframe width="100%" height="100%"
+                                src="<?php echo get_youtube_embed_url($youtube_link); ?>">
+                            </iframe>
+                        </div>
                     <?php elseif ( $wikimedia_commons_link ): ?>
                         <!-- Embed Wikimedia video -->
                         <video width="480" height="270" controls>
@@ -76,15 +78,15 @@
             <?php endif; ?>
 
             <p>
-                Published: <?php echo $formatted_date; ?>
+                <strong>Published <?php echo $formatted_date; ?></strong>
             </p>
 
-            <p>
+            <p class="wt_single-videos__description">
                 <?php echo $video_description; ?>
             </p>
 
             <!-- show language names -->
-            <h2>Featured Languages</h2>
+            <h3>Featured Languages</h3>
             <?php if( $featured_languages ): ?>
                 <p>
                 <?php foreach( $featured_languages as $post ):
@@ -105,11 +107,11 @@
             <?php endif; ?>
             <!-- /show language names -->
             
-            <small>
-                Licensing: <a href="<?php echo $license_link; ?>"><?php echo $video_license; ?></a>
-                <br>
-                <?php echo $attribution_statement; ?>
-            </small>
+                <h3>Licensing</h3> 
+                <p>
+                    <a href="<?php echo $license_link; ?>"><?php echo $video_license; ?></a>
+                </p>
+                <!-- <?php echo $attribution_statement; ?> -->
         </div>
     </div>
 

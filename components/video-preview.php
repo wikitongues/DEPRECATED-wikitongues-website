@@ -26,10 +26,14 @@
 	</a>
 
 	<h2 class="wt_video-preview__text">
+	<?php if ( $public_status == 'Public' ): ?>
 		<a class="wt_video-preview__link" 
 			href="<?php echo $video_permalink; ?>">
 			<?php echo $video_title; ?>
 		</a>
+	<?php else: ?>
+		<?php echo $video_title; ?>
+	<?php endif; ?>
 	</h2>
 
 	<!-- show language names -->
