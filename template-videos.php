@@ -27,10 +27,10 @@ if ( $video->have_posts() ) {  ?>
 		$wikimedia_commons_link = get_field('wikimedia_commons_link');
 		$video_license = get_field('video_license');
 		$license_link = get_field('license_link');
-		$attribution_statement = get_field('attribution_statement');
+		$attribution_statement = get_field('attribution');
 		$public_status = get_field('public_status');
 
-		include( locate_template('components/video-thumbnail.php') );
+		include( locate_template('components/video-preview.php') );
 	} 
 } wp_reset_postdata(); 
 
