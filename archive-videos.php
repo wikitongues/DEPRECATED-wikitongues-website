@@ -54,16 +54,17 @@ if (!empty($language)) {
 	);
 	$existing_languages = get_posts($language_args);
 
+	$meta_query[] = array(
+		'key' => 'post_title',
+		'value' => $s,
+		'compare' => 'LIKE'
+	);
+
 	if (count($existing_languages) > 0) {
 		// Query videos by post ID of featured languages (post object)
 		$meta_query[] = array(
 			'key' => 'featured_languages',
 			'value' => $existing_languages[0]->ID,
-			'compare' => 'LIKE'
-		);
-		$meta_query[] = array(
-			'key' => 'post_title',
-			'value' => $s,
 			'compare' => 'LIKE'
 		);
 		$meta_query['relation'] = 'OR';
@@ -98,7 +99,13 @@ $wp_query   = $video;
 
 			include( locate_template('components/video-preview.php') );
 		} 
-	} wp_reset_postdata(); 
+	} else { ?>
+		<div class="wt_archive-videos__no-search-results">
+			<p>No videos to show</p>
+			<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a>
+		</div>
+	<?php }
+	wp_reset_postdata(); 
 
 	// Custom query loop pagination
 	get_template_part('pagination');
