@@ -108,6 +108,12 @@ $wp_query   = $video;
 	<?php }
 	wp_reset_postdata(); 
 
+	if (!empty($language) && $video->have_posts()) { ?>
+		<div class="wt_archive-videos__all-videos">
+			<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a>
+		</div>
+	<?php }
+
 	// Custom query loop pagination
 	get_template_part('pagination');
 
