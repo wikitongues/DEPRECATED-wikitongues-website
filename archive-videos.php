@@ -33,6 +33,7 @@ if (!empty($language)) {
 	// Find languages matching ISO code
 	$language_args = array(
 		'post_type' => 'languages',
+		'numberposts' => -1,
 		'meta_query' => array(
 			array(
 				'key' => 'wt_id',
@@ -60,11 +61,11 @@ if (!empty($language)) {
 		'compare' => 'LIKE'
 	);
 
-	if (count($existing_languages) > 0) {
+	foreach ($existing_languages as $language_post) {
 		// Query videos by post ID of featured languages (post object)
 		$meta_query[] = array(
 			'key' => 'featured_languages',
-			'value' => $existing_languages[0]->ID,
+			'value' => $language_post->ID,
 			'compare' => 'LIKE'
 		);
 		$meta_query['relation'] = 'OR';
