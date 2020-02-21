@@ -5,6 +5,12 @@
 		<div class="wt_page-intro wt_page-intro--short">
 			<h1>Language Videos</h1>
 		</div>
+
+		<form id="searchform" action="<?php bloginfo('home'); ?>/" method="get">
+			<input id="s" maxlength="150" name="s" size="20" type="text" value="" class="txt" placeholder="Search videos" />
+			<input name="post_type" type="hidden" value="videos" />
+			<input id="searchsubmit" class="btn" type="submit" value="Search" />
+		</form>
 	</div>
 
 	<?php
@@ -14,7 +20,9 @@
 		'posts_per_page' => '30',
 		'meta_key' => 'youtube_publish_date',
 		'orderby' => 'meta_value_num',
-		'order' => 'DESC'
+		'order' => 'DESC',
+		's' => $s,
+		'paged' => $paged
 	);
 
 // Language ISO code from url
