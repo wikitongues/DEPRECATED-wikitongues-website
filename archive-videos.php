@@ -20,13 +20,14 @@
 		'posts_per_page' => '30',
 		'meta_key' => 'youtube_publish_date',
 		'orderby' => 'meta_value_num',
-		'order' => 'DESC',
-		's' => $s,
-		'paged' => $paged
+		'order' => 'DESC'
 	);
 
 // Language ISO code from url
 $language = get_query_var('language');
+if (empty($language)) {
+	$language = $s;
+}
 
 if (!empty($language)) {
 	// Find languages matching ISO code
@@ -37,7 +38,18 @@ if (!empty($language)) {
 				'key' => 'wt_id',
 				'value' => $language,
 				'compare' => 'LIKE'
-			)
+			),
+			array(
+				'key' => 'standard_name',
+				'value' => $language,
+				'compare' => 'LIKE'
+			),
+			array(
+				'key' => 'alternate_names',
+				'value' => $language,
+				'compare' => 'LIKE'
+			),
+			'relation' => 'OR'
 		)
 	);
 	$existing_languages = get_posts($language_args);
@@ -49,7 +61,12 @@ if (!empty($language)) {
 			'value' => $existing_languages[0]->ID,
 			'compare' => 'LIKE'
 		);
-		$meta_query['relation'] = 'AND';
+		$meta_query[] = array(
+			'key' => 'post_title',
+			'value' => $s,
+			'compare' => 'LIKE'
+		);
+		$meta_query['relation'] = 'OR';
 	}
 }
 
