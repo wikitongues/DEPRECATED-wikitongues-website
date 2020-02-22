@@ -6,6 +6,7 @@
 			<h1>Language Videos</h1>
 		</div>
 
+		<!-- Search form -->
 		<form id="searchform" action="<?php bloginfo('home'); ?>/" method="get">
 			<input id="s" maxlength="150" name="s" size="20" type="text" value="" class="txt" placeholder="Search videos" />
 			<input name="post_type" type="hidden" value="videos" />
@@ -23,63 +24,64 @@
 		'order' => 'DESC'
 	);
 
-// Language ISO code from url
-$language = get_query_var('language');
-if (empty($language)) {
-	$language = $s;
-}
+	// Check url parameter or search query
+	$language = get_query_var('language');
+	if (empty($language)) {
+		$language = $s;
+	}
 
-if (!empty($language)) {
-	// Find languages matching ISO code
-	$language_args = array(
-		'post_type' => 'languages',
-		'numberposts' => -1,
-		'meta_query' => array(
-			array(
-				'key' => 'wt_id',
-				'value' => $language,
-				'compare' => 'LIKE'
-			),
-			array(
-				'key' => 'standard_name',
-				'value' => $language,
-				'compare' => 'LIKE'
-			),
-			array(
-				'key' => 'alternate_names',
-				'value' => $language,
-				'compare' => 'LIKE'
-			),
-			'relation' => 'OR'
-		)
-	);
-	$existing_languages = get_posts($language_args);
+	if (!empty($language)) {
+		// Find matching languages
+		$language_args = array(
+			'post_type' => 'languages',
+			'numberposts' => -1,
+			'meta_query' => array(
+				array(
+					'key' => 'wt_id',
+					'value' => $language,
+					'compare' => 'LIKE'
+				),
+				array(
+					'key' => 'standard_name',
+					'value' => $language,
+					'compare' => 'LIKE'
+				),
+				array(
+					'key' => 'alternate_names',
+					'value' => $language,
+					'compare' => 'LIKE'
+				),
+				'relation' => 'OR'
+			)
+		);
+		$existing_languages = get_posts($language_args);
 
-	$meta_query[] = array(
-		'key' => 'post_title',
-		'value' => $s,
-		'compare' => 'LIKE'
-	);
-
-	foreach ($existing_languages as $language_post) {
-		// Query videos by post ID of featured languages (post object)
+		// Query by video post title
 		$meta_query[] = array(
-			'key' => 'featured_languages',
-			'value' => $language_post->ID,
+			'key' => 'post_title',
+			'value' => $s,
 			'compare' => 'LIKE'
 		);
-		$meta_query['relation'] = 'OR';
+
+		foreach ($existing_languages as $language_post) {
+			// Query videos by post ID of featured languages (post object)
+			$meta_query[] = array(
+				'key' => 'featured_languages',
+				'value' => $language_post->ID,
+				'compare' => 'LIKE'
+			);
+			$meta_query['relation'] = 'OR';
+		}
 	}
-}
 
-$args['meta_query'] = $meta_query;
+	$args['meta_query'] = $meta_query;
 
-// Get current page and append to custom query parameters array
-$args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-$video = new WP_Query( $args );
-$temp_query = $wp_query;
-$wp_query   = NULL;
-$wp_query   = $video;
+	// Get current page and append to custom query parameters array
+	$args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+	$video = new WP_Query( $args );
+	$temp_query = $wp_query;
+	$wp_query   = NULL;
+	$wp_query   = $video;
 
 	// Run video loop
 	if ( $video->have_posts() ) {  ?>
@@ -100,7 +102,7 @@ $wp_query   = $video;
 
 			include( locate_template('components/video-preview.php') );
 		} 
-	} else { ?>
+	} else { // No videos matching search query ?>
 		<div class="wt_archive-videos__no-search-results">
 			<p>No videos to show</p>
 			<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a>
@@ -108,6 +110,7 @@ $wp_query   = $video;
 	<?php }
 	wp_reset_postdata(); 
 
+	// Link to all videos if search query is applied
 	if (!empty($language) && $video->have_posts()) { ?>
 		<div class="wt_archive-videos__all-videos">
 			<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a>
