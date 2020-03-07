@@ -8,7 +8,7 @@
 
 		<!-- Search form -->
 		<form id="searchform" action="<?php bloginfo('home'); ?>/" method="get">
-			<input id="s" maxlength="150" name="s" size="20" type="text" value="" class="txt" placeholder="Search videos" />
+			<input id="videos_search" maxlength="150" name="videos_search" size="20" type="text" value="" class="txt" placeholder="Search videos" />
 			<input name="post_type" type="hidden" value="videos" />
 			<input id="searchsubmit" class="btn" type="submit" value="Search" />
 		</form>
@@ -25,12 +25,12 @@
 	);
 
 	// Check url parameter or search query
-	$language = get_query_var('language');
-	if (empty($language)) {
-		$language = $s;
+	$language_or_search = get_query_var('videos_search');
+	if (empty($language_or_search)) {
+		$language_or_search = $s;
 	}
 
-	if (!empty($language)) {
+	if (!empty($language_or_search)) {
 		// Find matching languages
 		$language_args = array(
 			'post_type' => 'languages',
@@ -38,17 +38,17 @@
 			'meta_query' => array(
 				array(
 					'key' => 'wt_id',
-					'value' => $language,
+					'value' => $language_or_search,
 					'compare' => 'LIKE'
 				),
 				array(
 					'key' => 'standard_name',
-					'value' => $language,
+					'value' => $language_or_search,
 					'compare' => 'LIKE'
 				),
 				array(
 					'key' => 'alternate_names',
-					'value' => $language,
+					'value' => $language_or_search,
 					'compare' => 'LIKE'
 				),
 				'relation' => 'OR'
@@ -59,7 +59,7 @@
 		// Query by video post title
 		$meta_query[] = array(
 			'key' => 'post_title',
-			'value' => $s,
+			'value' => $language_or_search,
 			'compare' => 'LIKE'
 		);
 
@@ -111,7 +111,7 @@
 	wp_reset_postdata(); 
 
 	// Link to all videos if search query is applied
-	if (!empty($language) && $video->have_posts()) { ?>
+	if (!empty($language_or_search) && $video->have_posts()) { ?>
 		<div class="wt_archive-videos__all-videos">
 			<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a>
 		</div>

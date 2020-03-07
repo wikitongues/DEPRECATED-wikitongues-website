@@ -872,7 +872,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
  */
 function wt_register_query_vars($vars)
 {
-    $vars[] = 'language';
+    $vars[] = 'videos_search';
     return $vars;
 }
 add_filter('query_vars', 'wt_register_query_vars');
