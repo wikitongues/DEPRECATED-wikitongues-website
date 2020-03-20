@@ -861,4 +861,19 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+	Query vars
+\*------------------------------------*/
+
+/**
+ * Register custom query vars
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/query_vars
+ */
+function wt_register_query_vars($vars)
+{
+    $vars[] = 'videos_search';
+    return $vars;
+}
+add_filter('query_vars', 'wt_register_query_vars');
 ?>

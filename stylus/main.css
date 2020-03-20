@@ -1685,6 +1685,12 @@ body.page-template-template-volunteers .main .wt_featured-item p {
   border-right-color: #e99086;
   border-top: 100px solid transparent;
 }
+.wt_archive-videos__no-search-results {
+  text-align: center;
+}
+.wt_archive-videos__all-videos {
+  text-align: center;
+}
 @media all and (max-width: 768px) {
   .wt_archive-videos__intro {
     margin: 15% auto 5% !important;
