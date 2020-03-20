@@ -3,33 +3,37 @@
 ## To-dos
 
 ### Global
-- [ ] Improved CTA module
-- [ ] Improved Newsletter signup banner (code and CMS integration, layout component)
-- [ ] Improved donate now banner (code and CMS integration, layout component)
-- [ ] Typography revision
-- [ ] Header review
+- [ ] Streamline all CTAs to single module
+- [ ] Incorporate newsletter signup into CMS layout builder
+- [ ] Incorporate donate now into CMS layout builder
+- [ ] Design pass: typography
+- [ ] Design pass: header navigation
 
 ### Home
-- [ ] Style review
+- [ ] Full design pass
 
 ### Manifesto
-- [ ] content upgrade
+- [ ] Revise content (content only)
 
 ### Donate
-- [ ] Payment methods upgrade (code)
-- [ ] Progress-to-goal banner (will require Airtable syncronization) (code)
-- [ ] How we spend it: seedbank (content)
-- [ ] How we spend it: resources (content)
-- [ ] Join our board CTA (code)
-- [ ] Newsletter capture (code)
-- [ ] Additional pages
+- [ ] Incorporate new payment form
+- [ ] Add CTA for alternative payment methods
+- [ ] Build progress-to-goal banner
+- [ ] Build testimonials section
+- [ ] Revise copy and images (content only)
+- [ ] Build join our board CTA
+- [ ] Additional pages: donor advise funds
+- [ ] Additional pages: prospective board members
 
 ### Seed bank videos
 - [ ] Style videos search bar
-- [ ] Search results page should have title
-- [ ] Video thumbnails should have video title rather than ID
+- [ ] Add search query to search results page header
+- [ ] Replace ID with title in video thumbnails
 
 ### Seed bank languages
 - [ ] Build languages search bar
-- [ ] Language pages should have more basic metadata
-- [ ] Language pages should have more content
+- [ ] Incorporate more descriptive metadata individual pages
+- [ ] Incorporate Living Tongues Dictionaries
+- [ ] Incorporate Poly phrase books
+- [ ] Incorporate UHRI recordings
+- [ ] Incorporate supporting educational materials
