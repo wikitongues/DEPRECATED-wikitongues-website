@@ -2,20 +2,20 @@
 
 ## To-dos
 
-###Global
+### Global
 - [ ] Improved CTA module
 - [ ] Improved Newsletter signup banner (code and CMS integration, layout component)
 - [ ] Improved donate now banner (code and CMS integration, layout component)
 - [ ] Typography revision
 - [ ] Header review
 
-###Home
+### Home
 - [ ] Style review
 
-###Manifesto
+### Manifesto
 - [ ] content upgrade
 
-###Donate
+### Donate
 - [ ] Payment methods upgrade (code)
 - [ ] Progress-to-goal banner (will require Airtable syncronization) (code)
 - [ ] How we spend it: seedbank (content)
@@ -24,12 +24,12 @@
 - [ ] Newsletter capture (code)
 - [ ] Additional pages
 
-###Seed bank videos
+### Seed bank videos
 - [ ] Style videos search bar
 - [ ] Search results page should have title
 - [ ] Video thumbnails should have video title rather than ID
 
-###Seed bank languages
+### Seed bank languages
 - [ ] Build languages search bar
 - [ ] Language pages should have more basic metadata
 - [ ] Language pages should have more content
