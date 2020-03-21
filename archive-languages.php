@@ -83,10 +83,16 @@
 			<div class="wt_archive-languages__all-languages">
 				<a href="<?php bloginfo('url'); ?>/languages">Explore all languages</a>
 			</div>
-		<?php }
+		<?php } ?>
 
-	// Custom query loop pagination
-	get_template_part('pagination');
+	<div class="wt_archive-languages__pagination">
+		<?php
+		// Custom query loop pagination
+		get_template_part('pagination');
+		?>
+	</div>
+
+	<?php
 
 	// Reset main query object
 	$wp_query = NULL;
