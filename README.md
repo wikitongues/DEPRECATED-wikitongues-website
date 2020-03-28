@@ -3,11 +3,14 @@
 ## To-dos
 
 ### Global
-- [ ] Streamline all CTAs to single module
+- [x] Streamline all CTAs to single module
 - [ ] Incorporate newsletter signup into CMS layout builder
 - [ ] Incorporate donate now into CMS layout builder
 - [ ] Design pass: typography
 - [ ] Design pass: header navigation
+- [ ] CSS: Fold typography into variables stylesheet
+- [ ] CSS: Deprecate shapes
+- [ ] CSS: Break down all files into templates or components 
 
 ### Home
 - [ ] Full design pass
