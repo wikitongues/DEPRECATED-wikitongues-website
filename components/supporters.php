@@ -57,7 +57,12 @@ $wp_query = $temp_query;
 wp_reset_postdata(); ?>
 
 	<div class="wt_section-intro">
-		<a href="<?php bloginfo('url');?>/donate" class="wt_cta">Add your name</a>
-		<a href="https://patreon.com/wikitongues" class="wt_secondary-cta">Or pledge on Patreon</a>
+	<?php 
+		$cta_link = get_bloginfo('url').'/donate';
+		$cta_text = 'Add your name';
+		$secondary_cta_link = 'https://patreon.com/wikitongues';
+		$secondary_cta_text = 'Or pledge on Patreon';
+		
+		include( locate_template('components/cta.php') ); ?>
 	</div>
 </div><!-- /.wt_face-grid -->

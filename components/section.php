@@ -25,9 +25,14 @@
 		<?php
 			if ( $section_title ) {
 				echo '<h1>' . $section_title . '</h1>' .
-					 '<p>' . $section_text . '</h1>' .
-           '<br>' .
-					 '<a class="wt_cta" href="' . $section_cta_link . '">' . $section_cta_text . '</a>';
+					 '<p>' . $section_text . '</h1><br>';
+			}
+
+			if ( $section_cta_link ) {
+				$cta_link = $section_cta_link;
+				$cta_text = $section_cta_text;
+
+				include( locate_template('components/cta.php') );
 			} ?>
 	    </aside>
     </div>

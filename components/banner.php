@@ -15,7 +15,10 @@
 		} 
 		
 		if ( $banner_cta_link ) { 
-			echo '<a class="wt_cta" href="' . $banner_cta_link . '">' . $banner_cta_text . '</a>'; 
+			$cta_link = $banner_cta_link;
+			$cta_text = $banner_cta_text;
+
+			include( locate_template('components/cta.php') );
 		} ?>
 	</aside>
 	<p class="wt_banner-image-caption">
