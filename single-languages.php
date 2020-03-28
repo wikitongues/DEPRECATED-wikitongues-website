@@ -35,8 +35,13 @@
 		endforeach; wp_reset_postdata(); ?>
 	<?php else: ?>
 		<div class="wt_single-languages__no-videos">
-			<p>We don't have a video for this language yet.</p>
-			<a href="<?php bloginfo('url'); ?>/submit-a-video" class="wt_single-languages__cta wt_cta">Submit a video</a>
+			<p>We don't have a video for this language yet.</p>			
+			<?php 
+			$cta_link = get_bloginfo('url').'/submit-a-video';
+			$unique_class = 'single-languages';
+			$cta_text = 'Submit a video';
+			
+			include( locate_template('components/cta.php') ); ?>
 		</div>
 	<?php endif; ?>
 	<!-- /video grid -->

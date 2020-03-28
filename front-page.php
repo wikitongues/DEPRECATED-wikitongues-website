@@ -17,33 +17,6 @@ get_header();
 	include( locate_template('components/banner.php') );
 
 	/* ======================= *\
-	 *     New Video Alert     *
-	\* ======================= */
-
-	$args = array(
-		'post_type' => 'videos',
-		'posts_per_page' => 1
-	);
-	$video_posts = new WP_Query( $args );
-
-	if ( $video_posts->have_posts() ):
-
-		while ( $video_posts->have_posts() ): $video_posts->the_post();
-
-			// define page banner variables
-			$alert_link = get_field('video_url');
-			$alert_title = get_the_title();
-			$alert_text = get_the_excerpt();
-			$alert_image = get_the_post_thumbnail_url();
-
-			// include alert template
-			include( locate_template('components/alert.php') );
-
-		endwhile;
-
-	endif; wp_reset_postdata();
-
-	/* ======================= *\
 	 *    Newsletter Signup    *
 	\* ======================= */
 
