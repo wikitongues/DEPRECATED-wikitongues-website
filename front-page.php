@@ -20,6 +20,7 @@ get_header();
 	 *    Newsletter Signup    *
 	\* ======================= */
 
+
 	$form_embed_code = get_field('form_embed_code');
 
 	include( locate_template('components/newsletter.php') );
