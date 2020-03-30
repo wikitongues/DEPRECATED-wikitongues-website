@@ -10,7 +10,7 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: $text-color;
+  color: #4799fc;
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
@@ -81,7 +81,7 @@ img {
   box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .header.background ul li a {
-  color: $text-color;
+  color: #11242f !important;
 }
 .header.background ul.sub-menu {
   background: #fff;
@@ -140,7 +140,7 @@ img {
   visibility: visible;
 }
 .header a {
-  color: $text-color;
+  color: #11242f;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
@@ -151,12 +151,12 @@ body.home .header a,
 body.page-template-template-form .header a,
 body.page-template-template-volunteers .header a,
 body.page-template-template-about .header a {
-  color: $text-color-light;
+  color: #fff;
   display: inline-block;
 }
 .footer {
-  background-color: $dark-background;
-  color: $text-color-light;
+  background-color: #11242f;
+  color: #fff;
   padding: 0 2rem 2rem 2rem;
   bottom: 0;
 }
@@ -192,18 +192,18 @@ body.page-template-template-about .header a {
   visibility: visible;
 }
 .footer .footer-navigation ul .sub-menu li a {
-  color: $footer-offblue;
+  color: #fff;
 }
 .footer .legal {
   width: 100%;
   margin-bottom: 0;
-  color: $footer-offblue;
+  color: #fff;
 }
 .footer .legal a {
   display: inline;
 }
 .footer a {
-  color: $text-color-light;
+  color: #fff;
 }
 @media all and (max-width: 979px) {
   .footer .footer-navigation ul {
@@ -221,7 +221,7 @@ body.page-template-template-about .header a {
   left: 0;
   top: -100px;
   border-right: 100vw solid transparent;
-  border-bottom: 100px solid #0d232f;
+  border-bottom: 100px solid #11242f;
   z-index: 5;
 }
 body.home .wt_banner .wt_banner-image-caption {
@@ -237,17 +237,17 @@ body.home .wt_page-section {
   font-size: 1.75rem;
 }
 body.home .wt_page-section.primary_content-block {
-  color: $text-color-light;
+  color: #fff;
 }
 body.home .wt_page-section#primary_content-block-2 {
   margin-bottom: 0;
 }
 body.home .wt_page-section#primary_content-block-2 .wt_section-content .wt_section-message .wt_cta {
-  background-color: $text-color-light;
-  color: $highlight-color;
+  background-color: #fff;
+  color: #4799fc;
 }
 body.home .wt_page-section#primary_content-block-2 .wt_section-content .wt_section-message .wt_cta:hover {
-  color: $highlight-color;
+  color: #4799fc;
 }
 body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featured-item {
   font-size: 1.25rem;
@@ -276,7 +276,7 @@ body.home .wt_page-section#primary_content-block-3 {
 body.home .wt_page-section .wt_featured-items {
   overflow-x: scroll;
   white-space: nowrap;
-  color: $text-color !important;
+  color: #11242f !important;
   margin-top: 0;
   padding-top: 0;
 }
@@ -1514,7 +1514,7 @@ body.page-template-template-donate .footer {
 .wt_banner-message h1,
 .wt_form-banner-message h1 {
   font-size: 7rem;
-  color: $text-color-light;
+  color: #fff;
   text-align: right;
   font-weight: bold;
   text-transform: uppercase;
@@ -1553,7 +1553,7 @@ body.page-template-template-donate .footer {
 }
 .wt_donate-banner .inner-wrap aside.wt_donate-banner-header h1 {
   text-align: left;
-  color: $text-color;
+  color: #11242f;
 }
 .wt_donate-banner .inner-wrap aside.wt_donate-banner-header p {
   font-size: 2rem;
@@ -1571,7 +1571,7 @@ body.page-template-template-donate .footer {
 .wt_banner .wt_banner-image-caption,
 .wt_donate-banner .wt_banner-image-caption {
   position: absolute;
-  color: $text-color-light;
+  color: #fff;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -1615,14 +1615,14 @@ body.page-template-template-donate .footer {
   padding: 3rem;
   font-size: 2rem;
   font-weight: bold;
-  background-color: $highlight-color;
+  background-color: #4799fc;
   border-radius: 1rem;
-  color: $text-color-light;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 .wt_cta:hover {
-  color: $text-color-light;
+  color: #fff;
 }
 .wt_secondary-cta {
   padding-top: 20px;
