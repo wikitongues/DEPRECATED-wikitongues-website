@@ -1,0 +1,71 @@
+body
+	&.page-template-template-projects
+		.wt_donate-banner
+			min-height auto
+		
+		.footer
+			margin-top 0
+
+// not working right now, need to push forward
+// // colorful shapes (weave into above elements on desgin pass)
+// .projects > .wt_page-intro::before
+//     content ""
+//     background-color #6eb0ff
+//     position absolute
+//     width 100vw
+//     height 100vw
+//     border-radius 100%
+//     // border-radius 250vh
+//     // border 250vh #6eb0ff solid
+//     top -50%
+//     left 50%
+//     transform translate(-50%,-50%)
+//     z-index -1
+
+// .projects > .wt_page-section
+//     // &:first-of-type::after
+//     //     content ""
+//     //     background-color transparent
+//     //     position absolute
+//     //     width 100vw
+//     //     left 0
+//     //     transform translateY(-200px)
+//     //     border-bottom 10px rgb(244,244,244) dashed
+//     //     z-index -1
+
+//     &:nth-of-type(even) > .wt_section-content > .wt_section-image::before
+//         content ""
+//         background-color transparent
+//         position absolute
+//         height 125%
+//         top 50%
+//         right 0
+//         transform translateY(-50%)
+//         border-left 40vw solid rgb(110,176,255)
+//         z-index -1
+
+//     &:nth-of-type(odd) > .wt_section-content > .wt_section-image::before
+//         content ""
+//         background-color transparent
+//         position absolute
+//         height 125%
+//         top 50%
+//         left 0
+//         transform translateY(-50%)
+//         border-right 40vw solid rgb(110,176,255)
+//         z-index -1         
+
+@media all and (max-width:979px)
+	body
+		&.page-template-template-projects
+			.wt_page-section
+				.wt_section-message
+					padding-left 2rem
+					padding-right 2rem
+					box-sizing border-box
+			
+			.wt_donate-banner 
+				.wt_donate-banner-content
+					width 90%
+					margin 0
+					padding 2rem

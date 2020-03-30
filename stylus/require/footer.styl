@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    FOOTER
+    footer.php
+\*------------------------------------*/
+
+.footer
+//    margin-top 150px
+    background-color $dark-background
+    color $text-color-light
+    padding 0 2rem 2rem 2rem
+    bottom 0
+    
+    .footer-logo
+        .logo-img
+            vertical-align middle
+            width 35px
+            height auto
+            border-radius 100%
+        
+        span
+            padding-left 5px
+            font-weight 700
+            letter-spacing 0.05rem
+            text-transform uppercase
+
+    .footer-navigation
+        display flex
+        width 100%
+
+        ul
+            display flex
+            list-style-type none
+            padding 0
+
+            &:last-of-type
+                margin-left auto                
+            
+            li
+                margin 3px 20px 3px 3px
+                letter-spacing 0.08rem
+
+            .sub-menu
+                visibility visible
+
+                li
+                    a
+                        color $footer-offblue
+
+    .legal
+        width 100%
+        margin-bottom 0
+        color $footer-offblue
+        
+        a
+            display inline
+
+.footer a
+    color $text-color-light
+    
+@media all and (max-width:979px)
+    .footer
+        .footer-navigation
+            ul
+                display block
+
+// colorful shapes (weave into above elements on desgin pass)
+.footer
+    position relative
+
+    &:before
+        content ""
+        background-color transparent
+        position absolute
+        height 0
+        left 0
+        top -100px
+        border-right 100vw solid transparent
+        border-bottom 100px solid #0d232f
+        z-index 5

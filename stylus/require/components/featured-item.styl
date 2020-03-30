@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    FEATURED ITEMS
+    components/featured-item.php
+\*------------------------------------*/
+
+// Display as a flexbox
+.wt_featured-items
+    // display flex
+    // justify-content space-between
+    padding 5%
+
+.wt_featured-item // Children
+    margin 2rem
+    background-color $text-color-light
+    border-radius 1rem
+    overflow hidden
+    // Featured item content flexbox
+    display flex
+    flex-direction column
+    -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+    box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+    
+    &:nth-of-type(1)
+        margin-left 0 !important
+
+// On smaller screens, show items in a single column
+@media only screen and (max-width: 800px)
+    .wt_featured-items
+        flex-direction column
+
+// Each featured item has three children:
+// 1. A link to youtube with a background image
+// 2. An h2 title
+// 3. A paragraph with intro text
+
+// Arbitrary height to display image
+// Might want to switch to image instead of background image
+.wt_featured-item
+    .wt_featured-item-image
+        height 20rem
+        background-size cover !important
+        width 100%
+
+    h2
+        padding 2rem 2rem 0 2rem
+
+    p
+        padding 0 2rem 2rem 2rem

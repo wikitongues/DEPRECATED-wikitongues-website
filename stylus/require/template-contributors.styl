@@ -1,0 +1,119 @@
+/*------------------------------------*\
+    WHO WE ARE
+    template-contributors.php
+\*------------------------------------*/
+
+body
+    &.page-template-template-contributors        
+        .wt_page-intro
+            margin-bottom 2%
+            
+            h1,
+            h2
+                margin-top 0
+                text-align center
+
+        .wt_who-navigation
+            margin 0 auto
+            padding 0
+            text-align center
+
+            li
+                display inline-block
+                margin 0 10px
+                text-transform uppercase
+                font-weight bold
+
+                &:hover,
+                &.active
+                    &::after
+                        content ""
+                        width 7px
+                        height 7px
+                        display block
+                        margin 5px auto
+                        border-radius 100%
+
+                &:hover
+                    &::after
+                        background-color #dedede
+
+                &.active
+                    &::after
+                        background-color #86e9c3
+
+        .wt_face-grid
+            width 90%
+            margin 5% auto 15%
+            text-align center
+
+            &.small
+                .wt_member
+                    display inline-block
+                    vertical-align top
+                    width 23%
+                    margin 1% .5%
+                    text-align left
+                    
+                    >*
+                        display inline-block
+                        vertical-align middle
+                    
+                    .wt_member-photo
+                        width 20%
+                        padding-bottom 20%
+                        margin-bottom 0
+                        border-radius 100%
+                        background-size cover !important
+                        margin-bottom 10px
+
+                        &.empty
+                            background-color #86e9c3 // if no photo
+                    
+                    .wt_member-information
+                        width 78%
+                        font-size 12px
+                        padding-left 10px
+                        box-sizing border-box
+                        
+                        h2
+                            font-size 12px
+                        
+                        .wt_member-credentials
+                            display none
+                        
+                        .wt_member-bio
+                            display none
+                
+            .pagination
+                margin-top 5%
+                
+                a, span
+                    width initial
+                    margin 0 10px
+                    font-weight bold
+                    
+                .current
+                    color #86e9c3
+
+@media only screen and (max-width: 979px)
+    body
+        &.page-template-template-contributors,
+            h1
+                margin-top 10%
+                
+            .wt_who-navigation
+                font-size 1rem
+                
+                li
+                    &.active
+                        &:after
+                            background #000 !important
+                            
+            .wt_face-grid
+                font-size 1rem !important
+
+                &.small
+                    .wt_member
+                        width 48% !important
+                        margin 1.5% .5% !important

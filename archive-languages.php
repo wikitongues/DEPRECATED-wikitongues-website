@@ -88,7 +88,7 @@
 	<div class="wt_archive-languages__pagination">
 		<?php
 		// Custom query loop pagination
-		get_template_part('pagination');
+		get_template_part('components/pagination');
 		?>
 	</div>
 
