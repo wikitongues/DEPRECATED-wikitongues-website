@@ -8,7 +8,7 @@
 - [ ] Incorporate donate now into CMS layout builder
 - [ ] Design pass: typography
 - [ ] Design pass: header navigation
-- [ ] CSS: Update typography variables
+- [ ] CSS: Update typography variables 
 - [x] CSS: Deprecate shapes
 - [x] CSS: Break down all files into templates or components 
 
