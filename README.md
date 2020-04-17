@@ -1,6 +1,6 @@
 # Wikitongues.org
 
-## To-dos
+## To-dos toward V1
 
 ### Global
 - [x] Streamline all CTAs to single module
@@ -18,6 +18,20 @@
 ### Manifesto
 - [ ] Revise content (content only)
 
+### Submit a video
+- [ ] Restructure how submissions are stored
+
+### Keep your language alive
+- [ ] Build language resources template
+- [ ] Sustainability toolkit full download
+- [ ] Sustainability toolkit individual chapters download
+
+### Podcast
+- [ ] Build podcasts post type
+- [ ] Podcast post type single page
+- [ ] Podcast homepage
+- [ ] Integrate RSS feed
+
 ### Donate
 - [ ] Incorporate new payment form
 - [ ] Add CTA for alternative payment methods
@@ -27,6 +41,7 @@
 - [ ] Build join our board CTA
 - [ ] Additional pages: donor advise funds
 - [ ] Additional pages: prospective board members
+- [ ] Donor blog (where we stream Patreon content)
 
 ### Seed bank videos
 - [ ] Style videos search bar
@@ -40,3 +55,4 @@
 - [ ] Incorporate Poly phrase books
 - [ ] Incorporate UHRI recordings
 - [ ] Incorporate supporting educational materials
+- [ ] "Let me know when content for this language is made available" feature
