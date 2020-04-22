@@ -1826,6 +1826,10 @@ body.page-template-template-volunteers .main .wt_featured-item p {
 .pagination .current {
   color: #6eb0ff;
 }
+.wt_search-form__submit {
+  font-size: 1.25rem !important;
+  padding: 0.3rem !important;
+}
 .wt_search-results__searchform {
   text-align: center;
 }
