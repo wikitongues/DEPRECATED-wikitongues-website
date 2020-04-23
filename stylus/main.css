@@ -1830,6 +1830,13 @@ body.page-template-template-volunteers .main .wt_featured-item p {
   font-size: 1.25rem !important;
   padding: 0.3rem !important;
 }
+.wt_search-form__field {
+  border-radius: 0.5rem;
+  border: 1px solid LightGrey;
+}
+.wt_search-results__header {
+  margin-top: 5%;
+}
 .wt_search-results__searchform {
   text-align: center;
 }
