@@ -872,6 +872,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
  */
 function wt_register_query_vars($vars)
 {
+    $vars[] = 'site_search';
     $vars[] = 'videos_search';
     $vars[] = 'languages_search';
     return $vars;
@@ -884,11 +885,22 @@ add_filter('query_vars', 'wt_register_query_vars');
 
 function add_searchbar_to_nav($items, $args) {
   if ($args->menu->slug == 'calls-to-action') {
-    $items .= '<li>' . get_search_form(false) . '</li>';
+    $items .= '<li>' . get_template_part('wikitongues', 'searchform') . '</li>';
     return $items;
   }
   return $items;
 }
 add_filter( 'wp_nav_menu_items', 'add_searchbar_to_nav', 10, 2 );
+
+function load_custom_search_template($template) {
+  if( isset($_REQUEST['site_search']) ) {
+      $t = locate_template('wikitongues-search.php', false);
+      if (!empty($t)) {
+        $template = $t;      
+      }
+  }
+  return $template;
+}
+add_action('template_include', 'load_custom_search_template');
 
 ?>

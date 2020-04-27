@@ -3,7 +3,6 @@
 /**
  * The template for displaying Search Results pages
  */
-
 get_header(); ?>
 
 	<section id="primary" class="content-area">
@@ -13,7 +12,7 @@ get_header(); ?>
           <h1 class="page-title">
           <?php
           /* translators: %s: Search query. */
-          printf( __( 'Search Results for: %s' ), get_search_query() );
+          printf( __( 'Search Results for: %s' ), $_GET['site_search'] );
           ?>
           </h1>
         </header><!-- .page-header -->
@@ -27,7 +26,7 @@ get_header(); ?>
             'order' => 'ASC'
           );
 
-          $search_query = get_search_query();
+          $search_query = $_GET['site_search'];
 
           // Meta query for searching languages
           $languages_meta = array(
@@ -82,11 +81,13 @@ get_header(); ?>
           $args['meta_query'] = $meta_query;
 
           // Get current page and append to custom query parameters array
-          $args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+          $args['paged'] = get_query_var('paged') ? get_query_var('paged') : 1;
           $custom_query = new WP_Query( $args );
           $temp_query = $wp_query;
           $wp_query   = NULL;
-          $wp_query   = $custom_query; ?>
+          $wp_query   = $custom_query; 
+          set_query_var('paged', $args['paged']);
+          ?>
 
           <div class="wt_search-results__main">
 
