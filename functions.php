@@ -903,4 +903,11 @@ function load_custom_search_template($template) {
 }
 add_action('template_include', 'load_custom_search_template');
 
+function set_post_types($query) {
+  if (isset($_REQUEST['site_search'])) {
+    $query->set('post_type', array('languages', 'videos'));
+  }
+}
+add_action('pre_get_posts', 'set_post_types');
+
 ?>
