@@ -885,7 +885,7 @@ add_filter('query_vars', 'wt_register_query_vars');
 
 function add_searchbar_to_nav($items, $args) {
   if ($args->menu->slug == 'calls-to-action') {
-    $items .= '<li>' . get_template_part('wikitongues', 'searchform') . '</li>';
+    $items .= '<li>' . get_search_form(false) . '</li>';
     return $items;
   }
   return $items;
