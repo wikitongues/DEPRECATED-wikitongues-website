@@ -1,0 +1,132 @@
+body, html
+    margin-top 0
+    width 100%
+
+body
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	display inline-block
+
+img
+    max-width 100%
+    border-radius 1rem
+
+.no-scroll
+    overflow hidden
+
+.clear
+    clear both
+
+.header
+    z-index 10
+    position fixed
+    display flex
+    top 0
+    width 100% // Using %: using the vw unit overflows on the x axis
+
+    &.fixed
+        position fixed !important
+        height 50px
+
+    &.background
+        &::before
+            content ""
+            z-index -1
+            position absolute
+            width 100vw
+            height 50px
+            background white
+            -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+            box-shadow 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+
+        ul
+            li
+                a
+                   color $dark_blue !important
+
+            &.sub-menu
+                background white
+
+.nav
+    
+    display flex
+    width 100%
+    flex-wrap nowrap
+    overflow-x auto
+    -webkit-overflow-scrolling touch // smooth scrolling on IOS devices
+    -ms-overflow-style none // hide scrollbar in Edge
+
+// Hide scrollbar on webkit browsers
+.nav::-webkit-scrollbar
+    display none
+
+// The scroll bar can not be hidden in Firefox (Gecko) using CSS as of 2018
+// See: https://stackoverflow.com/a/6165489/7770081
+// Possible solutions: https://stackoverflow.com/a/16671476/7770081
+
+// Don't let flex children shrink to toggle scroll
+.nav > *
+    flex 0 0 auto
+
+// Calls to action aligned to the right
+.nav ul:last-child
+    margin-left auto
+    margin-right 1rem
+
+// Logo size
+.logo
+    width 48px
+    height 48px
+    margin 0 1rem
+
+    img
+        border-radius 0 0 50% 50%
+        float left
+
+.header
+    ul
+        list-style-type none
+        margin 0
+        padding 0
+        display flex
+
+        // Position nav items
+        li
+            font-weight bold
+            text-transform uppercase
+            letter-spacing 0.1rem
+            text-align center
+
+            a
+                padding 1.18rem 1rem 1rem 1rem
+                
+// Dropdown nav
+.sub-menu
+    flex-direction column
+    visibility hidden
+    line-height 0.8
+
+    li
+        font-size 1.25rem
+
+.menu-item-has-children:hover .sub-menu
+    visibility visible
+
+.header a
+    color $dark_blue
+    -webkit-transition color .2s ease-in-out
+    -moz-transition color .2s ease-in-out
+    -ms-transition color .2s ease-in-out
+    -o-transition color .2s ease-in-out
+    transition color .2s ease-in-out
+
+// White if over the banner image
+body
+    &.home .header a,
+    // &.page-template-template-donate .header a,
+    &.page-template-template-form .header a,
+    &.page-template-template-volunteers .header a
+    &.page-template-template-about .header a
+        color $white
+        display inline-block

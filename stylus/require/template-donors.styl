@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    WHO WE ARE
+    template-donors.php
+\*------------------------------------*/
+
+body
+    &.page-template-template-donors
+        .wt_page-intro
+            margin-bottom 2%
+
+            h1,
+            h2
+                // margin-top 0
+                margin-top 100px
+                text-align center
+
+        .wt_who-navigation
+            margin 0 auto
+            padding 0
+            text-align center
+
+            li
+                display inline-block
+                margin 0 10px
+                text-transform uppercase
+                font-weight bold
+
+                &:hover,
+                &.active
+                    &::after
+                        content ""
+                        width 7px
+                        height 7px
+                        display block
+                        margin 5px auto
+                        border-radius 100%
+
+                &:hover
+                    &::after
+                        background-color #dedede
+
+                &.active
+                    &::after
+                        background-color #86e9c3
+
+        .wt_face-grid
+            width 90%
+            margin 5% auto 5%
+            text-align center
+                            
+            &.names-only
+                .wt_member
+                    display inline-block
+                    vertical-align top
+                    width 24%
+                    margin 0.5% 0
+                    text-align left
+
+                    .wt_member-photo
+                        display none
+                    
+                    .wt_member-information
+                        text-align center
+                        
+                        h2
+                            font-size 12px !important
+                            font-weight normal !important
+                
+                &.kickstarter
+                    margin-top 2.5%
+                    
+                    .wt_member
+                        width 19%
+                        margin-bottom 0
+                        
+                        .wt_member-information
+                            h2
+                                font-size 10px !important
+                
+            .pagination
+                margin-top 5%
+                
+                a, span
+                    width initial
+                    margin 0 10px
+                    font-weight bold
+                    
+                .current
+                    color #86e9c3
+
+// colorful shapes (weave into above elements on desgin pass)
+// Mixin for styling of all pages in "Who We Are" submenu!
+style-who-we-are(c)
+    & > .wt_page-intro::before
+        content ""
+        background-color transparent
+        position absolute
+        height 330px
+        left 0
+        top 0
+        border-right 100vw solid c
+        border-bottom 50px solid transparent
+        z-index -1
+
+    & > .wt_three-column-face-grid:nth-of-type(4)::before
+        content ""
+        background-color transparent
+        position absolute
+        height 215px
+        transform translateY(-50%)
+        left 0
+        border-right 100vw solid c
+        border-top 100px solid transparent
+        border-bottom 100px solid transparent
+        z-index -1
+
+    & > .wt_two-column-face-grid:nth-of-type(2)::after
+        content ""
+        background-color transparent
+        position absolute
+        height 400px
+        // transform translateY(-40%)
+        left 0
+        border-right 40vw solid c
+        z-index -1
+
+    // & > .wt_two-column-face-grid:nth-of-type(2) > .wt_member:first-child::after
+    //     content ""
+    //     background-color transparent
+    //     position absolute
+    //     width 100vw
+    //     left 0
+    //     transform translateY(200px)
+    //     border-bottom 10px rgb(244,244,244) dashed
+    //     z-index -1
+
+    & > .wt_names-list::before
+        content ""
+        background-color transparent
+        position absolute
+        height 400px
+        // transform translateY(-40%)
+        transform translate(150%, -50%)
+        left 0
+        border-right 40vw solid c
+        z-index -1
+
+.contributors
+    style-who-we-are rgb(134,233,195)
+
+.leadership
+    style-who-we-are rgb(134,233,195)
+
+.supporters
+    style-who-we-are rgb(255,246,143)
+
+@media only screen and (max-width: 979px)
+    body
+        &.page-template-template-donors
+            h1
+                margin-top 10%
+                
+        .wt_who-navigation
+            font-size 1rem
+            
+            li
+                &.active
+                    &:after
+                        background #000 !important
+                        
+        .wt_face-grid
+            font-size 1rem !important
+
+            &.names-only
+                .wt_member
+                    width initial !important
+                    margin 1.5% !important

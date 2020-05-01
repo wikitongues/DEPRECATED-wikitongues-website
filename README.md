@@ -1,6 +1,6 @@
 # Wikitongues.org
 
-## To-dos
+## To-dos toward V1
 
 ### Global
 - [x] Streamline all CTAs to single module
@@ -8,15 +8,29 @@
 - [ ] Incorporate donate now into CMS layout builder
 - [ ] Design pass: typography
 - [ ] Design pass: header navigation
-- [ ] CSS: Fold typography into variables stylesheet
-- [ ] CSS: Deprecate shapes
-- [ ] CSS: Break down all files into templates or components 
+- [x] CSS: Update typography variables 
+- [x] CSS: Deprecate shapes
+- [x] CSS: Break down all files into templates or components 
 
 ### Home
 - [ ] Full design pass
 
 ### Manifesto
 - [ ] Revise content (content only)
+
+### Submit a video
+- [ ] Restructure how submissions are stored
+
+### Keep your language alive
+- [ ] Build language resources template
+- [ ] Sustainability toolkit full download
+- [ ] Sustainability toolkit individual chapters download
+
+### Podcast
+- [ ] Build podcasts post type
+- [ ] Podcast post type single page
+- [ ] Podcast homepage
+- [ ] Integrate RSS feed
 
 ### Donate
 - [ ] Incorporate new payment form
@@ -27,6 +41,7 @@
 - [ ] Build join our board CTA
 - [ ] Additional pages: donor advise funds
 - [ ] Additional pages: prospective board members
+- [ ] Donor blog (where we stream Patreon content)
 
 ### Seed bank videos
 - [ ] Style videos search bar
@@ -40,3 +55,4 @@
 - [ ] Incorporate Poly phrase books
 - [ ] Incorporate UHRI recordings
 - [ ] Incorporate supporting educational materials
+- [ ] "Let me know when content for this language is made available" feature

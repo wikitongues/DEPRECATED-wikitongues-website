@@ -4,6 +4,43 @@
     components/form-banner.php
 \*------------------------------------*/
 
+label
+    font-size $small-text-size
+
+label > span
+    font-size $text-size
+
+input[type=text], input[type=email], input[type=url]
+    border none
+    border-bottom 1px solid LightGrey
+    margin-top 1rem
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus
+    border-color $text-color
+
+textarea
+    border 1px solid LightGrey
+    border-radius 0.5rem
+    // padding 1rem // causes the textarea to overflow
+    margin-top 1rem
+    resize none
+
+textarea:focus
+    border-color $text-color
+
+input[type=button], input[type=submit], input[type=reset]
+    font-size 1.5rem
+    /*background-color transparent*/
+    border 1px solid LightGrey
+    border-radius 0.5rem
+    padding 1rem
+    margin-top 1rem
+    text-decoration none
+    cursor pointer
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover
+    border-color $text-color
+
 /*
 ** For general banner layout styles refer to BANNER
 */
@@ -110,6 +147,45 @@ body
             .wt_featured-item
                 max-width 500px
                 margin 2rem auto
+
+// colorful shapes (weave into above elements on desgin pass)
+.submit-a-video, .volunteers
+    overflow-x hidden
+
+    & > .wt_form-banner::before
+        content ""
+        background-color transparent
+        position absolute
+        height 75vh
+        left 0
+        top 0
+        border-left 100vw solid rgb(110,176,255)
+        border-bottom 100px solid transparent
+        z-index -1
+
+    & > .main
+        position relative
+        margin-top 600px
+
+        &::after
+            content ""
+            background-color rgb(196,207,220)
+            position absolute
+            width 110vw
+            height 70%
+            bottom -35%
+            left -10vw
+            z-index -1
+
+        // & > .wt_page-intro::before
+        //     content ""
+        //     background-color transparent
+        //     position absolute
+        //     width 100vw
+        //     left 0
+        //     transform translateY(60px)
+        //     border-bottom 10px rgb(244,244,244) dashed
+        //     z-index -1
 
 @media all and (max-width:970px)
     body

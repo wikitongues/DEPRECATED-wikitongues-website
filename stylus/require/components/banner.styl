@@ -1,0 +1,137 @@
+/*------------------------------------*\
+    BANNERS
+    components/banner.php
+    components/form-banner.php
+    components/donate-banner.php
+\*------------------------------------*/
+
+/* Banner and Form Banner */
+
+.wt_banner, .wt_form-banner
+    position relative
+    width 100%
+    height 98vh
+    margin-top -5rem // Position banner on top
+    display flex
+    align-items center
+    background-size cover !important
+    background-attachment fixed !important
+
+    &:before
+        content ""
+        background-color transparent
+        position absolute
+        height 0
+        left 0
+        bottom 0
+        border-left 100vw solid transparent
+        border-bottom 100px solid white
+        z-index 5
+
+    & > *
+        flex 1
+    
+    .wt_banner-image-caption
+        text-shadow 0 0 30px #000
+
+.wt_banner-message,
+.wt_form-banner-message
+    width 90%
+    margin 0 10rem 0 auto
+
+    h1
+        font-size 7rem
+        color $white
+        text-align right
+        font-weight bold
+        text-transform uppercase
+
+.wt_banner-message 
+    h1
+        text-shadow 0 0 100px #000
+
+    .wt_cta
+        margin 2rem 0 0 auto
+        max-width 500px
+
+/* donate banner */
+
+.wt_donate-banner
+    width 100%
+    margin-top 50px
+    padding 50px 0 100px
+    -webkit-box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
+    box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
+    background: rgba(237,237,237,1)
+    background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(11%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)))
+    background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // filter: progid DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#fafafa', GradientType=0 )
+       
+    .inner-wrap
+        width 1073px
+        margin auto
+
+        aside
+            float left
+            
+            &.wt_donate-banner-header
+                width 500px
+                padding 50px 150px 50px 0
+                
+                h1
+                    text-align left
+                    color $dark_blue
+                
+                p
+                    font-size 2rem
+                    color $text-color
+
+            &.wt_donate-banner-form
+                margin 0
+                width 423px
+                height 508px
+                border-radius 3px
+                -webkit-box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)
+                box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)
+                overflow-y scroll
+
+.wt_banner,
+.wt_donate-banner
+    .wt_banner-image-caption
+        position absolute
+        color $white
+        font-weight 700
+        letter-spacing 0.1em
+
+@media all and (max-width:979px)
+    .wt_banner, .wt_form-banner
+        background-attachment initial !important
+
+    .wt_banner-message,
+    .wt_form-banner-message
+        h1
+            font-size 3rem
+        
+        .wt_cta
+            width 75%
+            padding 2rem 1rem
+            font-size 1.5rem
+    
+    .wt_donate-banner
+        position relative
+        margin-top 0 !important
+        box-shadow none !important
+        padding 50px 0 150px
+        
+        .inner-wrap
+            width auto !important
+            
+            aside
+                width 90% !important
+                margin 0 auto !important
+                padding 0 !important
+                float none

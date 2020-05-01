@@ -45,7 +45,7 @@ if ( $contributors->have_posts() ) {  ?>
 } wp_reset_postdata(); 
 
 // Custom query loop pagination
-get_template_part('pagination');
+get_template_part('components/pagination');
 
 // Reset main query object
 $wp_query = NULL;

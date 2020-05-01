@@ -15,3 +15,15 @@
     img
     	width 100%
     	height auto
+
+// colorful shapes (weave into above elements on desgin pass)
+.our_partners > .wt_page-intro::before
+    content ""
+    background-color transparent
+    position absolute
+    height 300px
+    left 0
+    top 0
+    border-left 100vw solid rgb(233,144,134)
+    border-bottom 75px solid transparent
+    z-index -1

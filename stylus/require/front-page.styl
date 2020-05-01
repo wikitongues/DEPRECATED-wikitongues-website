@@ -14,7 +14,7 @@ body
             font-size 1.75rem
 
             &.primary_content-block
-                color $text-color-light
+                color $white
 
             &#primary_content-block-2
                 margin-bottom 0
@@ -22,11 +22,11 @@ body
                 .wt_section-content
                     .wt_section-message
                         .wt_cta
-                            background-color $text-color-light
-                            color $highlight-color
+                            background-color $white
+                            color $bright_blue
 
                             &:hover
-                                color $highlight-color
+                                color $bright_blue
                                 
                 .wt_featured-items
                     .wt_featured-item
@@ -56,7 +56,7 @@ body
             .wt_featured-items
                 overflow-x scroll
                 white-space nowrap
-                color $text-color !important
+                color $dark_blue !important
                 margin-top 0
                 padding-top 0
 
@@ -155,6 +155,70 @@ body
                 border-bottom 100px solid #ededed
                 z-index 5
 
+// colorful shapes (weave into above elements on desgin pass)
+/* yellow block */
+#primary_content-block-1 > .wt_section-content::after
+    content ""
+    background-color transparent
+    height 150%
+    // transform translate(70%, -10%)
+    // margin-top 5%
+    // margin-right 50%
+    position absolute
+    top -10%
+    right 0
+    border-right 60vw solid
+    border-right-color #ffc342
+    z-index -1
+
+/* blue block */
+#primary_content-block-2::before
+    content ""
+    background-color transparent
+    height 150%
+    transform translateY(-5%)
+    position absolute
+    border-right 100vw solid
+    border-right-color rgb(110,176,255)
+    border-top 100px solid transparent
+    z-index -1
+
+/* pink gradiant block */
+#primary_content-block-3::before
+    content ""
+    background-color transparent
+    position absolute
+    top -90%
+    left 0
+    height 215%
+    // transform translateY(-10%)
+    border-right 100vw solid rgb(233,144,134)
+    border-top 140px solid transparent
+    z-index -1
+
+#news_content-block-1::before
+    content ""
+    background-color transparent
+    position absolute
+    top 0
+    left 0
+    height 175%
+    // transform translateY(-10%)
+    border-right 100vw solid rgb(255,255,255)
+    border-top 25px solid transparent
+    z-index -1
+    // intended as chevron floats around when window resized
+    // content ""
+    // background-color transparent
+    // position absolute
+    // left 0
+    // height 140px
+    // transform translateY(634px)
+    // border-left 50vw solid transparent
+    // border-right 50vw solid transparent
+    // border-bottom 140px solid white
+    // z-index -1
+
 @media all and (max-width:979px)
     body
         &.home
@@ -207,3 +271,19 @@ body
             
             #wt_blog-title
                 margin-bottom 2rem
+    
+    // colorful shapes (weave into above elements on desgin pass)
+    /* yellow block */
+    #primary_content-block-1 > .wt_section-content::after
+        content ""
+        background-color transparent
+        height 150%
+        // transform translate(70%, -10%)
+        // margin-top 5%
+        // margin-right 50%
+        position absolute
+        top 0
+        right 0
+        border-right 100vw solid
+        border-right-color #ffc342
+        z-index -1
