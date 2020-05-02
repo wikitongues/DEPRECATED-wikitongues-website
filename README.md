@@ -27,10 +27,12 @@
 - [ ] Sustainability toolkit individual chapters download
 
 ### Podcast
-- [ ] Build podcasts post type
-- [ ] Podcast post type single page
-- [ ] Podcast homepage
+- [x] Build podcasts post type
+- [ ] Podcast post type single page (html5 audio player) (doing)
+- [ ] Podcast homepage (doing)
 - [ ] Integrate RSS feed
+- [ ] Incorporate JPlayer
+- [ ] Source banner artwork for Speaking of Us
 
 ### Donate
 - [ ] Incorporate new payment form
