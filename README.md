@@ -28,10 +28,10 @@
 
 ### Podcast
 - [x] Build podcasts post type
-- [ ] Podcast post type single page (html5 audio player) (doing)
-- [ ] Podcast homepage (doing)
+- [x] Podcast post type single page
+- [x] Podcast homepage
 - [ ] Integrate RSS feed
-- [ ] Incorporate JPlayer
+- [ ] Replace HTML5 audio with JPlayer
 - [ ] Source banner artwork for Speaking of Us
 
 ### Donate
