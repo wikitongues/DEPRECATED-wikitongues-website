@@ -1,0 +1,44 @@
+body
+	&.post-type-archive-podcast
+		.wt_archive-podcast
+			width 95%
+			max-width 768px
+			margin 0 auto 15%
+			
+			&__episode
+				padding-bottom 5%
+				margin-bottom 5%
+				border-bottom 1px solid lightgrey
+				
+				&:last-of-type
+					border-bottom 0 !important
+				
+				&--thumbnail
+					display inline-block
+					vertical-align top
+					margin-right 2.5%
+					
+					img
+						height 250px
+						width auto
+				
+				&--meta
+					display inline-block
+					vertical-align top
+					
+				&--title
+					font-size 3rem
+
+@media all and (max-width 768px)
+	body
+		&.post-type-archive-podcast
+			.wt_archive-podcast
+				margin-bottom 35% !important
+				
+				&__episode
+					&--thumbnail
+						margin 0 auto 2.5% !important
+						
+						img
+							width 100% !important
+							height auto !important

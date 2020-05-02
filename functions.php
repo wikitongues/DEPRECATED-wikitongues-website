@@ -455,6 +455,7 @@ add_action('init', 'create_post_type_videos'); // Add our Videos Custom Post Typ
 add_action('init', 'create_post_type_blog'); // Add our News Custom Post Type
 add_action('init', 'create_post_type_press'); // Add our News Custom Post Type
 add_action('init', 'create_post_type_languages'); // Add our Languages Custom Post Type
+add_action('init', 'create_post_type_podcast'); // Add podcasts custom post type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -835,6 +836,45 @@ function create_post_type_languages()
         'has_archive' => true,
         'supports' => array(
             'title',
+            'thumbnail'
+        ),
+        'can_export' => true,
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        )
+    ));
+}
+
+// Blog Posts
+function create_post_type_podcast()
+{
+    register_taxonomy_for_object_type('category', 'podcast'); 
+    register_taxonomy_for_object_type('post_tag', 'podcast');
+    register_post_type('podcast',
+        array(
+        'labels' => array(
+            'name' => __('Podcast episodes', 'podcast'), 
+            'singular_name' => __('Podcast episode', 'podcast'),
+            'add_new' => __('Add New', 'podcast'),
+            'add_new_item' => __('Add New Podcast episode', 'podcast'),
+            'edit' => __('Edit', 'podcast'),
+            'edit_item' => __('Edit Podcast episode', 'podcast'),
+            'new_item' => __('New Podcast episode', 'podcast'),
+            'view' => __('View Podcast episode', 'podcast'),
+            'view_item' => __('View Podcast episode', 'podcast'),
+            'search_items' => __('Search Podcast episodes', 'podcast'),
+            'not_found' => __('No Podcast episodes found', 'podcast'),
+            'not_found_in_trash' => __('No Podcast episodes found in Trash', 'podcast')
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'menu_icon' => 'dashicons-microphone',
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            //'editor',
+            //'excerpt'
             'thumbnail'
         ),
         'can_export' => true,
