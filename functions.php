@@ -950,4 +950,18 @@ function set_post_types($query) {
 }
 add_action('pre_get_posts', 'set_post_types');
 
+/*------------------------------------*\
+	Custom RSS for podcast
+\*------------------------------------*/
+
+function podcast_rss() {
+	if (get_post_type() === 'podcast') {
+		get_template_part( 'feed', 'podcast' );
+	} else {
+		get_template_part( 'feed', 'rss2' );
+	}
+}
+remove_all_actions( 'do_feed_rss2' );
+add_action( 'do_feed_rss2', 'podcast_rss', 10, 1 );
+
 ?>
