@@ -29,7 +29,7 @@ $wt_search_aria_label = ! empty( $args['label'] ) ? 'aria-label="' . esc_attr( $
       type="search" 
       id="<?php echo esc_attr( $wt_search_unique_id ); ?>" 
       class="search-field wt_search-form__field" 
-      placeholder="<?php echo esc_attr_x( 'Search Wikitongues &hellip;', 'placeholder' ); ?>" 
+      placeholder="<?php echo esc_attr_x( 'Search a language', 'placeholder' ); ?>" 
       value="<?php echo get_query_var('site_search'); ?>" 
       name="site_search" />
 	</label>
