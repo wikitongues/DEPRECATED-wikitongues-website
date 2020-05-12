@@ -58,3 +58,6 @@
 - [ ] Incorporate UHRI recordings
 - [ ] Incorporate supporting educational materials
 - [ ] "Let me know when content for this language is made available" feature
+
+### Ideas
+- [ ] Project-specific donation pages
