@@ -1331,6 +1331,44 @@ body.page-template-template-donate .footer {
     width: 100%;
   }
 }
+body.page-template-template-toolkit .header a {
+  color: #fff !important;
+}
+body.page-template-template-toolkit .wt_banner {
+  height: 75vh;
+  background: #11242f !important;
+}
+body.page-template-template-toolkit .wt_toolkit-page {
+  text-align: center;
+  margin-bottom: 20%;
+}
+body.page-template-template-toolkit .wt_toolkit-page .wt_page-intro {
+  margin: 0 auto 5% !important;
+}
+body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
+  display: inline-block;
+  width: 28.5%;
+  width: calc(100% / 3.5);
+}
+@media all and (max-width: 768px) {
+  body.page-template-template-toolkit .wt_banner {
+    height: 50vh;
+  }
+  body.page-template-template-toolkit .wt_banner:before {
+    display: none !important;
+  }
+  body.page-template-template-toolkit .wt_banner aside {
+    width: 100%;
+    margin: 5.5rem auto 0;
+  }
+  body.page-template-template-toolkit .wt_banner aside h1 {
+    width: 100%;
+    text-align: center;
+  }
+  body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
+    width: 90% !important;
+  }
+}
 .wt_archive-videos {
   font-size: 1.2rem;
 }
