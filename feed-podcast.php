@@ -71,7 +71,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
         xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
         <?php do_action('rss2_ns'); ?>>
 <channel>
-        <title><?php bloginfo_rss('name'); ?> - Feed</title>
+        <title>Speaking of Us</title>
         <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
         <link><?php bloginfo_rss('url') ?></link>
         <description><?php bloginfo_rss('description') ?></description>
