@@ -33,6 +33,7 @@
 - [ ] Integrate RSS feed
 - [ ] Replace HTML5 audio with JPlayer
 - [ ] Source banner artwork for Speaking of Us
+- [ ] Add pullquote field to podcast post type
 
 ### Donate
 - [ ] Incorporate new payment form
