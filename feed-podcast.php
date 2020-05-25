@@ -74,15 +74,29 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
         <title>Speaking of Us</title>
         <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
         <link><?php bloginfo_rss('url') ?></link>
-        <description><?php bloginfo_rss('description') ?></description>
+        <description>
+        <![CDATA[
+        Speaking of Us explores what language teaches us about who we are and where we come from. In this podcast, you’ll get to know people from every culture on Earth. You’ll learn about their languages, their history, and how they navigate our rapidly-changing world. 
+        For accompanying media, guest information, and transcripts, visit www.wikitongues.org/podcast.
+        ]]>
+        </description>
         <lastBuildDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_lastpostmodified('GMT'), false); ?></lastBuildDate>
         <language><?php bloginfo_rss('language'); ?></language>
+        <copyright>c 2020 Wikitongues</copyright>
         <itunes:author>Wikitongues</itunes:author>
         <itunes:owner>
           <itunes:name>Wikitongues</itunes:name>
           <itunes:email>hello@wikitongues.org</itunes:email>
         </itunes:owner>
-        <itunes:image href="https://wikitongues.org/wp-content/uploads/2020/05/Screen-Shot-2020-04-28-at-14.07.28.png" />
+        <itunes:image href="https://wikitongues.org/wp-content/uploads/2020/05/Square.png" />
+        <itunes:explicit>yes</itunes:explicit>
+        <itunes:category text="Science">
+          <itunes:category text="Natural Sciences"/>
+        </itunes:category>
+        <itunes:category text="Society &amp; Culture">
+          <itunes:category text="Documentary"/>
+        </itunes:category>
+        <itunes:category text="History"/>
         <sy:updatePeriod><?php echo apply_filters( 'rss_update_period', 'hourly' ); ?></sy:updatePeriod>
         <sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', '1' ); ?></sy:updateFrequency>
         <?php do_action('rss2_head'); ?>
@@ -95,7 +109,8 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
                         <guid isPermaLink="false"><?php the_guid(); ?></guid>
                         <description><![CDATA[<?php echo get_field('podcast_summary'); ?>]]></description>
                         <content:encoded><![CDATA[<?php the_excerpt_rss() ?>]]></content:encoded>
-                        <itunes:image href="<?php the_post_thumbnail_url(); ?>" />                        
+                        <itunes:image href="<?php the_post_thumbnail_url(); ?>" />   
+                        <itunes:explicit>yes</itunes:explicit>                     
 
                         <enclosure 
                           url="<?php echo get_field('audio_file'); ?>" 
