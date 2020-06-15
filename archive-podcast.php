@@ -38,19 +38,19 @@
 
 		<div class="wt_archive-podcast__episode"><?php
 			if ( $podcast_thumbnail ): ?>
-			<aside class="wt_archive-podcast__episode--thumbnail">
+			<aside class="wt_archive-podcast__thumbnail">
 				<a href="<?php echo $podcast_permalink; ?>">
 					<?php echo $podcast_thumbnail; ?>
 				</a>
 			</aside>
 			<?php endif; ?>
-			<div class="wt_archive-podcast__episode--meta">
-				<h2 class="wt_archive-podcast__episode--title">
+			<div class="wt_archive-podcast__meta">
+				<h2 class="wt_archive-podcast__title">
 					<a href="<?php echo $podcast_permalink; ?>">
 						<?php echo $podcast_title; ?>
 					</a>
 				</h2>
-				<p class="wt_archive-podcast__episode--date">From <?php echo $podcast_date; ?></p>
+				<p class="wt_archive-podcast__date">From <?php echo $podcast_date; ?></p>
 			</div>			
 		</div><?php
 		} 

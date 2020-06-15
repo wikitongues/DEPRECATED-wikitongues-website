@@ -1476,43 +1476,44 @@ body.page-template-template-donate .footer {
     margin: 15% auto 30% !important;
   }
 }
-body.post-type-archive-podcast .wt_archive-podcast {
+.wt_archive-podcast {
   width: 95%;
   max-width: 768px;
   margin: 0 auto 15%;
 }
-body.post-type-archive-podcast .wt_archive-podcast__episode {
+.wt_archive-podcast__episode {
   padding-bottom: 5%;
   margin-bottom: 5%;
   border-bottom: 1px solid #d3d3d3;
+  overflow: auto;
 }
-body.post-type-archive-podcast .wt_archive-podcast__episode:last-of-type {
+.wt_archive-podcast__episode:last-of-type {
   border-bottom: 0 !important;
 }
-body.post-type-archive-podcast .wt_archive-podcast__episode--thumbnail {
-  display: inline-block;
+.wt_archive-podcast__thumbnail {
   vertical-align: top;
   margin-right: 2.5%;
+  float: left;
 }
-body.post-type-archive-podcast .wt_archive-podcast__episode--thumbnail img {
+.wt_archive-podcast__thumbnail img {
   height: 250px;
   width: auto;
 }
-body.post-type-archive-podcast .wt_archive-podcast__episode--meta {
-  display: inline-block;
+.wt_archive-podcast__meta {
   vertical-align: top;
+  overflow: hidden;
 }
-body.post-type-archive-podcast .wt_archive-podcast__episode--title {
+.wt_archive-podcast__title {
   font-size: 3rem;
 }
 @media all and (max-width: 768px) {
-  body.post-type-archive-podcast .wt_archive-podcast {
+  .wt_archive-podcast {
     margin-bottom: 35% !important;
   }
-  body.post-type-archive-podcast .wt_archive-podcast__episode--thumbnail {
+  .wt_archive-podcast__thumbnail {
     margin: 0 auto 2.5% !important;
   }
-  body.post-type-archive-podcast .wt_archive-podcast__episode--thumbnail img {
+  .wt_archive-podcast__thumbnail img {
     width: 100% !important;
     height: auto !important;
   }
@@ -1531,7 +1532,9 @@ body.single-podcast .wt_single-podcast__episode {
 }
 body.single-podcast .wt_single-podcast__summary,
 body.single-podcast .wt_single-podcast__videos,
-body.single-podcast .wt_single-podcast__reading {
+body.single-podcast .wt_single-podcast__reading,
+body.single-podcast .wt_single-podcast__transcript,
+body.single-podcast .wt_single-podcast__transcript-content {
   width: 100%;
   margin: 2.5% auto 5%;
 }
@@ -1541,6 +1544,9 @@ body.single-podcast .wt_single-podcast__videos .wt_featured-item {
   margin: 2% !important;
   display: inline-block;
   vertical-align: top;
+}
+body.single-podcast .wt_single-podcast__no-transcript {
+  text-align: center;
 }
 body.single-podcast .wt_single-podcast__navigation {
   text-align: center;
