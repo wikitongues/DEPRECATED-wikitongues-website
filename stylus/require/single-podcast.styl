@@ -1,47 +1,52 @@
 body
-	&.single-podcast
-		.wt_single-podcast
-			width 95%
-			max-width 768px
-			margin 10% auto 5%
-			
-			&__subheader
-				margin-bottom 2.5%
-				text-align center
-			
-			&__episode
-				text-align center
-			
-			&__summary,
-			&__videos,
-			&__reading
-				width 100%
-				margin 2.5% auto 5%
-				
-			&__videos
-				.wt_featured-item
-					width 48%
-					max-width 350px
-					margin 2% !important
-					display inline-block
-					vertical-align top
-			
-			&__navigation
-				text-align center
-				margin-bottom 15%
-				
-				&--back
-					margin 1% auto
+  &.single-podcast
+    .wt_single-podcast
+      width 95%
+      max-width 768px
+      margin 10% auto 5%
+      
+      &__subheader
+        margin-bottom 2.5%
+        text-align center
+      
+      &__episode
+        text-align center
+      
+      &__summary,
+      &__videos,
+      &__reading,
+      &__transcript,
+      &__transcript-content
+        width 100%
+        margin 2.5% auto 5%
+        
+      &__videos
+        .wt_featured-item
+          width 48%
+          max-width 350px
+          margin 2% !important
+          display inline-block
+          vertical-align top
+
+      &__no-transcript
+        text-align center
+      
+      &__navigation
+        text-align center
+        margin-bottom 15%
+        
+        &--back
+          margin 1% auto
 
 @media all and (max-width 768px)
-	body
-		&.single-podcast
-			.wt_single-podcast
-				margin-top 15% !important
-				
-				&__videos
-					.wt_featured-item
-						width 100% !important
-				
-				&__navigation
-					margin-bottom 35% !important
+  body
+    &.single-podcast
+      .wt_single-podcast
+        margin-top 15% !important
+        
+        &__videos
+          .wt_featured-item
+            width 100% !important
+        
+        &__navigation
+          margin-bottom 35% !important
