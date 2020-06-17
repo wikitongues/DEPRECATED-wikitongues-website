@@ -182,6 +182,12 @@ function html5blank_conditional_scripts()
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
+
+    // Enqueue jPlayer for podcast episodes
+    if (is_singular() && get_post_type() == 'podcast') {
+      wp_register_script('jPlayer', get_template_directory_uri() . '/js/lib/jquery.jplayer.min.js');
+      wp_enqueue_script('jPlayer');
+    }
 }
 
 // Load HTML5 Blank styles
@@ -192,6 +198,13 @@ function html5blank_styles()
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
+
+    // jPlayer default style
+    // TODO remove
+    if (is_singular() && get_post_type() == 'podcast') {
+      wp_register_style('jplayer.pink.flag', get_template_directory_uri() . '/pink.flag/css/jplayer.pink.flag.min.css');
+      wp_enqueue_style('jplayer.pink.flag');
+    }
 }
 
 // Register HTML5 Blank Navigation

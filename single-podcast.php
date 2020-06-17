@@ -16,11 +16,9 @@ $short_transcript =  explode('<br', $transcript)[0]; ?>
 	</h1>
 	
 	<div class="wt_single-podcast__episode"><?php
-		if ( $audio_file ): ?>
-		<audio controls>
-			<source src="<?php echo $audio_file; ?>" type="audio/mpeg">
-		</audio><?php
-		else:
+    if ( $audio_file ): 
+      get_template_part('components/podcast-player');
+    		else:
 			echo $audio_embed; 
 		endif; ?>
 	</div>
@@ -98,6 +96,33 @@ document.getElementById('readMore').addEventListener('click', expandTranscript);
 function expandTranscript() {
   document.getElementById('transcriptContent').innerHTML = transcript;
 }
+
+<?php if ($audio_file): ?>
+(function ($, root) {
+	
+  $(document).ready(function(){
+    $("#jquery_jplayer_1").jPlayer({
+      ready: function () {
+        $(this).jPlayer("setMedia", {
+          title: "<?php the_title(); ?>",
+          m4a: "<?php echo $audio_file; ?>"
+        });
+      },
+      cssSelectorAncestor: "#jp_container_1",
+      swfPath: "/lib",
+      supplied: "m4a",
+      useStateClassSkin: true,
+      autoBlur: false,
+      smoothPlayBar: true,
+      keyEnabled: true,
+      remainingDuration: true,
+      toggleDuration: true
+    });
+  });
+	
+})(jQuery, this);
+<?php endif; ?>
+
 </script>
 
 <?php get_footer(); ?>
