@@ -89,7 +89,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
           <itunes:email>hello@wikitongues.org</itunes:email>
         </itunes:owner>
         <itunes:image href="https://wikitongues.org/wp-content/uploads/2020/05/Square.png" />
-        <itunes:explicit>yes</itunes:explicit>
+        <itunes:explicit>no</itunes:explicit>
         <itunes:category text="Science">
           <itunes:category text="Natural Sciences"/>
         </itunes:category>
@@ -110,7 +110,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
                         <description><![CDATA[<?php echo get_field('podcast_summary'); ?>]]></description>
                         <content:encoded><![CDATA[<?php the_excerpt_rss() ?>]]></content:encoded>
                         <itunes:image href="<?php the_post_thumbnail_url(); ?>" />   
-                        <itunes:explicit>yes</itunes:explicit>                     
+                        <itunes:explicit>no</itunes:explicit>                     
 
                         <enclosure 
                           url="<?php echo get_field('audio_file'); ?>" 
