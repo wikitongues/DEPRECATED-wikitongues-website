@@ -45,6 +45,14 @@
 				<!-- nav -->
 				<nav class="nav" role="navigation">
 					<?php main_nav(); ?>
+					<!-- Search form -->
+					<div class="wt_nav--searchbar">
+						<form id="searchform" action="<?php bloginfo('home'); ?>/" method="get" class="wt_archive-languages__searchform">
+							<input id="languages_search" maxlength="150" name="languages_search" size="20" type="text" value="" class="txt" placeholder="Search languages" />
+							<input name="post_type" type="hidden" value="languages" />
+							<input id="searchsubmit" class="btn" type="submit" value="Search" />
+						</form>
+					</div>
 					<?php calls_to_action(); ?>
 				</nav>
 				<!-- /nav -->

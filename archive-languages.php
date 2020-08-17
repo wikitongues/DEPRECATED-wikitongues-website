@@ -2,28 +2,29 @@
 
 <div class="wt_archive-languages">
 	<div class="wt_page-intro">
-		<h1>Every language in the world</h1>
-		<p>Here is a directory of every language we have safeguarded, as classified by Ethnologue. It should be noted that not all languages are classified, and there are ongoing debates about how already classified languages are organized. Still, this is a good place to start.</p>
-
-		<!-- Search form -->
-		<form id="searchform" action="<?php bloginfo('home'); ?>/" method="get" class="wt_archive-languages__searchform">
-			<input id="languages_search" maxlength="150" name="languages_search" size="20" type="text" value="" class="txt" placeholder="Search languages" />
-			<input name="post_type" type="hidden" value="languages" />
-			<input id="searchsubmit" class="btn" type="submit" value="Search" />
-		</form>
-	</div>
-
 	<?php
 	// languages query args
 	$args = array(
 		'post_type' => 'languages',
-		'posts_per_page' => '100',
+		'posts_per_page' => '30',
 		'order' => 'ASC'
 	);
 
-	$languages_search = get_query_var('languages_search');
+	$languages_search = get_query_var('languages_search'); 
 
-	if (!empty($languages_search)) {
+	if ($languages_search): ?>
+
+	<h2><?php echo "Showing results for \"" . $languages_search . "\""; ?>
+		
+	<?php else: ?>
+	
+	<h2>Every language in the world</h2>
+
+	<?php endif; ?>
+	</h2>
+	</div>
+
+	<?php if (!empty($languages_search)) {
 		$args['meta_query'] = array(
 			array(
 				'key' => 'wt_id',
@@ -60,10 +61,16 @@
 
 			$ISO_code = get_the_title();
 			$language_name = get_field('standard_name');
-			$language_url = get_the_permalink(); ?>
+			$language_url = get_the_permalink(); 
+			$speakers_recorded = get_field('speakers_recorded');
+			$lexicon_source = get_field('lexicon_source');
+			$video_count = sizeOf($speakers_recorded);
+			$lexicon_count = sizeOf($lexicon_source); ?>
 
 		<a class="wt_archive-languages__link" href="<?php echo $language_url; ?>">
-			<?php echo $language_name; ?> [<?php echo $ISO_code; ?>]
+			<h3><?php echo $language_name; ?> [<?php echo $ISO_code; ?>]</h3>
+			<span><?php echo $video_count . " videos recorded"; ?></span><br>
+			<span><?php	echo $lexicon_count . " lexicon documents"; ?></span>
 		</a>
 
 		<?php		

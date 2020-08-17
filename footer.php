@@ -23,42 +23,6 @@
 			</footer>
 			<!-- /footer -->
 
-			<div style="opacity:0; background: rgba(0,0,0,.8); position: fixed; top: 0; left: 0; width: 100%; height:100vh; z-index: 100;" id="wt_birthdaypopup"><!-- birthday popup -->
-				<div style="width: 100%; height: 100%; position: relative;" id="wt_birthdaypopup--wrap">
-					<div style="position: absolute; width: 90%; height: 90vh; overflow: scroll; top: 50%; left: 50%; transform: translate(-50%,-50%);" id="wt_birthdaypopup--widget">	
-						<script src="https://app.giveforms.com/widget.js" type="text/javascript"></script><iframe src="https://wikitonguesorg.giveforms.com/wikitongues" id="giveforms-form-embed" name="giveforms" height="1200px" width="100%" style="min-width: 320px; border: 0;" allowpaymentrequest="true"></iframe>
-					</div>
-				</div>
-			</div><!-- /popup -->
-
-			<style>
-				#wt_birthdaypopup.fadein {
-					opacity:1 !important;
-				}
-			</style>
-
-			<script type="text/javascript">
-				var $ = jQuery;
-
-				$(document).ready(function(){
-					setTimeout(function(){
-						$('#wt_birthdaypopup').addClass('fadein');
-					}, 2000);
-
-					$('body').on('click', function(e){
-						if ( e.target.id !== "wt_birthdaypopup--widget") {
-							$('#wt_birthdaypopup').hide();
-						}
-					});
-
-					$('body').on('keyup',function(e){
-					    if(e.which == 27){
-					        $('#wt_birthdaypopup').hide();
-					    }
-					});
-				});
-			</script>
-
 		</div>
 		<!-- /wrapper -->
 
