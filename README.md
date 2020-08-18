@@ -52,11 +52,24 @@
 - [ ] Replace ID with title in video thumbnails
 
 ### Seed bank languages
-- [ ] Build languages search bar
-- [ ] Incorporate more descriptive metadata individual pages
-- [ ] Incorporate Living Tongues Dictionaries
-- [ ] Incorporate Poly phrase books
-- [ ] Incorporate UHRI recordings
+
+#### Global
+- [x] Build languages search bar
+
+#### archive-languages.php
+- [ ] Design pass - does the paginated index work?
+- [ ] Map feature
+
+#### single-languages.php
+- [ ] Incorporate all descriptive language metadata
+- [ ] Index/navigation for different categories of documentation
+- [x] Lexicon previews: add Living Tongues Dictionaries
+- [ ] Lexicon previews: add Incorporate Poly phrase books
+- [ ] Lexicon previews: add Incorporate UHRI recordings
+- [ ] Lexicon previews: specify document type (dictionary, phrasebook, etc)
+- [ ] Lexicon previews: specify location (Talking Dictionaries, Dropbox, etc)
+- [ ] Video previews: add more descriptive video metadata
+- [ ] Incorporate language revitalization initiative as post object
 - [ ] Incorporate supporting educational materials
 - [ ] "Let me know when content for this language is made available" feature
 
