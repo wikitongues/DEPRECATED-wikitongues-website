@@ -5,7 +5,10 @@ $audio_embed = get_field('audio_embed');
 $audio_file = get_field('audio_file');
 $podcast_summary = get_field('podcast_summary');
 $associated_videos = get_field('associated_videos');
-$associated_blog_posts = get_field('associated_blog_posts'); ?>
+$associated_blog_posts = get_field('associated_blog_posts');
+$transcript = get_field('transcript');
+$transcript = nl2br($transcript);
+$short_transcript =  explode('<br', $transcript)[0]; ?>
 
 <div class="wt_single-podcast">
 	<h1 class="wt_single-podcast__title">
@@ -24,8 +27,23 @@ $associated_blog_posts = get_field('associated_blog_posts'); ?>
 	
 	<div class="wt_single-podcast__summary">
 		<?php echo $podcast_summary; ?>
-	</div>
-	
+  </div>
+  
+  <div class="wt_single-podcast__transcript">
+    <h2 class="wt_single-podcast__subheader">Transcript</h2>
+    <div id="transcriptContent" class="wt_single-podcast__transcript-content">
+      <?php if (empty($transcript)): ?>
+        <div class="wt_single-podcast__no-transcript">
+          This episode has not been transcribed yet, please check back later.
+        </div>
+      <?php else: ?>
+        <?php echo $short_transcript; ?>
+        <br><br>
+        <a href="#" id="readMore">Read more</a>
+      <?php endif; ?>
+    </div>
+  </div>
+
 	<div class="wt_single-podcast__videos">
 		<h2 class="wt_single-podcast__subheader">Related Language Videos</h2><?php
 		foreach($associated_videos as $post){ 
@@ -70,5 +88,16 @@ $associated_blog_posts = get_field('associated_blog_posts'); ?>
 	</div>
 
 </div>
+
+<script>
+var transcript = <?php echo json_encode($transcript); ?>;
+var shortTranscript = <?php echo json_encode($short_transcript); ?>;
+
+document.getElementById('readMore').addEventListener('click', expandTranscript);
+
+function expandTranscript() {
+  document.getElementById('transcriptContent').innerHTML = transcript;
+}
+</script>
 
 <?php get_footer(); ?>
