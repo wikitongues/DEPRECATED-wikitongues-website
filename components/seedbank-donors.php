@@ -29,12 +29,18 @@ $temp_query = $wp_query;
 $wp_query   = NULL;
 $wp_query   = $donors;
 
-if ( $donors->have_posts() ) {
-	while ( $donors->have_posts() ){
-		$donors->the_post();
+if ( $donors->have_posts() ) { ?>
+	<div class="wt_seedbank-donors">
+		<h2 class="wt_seedbank-donors--header">This language archive is made possible by genorous donors</h2>
+		<div class="wt_seedbank-donors--names">
+			<?php
+			while ( $donors->have_posts() ){
+				$donors->the_post();
 
-		$name = get_the_title();
+				$name = get_the_title();
 
-		include( locate_template('components/member-profile.php') );
-	} wp_reset_postdata();
+				include( locate_template('components/member-profile.php') );
+			} wp_reset_postdata(); ?>
+		</div>
+	</div><?php
 }
