@@ -64,13 +64,26 @@
 			$language_url = get_the_permalink(); 
 			$speakers_recorded = get_field('speakers_recorded');
 			$lexicon_source = get_field('lexicon_source');
+			// var_dump($speakers_recorded);
 			$video_count = sizeOf($speakers_recorded);
 			$lexicon_count = sizeOf($lexicon_source); ?>
 
 		<a class="wt_archive-languages__link" href="<?php echo $language_url; ?>">
 			<h3><?php echo $language_name; ?> [<?php echo $ISO_code; ?>]</h3>
-			<span><?php echo $video_count . " videos recorded"; ?></span><br>
-			<span><?php	echo $lexicon_count . " lexicon documents"; ?></span>
+			<span>
+				<?php if ( $speakers_recorded ) {
+					echo $video_count;	
+				} else {
+					echo '0';
+				} ?> videos recored
+			</span><br>
+			<span>
+				<?php if ( $lexicon_source ) {
+					echo $lexicon_count;
+				} else {
+					echo '0';
+				} ?> lexicon documents
+			</span>
 		</a>
 
 		<?php		
