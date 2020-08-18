@@ -79,12 +79,7 @@
 	<!-- /pagination -->
 
 	<!-- archive donors -->
-	<div class="wt_single-languages__donors">
-		<h2 class="wt_single-languages__donors--header">This language archive is made possible by genorous donors</h2>
-		<div class="wt_single-languages__donors--names">
-			<?php include( locate_template('components/archive-donors.php') ); ?>
-		</div>
-	</div>
+	<?php include( locate_template('components/seedbank-donors.php') ); ?>
 	<!-- /archive donors -->
 </div>
 <?php get_footer(); ?>

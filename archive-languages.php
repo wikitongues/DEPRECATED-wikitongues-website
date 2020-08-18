@@ -121,7 +121,8 @@
 	// Reset post data after query reset to reactive page variables below
 	wp_reset_postdata();
 
-	?>
+	// Pull in seedbank tier donors
+	include( locate_template('components/seedbank-donors.php') ); ?>
 </div>
 
 <?php get_footer(); ?>

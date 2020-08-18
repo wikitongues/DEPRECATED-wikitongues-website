@@ -1555,18 +1555,6 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
 .wt_single-languages h2+p a {
   display: inline !important;
 }
-.wt_single-languages__donors--header {
-  width: 90%;
-  margin: auto auto 25px;
-}
-.wt_single-languages__donors--names {
-  column-count: 3;
-}
-.wt_single-languages__donors--names .wt_member h2 {
-  font-weight: normal;
-  font-size: 1.5rem;
-  margin: auto 10px;
-}
 @media all and (max-width: 768px) {
   .wt_single-languages__intro {
     margin: 15% auto 5% !important;
@@ -2242,5 +2230,29 @@ body.single-podcast .wt_single-podcast__navigation--back {
     display: block !important;
     width: 90% !important;
     margin: 5% auto !important;
+  }
+}
+.wt_seedbank-donors {
+  width: 90%;
+  margin: auto auto 15%;
+  text-align: center;
+}
+.wt_seedbank-donors--header {
+  margin-bottom: 25px;
+}
+.wt_seedbank-donors--names {
+  column-count: 3;
+}
+.wt_seedbank-donors--names .wt_member h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: auto 10px;
+}
+@media all and (max-width: 768px) {
+  .wt_seedbank-donors {
+    margin-bottom: 35%;
+  }
+  .wt_seedbank-donors--names {
+    column-count: 1;
   }
 }
