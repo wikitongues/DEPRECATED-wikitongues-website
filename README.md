@@ -46,11 +46,6 @@
 - [ ] Additional pages: prospective board members
 - [ ] Donor blog (where we stream Patreon content)
 
-### Seed bank videos
-- [ ] Style videos search bar
-- [ ] Add search query to search results page header
-- [ ] Replace ID with title in video thumbnails
-
 ### Seed bank languages
 
 #### Global
@@ -59,6 +54,9 @@
 #### archive-languages.php
 - [ ] Design pass - does the paginated index work?
 - [ ] Map feature
+
+#### archive-videos.php
+This section may be deprecated.
 
 #### single-languages.php
 - [ ] Incorporate all descriptive language metadata
