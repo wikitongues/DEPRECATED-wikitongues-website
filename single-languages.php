@@ -72,8 +72,19 @@
 	<?php endif; ?>
 	<!-- /lexicon -->
 
+	<!-- pagination -->
 	<div class="wt_single-languages__pagination pagination">
 		<a href="<?php bloginfo('url'); ?>/videos">Explore all videos</a> | <a href="<?php bloginfo('url'); ?>/languages">Explore all languages</a>
 	</div>
+	<!-- /pagination -->
+
+	<!-- archive donors -->
+	<div class="wt_single-languages__donors">
+		<h2 class="wt_single-languages__donors--header">This language archive is made possible by genorous donors</h2>
+		<div class="wt_single-languages__donors--names">
+			<?php include( locate_template('components/archive-donors.php') ); ?>
+		</div>
+	</div>
+	<!-- /archive donors -->
 </div>
 <?php get_footer(); ?>
