@@ -50,6 +50,7 @@
 
 #### Global
 - [x] Build languages search bar
+- [ ] Video and lexicon objects should relate to contributors
 
 #### archive-languages.php
 - [ ] Design pass - does the paginated index work?
