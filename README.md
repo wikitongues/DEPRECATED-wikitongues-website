@@ -54,6 +54,7 @@
 #### archive-languages.php
 - [ ] Design pass - does the paginated index work?
 - [ ] Map feature
+- [ ] Filters and sorting feature (i.e., by country, continent, quantity of documentation, etc) 
 
 #### archive-videos.php
 This section may be deprecated.
@@ -73,3 +74,5 @@ This section may be deprecated.
 
 ### Ideas
 - [ ] Project-specific donation pages
+- [ ] Suggest a feature flow
+- [ ] Report bug flow
