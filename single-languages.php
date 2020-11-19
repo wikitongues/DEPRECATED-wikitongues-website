@@ -2,7 +2,10 @@
 
 	$language_name = get_field('standard_name'); 
 	$alternate_names = get_field('alternate_names');
-	$language_description = get_field('language_description'); 
+	$nations_of_origin = get_field('nations_of_origin');
+	$linguistic_genealogy = get_field('linguistic_genealogy');
+	$language_description = get_field('language_description');
+	$wikipedia_url = get_field('wikipedia_url'); 
 	$speakers_recorded = get_field('speakers_recorded');
 	$lexicon_source = get_field('lexicon_source'); ?>
 
@@ -13,6 +16,13 @@
 			<h1><?php echo $language_name; ?></h1>
 			<h2>Also known as</h2>
 			<p><?php echo $alternate_names; ?></p>
+			<h2>Nations of Origin</h2>
+			<p><?php echo $nations_of_origin; ?></p>
+			<h2>Linguistic Genealogy</h2>
+			<p><?php echo $linguistic_genealogy; ?></p>
+			<h2>Language Description</h2>
+			<p><?php echo $language_description; ?></p>
+			<p>Read more or edit this description <a href="<?php echo $wikipedia_url; ?>">on Wikipedia</a>.</p>
 		</div>
 	</div>
 
