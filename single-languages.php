@@ -102,5 +102,14 @@
 	<!-- archive donors -->
 	<?php include( locate_template('components/seedbank-donors.php') ); ?>
 	<!-- /archive donors -->
+
+	<!-- donate module -->
+	<?php
+		$donate_module_header = 'While you\'re here...';
+		$donate_module_text = 'To date, Wikitongues has archived 607 languages. Can you help us reach 150 more languages in 2021? <br> <br>On average, it costs $250—just $20.84/month—to safeguard materials in a new language.';
+		$donate_embed_code = '<script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script><link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/><a class="giveforms-donation-button" href="https://wikitonguesorg.giveforms.com/default-giveform-2" data-multi-step="true">Donate</a>';
+
+		include( locate_template('components/donate-module.php') ); ?>
+	<!-- /donate module -->
 </div>
 <?php get_footer(); ?>
