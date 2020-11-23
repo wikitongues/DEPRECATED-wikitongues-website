@@ -1,10 +1,36 @@
 .wt_single-languages
-    font-size 1.2rem
+    font-family 'Noto Sans', regular
+    font-size 1.5rem
     margin-bottom 150px
 
     &__intro
+        position relative
+        margin-top 48px
+        min-height 375px
         text-align center
-
+        background $dark_blue
+        color $white
+        
+        &:before
+            content ""
+            background-color transparent
+            position absolute
+            height 0
+            left 0
+            bottom 0
+            border-left 100vw solid transparent
+            border-bottom 100px solid #fff
+            z-index 5
+        
+        &--names
+            h1
+                margin-bottom 0
+            
+            h2
+                margin-top 10px
+                font-size 2.5rem
+                font-style italic
+            
     &__no-videos
         text-align center
 
@@ -16,6 +42,7 @@
         margin 2%
 
     h2
+        font-size 2.5rem
         text-align center
         
         &+p
@@ -30,6 +57,10 @@
     .wt_single-languages
         &__intro
             margin 15% auto 5% !important
+            min-height 0 !important
+            
+            &:before
+                display none !important
 
         &__pagination
             margin 15% auto 30%	!important

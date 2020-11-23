@@ -1,0 +1,58 @@
+.wt_donate-module
+	position fixed
+	z-index 10000
+	right -100%
+	top 50%
+	transform translateY(-50%)
+	width 90%
+	max-width 320px
+	background $yellow
+	color $dark_blue
+	padding 40px
+	border-radius 40px
+	-webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+	-webkit-transition right .2s ease-in-out
+	-moz-transition right .2s ease-in-out
+	-ms-transition right .2s ease-in-out
+	-o-transition right .2s ease-in-out
+	transition right .2s ease-in-out
+	
+	&.visible
+		right 0 !important
+	
+	&__title
+		font-style italic
+	
+	&__text
+		margin 60px auto !important
+		
+	&__button
+		.giveforms-donation-button
+			display block
+			background $bright_blue
+			color $white
+			font-weight 700
+			text-align center
+			padding 10px
+			box-sizing border-box
+			
+	&__learn
+		margin-bottom 0
+		text-align center
+		
+		a
+			display inline !important
+			
+			&:hover
+				text-decoration underline
+	
+	&__close
+		margin 30px auto 0
+		text-align center
+		
+		a
+			color $dark_blue !important
+			
+			&:hover
+				text-decoration underline	

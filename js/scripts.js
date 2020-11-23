@@ -44,6 +44,22 @@
 				console.log('popup notice only appears on homepage');
 			}
 		}
+
+		function donateModule() {
+			$(window).scroll(function(){
+				$('.wt_donate-module').addClass('visible');
+			});
+
+			$('#close-module').click(function(e){
+				e.preventDefault();
+
+				$('.wt_donate-module').hide();
+			});
+		}
+
+		if ( $('body').hasClass('single-languages') ) {
+			donateModule();
+		}
 		
 		// setTimeout(function(){
 		// 	popupNotice();

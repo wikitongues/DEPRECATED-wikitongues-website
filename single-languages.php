@@ -2,20 +2,37 @@
 
 	$language_name = get_field('standard_name'); 
 	$alternate_names = get_field('alternate_names');
-	$language_description = get_field('language_description'); 
+	$nations_of_origin = get_field('nations_of_origin');
+	$linguistic_genealogy = get_field('linguistic_genealogy');
+	// $language_description = get_field('language_description');
+	// $wikipedia_url = get_field('wikipedia_url'); 
 	$speakers_recorded = get_field('speakers_recorded');
 	$lexicon_source = get_field('lexicon_source'); ?>
+
+<!-- this is for trying out new typography on the languages page. we will incorporate this into the primary stylesheet eventually -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital@0;1&display=swap');
+</style>
 
 <div class="wt_single-languages">
 	<!-- this should be made compatible with the page-intro tempalte -->
 	<div class="wt_single-languages__intro">
 		<div class="wt_page-intro wt_page-intro--short">
-			<h1><?php echo $language_name; ?></h1>
-			<h2>Also known as</h2>
-			<p><?php echo $alternate_names; ?></p>
+			<div class="wt_single-languages__intro--names">
+				<h1><?php echo $language_name; ?></h1>
+				<h2><?php echo $alternate_names; ?></h2>
+			</div>
+			<div class="wt_single-languages__intro--origins">
+				<!-- can we start this with a/an depending on whether or not the family starts w a vowel? -->
+				<!-- we also need to thank about when to preceed the country name with "the" --> 
+				<p>A <?php echo $linguistic_genealogy; ?> language of <?php echo $nations_of_origin; ?></p>
+			</div>
+			<!-- Ideally, we'll incorporate the Wikipedia description as a call-to-action for our user group -->
 		</div>
 	</div>
 
+	<div class="wt_single-languages__content">
 	<!-- video grid -->
 	<?php if( $speakers_recorded ): ?>
 		<h2>Videos</h2>
@@ -71,6 +88,10 @@
 		<p>No lexicon yet. If you have a dictionary or other vocabulary materials for this language, please write to us at <a href="mailto:hello@wikitongues.org;">hello@wikitongues.org</a>.</p>
 	<?php endif; ?>
 	<!-- /lexicon -->
+	</div>
+	<!-- /content -->
+
+	<div class="clear"></div>
 
 	<!-- pagination -->
 	<div class="wt_single-languages__pagination pagination">
@@ -81,5 +102,14 @@
 	<!-- archive donors -->
 	<?php include( locate_template('components/seedbank-donors.php') ); ?>
 	<!-- /archive donors -->
+
+	<!-- donate module -->
+	<?php
+		$donate_module_header = 'While you\'re here...';
+		$donate_module_text = 'To date, Wikitongues has archived 607 languages. Can you help us reach 150 more languages in 2021? <br> <br>On average, it costs $250—just $20.84/month—to safeguard materials in a new language.';
+		$donate_embed_code = '<script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script><link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/><a class="giveforms-donation-button" href="https://wikitonguesorg.giveforms.com/default-giveform-2" data-multi-step="true">Donate</a>';
+
+		include( locate_template('components/donate-module.php') ); ?>
+	<!-- /donate module -->
 </div>
 <?php get_footer(); ?>
