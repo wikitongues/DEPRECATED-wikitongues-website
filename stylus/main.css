@@ -1528,11 +1528,20 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   }
 }
 .wt_single-languages {
-  font-size: 1.2rem;
+  font-family: 'Noto Sans', regular;
+  font-size: 1.5rem;
   margin-bottom: 150px;
 }
 .wt_single-languages__intro {
   text-align: center;
+}
+.wt_single-languages__intro--names h1 {
+  margin-bottom: 0;
+}
+.wt_single-languages__intro--names h2 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  font-style: italic;
 }
 .wt_single-languages__no-videos {
   text-align: center;
