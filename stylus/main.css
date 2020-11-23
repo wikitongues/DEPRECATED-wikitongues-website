@@ -1533,7 +1533,23 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   margin-bottom: 150px;
 }
 .wt_single-languages__intro {
+  position: relative;
+  margin-top: 48px;
+  min-height: 375px;
   text-align: center;
+  background: #11242f;
+  color: #fff;
+}
+.wt_single-languages__intro:before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 100px solid #fff;
+  z-index: 5;
 }
 .wt_single-languages__intro--names h1 {
   margin-bottom: 0;
@@ -1554,6 +1570,7 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   margin: 2%;
 }
 .wt_single-languages h2 {
+  font-size: 2.5rem;
   text-align: center;
 }
 .wt_single-languages h2+p {
@@ -1567,6 +1584,10 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
 @media all and (max-width: 768px) {
   .wt_single-languages__intro {
     margin: 15% auto 5% !important;
+    min-height: 0 !important;
+  }
+  .wt_single-languages__intro:before {
+    display: none !important;
   }
   .wt_single-languages__pagination {
     margin: 15% auto 30% !important;
