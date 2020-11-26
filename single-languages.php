@@ -25,8 +25,20 @@
 			</div>
 			<div class="wt_single-languages__intro--origins">
 				<!-- can we start this with a/an depending on whether or not the family starts w a vowel? -->
-				<!-- we also need to thank about when to preceed the country name with "the" --> 
-				<p>A <?php echo $linguistic_genealogy; ?> language of <?php echo $nations_of_origin; ?></p>
+				<!-- we also need to thank about when to preceed the country name with "the" -->
+				<?php if ( $linguistic_genealogy || $nations_of_origin ): ?>
+				<p>
+					<span>A </span>
+					<?php if ( $linguistic_genealogy ): ?>
+						<?php echo $linguistic_genealogy; ?> 
+					<?php endif; ?>
+					<span>language</span>
+					<?php if ( $nations_of_origin ): ?>
+						<span> of </span>
+						<?php echo $nations_of_origin; ?>
+					<?php endif; ?>
+				</p>
+				<?php endif; ?>
 			</div>
 			<!-- Ideally, we'll incorporate the Wikipedia description as a call-to-action for our user group -->
 		</div>
