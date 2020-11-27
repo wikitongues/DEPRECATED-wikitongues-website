@@ -56,10 +56,20 @@ if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<!-- donate module -->
 	<?php
-		$donate_module_header = 'While you\'re here...';
-		$donate_module_text = 'To date, Wikitongues has archived 607 languages. Can you help us reach 150 more languages in 2021? <br> <br>On average, it costs $250—just $20.84/month—to safeguard materials in a new language.';
-		$donate_embed_code = '<script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script><link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/><a class="giveforms-donation-button" href="https://wikitonguesorg.giveforms.com/default-giveform-2" data-multi-step="true">Donate</a>';
+		// define variables for donate CTA at bottom of layout
+		$donate_banner_header = get_field('donate_banner_header');
+		$donate_banner_copy = get_field('donate_banner_copy');
+		$donate_banner_form_embed = get_field('donate_banner_form_embed');
 
+		// load donate banner
+		include( locate_template('components/donate-banner.php') );
+
+		// define variabels for donate popup at the bottom of the page
+		$donate_module_header = get_field('donate_module_header');
+		$donate_module_text = get_field('donate_module_text');
+		$donate_module_code = get_field('donate_module_code');
+
+		// load donate popup
 		include( locate_template('components/donate-module.php') ); ?>
 	<!-- /donate module -->
 

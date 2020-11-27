@@ -1,7 +1,8 @@
-<!-- URGENT - need to resolve projects post type and template slug conflict -->
+<?php /* Template name: Projects */ get_header(); ?>
 
-<?php /* Template name: Projects */ get_header();
-
+<h1>projects archive</h1>
+<?
+/*
 include( locate_template('components/page-intro.php') );
 
 // query featured projects array
@@ -44,6 +45,6 @@ $donate_banner_copy = get_field('donate_banner_copy');
 $donate_banner_form_embed = get_field('donate_banner_form_embed');
 
 // load donate CTA
-include( locate_template('components/donate-banner.php') );
+include( locate_template('components/donate-banner.php') ); */
 
 get_footer(); ?>

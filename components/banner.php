@@ -7,7 +7,7 @@
 	$banner_cta_text
 	*/ ?>
 
-<div class="wt_banner banner-element" style="background:url('<?php echo $banner_image; ?>') center center no-repeat;">
+<div class="wt_banner banner-element" style="background:url('<?php echo $banner_image['url']; ?>') center center no-repeat;">
 	<aside class="wt_banner-message">
 	<?php 
 		if ( $banner_text ) { 
