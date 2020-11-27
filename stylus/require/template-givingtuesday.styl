@@ -1,0 +1,72 @@
+.wt_giving-tuesday
+	font-family 'Noto Sans', regular
+	font-size 1.5rem
+	margin-bottom 150px
+	
+	&__intro
+		position relative
+		margin-top 48px
+		min-height 575px
+		text-align center
+		background $dark_blue
+		color $white
+		
+		&:before
+			content ""
+			background-color transparent
+			position absolute
+			height 0
+			left 0
+			bottom 0
+			border-left 100vw solid transparent
+			border-bottom 100px solid #fff
+			z-index 5
+		
+		&--graphic
+			padding-top 40px
+			height 200px
+			
+			img
+				height 100%
+				width auto
+		
+		h1
+			margin-top 0 !important
+	
+	&__content
+		&--summary
+			width 90%
+			max-width 550px
+			margin 5% auto
+			
+		.wt_project_content-block
+			.giveforms-donation-button
+				display block
+				width 90%
+				max-width 650px
+				white-space nowrap
+				margin 2rem auto 0 0
+				text-align center
+				padding 2rem
+				font-size 2rem
+				font-weight bold
+				background-color $bright_blue
+				border-radius 1rem
+				color $white
+				text-transform uppercase
+				letter-spacing 0.1rem
+			
+			.wt_cta
+				background-color transparent
+				padding-top 20px !important
+				font-size 1.5rem
+				font-weight bold
+				color $bright_blue
+				text-transform none !important
+				margin 0 !important
+				
+				// text-decoration: none
+				// color: #4799fc
+				// display: inline-block
+				// width: 100%
+				// box-sizing: border-box

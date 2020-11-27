@@ -57,7 +57,7 @@
 			});
 		}
 
-		if ( $('body').hasClass('single-languages') ) {
+		if ( $('body').hasClass('single-languages') || $('body').hasClass('single-projects') ) {
 			donateModule();
 		}
 		

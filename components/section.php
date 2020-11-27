@@ -4,6 +4,7 @@
 	$section_image_caption
 	$section_title
 	$section_text
+	$section_embed_code
 	$section_cta_link
 	$section_cta_text
 	$section_identifier
@@ -26,6 +27,10 @@
 			if ( $section_title ) {
 				echo '<h1>' . $section_title . '</h1>' .
 					 '<p>' . $section_text . '</h1><br>';
+			}
+
+			if ( $section_embed_code ) {
+				echo $section_embed_code;
 			}
 
 			if ( $section_cta_link ) {

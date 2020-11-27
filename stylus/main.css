@@ -178,7 +178,8 @@ img {
 body.home .header a,
 body.page-template-template-form .header a,
 body.page-template-template-volunteers .header a,
-body.page-template-template-about .header a {
+body.page-template-template-about .header a,
+body.single-projects .header a {
   color: #fff;
   display: inline-block;
 }
@@ -1397,6 +1398,71 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
     width: 90% !important;
   }
 }
+.wt_giving-tuesday {
+  font-family: 'Noto Sans', regular;
+  font-size: 1.5rem;
+  margin-bottom: 150px;
+}
+.wt_giving-tuesday__intro {
+  position: relative;
+  margin-top: 48px;
+  min-height: 575px;
+  text-align: center;
+  background: #11242f;
+  color: #fff;
+}
+.wt_giving-tuesday__intro:before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  border-left: 100vw solid transparent;
+  border-bottom: 100px solid #fff;
+  z-index: 5;
+}
+.wt_giving-tuesday__intro--graphic {
+  padding-top: 40px;
+  height: 200px;
+}
+.wt_giving-tuesday__intro--graphic img {
+  height: 100%;
+  width: auto;
+}
+.wt_giving-tuesday__intro h1 {
+  margin-top: 0 !important;
+}
+.wt_giving-tuesday__content--summary {
+  width: 90%;
+  max-width: 550px;
+  margin: 5% auto;
+}
+.wt_giving-tuesday__content .wt_project_content-block .giveforms-donation-button {
+  display: block;
+  width: 90%;
+  max-width: 650px;
+  white-space: nowrap;
+  margin: 2rem auto 0 0;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4799fc;
+  border-radius: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.wt_giving-tuesday__content .wt_project_content-block .wt_cta {
+  background-color: transparent;
+  padding-top: 20px !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4799fc;
+  text-transform: none !important;
+  margin: 0 !important;
+}
 .wt_archive-videos {
   font-size: 1.2rem;
 }
@@ -1752,6 +1818,29 @@ body.single-podcast .wt_single-podcast__navigation--back {
   .wt_search-results__pagination {
     margin-bottom: 30%;
   }
+}
+body.single-projects .wt_banner {
+  font-family: 'Noto Sans', sans-serif;
+  height: 60vh;
+}
+body.single-projects .wt_banner .wt_banner-message {
+  width: 100%;
+  margin: 0;
+}
+body.single-projects .wt_banner .wt_banner-message h1 {
+  text-shadow: 0 0 30px #000;
+  text-align: center;
+}
+body.single-projects .wt_single-projects {
+  font-family: 'Noto Sans', sans-serif;
+}
+body.single-projects .wt_single-projects__copy {
+  width: 90%;
+  max-width: 550px;
+  margin: 5% auto 0;
+}
+body.single-projects .wt_single-projects__videos {
+  margin: 5% auto 10%;
 }
 .wt_banner,
 .wt_form-banner {
@@ -2306,11 +2395,13 @@ body.single-podcast .wt_single-podcast__navigation--back {
   border-radius: 40px;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
   box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
-  -webkit-transition: right 0.2s ease-in-out;
-  -moz-transition: right 0.2s ease-in-out;
-  -ms-transition: right 0.2s ease-in-out;
-  -o-transition: right 0.2s ease-in-out;
-  transition: right 0.2s ease-in-out;
+  -webkit-transition: right 0.4s ease-in-out;
+  -moz-transition: right 0.4s ease-in-out;
+  -ms-transition: right 0.4s ease-in-out;
+  -o-transition: right 0.4s ease-in-out;
+  transition: right 0.4s ease-in-out;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
 }
 .wt_donate-module.visible {
   right: 0 !important;

@@ -509,9 +509,9 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Projects, aka Initiatives
 function create_post_type_projects()
 {
-    register_taxonomy_for_object_type('category', 'project_posts'); 
-    register_taxonomy_for_object_type('post_tag', 'project_posts');
-    register_post_type('project_posts',
+    register_taxonomy_for_object_type('category', 'projects'); 
+    register_taxonomy_for_object_type('post_tag', 'projects');
+    register_post_type('projects',
         array(
         'labels' => array(
             'name' => __('Projects', 'project'), 
@@ -532,7 +532,8 @@ function create_post_type_projects()
         'menu_icon' => 'dashicons-hammer',
         'has_archive' => true,
         'supports' => array(
-            'title'
+            'title',
+            'editor'
         ),
         'can_export' => true,
         'taxonomies' => array(
