@@ -13,21 +13,31 @@ $featured_videos = get_field('featured_videos');
 
 include( 'components/banner.php' );
 
+$project_header = '';
+$how_to_help = 'Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Deleniti eum repellendus cum nemo nostrum velit maiores non illum aspernatur ipsam sint dicta alias veritatis reprehenderit, voluptas sit. Totam, placeat, obcaecati!';
+$giveforms_embed_code = get_field('giveforms_embed_code');
+
 if (have_posts()): while (have_posts()) : the_post(); ?>
 
 <div class="wt_single-projects">
-	<!-- article -->
+	<h1 class="wt_single-projects__header"><?php echo $project_header; ?></h1>
 	<div class="wt_single-projects__copy">
 		<?php the_content(); ?>
 	</div>
-	<!-- /article -->
-
-<?php endwhile; ?>
-
-<?php endif; ?>
+	<div class="wt_single-projects__help">
+		<h1>How you can help</h1>
+			<?php if ( $how_to_help ): ?>
+			<p><?php echo $how_to_help; ?></p>
+		<?php endif; ?>
+		<?php echo $giveforms_embed_code; ?>
+		<!-- <p>If you or someone in your community speaks a Jewish language, or you'd like to volunteer your time as a field linguist, <a href="#">sign up</a>.</p> -->
+	</div>
+<?php endwhile; endif; ?>
 
 <?php if ( $featured_videos ): ?>
 	<div class="wt_single-projects__videos">
+		<h1>Listen to speakers of Jewish languages</h1>
+		<p>These videos were recorded by volunteers around the world.</p>
 		<?php foreach( $featured_videos as $post ): setup_postdata( $post ); 
 
 		if ( get_field('video_title') ) {
