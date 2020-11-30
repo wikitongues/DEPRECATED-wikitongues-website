@@ -11,11 +11,14 @@ $banner_image = get_field('project_banner_image');
 $banner_text = get_the_title();
 $featured_videos = get_field('featured_videos');
 
-include( 'components/banner.php' );
-
-$project_header = '';
-$how_to_help = 'Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Deleniti eum repellendus cum nemo nostrum velit maiores non illum aspernatur ipsam sint dicta alias veritatis reprehenderit, voluptas sit. Totam, placeat, obcaecati!';
+$project_header = get_field('project_header');
+$how_to_help = get_field('how_to_help');
 $giveforms_embed_code = get_field('giveforms_embed_code');
+
+$videos_header = get_field('videos_header');
+$videos_copy = get_field('videos_copy');
+
+include( 'components/banner.php' );
 
 if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -36,8 +39,8 @@ if (have_posts()): while (have_posts()) : the_post(); ?>
 
 <?php if ( $featured_videos ): ?>
 	<div class="wt_single-projects__videos">
-		<h1>Listen to speakers of Jewish languages</h1>
-		<p>These videos were recorded by volunteers around the world.</p>
+		<h1><?php echo $videos_header; ?></h1>
+		<p><?php echo $videos_copy; ?></p>
 		<?php foreach( $featured_videos as $post ): setup_postdata( $post ); 
 
 		if ( get_field('video_title') ) {
