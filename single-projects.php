@@ -67,6 +67,7 @@ if (have_posts()): while (have_posts()) : the_post(); ?>
 	<!-- donate module -->
 	<?php
 		// define variables for donate CTA at bottom of layout
+		$donate_banner_layout = get_field('banner_layout');
 		$donate_banner_header = get_field('donate_banner_header');
 		$donate_banner_copy = get_field('donate_banner_copy');
 		$donate_banner_form_embed = get_field('donate_banner_form_embed');

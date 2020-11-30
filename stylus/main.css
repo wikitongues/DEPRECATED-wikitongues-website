@@ -1850,7 +1850,7 @@ body.single-projects .wt_single-projects p a {
 body.single-projects .wt_single-projects .giveforms-donation-button {
   display: block;
   width: 90%;
-  max-width: 450px;
+  max-width: 650px;
   white-space: nowrap;
   margin: 5rem auto 0 0;
   text-align: center;
@@ -1879,6 +1879,39 @@ body.single-projects .wt_single-projects__videos p {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+body.single-projects .wt_donate-banner {
+  padding-bottom: 175px;
+}
+body.single-projects .wt_donate-banner .inner-wrap {
+  width: 90%;
+  max-width: 600px;
+}
+body.single-projects .wt_donate-banner .inner-wrap h1,
+body.single-projects .wt_donate-banner .inner-wrap p {
+  font-family: 'Noto Serif', serif;
+}
+body.single-projects .wt_donate-banner .inner-wrap p {
+  font-size: 1.85rem;
+  line-height: 3rem;
+  text-align: center;
+}
+body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
+  display: block;
+  width: 90%;
+  max-width: 450px;
+  white-space: nowrap;
+  margin: 5rem auto 0;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4799fc;
+  border-radius: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-family: 'Noto Sans', sans-serif;
 }
 .wt_banner,
 .wt_form-banner {
