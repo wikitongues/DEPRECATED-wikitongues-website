@@ -1424,14 +1424,14 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
 }
 .wt_giving-tuesday__intro--graphic {
   padding-top: 80px;
-  height: 200px;
+  height: 150px;
 }
 .wt_giving-tuesday__intro--graphic img {
   height: 100%;
   width: auto;
 }
 .wt_giving-tuesday__intro h1 {
-  margin: 40px auto !important;
+  margin: 20px auto !important;
 }
 .wt_giving-tuesday__intro h2 {
   max-width: 550px;
