@@ -11,13 +11,13 @@
 		<div class="wt_giving-tuesday__intro--graphic">
 			<img src="<?php echo $giving_tuesday_graphic['url']; ?>" alt="">
 		</div>
-		<h1>#GivingTuesday and Wikitongues</h1>
-		<h2>Subheading title</h2>
+		<h1>It's #GivingTuesday!</h1>
+		<h2>These are our core projects for 2021. Please consider donating, volunteering, or simply spreading the word.</h2>
 	</div>
 	<div class="wt_giving-tuesday__content">
-		<div class="wt_giving-tuesday__content--summary">
+<!-- 		<div class="wt_giving-tuesday__content--summary">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo voluptas rem dolores autem nihil dolorem quae doloremque? Est veritatis eum soluta tempore consectetur odit corporis quis officiis iusto placeat.
-		</div>
+		</div> -->
 		<?php // query featured projects array
 		$featured_projects = get_field('featured_projects');
 

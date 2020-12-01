@@ -63,9 +63,8 @@ if (have_posts()): while (have_posts()) : the_post(); ?>
 
 		endforeach; wp_reset_postdata(); ?>
 	</div>
+	<?php endif; ?>
 </div>
-
-<?php endif; ?>
 
 	<!-- donate module -->
 	<?php

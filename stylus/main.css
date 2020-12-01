@@ -1423,7 +1423,7 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   z-index: 5;
 }
 .wt_giving-tuesday__intro--graphic {
-  padding-top: 40px;
+  padding-top: 80px;
   height: 200px;
 }
 .wt_giving-tuesday__intro--graphic img {
@@ -1431,7 +1431,11 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   width: auto;
 }
 .wt_giving-tuesday__intro h1 {
-  margin-top: 0 !important;
+  margin: 40px auto !important;
+}
+.wt_giving-tuesday__intro h2 {
+  max-width: 550px;
+  margin: auto;
 }
 .wt_giving-tuesday__content--summary {
   width: 90%;
@@ -2460,7 +2464,7 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   transform: translateY(-50%);
   width: 90%;
   max-width: 320px;
-  background: #ffc342;
+  background: #ffdc90;
   color: #11242f;
   padding: 40px;
   border-radius: 40px;
