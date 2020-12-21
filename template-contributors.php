@@ -1,19 +1,10 @@
-<?php /* Template name: Community */ get_header(); ?>
+<?php /* Template name: Community */ get_header();
 
-<?php include( locate_template('components/page-intro.php') ); ?>
+include( locate_template('components/page-intro.php') );
 
-<ul class="wt_who-navigation">
-	<li>
-		<a href="<?php bloginfo('url'); ?>/who/leadership">Leadership</a>
-	</li>
-	<li class="active">
-		<a href="<?php bloginfo('url'); ?>/who/contributors">Contributors</a>
-	</li>
-	<li>
-		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
-	</li>
-</ul>
-<?php
+$current_page = 'contributors';
+include( locate_template('components/team-nav.php') ); 
+
 // Custom Query args
 $args = array( 
 	'post_type' => 'contributors',
