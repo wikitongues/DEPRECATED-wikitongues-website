@@ -509,27 +509,27 @@ body.home .wt_donate-banner:before {
     z-index: -1;
   }
 }
-body.page-template-template-leadership .wt_page-intro {
+body.page-template-template-team .wt_page-intro {
   margin-bottom: 2%;
 }
-body.page-template-template-leadership .wt_page-intro h1,
-body.page-template-template-leadership .wt_page-intro h2 {
+body.page-template-template-team .wt_page-intro h1,
+body.page-template-template-team .wt_page-intro h2 {
   margin-top: 0;
   text-align: center;
 }
-body.page-template-template-leadership .wt_who-navigation {
+body.page-template-template-team .wt_who-navigation {
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
-body.page-template-template-leadership .wt_who-navigation li {
+body.page-template-template-team .wt_who-navigation li {
   display: inline-block;
   margin: 0 10px;
   text-transform: uppercase;
   font-weight: bold;
 }
-body.page-template-template-leadership .wt_who-navigation li:hover::after,
-body.page-template-template-leadership .wt_who-navigation li.active::after {
+body.page-template-template-team .wt_who-navigation li:hover::after,
+body.page-template-template-team .wt_who-navigation li.active::after {
   content: "";
   width: 7px;
   height: 7px;
@@ -537,48 +537,48 @@ body.page-template-template-leadership .wt_who-navigation li.active::after {
   margin: 5px auto;
   border-radius: 100%;
 }
-body.page-template-template-leadership .wt_who-navigation li:hover::after {
+body.page-template-template-team .wt_who-navigation li:hover::after {
   background-color: #dedede;
 }
-body.page-template-template-leadership .wt_who-navigation li.active::after {
+body.page-template-template-team .wt_who-navigation li.active::after {
   background-color: #86e9c3;
 }
-body.page-template-template-leadership .wt_face-grid {
+body.page-template-template-team .wt_face-grid {
   width: 90%;
   margin: 5% auto 15%;
   text-align: center;
 }
-body.page-template-template-leadership .wt_face-grid.large>h1 {
+body.page-template-template-team .wt_face-grid.large>h1 {
   margin-bottom: 0;
 }
-body.page-template-template-leadership .wt_face-grid.large>p {
+body.page-template-template-team .wt_face-grid.large>p {
   font-size: 2rem;
   margin-bottom: 4rem;
 }
-body.page-template-template-leadership .wt_face-grid.large .wt_member {
+body.page-template-template-team .wt_face-grid.large .wt_member {
   display: inline-block;
   width: 31%;
   margin: 1% 0.5%;
   vertical-align: top;
   text-align: left;
 }
-body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member-photo {
+body.page-template-template-team .wt_face-grid.large .wt_member .wt_member-photo {
   width: 100%;
   padding-bottom: 100%;
   background-size: cover !important;
   margin-bottom: 10px;
 }
-body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member-photo.empty {
+body.page-template-template-team .wt_face-grid.large .wt_member .wt_member-photo.empty {
   background-color: #86e9c3;
 }
-body.page-template-template-leadership .wt_face-grid.large .wt_member h2 {
+body.page-template-template-team .wt_face-grid.large .wt_member h2 {
   font-size: 1em;
 }
-body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member-location {
+body.page-template-template-team .wt_face-grid.large .wt_member .wt_member-location {
   margin-top: 20px;
   font-style: italic;
 }
-body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member-bio {
+body.page-template-template-team .wt_face-grid.large .wt_member .wt_member-bio {
   margin: 5px 0 10px;
   padding-right: 5px;
 }
@@ -624,7 +624,7 @@ body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member
   border-right: 40vw solid #86e9c3;
   z-index: -1;
 }
-.leadership > .wt_page-intro::before {
+.team > .wt_page-intro::before {
   content: "";
   background-color: transparent;
   position: absolute;
@@ -635,7 +635,7 @@ body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member
   border-bottom: 50px solid transparent;
   z-index: -1;
 }
-.leadership > .wt_three-column-face-grid:nth-of-type(4)::before {
+.team > .wt_three-column-face-grid:nth-of-type(4)::before {
   content: "";
   background-color: transparent;
   position: absolute;
@@ -647,7 +647,7 @@ body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member
   border-bottom: 100px solid transparent;
   z-index: -1;
 }
-.leadership > .wt_two-column-face-grid:nth-of-type(2)::after {
+.team > .wt_two-column-face-grid:nth-of-type(2)::after {
   content: "";
   background-color: transparent;
   position: absolute;
@@ -656,7 +656,7 @@ body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member
   border-right: 40vw solid #86e9c3;
   z-index: -1;
 }
-.leadership > .wt_names-list::before {
+.team > .wt_names-list::before {
   content: "";
   background-color: transparent;
   position: absolute;
@@ -709,19 +709,19 @@ body.page-template-template-leadership .wt_face-grid.large .wt_member .wt_member
   z-index: -1;
 }
 @media only screen and (max-width: 979px) {
-  body.page-template-template-leadership h1 {
+  body.page-template-template-team h1 {
     margin-top: 10%;
   }
-  body.page-template-template-leadership .wt_who-navigation {
+  body.page-template-template-team .wt_who-navigation {
     font-size: 1rem;
   }
-  body.page-template-template-leadership .wt_who-navigation li.active:after {
+  body.page-template-template-team .wt_who-navigation li.active:after {
     background: #000 !important;
   }
-  body.page-template-template-leadership .wt_face-grid {
+  body.page-template-template-team .wt_face-grid {
     font-size: 1rem !important;
   }
-  body.page-template-template-leadership .wt_face-grid.large .wt_member {
+  body.page-template-template-team .wt_face-grid.large .wt_member {
     width: 48% !important;
     margin: 1.5% 0.5% !important;
   }

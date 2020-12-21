@@ -1,5 +1,7 @@
 <?php /* Template name: Team */ get_header(); 
 include( locate_template('components/page-intro.php') ); 
+
+$current_page = 'team';
 include( locate_template('components/team-nav.php') ); 
 
 // vars

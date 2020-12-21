@@ -1,20 +1,10 @@
-<?php /* Template name: Donors */ get_header(); ?>
+<?php /* Template name: Donors */ get_header(); 
 
-<?php include( locate_template('components/page-intro.php') ); ?>
+include( locate_template('components/page-intro.php') ); 
 
-<ul class="wt_who-navigation">
-	<li>
-		<a href="<?php bloginfo('url'); ?>/who/leadership">Leadership</a>
-	</li>
-	<li>
-		<a href="<?php bloginfo('url'); ?>/who/contributors">Contributors</a>
-	</li>
-	<li class="active">
-		<a href="<?php bloginfo('url'); ?>/who/supporters">Supporters</a>
-	</li>
-</ul>
+$current_page = 'supporters';
+include( locate_template('components/team-nav.php') ); 
 
-<?php 
 // locate component templates
 // include( locate_template('components/partners.php') ); need to decide what this constitutes
 include( locate_template('components/supporters.php') );

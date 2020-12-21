@@ -96,7 +96,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-leadership.php"
+                "value": "template-team.php"
             }
         ]
     ],
@@ -108,5 +108,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608580577
+    "modified": 1608585162
 }
