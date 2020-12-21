@@ -27,10 +27,18 @@
 				<!-- can we start this with a/an depending on whether or not the family starts w a vowel? -->
 				<!-- we also need to thank about when to preceed the country name with "the" -->
 				<?php if ( $linguistic_genealogy || $nations_of_origin ): ?>
-				<p>
-					<span>A </span>
-					<?php if ( $linguistic_genealogy ): ?>
-						<?php echo $linguistic_genealogy; ?> 
+				<p><?php 
+					if ( $linguistic_genealogy ) :
+						if ( $linguistic_genealogy[0] === 'A' ||
+							 $linguistic_genealogy[0] === 'E' ||
+							 $linguistic_genealogy[0] === 'I' ||
+							 $linguistic_genealogy[0] === 'O' ||
+							 $linguistic_genealogy[0] === 'U' ): ?>
+						<span>An </span>
+						<?php else: ?>
+						<span>A </span><?php
+						endif; ?>
+						<?php echo $linguistic_genealogy; ?>
 					<?php endif; ?>
 					<span>language</span>
 					<?php if ( $nations_of_origin ): ?>
