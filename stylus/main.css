@@ -548,6 +548,13 @@ body.page-template-template-leadership .wt_face-grid {
   margin: 5% auto 15%;
   text-align: center;
 }
+body.page-template-template-leadership .wt_face-grid.large>h1 {
+  margin-bottom: 0;
+}
+body.page-template-template-leadership .wt_face-grid.large>p {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
 body.page-template-template-leadership .wt_face-grid.large .wt_member {
   display: inline-block;
   width: 31%;

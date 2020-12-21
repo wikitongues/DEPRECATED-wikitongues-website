@@ -449,7 +449,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_projects'); // Add our Projects Custom Post Type
 add_action('init', 'create_post_type_partners'); // Add our Partners Custom Post Type
 add_action('init', 'create_post_type_contributors'); // Add our Contributors Custom Post Type
-add_action('init', 'create_post_type_leadership'); // Add our Leadership Custom Post Type
+add_action('init', 'create_post_type_team'); // Add our Team Custom Post Type
 add_action('init', 'create_post_type_donors'); // Add our Donors Custom Post Type
 add_action('init', 'create_post_type_videos'); // Add our Videos Custom Post Type
 add_action('init', 'create_post_type_lexicons'); // Add our Lexicon Custom Post Type
@@ -618,26 +618,26 @@ function create_post_type_contributors()
     ));
 }
 
-// Leadership
-function create_post_type_leadership()
+// team
+function create_post_type_team()
 {
-    register_taxonomy_for_object_type('category', 'leadership'); 
-    register_taxonomy_for_object_type('post_tag', 'leadership');
-    register_post_type('leadership',
+    register_taxonomy_for_object_type('category', 'team'); 
+    register_taxonomy_for_object_type('post_tag', 'team');
+    register_post_type('team',
         array(
         'labels' => array(
-            'name' => __('Leadership', 'leadership'), 
-            'singular_name' => __('Leadership', 'leadership'),
-            'add_new' => __('Add New', 'leadership'),
-            'add_new_item' => __('Add New leadership', 'leadership'),
-            'edit' => __('Edit', 'leadership'),
-            'edit_item' => __('Edit Leadership', 'leadership'),
-            'new_item' => __('New Leadership', 'leadership'),
-            'view' => __('View Leadership', 'leadership'),
-            'view_item' => __('View Leadership', 'leadership'),
-            'search_items' => __('Search Leadership', 'leadership'),
-            'not_found' => __('No Leadership found', 'leadership'),
-            'not_found_in_trash' => __('No Leadership found in Trash', 'leadership')
+            'name' => __('Team', 'team'), 
+            'singular_name' => __('Team', 'team'),
+            'add_new' => __('Add New', 'team'),
+            'add_new_item' => __('Add New team', 'team'),
+            'edit' => __('Edit', 'team'),
+            'edit_item' => __('Edit Team', 'team'),
+            'new_item' => __('New Team', 'team'),
+            'view' => __('View Team', 'team'),
+            'view_item' => __('View Team', 'team'),
+            'search_items' => __('Search Team', 'team'),
+            'not_found' => __('No Team found', 'team'),
+            'not_found_in_trash' => __('No Team found in Trash', 'team')
         ),
         'public' => true,
         'hierarchical' => true,
