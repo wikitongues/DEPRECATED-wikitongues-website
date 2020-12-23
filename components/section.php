@@ -26,7 +26,7 @@
 		<?php
 			if ( $section_title ) {
 				echo '<h1>' . $section_title . '</h1>' .
-					 '<p>' . $section_text . '</h1><br>';
+					 '<p>' . $section_text . '</p><br>';
 			}
 
 			if ( $section_embed_code ) {

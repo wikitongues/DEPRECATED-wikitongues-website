@@ -2,41 +2,27 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
+  color: #0d232f;
 }
 h1 {
-  font-size: 6rem;
-}
-a {
-  text-decoration: none;
-  color: #4799fc;
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-}
-h1 {
-  text-align: center;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 7rem;
+  font-family: 'Noto Serif', serif;
 }
 h2 {
-  margin: 0;
-  padding: 0;
+  font-size: 2.5rem;
+  font-family: 'Noto Serif', serif;
 }
-.header {
-  font-size: 1.5rem;
+p {
+  font-size: 1.85rem;
+  line-height: 3rem;
+  font-family: 'Noto Serif', serif;
 }
-.wt_banner-message h1,
-.wt_form-banner-message h1 {
-  font-size: 4rem;
-  line-height: 1;
-}
-.wt_alert {
-  font-size: 1.25rem;
-}
-@media all and (max-width: 979px) {
-  h1 {
-    font-size: 3rem;
-  }
+a {
+  color: #4799fc;
+  text-decoration: none;
 }
 body,
 html {
@@ -81,7 +67,7 @@ img {
   box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .header.background ul li a {
-  color: #11242f !important;
+  color: #0d232f !important;
 }
 .header.background ul.sub-menu {
   background: #fff;
@@ -116,7 +102,7 @@ img {
   padding: 5px 10px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  border: 1px solid #11242f;
+  border: 1px solid #0d232f;
   border-right: 0;
 }
 .wt_nav--searchbar .wt_archive-languages__searchform #searchsubmit {
@@ -128,8 +114,8 @@ img {
   border-top-right-radius: 3px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 3px;
-  background: #4799fc;
-  border: 1px solid #11242f;
+  background: $bright_blue;
+  border: 1px solid #0d232f;
   color: #fff;
 }
 .logo {
@@ -168,7 +154,7 @@ img {
   visibility: visible;
 }
 .header a {
-  color: #11242f;
+  color: #0d232f;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
@@ -184,7 +170,7 @@ body.single-projects .header a {
   display: inline-block;
 }
 .footer {
-  background-color: #11242f;
+  background-color: #0d232f;
   color: #fff;
   padding: 0 2rem 2rem 2rem;
   bottom: 0;
@@ -250,7 +236,7 @@ body.single-projects .header a {
   left: 0;
   top: -100px;
   border-right: 100vw solid transparent;
-  border-bottom: 100px solid #11242f;
+  border-bottom: 100px solid #0d232f;
   z-index: 5;
 }
 body.home .wt_banner .wt_banner-image-caption {
@@ -265,18 +251,8 @@ body.home .wt_banner .wt_banner-image-caption {
 body.home .wt_page-section {
   font-size: 1.75rem;
 }
-body.home .wt_page-section.primary_content-block {
-  color: #fff;
-}
 body.home .wt_page-section#primary_content-block-2 {
   margin-bottom: 0;
-}
-body.home .wt_page-section#primary_content-block-2 .wt_section-content .wt_section-message .wt_cta {
-  background-color: #fff;
-  color: #4799fc;
-}
-body.home .wt_page-section#primary_content-block-2 .wt_section-content .wt_section-message .wt_cta:hover {
-  color: #4799fc;
 }
 body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featured-item {
   font-size: 1.25rem;
@@ -306,7 +282,7 @@ body.home .wt_page-section#primary_content-block-3 {
 body.home .wt_page-section .wt_featured-items {
   overflow-x: scroll;
   white-space: nowrap;
-  color: #11242f !important;
+  color: #0d232f !important;
   margin-top: 0;
   padding-top: 0;
 }
@@ -326,11 +302,6 @@ body.home .wt_page-section.news_content-block#news_content-block-1 {
 body.home .wt_page-section.news_content-block .wt_section-message {
   max-width: 550px;
   box-sizing: border-box;
-}
-body.home .wt_page-section.news_content-block .wt_section-message h1 {
-  text-transform: unset;
-  font-size: 3rem;
-  line-height: initial;
 }
 body.home .wt_page-section.news_content-block .wt_section-message .wt_cta {
   width: initial;
@@ -1117,7 +1088,7 @@ label {
   font-size: $small-text-size;
 }
 label > span {
-  font-size: 1.5rem;
+  font-size: $text-size;
 }
 input[type=text],
 input[type=email],
@@ -1372,7 +1343,7 @@ body.page-template-template-toolkit .header a {
 }
 body.page-template-template-toolkit .wt_banner {
   height: 75vh;
-  background: #11242f !important;
+  background: #0d232f !important;
 }
 body.page-template-template-toolkit .wt_toolkit-page {
   text-align: center;
@@ -1415,7 +1386,7 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   margin-top: 48px;
   min-height: 575px;
   text-align: center;
-  background: #11242f;
+  background: #0d232f;
   color: #fff;
 }
 .wt_giving-tuesday__intro:before {
@@ -1459,7 +1430,7 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   padding: 2rem;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #4799fc;
+  background-color: $bright_blue;
   border-radius: 1rem;
   color: #fff;
   text-transform: uppercase;
@@ -1470,7 +1441,7 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   padding-top: 20px !important;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4799fc;
+  color: $bright_blue;
   text-transform: none !important;
   margin: 0 !important;
 }
@@ -1605,8 +1576,6 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   }
 }
 .wt_single-languages {
-  font-family: 'Noto Sans', regular;
-  font-size: 1.5rem;
   margin-bottom: 150px;
 }
 .wt_single-languages__intro {
@@ -1614,7 +1583,7 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
   margin-top: 48px;
   min-height: 375px;
   text-align: center;
-  background: #11242f;
+  background: #0d232f;
   color: #fff;
 }
 .wt_single-languages__intro:before {
@@ -1633,7 +1602,6 @@ body.page-template-template-toolkit .wt_toolkit-page .wt_featured-item {
 }
 .wt_single-languages__intro--names h2 {
   margin-top: 10px;
-  font-size: 2.5rem;
   font-style: italic;
 }
 .wt_single-languages__no-videos {
@@ -1831,7 +1799,6 @@ body.single-podcast .wt_single-podcast__navigation--back {
   }
 }
 body.single-projects .wt_banner {
-  font-family: 'Noto Sans', sans-serif;
   height: 60vh;
 }
 body.single-projects .wt_banner .wt_banner-message {
@@ -1839,24 +1806,19 @@ body.single-projects .wt_banner .wt_banner-message {
   margin: 0;
 }
 body.single-projects .wt_banner .wt_banner-message h1 {
+  font-size: 7rem;
+  font-family: 'Noto Sans', sans-erif;
   text-shadow: 0 0 30px #000;
+  color: #fff;
   text-align: center;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 body.single-projects .wt_single-projects {
   font-family: 'Noto Serif', serif;
 }
 body.single-projects .wt_single-projects h1 {
-  font-weight: 700 !important;
-  font-size: 5rem;
-  line-height: 7rem;
   text-align: left;
-}
-body.single-projects .wt_single-projects p {
-  font-size: 1.85rem;
-  line-height: 3rem;
-}
-body.single-projects .wt_single-projects p a {
-  display: inline;
 }
 body.single-projects .wt_single-projects .giveforms-donation-button {
   display: block;
@@ -1897,15 +1859,6 @@ body.single-projects .wt_donate-banner {
 body.single-projects .wt_donate-banner .inner-wrap {
   width: 90%;
   max-width: 600px;
-}
-body.single-projects .wt_donate-banner .inner-wrap h1,
-body.single-projects .wt_donate-banner .inner-wrap p {
-  font-family: 'Noto Serif', serif;
-}
-body.single-projects .wt_donate-banner .inner-wrap p {
-  font-size: 1.85rem;
-  line-height: 3rem;
-  text-align: center;
 }
 body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   display: block;
@@ -1963,17 +1916,32 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
 .wt_banner-message h1,
 .wt_form-banner-message h1 {
   font-size: 7rem;
+  font-family: 'Noto Sans', sans-erif;
+  text-shadow: 0 0 30px #000;
   color: #fff;
   text-align: right;
-  font-weight: bold;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 .wt_banner-message h1 {
   text-shadow: 0 0 100px #000;
 }
 .wt_banner-message .wt_cta {
+  display: block;
+  width: 90%;
+  max-width: 450px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4799fc;
+  border-radius: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-family: 'Noto Sans', sans-erif;
   margin: 2rem 0 0 auto;
-  max-width: 500px;
 }
 .wt_donate-banner {
   width: 100%;
@@ -2002,7 +1970,7 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
 }
 .wt_donate-banner .inner-wrap aside.wt_donate-banner-header h1 {
   text-align: left;
-  color: #11242f;
+  color: #0d232f;
 }
 .wt_donate-banner .inner-wrap aside.wt_donate-banner-header p {
   font-size: 2rem;
@@ -2064,7 +2032,7 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   padding: 3rem;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #4799fc;
+  background-color: $bright_blue;
   border-radius: 1rem;
   color: #fff;
   text-transform: uppercase;
@@ -2286,20 +2254,25 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
 .wt_page-section .wt_section-content .wt_section-message h1 {
   margin: 0 auto 2rem;
   text-align: left;
-  font-size: 5rem;
-  letter-spacing: 0.2rem;
-  line-height: 6rem;
-  text-transform: uppercase;
 }
 .wt_page-section .wt_section-content .wt_section-message p {
   margin: auto;
 }
 .wt_page-section .wt_section-content .wt_section-message .wt_cta {
+  display: block;
   width: 90%;
-  box-sizing: border-box;
-  margin-top: 3rem;
+  max-width: 450px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4799fc;
+  border-radius: 1rem;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  font-family: 'Noto Sans', sans-erif;
 }
 .wt_page-section .wt_featured-items {
   max-width: 1460px;
@@ -2343,11 +2316,6 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   order: -1;
 }
 @media only screen and (max-width: 1280px) {
-  .wt_page-section .wt_section-content .wt_section-message h1 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    line-height: 4rem;
-  }
   .wt_page-section .wt_section-content .wt_section-message .wt_cta {
     margin-top: 2rem;
     padding: 2rem;
@@ -2471,8 +2439,8 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   transform: translateY(-50%);
   width: 90%;
   max-width: 320px;
-  background: #ffdc90;
-  color: #11242f;
+  background: $lightyellow;
+  color: #0d232f;
   padding: 40px;
   border-radius: 40px;
   -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
@@ -2496,7 +2464,7 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
 }
 .wt_donate-module__button .giveforms-donation-button {
   display: block;
-  background: #4799fc;
+  background: $bright_blue;
   color: #fff;
   font-weight: 700;
   text-align: center;
@@ -2518,7 +2486,7 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   text-align: center;
 }
 .wt_donate-module__close a {
-  color: #11242f !important;
+  color: #0d232f !important;
 }
 .wt_donate-module__close a:hover {
   text-decoration: underline;

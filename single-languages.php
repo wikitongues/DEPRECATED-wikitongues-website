@@ -9,12 +9,6 @@
 	$speakers_recorded = get_field('speakers_recorded');
 	$lexicon_source = get_field('lexicon_source'); ?>
 
-<!-- this is for trying out new typography on the languages page. we will incorporate this into the primary stylesheet eventually -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital@0;1&display=swap');
-</style>
-
 <div class="wt_single-languages">
 	<!-- this should be made compatible with the page-intro tempalte -->
 	<div class="wt_single-languages__intro">
