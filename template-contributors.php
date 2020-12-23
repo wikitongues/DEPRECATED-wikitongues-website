@@ -53,6 +53,6 @@ $donate_banner_copy = get_field('donate_banner_copy');
 $donate_banner_form_embed = get_field('donate_banner_form_embed');
 
 // load donate CTA
-include( locate_template('components/donate-banner.php') );
+//include( locate_template('components/donate-banner.php') );
 
 get_footer(); ?>
