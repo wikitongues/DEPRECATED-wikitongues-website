@@ -20,6 +20,7 @@ $interns = get_field('interns'); ?>
 		$profile_picture = get_field('profile_picture');
 		$location = get_field('contributor_location');
 		$bio = get_field('bio');
+		$title = get_field('title')
 
 		// we might want to change the name of this
 		include( locate_template('components/member-profile.php') );
@@ -33,6 +34,7 @@ $interns = get_field('interns'); ?>
 		$profile_picture = get_field('profile_picture');
 		$location = get_field('contributor_location');
 		$bio = get_field('bio');
+		$title = get_field('title')
 
 		// we might want to change the name of this
 		include( locate_template('components/member-profile.php') );
@@ -46,6 +48,7 @@ $interns = get_field('interns'); ?>
 		$profile_picture = get_field('profile_picture');
 		$location = get_field('contributor_location');
 		$bio = get_field('bio');
+		$title = get_field('title')
 
 		// we might want to change the name of this
 		include( locate_template('components/member-profile.php') );
@@ -59,6 +62,7 @@ $interns = get_field('interns'); ?>
 		$profile_picture = get_field('profile_picture');
 		$location = get_field('contributor_location');
 		$bio = get_field('bio');
+		$title = get_field('title')
 
 		// we might want to change the name of this
 		include( locate_template('components/member-profile.php') );
