@@ -43,7 +43,7 @@ img
         ul
             li
                 a
-                   color $dark_blue !important
+                    color $dark_blue !important
 
             &.sub-menu
                 background white
@@ -55,6 +55,11 @@ img
     overflow-x auto
     -webkit-overflow-scrolling touch // smooth scrolling on IOS devices
     -ms-overflow-style none // hide scrollbar in Edge
+    
+    ul
+        li
+            a
+                navLink()
 
 // Hide scrollbar on webkit browsers
 .nav::-webkit-scrollbar

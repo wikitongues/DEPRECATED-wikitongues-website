@@ -1,6 +1,7 @@
 body
     &.home
         .wt_banner
+            // this should go in the header
             .wt_banner-image-caption
                 left 5%
                 -webkit-transform rotate(-5deg) // rotation doesn't quite align, gonna need some media queries to get this right
@@ -11,10 +12,29 @@ body
                 bottom 5%
 
         .wt_page-section
-            font-size 1.75rem
+            padding 30px 0 60px
+            
+            &#primary_content-block-1
+                background $yellow
+                
+                &:before
+                    content ''
+                    position absolute
+                    border-right 100vw solid $yellow
+                    border-top 25px solid transparent 
+                    height 25px
+                    top -25px             
 
             &#primary_content-block-2
-                margin-bottom 0
+                background $light_blue
+                
+                &:before
+                    content ''
+                    position absolute
+                    border-left 100vw solid $light_blue
+                    border-top 25px solid transparent 
+                    height 25px
+                    top -25px
                                 
                 .wt_featured-items
                     .wt_featured-item
@@ -40,7 +60,15 @@ body
                                 letter-spacing 0.06em
 
             &#primary_content-block-3
-                margin-bottom 0
+                background $pink
+                
+                &:before
+                    content ''
+                    position absolute
+                    border-right 100vw solid $pink
+                    border-top 25px solid transparent 
+                    height 25px
+                    top -25px
 
             .wt_featured-items
                 overflow-x scroll
@@ -77,9 +105,8 @@ body
 
 
         #wt_blog-title
-            margin 4rem 0 0
-            color white
-            text-transform uppercase
+            bannerh1(center)
+            text-shadow none !important
 
             &+p
                 margin 0
@@ -139,70 +166,6 @@ body
                 border-bottom 100px solid #ededed
                 z-index 5
 
-// colorful shapes (weave into above elements on desgin pass)
-/* yellow block */
-#primary_content-block-1 > .wt_section-content::after
-    content ""
-    background-color transparent
-    height 150%
-    // transform translate(70%, -10%)
-    // margin-top 5%
-    // margin-right 50%
-    position absolute
-    top -10%
-    right 0
-    border-right 60vw solid
-    border-right-color #ffc342
-    z-index -1
-
-/* blue block */
-#primary_content-block-2::before
-    content ""
-    background-color transparent
-    height 150%
-    transform translateY(-5%)
-    position absolute
-    border-right 100vw solid
-    border-right-color rgb(110,176,255)
-    border-top 100px solid transparent
-    z-index -1
-
-/* pink gradiant block */
-#primary_content-block-3::before
-    content ""
-    background-color transparent
-    position absolute
-    top -90%
-    left 0
-    height 215%
-    // transform translateY(-10%)
-    border-right 100vw solid rgb(233,144,134)
-    border-top 140px solid transparent
-    z-index -1
-
-#news_content-block-1::before
-    content ""
-    background-color transparent
-    position absolute
-    top 0
-    left 0
-    height 175%
-    // transform translateY(-10%)
-    border-right 100vw solid rgb(255,255,255)
-    border-top 25px solid transparent
-    z-index -1
-    // intended as chevron floats around when window resized
-    // content ""
-    // background-color transparent
-    // position absolute
-    // left 0
-    // height 140px
-    // transform translateY(634px)
-    // border-left 50vw solid transparent
-    // border-right 50vw solid transparent
-    // border-bottom 140px solid white
-    // z-index -1
-
 @media all and (max-width:979px)
     body
         &.home
@@ -255,19 +218,3 @@ body
             
             #wt_blog-title
                 margin-bottom 2rem
-    
-    // colorful shapes (weave into above elements on desgin pass)
-    /* yellow block */
-    #primary_content-block-1 > .wt_section-content::after
-        content ""
-        background-color transparent
-        height 150%
-        // transform translate(70%, -10%)
-        // margin-top 5%
-        // margin-right 50%
-        position absolute
-        top 0
-        right 0
-        border-right 100vw solid
-        border-right-color #ffc342
-        z-index -1

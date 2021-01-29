@@ -80,6 +80,9 @@ img {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
+.nav ul li a {
+  font-family: 'Noto Sans', sans-erif;
+}
 .nav::-webkit-scrollbar {
   display: none;
 }
@@ -249,10 +252,29 @@ body.home .wt_banner .wt_banner-image-caption {
   bottom: 5%;
 }
 body.home .wt_page-section {
-  font-size: 1.75rem;
+  padding: 30px 0 60px;
+}
+body.home .wt_page-section#primary_content-block-1 {
+  background: #ffdc90;
+}
+body.home .wt_page-section#primary_content-block-1:before {
+  content: '';
+  position: absolute;
+  border-right: 100vw solid #ffdc90;
+  border-top: 25px solid transparent;
+  height: 25px;
+  top: -25px;
 }
 body.home .wt_page-section#primary_content-block-2 {
-  margin-bottom: 0;
+  background: #a8c7ff;
+}
+body.home .wt_page-section#primary_content-block-2:before {
+  content: '';
+  position: absolute;
+  border-left: 100vw solid #a8c7ff;
+  border-top: 25px solid transparent;
+  height: 25px;
+  top: -25px;
 }
 body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featured-item {
   font-size: 1.25rem;
@@ -277,7 +299,15 @@ body.home .wt_page-section#primary_content-block-2 .wt_featured-items .wt_featur
   letter-spacing: 0.06em;
 }
 body.home .wt_page-section#primary_content-block-3 {
-  margin-bottom: 0;
+  background: #ffb6ad;
+}
+body.home .wt_page-section#primary_content-block-3:before {
+  content: '';
+  position: absolute;
+  border-right: 100vw solid #ffb6ad;
+  border-top: 25px solid transparent;
+  height: 25px;
+  top: -25px;
 }
 body.home .wt_page-section .wt_featured-items {
   overflow-x: scroll;
@@ -313,9 +343,14 @@ body.home .wt_page-section.news_content-block .wt_section-message .wt_cta {
   font-weight: 400;
 }
 body.home #wt_blog-title {
-  margin: 4rem 0 0;
+  font-size: 7rem;
+  font-family: 'Noto Sans', sans-erif;
+  text-shadow: 0 0 30px #000;
   color: #fff;
-  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.15;
+  text-transform: capitalize;
+  text-shadow: none !important;
 }
 body.home #wt_blog-title+p {
   margin: 0;
@@ -376,50 +411,6 @@ body.home .wt_donate-banner:before {
   border-bottom: 100px solid #ededed;
   z-index: 5;
 }
-#primary_content-block-1 > .wt_section-content::after {
-  content: "";
-  background-color: transparent;
-  height: 150%;
-  position: absolute;
-  top: -10%;
-  right: 0;
-  border-right: 60vw solid;
-  border-right-color: #ffc342;
-  z-index: -1;
-}
-#primary_content-block-2::before {
-  content: "";
-  background-color: transparent;
-  height: 150%;
-  transform: translateY(-5%);
-  position: absolute;
-  border-right: 100vw solid;
-  border-right-color: #6eb0ff;
-  border-top: 100px solid transparent;
-  z-index: -1;
-}
-#primary_content-block-3::before {
-  content: "";
-  background-color: transparent;
-  position: absolute;
-  top: -90%;
-  left: 0;
-  height: 215%;
-  border-right: 100vw solid #e99086;
-  border-top: 140px solid transparent;
-  z-index: -1;
-}
-#news_content-block-1::before {
-  content: "";
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 175%;
-  border-right: 100vw solid #fff;
-  border-top: 25px solid transparent;
-  z-index: -1;
-}
 @media all and (max-width: 979px) {
   body.home .wt_banner {
     display: block;
@@ -467,17 +458,6 @@ body.home .wt_donate-banner:before {
   }
   body.home #wt_blog-title {
     margin-bottom: 2rem;
-  }
-  #primary_content-block-1 > .wt_section-content::after {
-    content: "";
-    background-color: transparent;
-    height: 150%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-right: 100vw solid;
-    border-right-color: #ffc342;
-    z-index: -1;
   }
 }
 body.page-template-template-team .wt_page-intro {
@@ -1812,7 +1792,7 @@ body.single-projects .wt_banner .wt_banner-message h1 {
   color: #fff;
   text-align: center;
   line-height: 1.15;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 body.single-projects .wt_single-projects {
   font-family: 'Noto Serif', serif;
@@ -1921,7 +1901,7 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
   color: #fff;
   text-align: right;
   line-height: 1.15;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .wt_banner-message h1 {
   text-shadow: 0 0 100px #000;
@@ -2235,7 +2215,6 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
 }
 .wt_page-section {
   position: relative;
-  margin-bottom: 5%;
 }
 .wt_page-section .wt_section-content {
   position: relative;
@@ -2299,9 +2278,6 @@ body.single-projects .wt_donate-banner .inner-wrap .giveforms-donation-button {
 }
 .wt_page-section:nth-of-type(odd) .wt_section-image .wt_section-image-caption {
   left: 0;
-}
-.wt_page-section:nth-of-type(even) .wt_section-image {
-  margin: 2rem 0 2rem 2rem;
 }
 .wt_page-section:nth-of-type(even) .wt_section-image img {
   width: 100%;
