@@ -1,8 +1,6 @@
 body
 	&.single-projects		
 		.wt_banner
-			height 60vh
-			
 			.wt_banner-message
 				width 100%
 				margin 0
@@ -10,11 +8,15 @@ body
 				h1
 					bannerh1(center)
 		
-		.wt_single-projects
-			font-family 'Noto Serif', serif
-			
+		.wt_single-projects			
 			h1
+				width 90%
+				max-width 600px
+				margin $margin3 auto 0
 				text-align left
+			
+			a
+				color $interactive
 			
 			.giveforms-donation-button
 				display block
@@ -72,3 +74,10 @@ body
 					text-transform uppercase
 					letter-spacing 0.1rem
 					font-family 'Noto Sans', sans-serif
+
+@media all and (max-width:$mobile)
+	body
+		&.single-projects
+			.wt_single-projects
+				h1
+					margin-top $margin5 !important

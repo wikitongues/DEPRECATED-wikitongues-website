@@ -57,22 +57,24 @@
 
 .wt_donate-banner
     width 100%
-    margin-top 50px
-    padding 50px 0 100px
-    -webkit-box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
-    box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
+    padding $margin4 0
+    // -webkit-box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
+    // box-shadow inset 0 3px 1px -2px rgba(0,0,0,0.2), inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 1px 5px 0 rgba(0,0,0,0.12)
     background: rgba(237,237,237,1)
-    background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(11%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)))
-    background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
-    background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
-    background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
-    background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(11%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)))
+    // background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
+    // background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 11%, rgba(237,237,237,1) 100%)
     // filter: progid DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#fafafa', GradientType=0 )
        
     .inner-wrap
         width 1073px
         margin auto
+        
+        .wt_donate-banner-header
+            text-align center
 
         aside
             float left
@@ -82,7 +84,7 @@
                 padding 50px 150px 50px 0
                 
                 h1
-                    text-align left
+                    text-align center
                     color $dark_blue
                 
                 p
@@ -90,7 +92,7 @@
                     color $text-color
 
             &.wt_donate-banner-form
-                margin 0
+                margin $margin1 0 0 0 
                 width 423px
                 height 508px
                 border-radius 3px

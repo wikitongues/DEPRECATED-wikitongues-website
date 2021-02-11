@@ -8,6 +8,7 @@ $donate_banner_form_embed = get_field('donate_banner_form_embed');
 // load banner template
 include( locate_template('components/donate-banner.php') );
 
+/*
 // loop through page sections
 if ( have_rows( 'sections' ) ) {
 
@@ -36,14 +37,14 @@ if ( have_rows( 'sections' ) ) {
 		// load section template
 		include( locate_template('components/section.php') );
 	}
-} ?>
+} */?>
 
-<div class="wt_newsletter-signup-wrapper">
+<!-- <div class="wt_newsletter-signup-wrapper">
 	<h1>Still not sure?</h1>
 	<?php 
 		$form_embed_code = get_field('form_embed_code');
 
-		include( locate_template('components/newsletter-deprecated.php') ); ?>
+		// include( locate_template('components/newsletter-deprecated.php') ); ?>
 </div>
-
+ -->
 <?php get_footer(); ?>
