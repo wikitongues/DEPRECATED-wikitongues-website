@@ -3,32 +3,40 @@
 
     &__intro
         position relative
-        margin-top 48px
-        min-height 375px
+        padding-top $margin2
         text-align center
         background $dark_blue
         color $white
         
-        &:before
-            content ""
-            background-color transparent
-            position absolute
-            height 0
-            left 0
-            bottom 0
-            border-left 100vw solid transparent
-            border-bottom 100px solid #fff
-            z-index 5
-        
         &--names
             h1
-                margin-bottom 0
+                margin $margin1 0 0
             
             h2
-                margin-top 10px
+                margin 0
+            
+            p
+                margin $margin1 0
                 font-style italic
+    
+    &__content
+        // silence is golden
+    
+    &__submit
+        margin $margin1 0
+        text-align center
+        
+        a
+            display inline-block
+            width 270px
+            margin-bottom $margin2
+            padding 20px
+            interactive($white)
+            background $interactive
+            border-radius 30px
             
     &__no-videos
+        margin-top $margin2
         text-align center
 
     &__cta
@@ -36,7 +44,11 @@
         margin 5% auto 10% !important
         
     &__lexicon
-        margin 2%
+        margin $margin2 $margin1 $margin3
+        
+        .wt_lexicon-preview
+                &--link
+                    color $interactive
 
     h2
         font-size 2.5rem
@@ -44,20 +56,21 @@
         
         &+p
             width 90%
+            max-width 730px
             margin 10px auto
             text-align center
             
             a
+                font-weight 700
+                color $interactive
                 display inline !important
 
 @media all and (max-width:768px)
     .wt_single-languages
         &__intro
-            margin 15% auto 5% !important
-            min-height 0 !important
-            
-            &:before
-                display none !important
+            // silence is golden
+            // margin 15% auto 5% !important
+            // min-height 0 !important
 
         &__pagination
             margin 15% auto 30%	!important

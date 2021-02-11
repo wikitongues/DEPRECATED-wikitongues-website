@@ -23,9 +23,9 @@
 		function navColorChange() {
 			$(window).scroll(function(){
 				if ( $(window).scrollTop() > 0 ) { 
-					$('.header').addClass('background');
+					$('.wt_header').addClass('background');
 				} else {
-					$('.header').removeClass('background');
+					$('.wt_header').removeClass('background');
 				}
 			});
 		}

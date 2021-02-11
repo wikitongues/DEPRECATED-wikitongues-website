@@ -37,14 +37,14 @@
 				
 				// define content variables
 				$section_image = get_field('project_banner_image');
-				$section_image_caption = get_field('project_image_caption');
-				$section_title = get_the_title($post);
-				$section_text = get_field('project_excerpt');
-				$section_embed_code = get_field('giveforms_embed_code');
-				$section_cta = get_field('project_call_to_action');
-				$section_cta_link = $section_cta['cta_link'];
-				$section_cta_text = $section_cta['cta_text'];
-				$section_identifier = 'wt_project';
+				$section_subheader = get_field('project_subheader');
+				$section_header = get_the_title();
+				$section_copy = get_field('project_excerpt');
+				$section_action_embed;
+				$section_action_link = get_field('project_call_to_action')['cta_link'];
+				$section_action_text = get_field('project_call_to_action')['cta_text'];
+				$section_secondary_action_link = get_field('project_secondary_action')['cta_link'];
+				$section_secondary_action_text = get_field('project_secondary_action')['cta_text'];
 
 				// load section template
 				include( locate_template('components/section.php') );

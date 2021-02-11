@@ -4,18 +4,15 @@ body
 			a
 				color $white !important
 				
-		.wt_banner
-			height 75vh
-			background $dark_blue !important
-		
 		.wt_toolkit-page
 			text-align center
 			margin-bottom 20%
 			
 			.wt_page-intro
-				margin 0 auto 5% !important
+				margin $margin2 auto
 
 			.wt_featured-item
+				vertical-align top
 				display inline-block
 				width 28.5%
 				width calc(100%/3.5)
@@ -23,20 +20,9 @@ body
 @media all and (max-width:768px)
 	body
 		&.page-template-template-toolkit
-			.wt_banner
-				height 50vh
-				
-				&:before
-					display none !important
-					
-				aside
-					width 100%
-					margin 5.5rem auto 0
-								
-					h1
-						width 100%
-						text-align center
-
 			.wt_toolkit-page
+				.wt_page-intro
+					margin $margin5 auto $margin1
+					
 				.wt_featured-item
 					width 90% !important

@@ -1,7 +1,15 @@
 <?php /* Template name: Languages */ get_header(); ?>
 
-<div class="wt_archive-languages">
-	<div class="wt_page-intro">
+<div class="wt_archive-languages">	
+	<div class="wt_archive-languages__intro">
+		<h1>Every language in the world</h1>
+		<p>Wikitongues is building a seedbank of linguistic diversity by crowdsourcing video oral histories, audio files, and lexicon documents. <a href="<?php the_field('archival_policy', 'option'); ?>">Read our archival policy</a> to learn about our preservation methods, or <a href="<?php bloginfo('url'); ?>/submit-a-video">submit your own video</a>.</p>
+		<form id="searchform" action="<?php bloginfo('home'); ?>/" method="get" class="wt_archive-languages__searchform">
+			<input id="languages_search" maxlength="150" name="languages_search" size="20" type="text" value="" class="txt" placeholder="Search languages" />
+			<input name="post_type" type="hidden" value="languages" />
+			<input id="searchsubmit" class="btn" type="submit" value="Search" />
+		</form>
+	</div>
 	<?php
 	// languages query args
 	$args = array(
@@ -12,19 +20,12 @@
 
 	$languages_search = get_query_var('languages_search'); 
 
-	if ($languages_search): ?>
+	if ($languages_search) {
+		echo '<h2 class="wt_archive-languages__results">Showing results for ' . $languages_search . '</h2>'; 
 
-	<h2><?php echo "Showing results for \"" . $languages_search . "\""; ?>
-		
-	<?php else: ?>
-	
-	<h2>Every language in the world</h2>
+	} 
 
-	<?php endif; ?>
-	</h2>
-	</div>
-
-	<?php if (!empty($languages_search)) {
+	if (!empty($languages_search)) {
 		$args['meta_query'] = array(
 			array(
 				'key' => 'wt_id',
@@ -69,7 +70,7 @@
 			$lexicon_count = sizeOf($lexicon_source); ?>
 
 		<a class="wt_archive-languages__link" href="<?php echo $language_url; ?>">
-			<h3><?php echo $language_name; ?> [<?php echo $ISO_code; ?>]</h3>
+			<h2><?php echo $language_name; ?> [<?php echo $ISO_code; ?>]</h2>
 			<span>
 				<?php if ( $speakers_recorded ) {
 					echo $video_count;	

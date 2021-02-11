@@ -3,105 +3,115 @@
     components/section.php
 \*------------------------------------*/
 
-.wt_page-section
+.wt_section
     position relative
+    margin-top $margin5
+    color $pewter
+    
+    &__aside
+        &--image
+            position relative
+            float(left,50%)
+            padding-bottom 35%
+            background-size cover !important
+            
+            &:before
+                content ''
+                position absolute
+                width 100%
+                height 100%
+                background $pewter
+                z-index -5
+                top 6%
+                left 4%
 
-    .wt_section-content
-        position relative
-        display flex
-
-        > *
-            flex 1
-            margin auto
-
-        .wt_section-message
-            padding 6rem
-
-            *
-                max-width 650px
-
-            h1
-                margin 0 auto 2rem
-                text-align left
-
-            p
-                margin auto
-
-            .wt_cta
-                ctaButton(450px)
-
-    .wt_featured-items
-        max-width 1460px
-        margin 5% auto 0
+        &--content
+            float(left)
+            max-width 370px
+            margin-left 7%
         
-// Switch image and message at each new section
-.wt_page-section
-    .wt_section-image
-        position relative
-
-        .wt_section-image-caption
-            position absolute
-            top 0
-            font-size 1.25rem
-            letter-spacing 0.1em
-            margin 5px 10px
-            position absolute
-            color white
-            text-shadow 0 0 30px #000
-
-    &:nth-of-type(odd)
-        .wt_section-image
-            img
-                width 100%
-                height auto
-                border-top-left-radius 0
-                border-bottom-left-radius 0
+        &--subheader,
+        &--header
+            margin 0
+        
+        &--copy
+            margin $margin1 0
+        
+        &--action
+            display block
+            width 75%
+            background $interactive
+            padding 20px
+            box-sizing border-box
+            border-radius 60px
+            text-align center
+            interactive($white)
+        
+        &--secondaryaction
+            display block
+            margin-top $margin1
+            interactive($pewter)
             
-            .wt_section-image-caption
-                left 0
-
-    &:nth-of-type(even)
-        .wt_section-image
-            img
-                width 100%
-                height auto
-                border-top-right-radius 0
-                border-bottom-right-radius 0
+            i
+                font-size 2.5rem
+                vertical-align middle
+                margin-right 5px
+                
+                &:last-of-type
+                    display none
             
-            .wt_section-image-caption
-                right 0
+            span
+                vertical-align middle
+    
+    &:nth-of-type(2n)
+        aside
+            float(right)
+            text-align right
+            
+            &:first-of-type
+                &:before
+                    left -4%
+            
+            &:last-of-type
+                margin-right 7%
+                margin-left 0 !important
+            
+            .wt_section__aside--action
+                margin-left auto !important
+            
+            .wt_section__aside--secondaryaction
+                i
+                    &:first-of-type
+                        display none
+                    
+                    &:last-of-type
+                        display inline
+                        margin 0 0 0 5px
 
-        .wt_section-message
-            order -1
+    clear()
 
-// typography reduction on laptop screens
-@media only screen and (max-width: 1280px)
-    .wt_page-section
-        .wt_section-content
-            .wt_section-message
-                .wt_cta
-                    margin-top 2rem
-                    padding 2rem
-
-        .wt_featured-items
-            font-size 1.25rem
-
-// Single column and remove image/message switch on smaller screens
-@media only screen and (max-width: 979px)
-    .wt_page-section
-        .wt_section-content
-            flex-direction column
-
-            .wt_section-message
-                &:nth-of-type(even)
-                    order 1
-
-                &:nth-of-type(odd)
-                    order -1
-
-            .wt_section-image
-                padding 0
-
-                img
-                    width 100%
-                    border-radius 0 !important
+@media all and (max-width:$mobile)
+    .wt_section
+        margin-top $margin1
+        
+        &__aside
+            &--content
+                float none !important
+                width 100% !important
+                margin 0 !important
+                padding 30px
+                box-sizing border-box
+                
+                br
+                    display none
+            
+            &--action
+                width 100%
+            
+            &--image
+                float none !important
+                width 100% !important
+                margin 0 !important
+            
+                &:before
+                    display none !important

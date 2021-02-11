@@ -1005,4 +1005,14 @@ function podcast_rss() {
 remove_all_actions( 'do_feed_rss2' );
 add_action( 'do_feed_rss2', 'podcast_rss', 10, 1 );
 
+/*-----------------------------------------*\
+    Add options page for global variables
+\*-----------------------------------------*/
+
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page();
+    
+}
+
 ?>

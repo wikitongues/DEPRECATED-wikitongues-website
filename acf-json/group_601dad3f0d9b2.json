@@ -1,54 +1,11 @@
 {
-    "key": "group_5abd380a5d96c",
-    "title": "Page Banner",
+    "key": "group_601dad3f0d9b2",
+    "title": "Donate Block",
     "fields": [
         {
-            "key": "field_5abd380f78efe",
-            "label": "Banner Image",
-            "name": "banner_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_601f23bc0f6eb",
-            "label": "Banner Header",
-            "name": "banner_header",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_5abd43e885adb",
-            "label": "Banner Text",
-            "name": "banner_text",
+            "key": "field_601dad3f1364c",
+            "label": "Donate Header",
+            "name": "donate_header",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -65,10 +22,10 @@
             "new_lines": "br"
         },
         {
-            "key": "field_5abd43f785adc",
-            "label": "Banner Call to Action Link",
-            "name": "banner_cta_link",
-            "type": "url",
+            "key": "field_601dad3f13652",
+            "label": "Donate Copy",
+            "name": "donate_copy",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -78,12 +35,34 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
-            "key": "field_5abd441185add",
-            "label": "Banner Call to Action Text",
-            "name": "banner_cta_text",
+            "key": "field_601dad3f13657",
+            "label": "Donate Embed",
+            "name": "donate_embed",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_601dad86c84d0",
+            "label": "Donate Secondary Action Text",
+            "name": "donate_secondary_action_text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -98,28 +77,33 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_601dae09c84d1",
+            "label": "Donate Secondary Action Link",
+            "name": "donate_secondary_action_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "template-volunteers.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "template-about.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "template-toolkit.php"
+                "value": "page"
             }
         ]
     ],
@@ -131,5 +115,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612653518
+    "modified": 1612819058
 }

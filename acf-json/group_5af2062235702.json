@@ -46,6 +46,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_6024a65364761",
+            "label": "Project Subheader",
+            "name": "project_subheader",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5af2063e082b2",
             "label": "Excerpt",
             "name": "project_excerpt",
@@ -100,6 +119,58 @@
                 },
                 {
                     "key": "field_5af20742f47d4",
+                    "label": "Link",
+                    "name": "cta_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6024a6ff3f6c1",
+            "label": "Secondary Action",
+            "name": "project_secondary_action",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6024a6ff3f6c2",
+                    "label": "Text",
+                    "name": "cta_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6024a6ff3f6c3",
                     "label": "Link",
                     "name": "cta_link",
                     "type": "url",
@@ -251,5 +322,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606768961
+    "modified": 1613014798
 }
