@@ -1,23 +1,79 @@
+body
+    &.post-type-archive-languages
+        .wt_header
+            &__nav
+                ul
+                    li
+                        a
+                            color $blue
+                    
+                    &:last-of-type
+                        li
+                            background $interactive
+                            
+                            a
+                                color $white !important                    
+            
 .wt_archive-languages
-    .wt_page-intro
+    &__intro
         text-align center
-        margin-bottom 0 !important
+        margin $margin4 0
+        
+        p
+            width 90%
+            max-width 650px
+            margin 0 auto $margin1
+        
+        a
+            color $interactive
+            font-weight 700
+        
+        form
+            &#searchform
+                width 90%
+                max-width 450px
+                margin auto
+                
+                input
+                    &#languages_search
+                        width 70%
+                        margin 0 3% 0 auto
+                        border-bottom 1px solid $blue
+                        interactive($blue)
+                        padding 2% 0
+                        
+                        &:focus
+                            outline none
+                        
+                    &#searchsubmit
+                        width 25%
+                        background $interactive
+                        interactive($white)
+                        border 0
+                        border-radius 30px
+    
+    &__results
+        margin 0 auto $margin1
+        text-align center
 
     &__main
         width 90%
-        margin 5% auto 10%
+        margin $margin1 auto $margin5
         column-count 3
         text-align center
 
     &__link
-        color #6eb0ff
+        display inline-block
+        width 100%
+        color $interactive
         margin-bottom 5px
 
         &:hover
             text-decoration underline
         
-        h3
+        h2
             margin-bottom 5px
+            text-transform initial
 
     &__no-search-results
         text-align center

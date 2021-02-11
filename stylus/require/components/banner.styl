@@ -7,52 +7,51 @@
 
 /* Banner and Form Banner */
 
-.wt_banner, .wt_form-banner
+.wt_banner
     position relative
     width 100%
     height 98vh
     margin-top -5rem // Position banner on top
-    display flex
-    align-items center
     background-size cover !important
     background-attachment fixed !important
-
-    &:before
-        content ""
-        background-color transparent
-        position absolute
-        height 0
-        left 0
-        bottom 0
-        border-left 100vw solid transparent
-        border-bottom 100px solid white
-        z-index 5
-
-    & > *
-        flex 1
+    boxShadowInset()
     
-    .wt_banner-image-caption
-        text-shadow 0 0 30px #000
-
-.wt_banner-message,
-.wt_form-banner-message
-    width 90%
-    margin 0 10rem 0 auto
-
-    h1
-        font-size 7rem
+    &__content
+        position absolute
+        bottom -10%
+        right 30px
+        width 210px
+        -webkit-transform translateY(-10%)
+        -moz-transform translateY(-10%)
+        -ms-transform translateY(-10%)
+        -o-transform translateY(-10%)
+        transform translateY(-10%)
+        background $pewter
         color $white
-        text-align right
-        font-weight bold
-        text-transform uppercase
+        padding 40px 60px 50px
+        border-radius 2px
+        text-shadow 0 0 10px $blue
+        boxShadow()
+        
+        h1
+            margin 0 auto $margin1
+            padding-bottom $margin1
+            border-bottom 1px solid $white
+        
+        p
+            margin 0
 
-.wt_banner-message 
-    h1
-        text-shadow 0 0 100px #000
-
-    .wt_cta
-        margin 2rem 0 0 auto
-        max-width 500px
+    &__scroll
+        position absolute
+        bottom 30px
+        left 30px
+        padding 0
+        interactive($white)
+        text-shadow 0 0 10px $blue
+        
+        i
+            font-size 2.5rem
+            margin-right 5px         
 
 /* donate banner */
 
@@ -99,7 +98,6 @@
                 box-shadow 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)
                 overflow-y scroll
 
-.wt_banner,
 .wt_donate-banner
     .wt_banner-image-caption
         position absolute
@@ -107,31 +105,41 @@
         font-weight 700
         letter-spacing 0.1em
 
-@media all and (max-width:979px)
-    .wt_banner, .wt_form-banner
+@media all and (max-width:$mobile)
+    .wt_banner
         background-attachment initial !important
+        
+        &__content
+            right initial !important
+            left 50% !important
+            transform translate(-50%, 20%) !important
+        
+        &__scroll
+            display none !important
+    // .wt_banner, .wt_form-banner
+    //     background-attachment initial !important
 
-    .wt_banner-message,
-    .wt_form-banner-message
-        h1
-            font-size 3rem
+    // .wt_banner-message,
+    // .wt_form-banner-message
+    //     h1
+    //         font-size 3rem
         
-        .wt_cta
-            width 75%
-            padding 2rem 1rem
-            font-size 1.5rem
+    //     .wt_cta
+    //         width 75%
+    //         padding 2rem 1rem
+    //         font-size 1.5rem
     
-    .wt_donate-banner
-        position relative
-        margin-top 0 !important
-        box-shadow none !important
-        padding 50px 0 150px
+    // .wt_donate-banner
+    //     position relative
+    //     margin-top 0 !important
+    //     box-shadow none !important
+    //     padding 50px 0 150px
         
-        .inner-wrap
-            width auto !important
+    //     .inner-wrap
+    //         width auto !important
             
-            aside
-                width 90% !important
-                margin 0 auto !important
-                padding 0 !important
-                float none
+    //         aside
+    //             width 90% !important
+    //             margin 0 auto !important
+    //             padding 0 !important
+    //             float none

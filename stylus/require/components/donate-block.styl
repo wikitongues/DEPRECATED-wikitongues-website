@@ -1,0 +1,38 @@
+.wt_donate
+	padding $margin5 0
+	text-align center
+	color $pewter
+	
+	&__header
+		margin 0
+
+	&__embed
+		a
+			display block
+			width 90%
+			max-width 500px
+			margin $margin1 auto
+			background $interactive
+			padding 25px
+			box-sizing border-box
+			border-radius 60px
+			text-align center
+			interactive($white)
+			font-size 2.8rem
+		
+	&__secondaryaction
+		interactive($pewter)
+		font-size 1.8rem
+		
+		i
+			font-size 2.8rem
+			margin-right 8px
+			vertical-align middle
+		
+		span
+			vertical-align middle
+
+@media all and (max-width:$mobile)
+	.wt_donate
+		padding $margin1 0
+		background $offwhite

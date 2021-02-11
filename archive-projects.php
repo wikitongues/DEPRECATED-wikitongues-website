@@ -1,36 +1,26 @@
 <?php /* Template name: Projects */ get_header(); ?>
 
-<h1>projects archive</h1>
-<?
-/*
-include( locate_template('components/page-intro.php') );
+<h1>Current Projects</h1>
 
-// query featured projects array
-$featured_projects = get_field('featured_projects');
-
+<?php
 // start loop
-if ( $featured_projects ) {
+if ( have_posts() ) {
 
-	// define $i for $i++ loop
-	$i;
-
-	foreach ( $featured_projects as $post ) {
-
-		// run $i++ to assign unique IDs to each section
-		$i++;
+	while ( have_posts() ) {
 
 		// initialize post data
-		setup_postdata( $post );
+		the_post();
 		
 		// define content variables
 		$section_image = get_field('project_banner_image');
-		$section_image_caption = get_field('project_image_caption');
-		$section_title = get_the_title($post);
-		$section_text = get_field('project_excerpt');
-		$section_cta = get_field('project_call_to_action');
-		$section_cta_link = $section_cta['cta_link'];
-		$section_cta_text = $section_cta['cta_text'];
-		$section_identifier = 'wt_project';
+		$section_subheader = get_field('project_subheader');
+		$section_header = get_the_title();
+		$section_copy = get_field('project_excerpt');
+		$section_action_embed;
+		$section_action_link = get_field('project_call_to_action')['cta_link'];
+		$section_action_text = get_field('project_call_to_action')['cta_text'];
+		$section_secondary_action_link = get_field('project_secondary_action')['cta_link'];
+		$section_secondary_action_text = get_field('project_secondary_action')['cta_text'];
 
 		// load section template
 		include( locate_template('components/section.php') );
@@ -38,13 +28,5 @@ if ( $featured_projects ) {
 
 	wp_reset_postdata();
 }
-
-// define variables for donate CTA at bottom of layout
-$donate_banner_header = get_field('donate_banner_header');
-$donate_banner_copy = get_field('donate_banner_copy');
-$donate_banner_form_embed = get_field('donate_banner_form_embed');
-
-// load donate CTA
-include( locate_template('components/donate-banner.php') ); */
 
 get_footer(); ?>

@@ -1,9 +1,9 @@
 {
-    "key": "group_5abd380a5d96c",
-    "title": "Page Banner",
+    "key": "group_601da4e7b3b6f",
+    "title": "Homepage Banner",
     "fields": [
         {
-            "key": "field_5abd380f78efe",
+            "key": "field_601da4e7b92dd",
             "label": "Banner Image",
             "name": "banner_image",
             "type": "image",
@@ -27,7 +27,26 @@
             "mime_types": ""
         },
         {
-            "key": "field_601f23bc0f6eb",
+            "key": "field_601da4e7b92f5",
+            "label": "Banner Image Caption",
+            "name": "banner_image_caption",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_601f2402c3c7e",
             "label": "Banner Header",
             "name": "banner_header",
             "type": "textarea",
@@ -46,7 +65,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_5abd43e885adb",
+            "key": "field_601da4e7b92fa",
             "label": "Banner Text",
             "name": "banner_text",
             "type": "textarea",
@@ -65,7 +84,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_5abd43f785adc",
+            "key": "field_601da4e7b9300",
             "label": "Banner Call to Action Link",
             "name": "banner_cta_link",
             "type": "url",
@@ -81,7 +100,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5abd441185add",
+            "key": "field_601da4e7b9305",
             "label": "Banner Call to Action Text",
             "name": "banner_cta_text",
             "type": "text",
@@ -103,23 +122,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "page_type",
                 "operator": "==",
-                "value": "template-volunteers.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "template-about.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "template-toolkit.php"
+                "value": "front_page"
             }
         ]
     ],
@@ -131,5 +136,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612653518
+    "modified": 1612653598
 }

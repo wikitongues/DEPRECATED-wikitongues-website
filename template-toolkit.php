@@ -1,7 +1,8 @@
 <?php /* Template name: Toolkit */ get_header();
 
 // define page banner variables
-//$banner_image = get_field('banner_image');
+$banner_image = get_field('banner_image');
+$banner_header = get_field('banner_header');
 $banner_text = get_field('banner_text');
 $banner_cta_link = get_field('banner_cta_link');
 $banner_cta_text = get_field('banner_cta_text');

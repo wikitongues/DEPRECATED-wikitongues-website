@@ -1,24 +1,29 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="wt_footer" role="contentinfo">
 				
 				<!-- logomark -->
-				<div class="footer-logo">
+				<div class="wt_footer__logo">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="Logo" class="logo-img">
 					<span>Wikitongues, Inc.</span>
 				</div>
 				<!-- /logomark -->
 
 				<!-- footer menus -->
-				<div class="footer-navigation">
-					<?php main_footer_menu(); ?>
+				<div class="wt_footer__navigation">
 					<?php secondary_footer_menu(); ?>
-					<!-- <div class="clear"></div> -->
 				</div>
 				<!-- /footer menus -->
 
 				<!-- legal -->
-				<p class="legal">Wikitongues is a 501(3)(c) non-profit organization based on Lenape land in Brooklyn, NY, USA. <br> Thanks to <a href="https://www.greengeeks.com/track/wikitongues" target="_blank">GreenGeeks</a>, this website's carbon footprint is offset by wind credits.</p>
+				<div class="wt_footer__legal">Wikitongues is a 501(3)(c) non-profit organization based on Lenape land in Brooklyn, NY, USA. <br> Thanks to <a href="https://www.greengeeks.com/track/wikitongues" target="_blank">GreenGeeks</a>, this website's carbon footprint is offset by wind credits.</div> <!-- Lenapehoking -->
 				<!-- /legal -->
+
+				<!-- Questions? -->
+				<div class="wt_footer__questions">
+					<strong>Questions?</strong><br />
+					<a href="mailto:hello@wikitongues.org">hello@wikitongues.org</a>
+				</div>
+				<!-- / Questions -->
 
 			</footer>
 			<!-- /footer -->

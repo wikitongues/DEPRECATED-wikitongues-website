@@ -3,14 +3,20 @@
     footer.php
 \*------------------------------------*/
 
-.footer
-//    margin-top 150px
-    background-color $dark_blue
+.wt_footer
+    padding $margin3
+    background-color $blue
     color $white
-    padding 0 2rem 2rem 2rem
-    bottom 0
+    font-family $sans_serif
+    color $white
+    font-size 1.4rem
+    text-align center
+    font-weight 200
     
-    .footer-logo
+    &__logo
+        margin 0
+        text-align center
+        
         .logo-img
             vertical-align middle
             width 35px
@@ -23,57 +29,48 @@
             letter-spacing 0.05rem
             text-transform uppercase
 
-    .footer-navigation
-        display flex
+    &__navigation
+        margin $margin2 auto
         width 100%
 
         ul
-            display flex
-            list-style-type none
+            list-style none
             padding 0
 
             &:last-of-type
                 margin-left auto                
             
             li
-                margin 3px 20px 3px 3px
-                letter-spacing 0.08rem
+                display inline-block
+                margin 0 10px
+                
+                a
+                    color $white
 
-            .sub-menu
-                visibility visible
-
-                li
-                    a
-                        color $white
-
-    .legal
+    &__legal
         width 100%
         margin-bottom 0
-        color $white
         
         a
             display inline
-
-.footer a
-    color $white
+            color $white
+            font-weight 900
     
-@media all and (max-width:979px)
-    .footer
-        .footer-navigation
+    &__questions
+        margin-top $margin2
+        
+        a
+            color $white
+    
+@media all and (max-width:$mobile)
+    .wt_footer
+        padding $margin1
+        
+        &__navigation
             ul
-                display block
-
-// colorful shapes (weave into above elements on desgin pass)
-.footer
-    position relative
-
-    &:before
-        content ""
-        background-color transparent
-        position absolute
-        height 0
-        left 0
-        top -100px
-        border-right 100vw solid transparent
-        border-bottom 100px solid $dark_blue
-        z-index 5
+                li
+                    display block
+        
+        &__legal
+            br
+                display none

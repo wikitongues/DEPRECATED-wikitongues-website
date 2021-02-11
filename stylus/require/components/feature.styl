@@ -1,0 +1,140 @@
+/*------------------------------------*\
+    Feature
+    components/feature.php
+\*------------------------------------*/
+
+.wt_feature
+	position relative
+	margin-top $margin5
+	width 100%
+	padding-bottom 50%
+	
+	&__aside
+		&--content
+			position absolute
+			top 45%
+			width 45%
+			max-width 370px
+			-webkit-transform translateY(-45%)
+			-moz-transform translateY(-45%)
+			-o-transform translateY(-45%)
+			-ms-transform translateY(-45%)
+			transform translateY(-45%)
+			color $white
+			
+		&--subheader,
+		&--header
+			margin 0
+			
+		&--copy
+			margin $margin1 0
+		
+		&--action
+			display block
+			width 75%
+			background $white
+			interactive($blue)
+			padding 20px
+			box-sizing border-box
+			border-radius 60px
+			text-align center
+		
+		&--secondaryaction
+			display block
+			margin-top $margin1
+			interactive($white)
+			
+			i
+				font-size 2.5rem
+				vertical-align middle
+			
+			span
+				vertical-align middle
+	
+	&__aside
+		&--image
+			position absolute
+			width 55%
+			padding-bottom 50%
+			background-size cover !important
+	
+	&:nth-of-type(odd)
+		&:before
+			content ''
+			position absolute
+			top -5%
+			right 0
+			z-index -2
+			background $blue
+			width 90%
+			height 100%
+		
+		.wt_feature__aside
+			&--content
+				left 60%
+			
+			&--secondaryaction
+				i
+					&:first-of-type
+						margin-right 5px
+						
+					&:last-of-type
+						display none
+	
+	&:nth-of-type(even)
+		&:before
+			content ''
+			position absolute
+			top -5%
+			left 0
+			z-index -2
+			background $burgundy
+			width 90%
+			height 100%
+		
+		.wt_feature__aside
+			&--content
+				text-align right
+				right 60%
+				
+				i
+					&:first-of-type
+						display none
+					
+					&:last-of-type
+						margin-left 5px
+			
+			&--action
+				margin-left auto !important
+			
+			&--image
+				right 0
+
+@media all and (max-width:$mobile)
+	.wt_feature
+		margin-top $margin1
+		padding 0
+		
+		&:before
+			display none !important
+			
+		&__aside
+			&--content
+				position relative
+				width 100%
+				left initial !important
+				right initial !important
+				transform none
+				padding 30px
+				box-sizing border-box
+			
+			&--image
+				position relative
+				width 100%
+				transform none
+		
+		&:nth-of-type(odd)
+			background $blue
+		
+		&:nth-of-type(even)
+			background $burgundy

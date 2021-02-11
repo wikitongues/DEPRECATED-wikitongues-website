@@ -37,9 +37,9 @@
 	</h2>
 
 	<!-- show language names -->
-	<h3 class="wt_video-preview__text wt_video-preview__text--header">
+	<strong class="wt_video-preview__text wt_video-preview__text--header">
 		Featured Languages
-	</h3>
+	</strong>
 	<?php if( $featured_languages ): ?>
 		<p class="wt_video-preview__text wt_video-preview__text--p">
 		<?php foreach( $featured_languages as $post ):
@@ -63,9 +63,9 @@
 	<!-- /show language names -->
 	
 	<!-- Show distribution links -->
-	<h3 class="wt_video-preview__text wt_video-preview__text--header">
+	<strong class="wt_video-preview__text wt_video-preview__text--header">
 		Distribution
-	</h3>
+	</strong>
 	<?php if ( $public_status == 'Removed' || $public_status == 'Private' ): ?>
 		<p class="wt_video-preview__text wt_video-preview__text--p">
 			This video is not publicly available.
@@ -101,9 +101,9 @@
 	<!-- /Show distribution links -->
 
 	<!-- Show Licensing -->
-	<h3 class="wt_video-preview__text wt_video-preview__text--header">
+	<strong class="wt_video-preview__text wt_video-preview__text--header">
 		Licensing
-	</h3>
+	</strong>
 	<p class="wt_video-preview__text wt_video-preview__text--p">
 		<?php if ( $video_license == 'Standard' ) {
 			echo 'Protected';

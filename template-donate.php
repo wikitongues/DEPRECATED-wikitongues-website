@@ -43,7 +43,7 @@ if ( have_rows( 'sections' ) ) {
 	<?php 
 		$form_embed_code = get_field('form_embed_code');
 
-		include( locate_template('components/newsletter.php') ); ?>
+		include( locate_template('components/newsletter-deprecated.php') ); ?>
 </div>
 
 <?php get_footer(); ?>

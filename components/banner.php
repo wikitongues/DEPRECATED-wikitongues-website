@@ -8,23 +8,13 @@
 	*/ ?>
 
 <div class="wt_banner banner-element" style="background:url('<?php echo $banner_image['url']; ?>') center center no-repeat;">
-	<aside class="wt_banner-message">
-	<?php 
-		if ( $banner_text ) { 
-			echo '<h1>' . $banner_text . '</h1>'; 
-		} 
-		
-		if ( $banner_cta_link ) { 
-			$cta_link = $banner_cta_link;
-			$cta_text = $banner_cta_text;
-
-			include( locate_template('components/cta.php') );
-		} ?>
+	<aside class="wt_banner__content">
+		<h1 class="wt_banner__content--header">
+			<?php echo $banner_header; ?>
+		</h1>
+		<p id="scroll-anchor" class="wt_banner__content--text">
+			<?php echo $banner_text; ?>
+		</p>
 	</aside>
-	<p class="wt_banner-image-caption">
-	<?php
-		if ( $banner_image_caption ) {
-			echo $banner_image_caption;
-		} ?>
-	</p>
+	<a href="#scroll-anchor" class="wt_banner__scroll"><i class="fal fa-arrow-to-bottom"></i> Scroll Down</a>
 </div>

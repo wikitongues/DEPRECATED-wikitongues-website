@@ -9,19 +9,13 @@
 	$speakers_recorded = get_field('speakers_recorded');
 	$lexicon_source = get_field('lexicon_source'); ?>
 
-<!-- this is for trying out new typography on the languages page. we will incorporate this into the primary stylesheet eventually -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital@0;1&display=swap');
-</style>
-
 <div class="wt_single-languages">
 	<!-- this should be made compatible with the page-intro tempalte -->
 	<div class="wt_single-languages__intro">
 		<div class="wt_page-intro wt_page-intro--short">
 			<div class="wt_single-languages__intro--names">
 				<h1><?php echo $language_name; ?></h1>
-				<h2><?php echo $alternate_names; ?></h2>
+				<p><?php echo $alternate_names; ?></p>
 			</div>
 			<div class="wt_single-languages__intro--origins">
 				<!-- can we start this with a/an depending on whether or not the family starts w a vowel? -->
@@ -56,7 +50,7 @@
 	<!-- video grid -->
 	<?php if( $speakers_recorded ): ?>
 		<h2>Videos</h2>
-		<p>The following samples were recorded by volunteers from around the world. Submit your own video <a href="<?php bloginfo('url'); ?>/submit-a-video">here</a>.</p>
+		<p>The following samples were recorded by volunteers from around the world.</p>
 		<?php foreach( $speakers_recorded as $post ): setup_postdata( $post ); 
 
 			if ( get_field('video_title') ) {
@@ -78,15 +72,15 @@
 			include( locate_template('components/video-preview.php') );
 
 		endforeach; wp_reset_postdata(); ?>
+	<div class="wt_single-languages__submit">
+		<a href="<?php bloginfo('url'); ?>/submit-a-video">Add a video</a>
+	</div>
 	<?php else: ?>
 		<div class="wt_single-languages__no-videos">
 			<p>We don't have a video for this language yet.</p>			
-			<?php 
-			$cta_link = get_bloginfo('url').'/submit-a-video';
-			$unique_class = 'single-languages';
-			$cta_text = 'Submit a video';
-			
-			include( locate_template('components/cta.php') ); ?>
+			<div class="wt_single-languages__submit">
+				<a href="<?php bloginfo('url'); ?>/submit-a-video">Add a video</a>
+			</div>
 		</div>
 	<?php endif; ?>
 	<!-- /video grid -->
@@ -130,11 +124,11 @@
 
 	<!-- donate module -->
 	<?php
-		$donate_module_header = 'While you\'re here...';
-		$donate_module_text = 'To date, Wikitongues has archived 607 languages. Can you help us reach 150 more languages in 2021? <br> <br>On average, it costs $250—just $20.84/month—to safeguard materials in a new language.';
-		$donate_module_code = '<script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script><link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/><a class="giveforms-donation-button" href="https://wikitonguesorg.giveforms.com/default-giveform-2" data-multi-step="true">Donate</a>';
+		// $donate_module_header = 'While you\'re here...';
+		// $donate_module_text = 'To date, Wikitongues has archived 607 languages. Can you help us reach 150 more languages in 2021? <br> <br>On average, it costs $250—just $20.84/month—to safeguard materials in a new language.';
+		// $donate_module_code = '<script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script><link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/><a class="giveforms-donation-button" href="https://wikitonguesorg.giveforms.com/default-giveform-2" data-multi-step="true">Donate</a>';
 
-		include( locate_template('components/donate-module.php') ); ?>
+		// include( locate_template('components/donate-module.php') ); ?>
 	<!-- /donate module -->
 </div>
 <?php get_footer(); ?>
