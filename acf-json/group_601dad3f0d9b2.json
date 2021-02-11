@@ -82,7 +82,7 @@
             "key": "field_601dae09c84d1",
             "label": "Donate Secondary Action Link",
             "name": "donate_secondary_action_link",
-            "type": "page_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -91,11 +91,7 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
+            "return_format": "url"
         }
     ],
     "location": [
@@ -115,5 +111,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612819058
+    "modified": 1613023394
 }

@@ -8,7 +8,8 @@
 <?php 
 
 $banner_image = get_field('project_banner_image');
-$banner_text = get_the_title();
+$banner_header = get_field('project_header');
+$banner_text = get_field('project_banner_text');
 $featured_videos = get_field('featured_videos');
 
 $project_header = get_field('project_header');
@@ -83,7 +84,7 @@ if (have_posts()): while (have_posts()) : the_post(); ?>
 		$donate_module_code = get_field('donate_module_code');
 
 		// load donate popup
-		include( locate_template('components/donate-module.php') ); ?>
+		// include( locate_template('components/donate-module.php') ); ?>
 	<!-- /donate module -->
 
 <?php get_footer(); ?>

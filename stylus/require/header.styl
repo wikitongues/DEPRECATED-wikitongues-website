@@ -40,7 +40,9 @@ body
                         
                         li
                             background $interactive
-                            margin-right 0
+                            
+                            &:last-of-type
+                                margin-right 0
                             
                             a
                                 color $white
@@ -74,10 +76,12 @@ body
         
             &:last-of-type
                 li
-                    margin-right 30px
                     padding 10px 20px
                     border-radius 20px
                     background $white
+                    
+                    &:last-of-type
+                        margin-right 30px
                     
                     a
                         color $blue
