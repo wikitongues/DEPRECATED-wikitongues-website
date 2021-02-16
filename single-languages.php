@@ -63,6 +63,7 @@
 			$video_thumbnail = get_field('video_thumbnail');
 			$featured_languages = get_field('featured_languages');
 			$video_description = get_field('video_description');
+			$dropbox_link = get_field('dropbox_link');
 			$youtube_link = get_field('youtube_link');
 			$wikimedia_commons_link = get_field('wikimedia_commons_link');
 			$video_license = get_field('video_license');

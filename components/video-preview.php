@@ -4,6 +4,7 @@
 	$video_thumbnail
 	$featured_languages
 	$video_description
+	$dropbox_link
 	$youtube_link
 	$wikimedia_commons_link
 	$video_license
@@ -37,24 +38,22 @@
 	</h2>
 
 	<!-- show language names -->
-	<strong class="wt_video-preview__text wt_video-preview__text--header">
+	<div class="wt_video-preview__text wt_video-preview__text--header">
 		Featured Languages
-	</strong>
+	</div>
 	<?php if( $featured_languages ): ?>
-		<p class="wt_video-preview__text wt_video-preview__text--p">
 		<?php foreach( $featured_languages as $post ):
 				setup_postdata( $post ); 
 
 				$ISO_code = get_the_title();
 				$language_name = get_field('standard_name');
 				$language_url = get_the_permalink(); ?>
-				<span>
+				<p class="wt_video-preview__text wt_video-preview__text--p">
 					<a class="wt_video-preview__link" href="<?php echo $language_url; ?>">
 						<?php echo $language_name; ?> [<?php echo $ISO_code; ?>]
 					</a>
-				</span>
+				</p>
 		<?php endforeach; wp_reset_postdata(); ?>
-		</p>
 	<?php else: ?>
 		<p class="wt_video-preview__text wt_video-preview__text--p">
 			Sorry, languages aren't loading right now.
@@ -63,15 +62,22 @@
 	<!-- /show language names -->
 	
 	<!-- Show distribution links -->
-	<strong class="wt_video-preview__text wt_video-preview__text--header">
+	<div class="wt_video-preview__text wt_video-preview__text--header">
 		Distribution
-	</strong>
+	</div>
 	<?php if ( $public_status == 'Removed' || $public_status == 'Private' ): ?>
 		<p class="wt_video-preview__text wt_video-preview__text--p">
 			This video is not publicly available.
 		</p>
 	<?php else: ?>
 		<?php if ( $youtube_link != 'No ID' || $wikimedia_commons_link ): ?>
+			<?php if ( $dropbox_link ): ?>
+				<p class="wt_video-preview__text">
+					<a href="<?php echo $dropbox_link; ?>" class="wt_video-preview__link">
+						Dropbox
+					</a>
+				</p>
+			<?php endif; ?>
 			<?php if ( $youtube_link != 'No ID' ): ?>
 				<p class="wt_video-preview__text wt_video-preview__text--p">
 					<a class="wt_video-preview__link" href="<?php echo $youtube_link; ?>">
@@ -101,9 +107,9 @@
 	<!-- /Show distribution links -->
 
 	<!-- Show Licensing -->
-	<strong class="wt_video-preview__text wt_video-preview__text--header">
+	<div class="wt_video-preview__text wt_video-preview__text--header">
 		Licensing
-	</strong>
+	</div>
 	<p class="wt_video-preview__text wt_video-preview__text--p">
 		<?php if ( $video_license == 'Standard' ) {
 			echo 'Protected';
