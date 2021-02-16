@@ -2292,10 +2292,10 @@ body.post-type-archive-projects .wt_section:last-of-type {
 }
 .wt_video-preview__text--header {
   font-weight: 700;
-  margin-bottom: 0;
+  margin: 15px auto 0;
 }
 .wt_video-preview__text--p {
-  margin: 5px 0 15px;
+  margin: 5px 0;
 }
 .wt_video-preview__link {
   color: #6eb0ff;
