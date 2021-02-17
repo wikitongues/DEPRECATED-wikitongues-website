@@ -72,13 +72,13 @@
 	<?php else: ?>
 		<?php if ( $youtube_link != 'No ID' || $wikimedia_commons_link ): ?>
 			<?php if ( $dropbox_link ): ?>
-				<p class="wt_video-preview__text">
+				<p class="wt_video-preview__text wt_video-preview__text--p">
 					<a href="<?php echo $dropbox_link; ?>" class="wt_video-preview__link">
 						Dropbox
 					</a>
 				</p>
 			<?php endif; ?>
-			<?php if ( $youtube_link != 'No ID' ): ?>
+			<?php if ( $youtube_link && $youtube_link != 'No ID' ): ?>
 				<p class="wt_video-preview__text wt_video-preview__text--p">
 					<a class="wt_video-preview__link" href="<?php echo $youtube_link; ?>">
 						YouTube
