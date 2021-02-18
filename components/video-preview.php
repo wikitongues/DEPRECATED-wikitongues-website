@@ -13,7 +13,11 @@
 	$public_status
 	*/ ?>
 <div class="wt_video-preview">
+	<?php if ( $dropbox_link ): ?>
+	<a href="<?php echo $dropbox_link; ?>" target="_blank">
+	<?php else: ?>
 	<a href="<?php echo $video_permalink; ?>">
+	<?php endif; ?>
 		<!-- we should find a way to format this string correctly in the exported Airtable CSV rather than parsing the string here -->
 		<?php if ( $video_thumbnail ): 
 			preg_match('#\((.*?)\)#', $video_thumbnail, $match); ?>
