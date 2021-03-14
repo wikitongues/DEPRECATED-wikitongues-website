@@ -1,21 +1,30 @@
 .wt_cta
-    display block
-    width 60%
-    white-space nowrap
-    margin 2rem auto 2rem 0
+    padding $margin1 0 $margin5 0
     text-align center
-    padding 3rem
-    font-size 2rem
-    font-weight bold
-    background-color $bright_blue
-    border-radius 1rem
-    color $white
-    text-transform uppercase
-    letter-spacing 0.1rem
-
-    &:hover
-        color $white
-
-.wt_secondary-cta
-    padding-top 20px
-    font-weight bold
+    color $pewter
+    
+    &__link
+        display block
+        width 90%
+        max-width 500px
+        margin $margin1 auto
+        background $interactive
+        padding 25px
+        box-sizing border-box
+        border-radius 60px
+        text-align center
+        interactive($white)
+        font-size 2.8rem
+    
+    &__secondary
+        interactive($pewter)
+        font-size 1.8rem
+        text-align center
+        
+        i
+            font-size 2.8rem
+            margin-right 8px
+            vertical-align middle
+            
+            span
+                vertical-align middle

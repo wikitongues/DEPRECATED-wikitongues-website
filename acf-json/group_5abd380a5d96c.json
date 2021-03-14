@@ -121,6 +121,13 @@
                 "operator": "==",
                 "value": "template-toolkit.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-revitalization.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -131,5 +138,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612653518
+    "modified": 1615244333
 }

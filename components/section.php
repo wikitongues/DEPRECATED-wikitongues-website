@@ -32,12 +32,14 @@
 				<?php echo $section_action_text; ?>   	
 			</a>
 		<?php endif; ?>
+		<?php if ( $secondary_section_action_link ): ?>
 		<a class="wt_section__aside--secondaryaction"
 			   href="<?php echo $section_secondary_action_link; ?>">
 			<i class="fal fa-arrow-to-right"></i>
 			<span><?php echo $section_secondary_action_text; ?></span>
 			<i class="fal fa-arrow-to-left"></i>  	
 		</a>
+		<?php endif; ?>
     </aside>
     <div class="clear"></div>
 </section>
