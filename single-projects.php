@@ -21,9 +21,13 @@ if ( have_posts() ) {
 
 		if ( $title == 'Language Revitalization' ) {
 			include( 'components/language-revitalization.php' );
+			
+		} elseif ( $title == 'Jewish Languages' ) {
+			include( 'components/jewish-languages.php' );
+			
 		} else {
-			// we will eventually have a default project template and unique templates for each of these big projects
 			include( 'components/project-content.php' );
+			
 		}
 	} 
 }
