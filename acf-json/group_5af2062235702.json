@@ -511,9 +511,9 @@
                             "return_format": "url"
                         },
                         {
-                            "key": "field_6056860035827",
-                            "label": "Second action text",
-                            "name": "second_action_text",
+                            "key": "field_6056860935828",
+                            "label": "Second action embed",
+                            "name": "second_action_embed",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -528,21 +528,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_6056860935828",
-                            "label": "Second action link",
-                            "name": "second_action_link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url"
                         }
                     ],
                     "min": "",
@@ -748,5 +733,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616283428
+    "modified": 1616364455
 }

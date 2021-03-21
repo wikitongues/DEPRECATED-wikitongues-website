@@ -1,4 +1,4 @@
-<div class="single-projects_jewish">
+<div class="single-projects__jewish">
 <?php 
 if( have_rows('jewish_languages_layout') ){
 	while( have_rows('jewish_languages_layout') ){
@@ -10,16 +10,18 @@ if( have_rows('jewish_languages_layout') ){
 			$copy_text = get_sub_field('copy_text');
 			$first_action_text = get_sub_field('first_action_text');
 			$first_action_link = get_sub_field('first_action_link');
-			$second_action_text = get_sub_field('second_action_text');
-			$second_action_link = get_sub_field('second_action_link');
+			$second_action_embed = get_sub_field('second_action_embed');
 
 			// summary layout markup
 			echo '<div class="wt_content-block">'.
 				 '<h1>'.$header_text.'</h1>'.
 				 $copy_text.
+				 '<a class="wt_primary-action" href="'.$first_action_link.'">'.
+				 $first_action_text.
+				 '</a>'.
+				 $second_action_embed.
+				 '<a id="target" class="wt_donate__secondaryaction" href="#target"><i class="fal fa-arrow-to-bottom"></i><span>Or keep reading</span></a>'.
 				 '</div>';
-
-			// calls-to-action
 
 		} elseif ( get_row_layout() == 'languages' ){
 			// languages layout variables
@@ -50,14 +52,38 @@ if( have_rows('jewish_languages_layout') ){
 			// featured videos variables
 			$header_text = get_sub_field('header_text');
 			$copy_text = get_sub_field('copy_text');
+			$videos = get_sub_field('videos');
 
 			echo '<div class="wt_content-block">'.
 				 '<h1>'.$header_text.'</h1>'.
 				 $copy_text.
 				 '</div>';
 
-			// videos link
+			if( $videos ) {
+				foreach( $videos as $post ){
+					setup_postdata( $post );
 
+					if ( get_field('video_title') ) {
+						$video_title = get_field('video_title');
+					} else {
+						$video_title = get_the_title($post);
+					}
+
+					$video_permalink = get_the_permalink();
+					$video_thumbnail = get_field('video_thumbnail');
+					$featured_languages = get_field('featured_languages');
+					$video_description = get_field('video_description');
+					$dropbox_link = get_field('dropbox_link');
+					$youtube_link = get_field('youtube_link');
+					$wikimedia_commons_link = get_field('wikimedia_commons_link');
+					$video_license = get_field('video_license');
+					$license_link = get_field('license_link');
+					$attribution_statement = get_field('attribution');
+
+					include( locate_template('components/video-preview.php') );
+				} 
+				wp_reset_postdata();
+			}
 		}
 	}
 }

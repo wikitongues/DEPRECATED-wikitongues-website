@@ -2602,3 +2602,60 @@ body.post-type-archive-projects .wt_section:last-of-type {
     margin: auto !important;
   }
 }
+.single-projects__jewish .wt_content-block {
+  width: 90%;
+  max-width: 600px;
+  margin: 90px auto 0;
+}
+.single-projects__jewish .wt_content-block p {
+  line-height: 3.6rem;
+}
+.single-projects__jewish .wt_content-block:first-of-type {
+  margin-top: 180px;
+}
+.single-projects__jewish .wt_content-block .wt_primary-action {
+  display: inline-block;
+  width: 48%;
+  max-width: 500px;
+  margin: 30px 4% 30px 0;
+  background: #20597a;
+  border: 5px solid #20597a;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+.single-projects__jewish .wt_content-block .giveforms-donation-button {
+  display: inline-block;
+  width: 48%;
+  max-width: 500px;
+  border: 5px solid #20597a;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #20597a;
+  font-family: objektiv-mk1, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+.single-projects__jewish .wt_donate {
+  padding: 90px 0;
+}
+@media all and (max-width: 979px) {
+  .single-projects__jewish .wt_content-block h1 br {
+    display: none;
+  }
+  .single-projects__jewish .wt_content-block .wt_primary-action,
+  .single-projects__jewish .wt_content-block .giveforms-donation-button {
+    font-size: 1.4rem;
+  }
+}
