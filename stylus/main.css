@@ -2610,6 +2610,11 @@ body.post-type-archive-projects .wt_section:last-of-type {
 .single-projects__jewish .wt_content-block p {
   line-height: 3.6rem;
 }
+.single-projects__jewish .wt_content-block p a {
+  color: #fff;
+  background: #20597a;
+  padding: 0 5px;
+}
 .single-projects__jewish .wt_content-block:first-of-type {
   margin-top: 180px;
 }
@@ -2624,12 +2629,11 @@ body.post-type-archive-projects .wt_section:last-of-type {
   box-sizing: border-box;
   border-radius: 60px;
   text-align: center;
-  font-size: 1.5rem;
   color: #fff;
   font-family: objektiv-mk1, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
 }
 .single-projects__jewish .wt_content-block .giveforms-donation-button {
   display: inline-block;
@@ -2640,12 +2644,11 @@ body.post-type-archive-projects .wt_section:last-of-type {
   box-sizing: border-box;
   border-radius: 60px;
   text-align: center;
-  font-size: 1.5rem;
   color: #20597a;
   font-family: objektiv-mk1, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
 }
 .single-projects__jewish .wt_donate {
   padding: 90px 0;
