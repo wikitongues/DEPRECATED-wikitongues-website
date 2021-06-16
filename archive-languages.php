@@ -76,7 +76,7 @@
 					echo $video_count;	
 				} else {
 					echo '0';
-				} ?> videos recored
+				} ?> videos recorded
 			</span><br>
 			<span>
 				<?php if ( $lexicon_source ) {
